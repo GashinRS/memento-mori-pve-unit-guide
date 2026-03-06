@@ -187,7 +187,8 @@ const GENERAL_UNITS = [
         most stages. Another great target of this buff is Cordie, but this is more useful in tower because Cordie's 
         survivability in main quest is still not great even with Yildiz.</p>
         <br>
-        <p><strong>Speed Tuning — </strong> No speed tuning is required</p>
+        <p><strong>Speed Tuning — </strong>Since Yildiz's S1 can inflict Buff Immunity on enemies, you will want her to
+        move before the enemies or your DPS in some scenarios.</p>
       `
     },
 
