@@ -1,0 +1,43 @@
+const UNIT_NAMES = {
+    Artie: "Artie",
+    Belle: "Belle",
+    Cordie:  "Cordie",
+    Dian: "Dian",
+    Eirene: "Eirene",
+    Eureka: "Eureka",
+    Evelyn: "Evelyn",
+    Fia: "Fia",
+    FiaLR5: "Fia",
+    Florence: "Florence",
+    Kobel: "Kobel",
+    LunaLR: "Luna",
+    LunaLR5: "Luna",
+    Matilda: "Matilda",
+    Meria: "Meria",
+    Merlyn: "Merlyn",
+    Mertillier: "Mertillier",
+    Milla: "Milla",
+    Mimi: "Mimi",
+    Moineau: "Moineau",
+    Nina1: "Nina",
+    Primavera: "Primavera",
+    Regina: "Regina",
+    Rusalka: "Rusalka",
+    Samleth: "Summer Amleth",
+    Sivi: "Sivi",
+    SmoddeySR: "Summer Moddey",
+    SmoddeyUR: "Summer Moddey",
+    Tama: "Tama",
+    Xamour: "Winter Amour",
+    XLuna: "Winter Luna",
+    XSol: "Winter Soltina",
+    XTropon: "Winter Tropon",
+    XTropon1: "Winter Tropon",
+    Yildiz: "Yildiz",
+    Yuni: "Yuni",
+
+};
+
+function u(id) {
+    return { id: id, name: UNIT_NAMES[id] || id };
+}

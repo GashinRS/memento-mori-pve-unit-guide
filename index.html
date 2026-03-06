@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memento Mori — PvE Limited Unit Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+    <script src="data/helper.js"></script>
+    <script src="data/general.js"></script>
+    <script src="data/quest.js"></script>
+    <script src="data/tower.js"></script>
+    <script src="data/mention.js"></script>
+    <script src="units-data.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-wrap">
+
+    <header>
+        <p class="header-eyebrow">Bank of Innovation</p>
+        <h1>Memento Mori<br>PvE Limited Unit Guide</h1>
+        <p class="header-sub">Units worth pulling — ranked by impact across PvE content</p>
+    </header>
+
+    <nav class="nav">
+        <a href="#general" data-cat="general">&#11088; Generally Useful</a>
+        <a href="#quest"   data-cat="quest">&#128506; Main Quest</a>
+        <a href="#tower"   data-cat="tower">&#128508; Tower</a>
+        <a href="#mention" data-cat="mention">&#10022; Honorable Mentions</a>
+    </nav>
+
+    <!-- ── WIP Banner ── -->
+    <div class="wip-banner">
+        <div class="wip-icon">&#9998;</div>
+        <div class="wip-body">
+            <div class="wip-title">Work in Progress</div>
+            <p class="wip-text">
+                This guide is still being written and expanded. Some units may be missing and entries may be lacking
+                explanations, team suggestions or detailed weapon notes.
+                Please contact @gashin on Discord if you have suggestions, found any errors or if there is anything
+                else you want to discuss regarding this guide.
+                <strong>Planned additions in future revisions:</strong>
+            </p>
+            <ul class="wip-list">
+                <li>Add an icon overview of all units on this list with links to their respective explanation cards</li>
+                <li>Explanation of difference between Tower and Main Quest and how this influences what units are good</li>
+                <li>Explanation of different DPS units and when each should be used (Cordie, Florence, Fia, Dian, lvl 1 Nina)</li>
+                <li>The level 1 strategy</li>
+                <li>Base pool unit guide</li>
+                <li>Examples of unconventional PVE teams that work in very specific scenarios</li>
+                <li>List of common abbreviations</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ── Guide Assumptions ── -->
+    <div class="assumptions-block">
+        <div class="assumptions-header">
+            <h2>Before You Read</h2>
+            <div class="assumptions-line"></div>
+        </div>
+        <div class="assumptions-grid">
+            <div class="assumption-card">
+                <div class="assumption-title">&#9878; Gear Requirements</div>
+                <p class="assumption-text">
+                    As a general rule of thumb, you always want as much Defense as possible on your support units.
+                    This means that SR gear is actually a really cost-effective way to get a lot of defense, because
+                    the 4-set bonus gives a 30% Defense buff. Due to this, almost every support unit wants to have
+                    4 SR with the boots and gloves (the two gear pieces that give defense) being as high level as
+                    possible.
+                    <br>
+                    When it comes to upgrade investment, all your upgrades should go to boots and gloves
+                    first once you max out the weapon, other gear pieces can safely be ignored as they do not contribute
+                    as much. For example, if your level link is 360, the gear your supports want is level 360 SR boots
+                    and gloves, and then 2 level 240 pieces of SR gear between the helmet, dress and necklace. When
+                    other gear is expected, this will be clearly stated in that unit's section.
+                </p>
+            </div>
+            <div class="assumption-card">
+                <div class="assumption-title">&#9733; Character Rarity Requirements</div>
+                <p class="assumption-text">
+                    As a general rule of thumb, support units only require one copy, and having more often does not yield
+                    better performance. The expected rarity for every unit in this list will be visible from the icons
+                    used. When a character performs noticeably better at higher rarities, this will be clearly stated
+                    in the unit's section.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="legend">
+        <div>
+            <div class="legend-group-title">Paired Unit Badges</div>
+            <div class="legend-items">
+                <div class="legend-item"><span class="pair-badge dps">DPS</span> Main or sub damage dealer</div>
+                <div class="legend-item"><span class="pair-badge support">Support</span> Enabler or buffer</div>
+                <div class="legend-item"><span class="pair-badge required">Required</span> Must-have teammate</div>
+            </div>
+        </div>
+        <div>
+            <div class="legend-group-title">Weapon Investment</div>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="weapon-icon optional" style="width:36px;height:36px"></div>
+                    Optional — minor gains
+                </div>
+                <div class="legend-item">
+                    <div class="weapon-icon recommended" style="width:36px;height:36px"></div>
+                    Recommended — noticeable upgrade
+                </div>
+                <div class="legend-item">
+                    <div class="weapon-icon required" style="width:36px;height:36px"></div>
+                    Required — unit needs this
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mount"></div>
+
+    <footer>
+        <p>This is a community guide — not affiliated with <span>Bank of Innovation</span>.</p>
+    </footer>
+
+</div>
+
+<script>
+    /* ── Helpers ── */
+    function imgFB(src, alt, fb) {
+        return '<img src="' + src + '" alt="' + alt + '" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' + fb;
+    }
+
+    function unitIcon(id, size) {
+        size = size || '4.75rem';
+        return '<div class="unit-icon" style="width:' + size + ';height:' + size + '">' +
+            imgFB('icons/units/' + id + '.png', id,
+                '<div class="placeholder-label" style="display:none">Unit<br>Icon</div>') +
+            '</div>';
+    }
+
+    /* ── Weapons ── */
+    function renderWeapons(weapons) {
+        if (!weapons || weapons.length === 0) {
+            return '<span class="no-weapon-badge">No weapon needed</span>';
+        }
+        return weapons.map(function(w) {
+            var tierLabel = { optional: 'Optional', recommended: 'Recommended', required: 'Required' }[w.tier] || w.tier;
+            var tipText = tierLabel + (w.description ? ' — click for details' : '');
+            var desc = w.description ? '<div class="weapon-desc">' + w.description + '</div>' : '';
+            return '<div class="weapon-wrap" onclick="this.classList.toggle(\'active\')">' +
+                '<div class="weapon-icon ' + w.tier + '">' +
+                imgFB('icons/weapons/' + w.level + '.png', w.level, '') +
+                '</div>' +
+                '<div class="weapon-dot ' + w.tier + '"></div>' +
+                '<div class="weapon-tooltip">' + tipText + '</div>' +
+                desc +
+                '</div>';
+        }).join('');
+    }
+
+    /* ── Pairs ── */
+    function renderPairs(pairs) {
+        if (!pairs || !pairs.length) return '';
+        var chips = pairs.map(function(p) {
+            return '<div class="pair-group">' +
+                '<div class="tip-icon">' +
+                '<div class="pair-unit-icon">' +
+                imgFB('icons/units/' + p.id + '.png', p.name,
+                    '<div class="pair-unit-placeholder" style="display:flex">?</div>') +
+                '</div>' +
+                '<div class="tip">' + p.name + '</div>' +
+                '</div>' +
+                '<span class="pair-badge ' + p.badge + '">' + p.badge + '</span>' +
+                '</div>';
+        }).join('');
+        return '<div class="row-label">Pairs Well With</div>' +
+            '<div class="pairs-row">' + chips + '</div>';
+    }
+
+    /* ── Teams ── */
+    // Each slot is now an object: { id, name }
+    function renderTeams(teams) {
+        if (!teams || !teams.length) return '';
+        var rows = teams.map(function(team) {
+            var slots = team.slots.map(function(slot, i) {
+                return '<div class="tip-icon">' +
+                    '<div class="team-slot">' +
+                    imgFB('icons/units/' + slot.id + '.png', slot.name,
+                        '<div class="slot-placeholder" style="display:none"></div>') +
+                    '</div>' +
+                    '<div class="tip">' + slot.name + '</div>' +
+                    '</div>';
+            }).join('');
+            var label = team.label
+                ? '<span class="team-label">' + team.label + '</span>'
+                : '';
+            return '<div class="team-row">' + slots + label + '</div>';
+        }).join('');
+        return '<div class="teams-section">' +
+            '<div class="row-label">Team Examples</div>' + rows +
+            '</div>';
+    }
+
+    /* ── Card ── */
+    function renderCard(unit) {
+        return '<div class="unit-card">' +
+            '<div class="unit-top">' +
+            unitIcon(unit.id) +
+            '<div class="unit-meta">' +
+            '<div class="unit-name">' + unit.name + '</div>' +
+            '<div class="unit-role">' + unit.role +
+            (unit.scalable ? ' <span class="copies-badge">&#8679; scales with copies</span>' : '') +
+            '</div>' +
+            '<div class="weapons-row">' +
+            '<span class="weapons-label">Weapon</span>' +
+            renderWeapons(unit.weapons) +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            renderPairs(unit.pairs) +
+            renderTeams(unit.teams) +
+            '<div class="card-divider"></div>' +
+            '<p class="unit-desc">' + unit.desc.trim() + '</p>' +
+            '</div>';
+    }
+
+    /* ── Sections ── */
+    var SECTIONS = [
+        { key:'general', id:'general', label:'Generally Useful',  pill:'All Content' },
+        { key:'quest',   id:'quest',   label:'Main Quest Units',   pill:'Quest Only'  },
+        { key:'tower',   id:'tower',   label:'Tower Units',        pill:'Tower Only'  },
+        { key:'mention', id:'mention', label:'Honorable Mentions', pill:'Situational',
+            note: `While units are not bad, they are either outshadowed by stronger alternatives or are meant to be
+            paired with Florence who is outshadowed herself by Cordie. They may still be worth considering when
+            preferred units are unavailable due to the long rerun cycles (~6 months) in this game, or if they align
+            with your personal progression goals. That said, the general advice is to pass on them for PVE purposes and
+            conserve resources (both Diamonds and Crystals) unless you have a specific reason to pull, like using them in PVP as well.` },
+    ];
+
+    document.getElementById('mount').innerHTML = SECTIONS.map(function(sec) {
+        var units = UNITS[sec.key] || [];
+        var cards = units.map(renderCard).join('');
+        var note = sec.note
+            ? '<p class="section-note">' + sec.note + '</p>'
+            : '';
+        return '<section class="section-block" id="' + sec.id + '" data-cat="' + sec.key + '">' +
+            '<div class="section-header">' +
+            '<h2>' + sec.label + '</h2>' +
+            '<span class="section-pill">' + sec.pill + '</span>' +
+            '<div class="section-line"></div>' +
+            '</div>' +
+            note +
+            '<div class="unit-grid">' + cards + '</div>' +
+            '</section>';
+    }).join('');
+</script>
+</body>
+</html>
