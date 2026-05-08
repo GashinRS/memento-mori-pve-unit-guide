@@ -32,4 +32,4 @@ Eirene is one of the few units in the game who can debuff defense (25% in main q
 **Speed Tuning — ** Since Eirene is a debuffer, you want her to act before your main DPS. Another
         thing to take into account is that when possible, you want your main DPS to be the slowest unit on your team
         to get the extra cooldown reduction. When this is not possible due to a lack of speed runes, having Meria
-        as the slowest unit is also a good option since she can replenish her barriers faster that way.
+        as the slowest unit is also a good option since she can replenish her Multi-Barriers faster that way.

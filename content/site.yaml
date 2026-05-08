@@ -43,6 +43,25 @@ assumptions:
         better performance. The expected rarity for every unit in this list will be visible from the icons
         used. When a character performs noticeably better at higher rarities, this will be clearly stated
         in the unit's section.
+glossary:
+  title: Glossary
+  terms:
+    - term: Enfeeble
+      definition: |
+        This debuff decreases a character's ATK.
+        Unlike normal Decreased Stat debuffs,
+        the amount a target's stat is decreased by via Enfeeble is calculated based on their in-battle stat.
+    - term: Multi-Barrier
+      aliases: [Multi-Barriers]
+      definition: |
+        This buff provides a multi-layered barrier.
+        When a character takes damage,
+        1 barrier layer is depleted to nullify that damage.
+        If Multi-Barrier is overlapped with Invulnerable, the barrier layer will not be depleted.
+        If Multi-Barrier is overlapped with Shield, Multi-Barrier will be used first.
+        If multiple kinds of Multi-Barrier are overlapping with each other, they will be used based on the following order of priority.
+    - term: UW
+      definition: Unique Weapon
 sections:
   - key: general
     id: general

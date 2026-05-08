@@ -216,7 +216,7 @@ const GENERAL_UNITS = [
             }
         ],
         "teams": [],
-        "desc": "<p>Fia is without a doubt one of the most important limited units you can pull for PVE. Technically she is usable         at UR+ rarity, but Fia is the only unit on this entire list that gets a firm recommendation to LR. She is unique         in the sense that she can act as both a support unit and DPS.</p>\n<p>Fia's support comes from her passive that increases adjacent allies' HP by 50% of her own, which greatly contributes         to the effectiveness of level 1 strategies and units that rely on their HP to deal damage like Dian. This buff         does not however contribute much to general survivability of other units, as other means such as barriers and         buffing defense are more suited for this.</p>\n<p>Fia can also act as a strong DPS option because her S2 deals direct damage based on damage dealt to her. Direct         damage bypasses enemy defenses and also does not require any attack or PMDB from the attacker. Because Fia also         buffs her own HP, this directly affects how much damage she can deal, as being able to take more damage (higher HP)         also means more damage dealt. This means that the only offense stats Fia requires are crit rate, crit damage and         HP.</p>\n<p>Because both her support and DPS roles require as much HP as possible, the gear should also reflect this, as you         want set bonuses that boost HP and stamina. For an LR Fia, the standard gear setup would be 4 UR + 2 SSR. Because         Fia scales with her HP, getting her to LR5 can also be a good option for the added HP and the ability to use         4 LR instead of 4 UR gear for even more HP.</p>\n<p><strong>Main Quest —</strong> Fia's support role is most prevalent in main quest where you will often     use her to buff up level 1 Nina (and sometimes Winter Tropon's) HP. If you want to use her as a DPS, Yildiz is a     must-have for the additional bulk, and LR5 also improves her performance by a big amount.</p>\n<p><strong>Tower —</strong>In tower Fia will mostly be used as a DPS. Because of lower enemy attack stats compared to     main quest, Yildiz is not required and LR should be more than enough to perform adequately in most scenarios. An issue you can run into     sometimes in tower when pairing her with Yildiz is that she becomes too bulky, which reduces her damage, so this is     something to take into account.</p>\n<p><strong>Speed Tuning —</strong> In most cases you do not want any speed on her, because taking another hit before     being able to attack will increase her damage. There are cases where attacking first can be beneficial however. This     can for example be the case when facing Amour, as attacking first will let you avoid the Blight debuff, which prevents healing.</p>"
+        "desc": "<p>Fia is without a doubt one of the most important limited units you can pull for PVE. Technically she is usable         at UR+ rarity, but Fia is the only unit on this entire list that gets a firm recommendation to LR. She is unique         in the sense that she can act as both a support unit and DPS.</p>\n<p>Fia's support comes from her passive that increases adjacent allies' HP by 50% of her own, which greatly contributes         to the effectiveness of level 1 strategies and units that rely on their HP to deal damage like Dian. This buff         does not however contribute much to general survivability of other units, as other means such as Multi-Barriers and         buffing defense are more suited for this.</p>\n<p>Fia can also act as a strong DPS option because her S2 deals direct damage based on damage dealt to her. Direct         damage bypasses enemy defenses and also does not require any attack or PMDB from the attacker. Because Fia also         buffs her own HP, this directly affects how much damage she can deal, as being able to take more damage (higher HP)         also means more damage dealt. This means that the only offense stats Fia requires are crit rate, crit damage and         HP.</p>\n<p>Because both her support and DPS roles require as much HP as possible, the gear should also reflect this, as you         want set bonuses that boost HP and stamina. For an LR Fia, the standard gear setup would be 4 UR + 2 SSR. Because         Fia scales with her HP, getting her to LR5 can also be a good option for the added HP and the ability to use         4 LR instead of 4 UR gear for even more HP.</p>\n<p><strong>Main Quest —</strong> Fia's support role is most prevalent in main quest where you will often     use her to buff up level 1 Nina (and sometimes Winter Tropon's) HP. If you want to use her as a DPS, Yildiz is a     must-have for the additional bulk, and LR5 also improves her performance by a big amount.</p>\n<p><strong>Tower —</strong>In tower Fia will mostly be used as a DPS. Because of lower enemy attack stats compared to     main quest, Yildiz is not required and LR should be more than enough to perform adequately in most scenarios. An issue you can run into     sometimes in tower when pairing her with Yildiz is that she becomes too bulky, which reduces her damage, so this is     something to take into account.</p>\n<p><strong>Speed Tuning —</strong> In most cases you do not want any speed on her, because taking another hit before     being able to attack will increase her damage. There are cases where attacking first can be beneficial however. This     can for example be the case when facing Amour, as attacking first will let you avoid the Blight debuff, which prevents healing.</p>"
     },
     {
         "id": "Yildiz",
@@ -658,7 +658,7 @@ const GENERAL_UNITS = [
                 ]
             }
         ],
-        "desc": "<p>Eirene is one of the few units in the game who can debuff defense (25% in main quest, 50% in tower),         which is an incredibly powerful debuff.         It is better than P.DEF debuffs due to defense contributing more to bulk. When you pair her with Cordie,         you can even get enemies down to 0 defense which can allow you to beat stages that would otherwise have way too         much defense to beat with some other teams. She also has an additional effect where the slowest ally on the team         can get a 1 turn cooldown reduction when they use their first auto attack.</p>\n<p><strong>Main Quest — </strong>Eirene's debuff is undispellable in main quest, which means that you do not         need any debuff accuracy for the debuff to land. It even works on units with debuff immunity (Cordie).</p>\n<p><strong>Speed Tuning — </strong> Since Eirene is a debuffer, you want her to act before your main DPS. Another         thing to take into account is that when possible, you want your main DPS to be the slowest unit on your team         to get the extra cooldown reduction. When this is not possible due to a lack of speed runes, having Meria         as the slowest unit is also a good option since she can replenish her barriers faster that way.</p>"
+        "desc": "<p>Eirene is one of the few units in the game who can debuff defense (25% in main quest, 50% in tower),         which is an incredibly powerful debuff.         It is better than P.DEF debuffs due to defense contributing more to bulk. When you pair her with Cordie,         you can even get enemies down to 0 defense which can allow you to beat stages that would otherwise have way too         much defense to beat with some other teams. She also has an additional effect where the slowest ally on the team         can get a 1 turn cooldown reduction when they use their first auto attack.</p>\n<p><strong>Main Quest — </strong>Eirene's debuff is undispellable in main quest, which means that you do not         need any debuff accuracy for the debuff to land. It even works on units with debuff immunity (Cordie).</p>\n<p><strong>Speed Tuning — </strong> Since Eirene is a debuffer, you want her to act before your main DPS. Another         thing to take into account is that when possible, you want your main DPS to be the slowest unit on your team         to get the extra cooldown reduction. When this is not possible due to a lack of speed runes, having Meria         as the slowest unit is also a good option since she can replenish her Multi-Barriers faster that way.</p>"
     },
     {
         "id": "Meria",
@@ -668,7 +668,7 @@ const GENERAL_UNITS = [
             {
                 "level": "MeriaSSR",
                 "tier": "recommended",
-                "description": "Grants an extra S1 hit thus an extra barrier, greatly contributing to survival"
+                "description": "Grants an extra S1 hit thus an extra Multi-Barrier, greatly contributing to survival"
             },
             {
                 "level": "MeriaUR",
@@ -684,7 +684,7 @@ const GENERAL_UNITS = [
             }
         ],
         "teams": [],
-        "desc": "<p>Meria is one of the most universally useful support units in the game and can fit into almost any team, making her         a must pull. The reason for this is a passive effect that grants her a barrier for every hit she does.         When she already has 4 barriers, the extra barriers overflow to the ally with the highest attack. Because her S1         hits 5 times, this means that she will immediately grant 4 barriers to herself and 1 to the highest attack ally.         Her S2 hits 5 times as well, which can immediately replenish broken barriers. This makes for a powerful survival tool, and         hard counters most units that rely on AoE attacks like Soltina since they do not have the necessary hits to break         the barriers.</p>\n<p><strong>Speed Tuning — </strong>In most cases Meria's speed does not matter that much. Because she already         has an innate 20% speed buff, she will be faster than most enemies without any speed runes and will thus         already grant her barriers before the enemies can act. When this is not the case, giving her         a bit of speed runes can help.</p>"
+        "desc": "<p>Meria is one of the most universally useful support units in the game and can fit into almost any team, making her         a must pull. The reason for this is a passive effect that grants her a Multi-Barrier for every hit she does.         When she already has 4 Multi-Barriers, the extra Multi-Barriers overflow to the ally with the highest attack. Because her S1         hits 5 times, this means that she will immediately grant 4 Multi-Barriers to herself and 1 to the highest attack ally.         Her S2 hits 5 times as well, which can immediately replenish broken Multi-Barriers. This makes for a powerful survival tool, and         hard counters most units that rely on AoE attacks like Soltina since they do not have the necessary hits to break         the Multi-Barriers.</p>\n<p><strong>Speed Tuning — </strong>In most cases Meria's speed does not matter that much. Because she already         has an innate 20% speed buff, she will be faster than most enemies without any speed runes and will thus         already grant her Multi-Barriers before the enemies can act. When this is not the case, giving her         a bit of speed runes can help.</p>"
     }
 ];
 
@@ -1021,7 +1021,7 @@ const HONORABLE_MENTIONS = [
             }
         ],
         "teams": [],
-        "desc": "<p>Winter Luna provides the highest attack ally with 4 barriers every 8 turns if they are an Emerald or Crimson ally. Her S1 additionally inflicts Enfeeble on 3 to 5 enemies depending on whether you have her UW.</p>"
+        "desc": "<p>Winter Luna provides the highest attack ally with 4 Multi-Barriers every 8 turns if they are an Emerald or Crimson ally. Her S1 additionally inflicts Enfeeble on 3 to 5 enemies depending on whether you have her UW.</p>"
     },
     {
         "id": "Yuni",
@@ -1052,7 +1052,7 @@ const HONORABLE_MENTIONS = [
         "weapons": [],
         "pairs": [],
         "teams": [],
-        "desc": "<p>Rusalka grants 5 barriers to herself and 1 to every ally when she is defeated. This is useful as a one time increase in  survivability, but she gets outdone by Meria, who can provide barriers every turn without requiring her to be defeated.</p>\n<p><strong>Speed Tuning —</strong> No speed tuning is required</p>"
+        "desc": "<p>Rusalka grants 5 Multi-Barriers to herself and 1 to every ally when she is defeated. This is useful as a one time increase in  survivability, but she gets outdone by Meria, who can provide Multi-Barriers every turn without requiring her to be defeated.</p>\n<p><strong>Speed Tuning —</strong> No speed tuning is required</p>"
     },
     {
         "id": "Regina",
@@ -1181,6 +1181,26 @@ const SITE_CONTENT = {
                 "title": "Character Rarity Requirements",
                 "icon": "&#9733;",
                 "text": "<p>As a general rule of thumb, support units only require one copy, and having more often does not yield better performance. The expected rarity for every unit in this list will be visible from the icons used. When a character performs noticeably better at higher rarities, this will be clearly stated in the unit's section.</p>"
+            }
+        ]
+    },
+    "glossary": {
+        "title": "Glossary",
+        "terms": [
+            {
+                "term": "Enfeeble",
+                "definition": "<p>This debuff decreases a character's ATK. Unlike normal Decreased Stat debuffs, the amount a target's stat is decreased by via Enfeeble is calculated based on their in-battle stat.</p>"
+            },
+            {
+                "term": "Multi-Barrier",
+                "aliases": [
+                    "Multi-Barriers"
+                ],
+                "definition": "<p>This buff provides a multi-layered barrier. When a character takes damage, 1 barrier layer is depleted to nullify that damage. If Multi-Barrier is overlapped with Invulnerable, the barrier layer will not be depleted. If Multi-Barrier is overlapped with Shield, Multi-Barrier will be used first. If multiple kinds of Multi-Barrier are overlapping with each other, they will be used based on the following order of priority.</p>"
+            },
+            {
+                "term": "UW",
+                "definition": "<p>Unique Weapon</p>"
             }
         ]
     },

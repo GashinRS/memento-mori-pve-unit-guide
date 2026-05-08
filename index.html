@@ -24,6 +24,8 @@
     <!-- ── Guide Assumptions ── -->
     <div id="assumptions-block"></div>
 
+    <div id="glossary-block"></div>
+
     <div id="unit-overview"></div>
 
     <div class="legend">
@@ -89,6 +91,33 @@
 
     function unitAnchor(unit) {
         return 'unit-' + unit.id;
+    }
+
+    function glossaryAnchor(term) {
+        return 'glossary-' + String(term || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    }
+
+    function linkGlossaryTerms(html) {
+        var glossary = SITE_CONTENT.glossary;
+        if (!glossary || !glossary.terms) return html;
+        var terms = [];
+        glossary.terms.forEach(function(entry) {
+            [entry.term].concat(entry.aliases || []).forEach(function(label) {
+                terms.push({ label: label, anchor: glossaryAnchor(entry.term) });
+            });
+        });
+        terms.sort(function(a, b) { return b.label.length - a.label.length; });
+        var pattern = new RegExp('\\b(' + terms.map(function(term) {
+            return term.label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }).join('|') + ')\\b', 'g');
+        var anchorByLabel = {};
+        terms.forEach(function(term) { anchorByLabel[term.label] = term.anchor; });
+        return html.split(/(<[^>]+>)/g).map(function(part) {
+            if (part.charAt(0) === '<') return part;
+            return part.replace(pattern, function(match) {
+                return '<a class="glossary-link" href="#' + anchorByLabel[match] + '">' + match + '</a>';
+            });
+        }).join('');
     }
 
     /* ── Weapons ── */
@@ -177,7 +206,7 @@
             renderPairs(unit.pairs) +
             renderTeams(unit.teams) +
             '<div class="card-divider"></div>' +
-            '<div class="unit-desc">' + unit.desc.trim() + '</div>' +
+            '<div class="unit-desc">' + linkGlossaryTerms(unit.desc.trim()) + '</div>' +
             '</div>';
     }
 
@@ -232,6 +261,27 @@
                     '</div>';
             }).join('') +
             '</div>' +
+            '</details>';
+    }
+
+    function renderGlossary() {
+        var glossary = SITE_CONTENT.glossary;
+        if (!glossary || !glossary.terms || !glossary.terms.length) return;
+        document.getElementById('glossary-block').innerHTML =
+            '<details class="glossary-block">' +
+            '<summary class="glossary-header">' +
+            '<span class="glossary-toggle"></span>' +
+            '<h2>' + glossary.title + '</h2>' +
+            '<div class="glossary-line"></div>' +
+            '</summary>' +
+            '<dl class="glossary-list">' +
+            glossary.terms.map(function(entry) {
+                return '<div class="glossary-entry" id="' + glossaryAnchor(entry.term) + '">' +
+                    '<dt>' + entry.term + '</dt>' +
+                    '<dd>' + entry.definition + '</dd>' +
+                    '</div>';
+            }).join('') +
+            '</dl>' +
             '</details>';
     }
 
@@ -298,6 +348,7 @@
     renderNav();
     renderWip();
     renderAssumptions();
+    renderGlossary();
     renderUnitOverview();
     renderFooter();
     setupBackToTop();

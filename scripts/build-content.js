@@ -26,6 +26,8 @@ const CONTAINER_KEYS = new Set([
     "weapons",
     "wip",
     "general",
+    "glossary",
+    "terms",
     "quest",
     "tower",
     "mention",
@@ -341,7 +343,7 @@ function siteMarkdownToHtml(value, key = "") {
         );
     }
     if (typeof value !== "string") return value;
-    if (!["text", "note"].includes(key)) return value;
+    if (!["text", "note", "definition"].includes(key)) return value;
     return markdownToHtml(value);
 }
 

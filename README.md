@@ -53,6 +53,8 @@ Edit `content/site.yaml` for the header, WIP banner, assumptions, section labels
 
 Edit `content/unit-names.yaml` when a team or pair references an icon id that does not have its own guide entry.
 
+Glossary terms also live in `content/site.yaml`. Terms and aliases are automatically linked when they appear in unit explanations.
+
 ## Building Generated Data
 
 After editing content, run:

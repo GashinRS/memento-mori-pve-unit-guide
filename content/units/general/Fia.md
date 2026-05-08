@@ -27,7 +27,7 @@ Fia is without a doubt one of the most important limited units you can pull for 
 
         Fia's support comes from her passive that increases adjacent allies' HP by 50% of her own, which greatly contributes
         to the effectiveness of level 1 strategies and units that rely on their HP to deal damage like Dian. This buff
-        does not however contribute much to general survivability of other units, as other means such as barriers and
+        does not however contribute much to general survivability of other units, as other means such as Multi-Barriers and
         buffing defense are more suited for this.
 
         Fia can also act as a strong DPS option because her S2 deals direct damage based on damage dealt to her. Direct

@@ -411,6 +411,42 @@ footer span { color: var(--sepia-light); }
 .assumption-text strong { color: var(--ink-mid); font-weight: 600; }
 .assumption-text em { color: var(--sepia); font-style: italic; }
 
+/* ── Glossary ── */
+.glossary-block { background: rgba(255,252,245,.68); backdrop-filter: blur(6px); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 0; margin-bottom: 32px; box-shadow: 0 2px 12px rgba(80,50,20,.05); overflow: hidden; }
+.glossary-header { display: flex; align-items: center; gap: 12px; padding: 12px 20px; cursor: pointer; list-style: none; }
+.glossary-header::-webkit-details-marker { display: none; }
+.glossary-header h2 { font-family: 'Cinzel', serif; font-size: .85rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; color: var(--ink-mid); }
+.glossary-line { flex: 1; height: 1px; background: var(--border); }
+.glossary-toggle {
+    width: 1.05rem;
+    height: 1.05rem;
+    border-radius: 50%;
+    border: 1px solid var(--border-hover);
+    position: relative;
+    flex-shrink: 0;
+    background: rgba(255,252,245,.55);
+}
+.glossary-toggle::before,
+.glossary-toggle::after {
+    content: '';
+    position: absolute;
+    background: var(--teal);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.glossary-toggle::before { width: 8px; height: 1px; }
+.glossary-toggle::after { width: 1px; height: 8px; transition: opacity .15s; }
+.glossary-block[open] .glossary-toggle::after { opacity: 0; }
+.glossary-block[open] .glossary-header { border-bottom: 1px solid var(--border); }
+.glossary-list { display: grid; gap: 16px; padding: 20px 28px 24px; }
+.glossary-entry { scroll-margin-top: 18px; }
+.glossary-entry dt { font-family: 'Cinzel', serif; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); margin-bottom: 4px; }
+.glossary-entry dd { font-size: .86rem; color: var(--ink-light); line-height: 1.55; }
+.glossary-entry dd p + p { margin-top: .55rem; }
+.glossary-link { color: var(--teal); text-decoration: none; border-bottom: 1px dotted rgba(58,122,114,.55); }
+.glossary-link:hover { color: var(--sepia); border-bottom-color: var(--sepia); }
+
 .copies-badge {
     display: inline-flex;
     align-items: center;
