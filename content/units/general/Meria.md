@@ -1,8 +1,6 @@
 ---
 id: Meria
 name: Meria
-category: general
-order: 11
 role: Support
 weapons:
   - level: MeriaSSR

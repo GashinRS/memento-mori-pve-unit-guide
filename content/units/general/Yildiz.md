@@ -1,8 +1,6 @@
 ---
 id: Yildiz
 name: Yildiz
-category: general
-order: 5
 role: Support
 weapons:
   - level: YildizUR

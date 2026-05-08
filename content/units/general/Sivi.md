@@ -1,8 +1,6 @@
 ---
 id: Sivi
 name: Sivi
-category: general
-order: 1
 role: Support
 weapons:
   - level: SiviUR

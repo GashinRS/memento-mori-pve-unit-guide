@@ -1,8 +1,6 @@
 ---
 id: SmoddeySR
 name: Summer Moddey
-category: quest
-order: 2
 role: Support - DPS
 scalable: true
 aliases:

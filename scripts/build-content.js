@@ -25,6 +25,10 @@ const CONTAINER_KEYS = new Set([
     "teams",
     "weapons",
     "wip",
+    "general",
+    "quest",
+    "tower",
+    "mention",
 ]);
 
 function parseScalar(value) {
@@ -264,33 +268,59 @@ function hydrateUnitReferences(units, names) {
 }
 
 function loadUnits() {
-    const files = fs
-        .readdirSync(unitsDir)
-        .filter((file) => file.endsWith(".md"))
-        .sort();
+    const orderPath = path.join(contentDir, "unit-order.yaml");
+    const unitOrder = fs.existsSync(orderPath) ? parseYaml(fs.readFileSync(orderPath, "utf8")) : {};
+    const unitsById = new Map();
+    const units = [];
 
-    const units = files.map((file) => {
-        const filePath = path.join(unitsDir, file);
-        const parsed = parseFrontmatter(fs.readFileSync(filePath, "utf8"), filePath);
-        return {
-            ...parsed.data,
-            body: parsed.body,
-            aliases: parsed.data.aliases || [],
-            order: Number(parsed.data.order || 0),
-        };
+    CATEGORY_KEYS.forEach((category) => {
+        const categoryDir = path.join(unitsDir, category);
+        if (!fs.existsSync(categoryDir)) return;
+
+        fs.readdirSync(categoryDir)
+            .filter((file) => file.endsWith(".md"))
+            .sort()
+            .forEach((file) => {
+                const filePath = path.join(categoryDir, file);
+                const parsed = parseFrontmatter(fs.readFileSync(filePath, "utf8"), filePath);
+                const unit = {
+                    ...parsed.data,
+                    category,
+                    body: parsed.body,
+                    aliases: parsed.data.aliases || [],
+                };
+                if (unitsById.has(unit.id)) {
+                    throw new Error(`Duplicate unit id "${unit.id}" in ${filePath}`);
+                }
+                unitsById.set(unit.id, unit);
+                units.push(unit);
+            });
     });
 
     const names = unitNameMap(units);
     const grouped = Object.fromEntries(CATEGORY_KEYS.map((key) => [key, []]));
 
-    units
-        .sort((a, b) => a.order - b.order || a.name.localeCompare(b.name))
-        .forEach((unit) => {
-            if (!grouped[unit.category]) {
-                throw new Error(`${unit.id} uses unknown category "${unit.category}"`);
+    CATEGORY_KEYS.forEach((category) => {
+        const orderedIds = Array.isArray(unitOrder[category]) ? unitOrder[category] : [];
+        const categoryUnits = units
+            .filter((unit) => unit.category === category)
+            .sort((a, b) => a.name.localeCompare(b.name));
+        const categoryById = new Map(categoryUnits.map((unit) => [unit.id, unit]));
+        const seen = new Set();
+
+        orderedIds.forEach((id) => {
+            const unit = categoryById.get(id);
+            if (!unit) {
+                throw new Error(`content/unit-order.yaml references missing ${category} unit "${id}"`);
             }
             grouped[unit.category].push(unit);
+            seen.add(id);
         });
+
+        categoryUnits.forEach((unit) => {
+            if (!seen.has(unit.id)) grouped[category].push(unit);
+        });
+    });
 
     return {
         names,

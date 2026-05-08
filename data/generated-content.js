@@ -1071,7 +1071,6 @@ const SITE_CONTENT = {
         "title": "Work in Progress",
         "text": "<p>This guide is still being written and expanded. Some units may be missing and entries may be lacking explanations, team suggestions or detailed weapon notes. Please contact @gashin on Discord if you have suggestions, found any errors or if there is anything else you want to discuss regarding this guide. <strong>Planned additions in future revisions:</strong></p>",
         "items": [
-            "Add an icon overview of all units on this list with links to their respective explanation cards",
             "Explanation of difference between Tower and Main Quest and how this influences what units are good",
             "Explanation of different DPS units and when each should be used (Cordie, Florence, Fia, Dian, lvl 1 Nina)",
             "The level 1 strategy",

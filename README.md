@@ -4,21 +4,22 @@ This is a static guide site. The editable guide content lives in `content/`; the
 
 ## Editing Units
 
-Each unit has one Markdown file in `content/units/`.
+Each unit has one Markdown file in a category folder under `content/units/`.
 
-- Frontmatter controls metadata such as category, role, weapons, pairs, and teams.
+- Frontmatter controls metadata such as role, weapons, pairs, and teams.
+- The unit category comes from its folder: `general`, `quest`, `tower`, or `mention`.
 - The Markdown body becomes the unit description.
-- Use `order` to control where a unit appears inside its category.
+- Edit `content/unit-order.yaml` to control where units appear inside each category.
 - Use `aliases` when an icon id should display as the same character name, such as `FiaLR5`.
 
 Example:
+
+`content/units/general/Sivi.md`
 
 ```md
 ---
 id: Sivi
 name: Sivi
-category: general
-order: 1
 role: Support
 weapons:
   - level: SiviUR
@@ -35,6 +36,15 @@ teams:
 Write the unit explanation here.
 
 **Speed Tuning —** Add speed notes here.
+```
+
+`content/unit-order.yaml`
+
+```yaml
+general:
+  - Sivi
+  - XTropon1
+  - XSol
 ```
 
 ## Editing Page Copy

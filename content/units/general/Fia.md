@@ -1,8 +1,6 @@
 ---
 id: Fia
 name: Fia
-category: general
-order: 4
 role: Support - DPS
 scalable: true
 aliases:

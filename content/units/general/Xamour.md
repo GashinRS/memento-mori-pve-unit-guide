@@ -1,8 +1,6 @@
 ---
 id: Xamour
 name: Winter Amour
-category: general
-order: 9
 role: Support
 weapons:
   - level: XamourSSR

@@ -1,8 +1,6 @@
 ---
 id: Eirene
 name: Eirene
-category: general
-order: 10
 role: Support
 weapons:
   - level: EireneSSR

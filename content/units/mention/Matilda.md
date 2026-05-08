@@ -1,8 +1,6 @@
 ---
 id: Matilda
 name: Matilda
-category: mention
-order: 3
 role: Support
 weapons:
   - level: MatildaSSR

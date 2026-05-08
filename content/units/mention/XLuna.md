@@ -1,8 +1,6 @@
 ---
 id: XLuna
 name: Winter Luna
-category: mention
-order: 5
 role: Support
 weapons:
   - level: XLunaSSR

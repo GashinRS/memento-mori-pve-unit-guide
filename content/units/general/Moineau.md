@@ -1,8 +1,6 @@
 ---
 id: Moineau
 name: Moineau
-category: general
-order: 7
 role: Support - DPS
 scalable: true
 weapons:

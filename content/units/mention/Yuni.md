@@ -1,8 +1,6 @@
 ---
 id: Yuni
 name: Yuni
-category: mention
-order: 6
 role: Support
 scalable: true
 weapons:

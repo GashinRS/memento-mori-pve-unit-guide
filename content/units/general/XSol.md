@@ -1,8 +1,6 @@
 ---
 id: XSol
 name: Winter Soltina
-category: general
-order: 3
 role: Support
 weapons:
   - level: XSolSSR

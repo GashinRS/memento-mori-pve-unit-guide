@@ -1,8 +1,6 @@
 ---
 id: Evelyn
 name: Evelyn
-category: mention
-order: 2
 role: Support
 scalable: true
 weapons:

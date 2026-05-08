@@ -1,8 +1,6 @@
 ---
 id: Milla
 name: Milla
-category: general
-order: 6
 role: Support
 scalable: true
 weapons:

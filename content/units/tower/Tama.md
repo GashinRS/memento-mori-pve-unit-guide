@@ -1,8 +1,6 @@
 ---
 id: Tama
 name: Tama
-category: tower
-order: 1
 role: Support - DPS
 scalable: true
 weapons:

@@ -1,8 +1,6 @@
 ---
 id: Belle
 name: Belle
-category: quest
-order: 1
 role: Tank
 scalable: true
 weapons:

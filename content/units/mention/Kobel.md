@@ -1,13 +1,14 @@
 ---
-id: Regina
-name: Regina
-category: mention
-order: 8
+id: Kobel
+name: Kobel
 role: Support
 scalable: true
 weapons:
-  - level: ReginaUR
-    tier: required
+  - level: KobelSSR
+    tier: recommended
+    description: todo
+  - level: KobelUR
+    tier: recommended
     description: todo
 pairs:
   - id: Fia

@@ -1,8 +1,6 @@
 ---
 id: XTropon1
 name: Winter Tropon
-category: general
-order: 2
 role: Tank - Sub DPS
 aliases:
   - id: XTropon

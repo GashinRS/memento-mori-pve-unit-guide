@@ -1,8 +1,6 @@
 ---
 id: Samleth
 name: Summer Amleth
-category: general
-order: 8
 role: Support
 weapons:
   - level: SamlethSSR
