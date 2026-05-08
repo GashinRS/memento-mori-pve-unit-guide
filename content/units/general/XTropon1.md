@@ -33,8 +33,8 @@ Winter Tropon is a rather niche unit that, while not universally useful, can be 
         is from STR and MAG runes since those stats are mapped one to one with P.DEF and M.DEF respectively. Another way
         to get more P.DEF and M.DEF is simply through P.DEF and M.DEF runes.
 
-**Main Quest —**Winter Tropon loses her value in main quest after turn 20, because her S1 counts as
-     a debuff for enemies, and enemies in main quest cannot get debuffed past turn 20.
+**Main Quest —**Winter Tropon loses much of her value in main quest after turn 20 due to enemies gaining Berserk. This prevents
+her from applying her debuff and thus from stealing enemy stats.
 
 **Speed Tuning —**Winter Tropon wants her buff to be active as soon as possible, so she should move
     before any of the enemy units.

@@ -112,9 +112,15 @@ glossary:
       definition: |
         After each turn, increases damage dealt by 10%.
         [Debuff Immunity] Becomes immune to debuffs (cannot be dispelled).
+    - term: Direct Damage
+      definition: |
+        Direct damage ignores all enemy defense stats and is not affected by the attackers attacking stats 
+        (unless explicitly mentioned in the skill description) as well as PMDB.
     - term: UW
       aliases: [UWs]
       definition: Unique Weapon
+    - term: PMDB
+      definition: Physical/Magical Defense Break
 sections:
   - key: general
     id: general

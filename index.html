@@ -126,11 +126,11 @@
         terms.sort(function(a, b) { return b.label.length - a.label.length; });
         var pattern = new RegExp('\\b(' + terms.map(function(term) {
             return escapeRegExp(term.label);
-        }).join('|') + ')\\b', 'g');
+        }).join('|') + ')\\b', 'gi');
         var anchorByLabel = {};
-        terms.forEach(function(term) { anchorByLabel[term.label] = term.anchor; });
+        terms.forEach(function(term) { anchorByLabel[term.label.toLowerCase()] = term.anchor; });
         return linkPlainTextSegments(html, pattern, function(match) {
-            return '<a class="glossary-link" href="#' + anchorByLabel[match] + '">' + match + '</a>';
+            return '<a class="glossary-link" href="#' + anchorByLabel[match.toLowerCase()] + '">' + match + '</a>';
         });
     }
 
@@ -138,6 +138,19 @@
         return SECTIONS.flatMap(function(sec) {
             return UNITS[sec.key] || [];
         });
+    }
+
+    function samePageUnitAnchors(currentUnit) {
+        var anchors = {};
+        listedUnits().forEach(function(unit) {
+            if (currentUnit && unit.id === currentUnit.id) return;
+            anchors[unit.id] = unitAnchor(unit);
+            (unit.aliases || []).forEach(function(alias) {
+                anchors[alias.id] = unitAnchor(unit);
+            });
+            if (!anchors[unit.name]) anchors[unit.name] = unitAnchor(unit);
+        });
+        return anchors;
     }
 
     function linkUnitMentions(html, currentUnit) {
@@ -185,15 +198,23 @@
     }
 
     /* ── Pairs ── */
-    function renderPairs(pairs) {
+    function renderPairs(pairs, currentUnit) {
         if (!pairs || !pairs.length) return '';
+        var anchors = samePageUnitAnchors(currentUnit);
         var chips = pairs.map(function(p) {
-            return '<div class="pair-group">' +
-                '<div class="tip-icon">' +
-                '<div class="pair-unit-icon">' +
+            var pairIcon = '<div class="pair-unit-icon">' +
                 imgFB('icons/units/' + p.id + '.png', p.name,
                     '<div class="pair-unit-placeholder" style="display:flex">?</div>') +
-                '</div>' +
+                '</div>';
+            var target = anchors[p.id] || anchors[p.name];
+            if (target) {
+                pairIcon = '<a class="pair-unit-link" href="#' + target + '" aria-label="Go to ' + p.name + '">' +
+                    pairIcon +
+                    '</a>';
+            }
+            return '<div class="pair-group">' +
+                '<div class="tip-icon">' +
+                pairIcon +
                 '<div class="tip">' + p.name + '</div>' +
                 '</div>' +
                 '<span class="pair-badge ' + p.badge + '">' + p.badge + '</span>' +
@@ -243,7 +264,7 @@
             '</div>' +
             '</div>' +
             '</div>' +
-            renderPairs(unit.pairs) +
+            renderPairs(unit.pairs, unit) +
             renderTeams(unit.teams) +
             '<div class="card-divider"></div>' +
             '<div class="unit-desc">' + linkGuideTerms(unit.desc.trim(), unit) + '</div>' +

@@ -258,6 +258,7 @@ function hydrateUnitReferences(units, names) {
         name: unit.name,
         role: unit.role,
         scalable: unit.scalable || undefined,
+        aliases: unit.aliases,
         weapons: Array.isArray(unit.weapons) ? unit.weapons : [],
         pairs: normalizePairs(unit.pairs).map((pair) => ({
             ...pair,

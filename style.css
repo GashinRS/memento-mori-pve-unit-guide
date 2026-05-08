@@ -108,11 +108,31 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
 .page-nav a[aria-current="page"] { color: var(--sepia); border-color: var(--sepia); background: rgba(139,94,60,.08); }
 
 /* ── Legend ── */
-.legend { background: var(--bg-card); backdrop-filter: blur(6px); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px 24px; margin-bottom: 52px; display: flex; flex-wrap: wrap; gap: 20px 40px; box-shadow: 0 2px 16px rgba(80,50,20,.07); }
-.legend-group-title { font-family: 'Cinzel',serif; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 8px; }
+.legend { background: var(--bg-card); backdrop-filter: blur(6px); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px 24px; margin-bottom: 52px; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px 40px; box-shadow: 0 2px 16px rgba(80,50,20,.07); }
+.legend-group-title { font-family: 'Cinzel',serif; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 8px; }
 .legend-items { display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center; }
 .legend-item { display: flex; align-items: center; gap: 7px; font-size: .8rem; color: var(--ink-light); }
-.legend-weapon-sample { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; }
+.legend-weapon-sample {
+    width: 36px;
+    height: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+}
+.legend-weapon-sample .weapon-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.legend-weapon-sample .weapon-marker {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -16px;
+}
 
 /* ── Unit Overview ── */
 .unit-overview { margin: -20px 0 36px; }
@@ -348,6 +368,8 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
     background: rgba(240,235,224,.7); border: 1px solid var(--border);
     overflow: hidden; flex-shrink: 0;
 }
+.pair-unit-link { display: inline-flex; border-radius: 4px; text-decoration: none; }
+.pair-unit-link:hover .pair-unit-icon { border-color: var(--cat); box-shadow: 0 0 7px color-mix(in srgb,var(--cat) 24%,transparent); }
 .pair-unit-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .pair-unit-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 8px; color: var(--ink-faint); font-family: 'Cinzel',serif; }
 

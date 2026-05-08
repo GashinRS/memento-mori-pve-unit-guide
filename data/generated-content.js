@@ -46,6 +46,7 @@ const GENERAL_UNITS = [
         "id": "Sivi",
         "name": "Sivi",
         "role": "Support",
+        "aliases": [],
         "weapons": [
             {
                 "level": "SiviUR",
@@ -93,6 +94,12 @@ const GENERAL_UNITS = [
         "id": "XTropon1",
         "name": "Winter Tropon",
         "role": "Tank - Sub DPS",
+        "aliases": [
+            {
+                "id": "XTropon",
+                "name": "Winter Tropon"
+            }
+        ],
         "weapons": [],
         "pairs": [
             {
@@ -133,12 +140,13 @@ const GENERAL_UNITS = [
                 ]
             }
         ],
-        "desc": "<p>Winter Tropon is a rather niche unit that, while not universally useful, can be a very powerful tool in specific         scenarios. Due to how stat scaling and the damage formula work, all stats except for HP and speed are essentially         worth a lot more on low level units (the specifics with examples will be explained in another section which will         get added at a later date). This game mechanic pairs incredibly well with her S1, which absorbs 15% of an enemy's         attack and defense into her own attack and defense. This basically makes her immortal as long as her buff is active,         given the high defense values PVE enemies have. The only requirement for this is that you pair her with Fia         to buff her HP, since at level 1 her base HP will be really low.</p>\n<p>Something to take into consideration are the two turns where her buff is not active, since she is a lot more         vulnerable during those turns. This means she performs best against enemies with a 4 turn cooldown cycle like         herself, so she can match her stat absorption with the enemies' skill activations.</p>\n<p>Something that can help with extra bulk during the turns she is vulnerable is P.DEF and M.DEF. These stats are         generally relatively useless on normal units, but work really well for level 1 units. The main source of this         is from STR and MAG runes since those stats are mapped one to one with P.DEF and M.DEF respectively. Another way         to get more P.DEF and M.DEF is simply through P.DEF and M.DEF runes.</p>\n<p><strong>Main Quest —</strong>Winter Tropon loses her value in main quest after turn 20, because her S1 counts as      a debuff for enemies, and enemies in main quest cannot get debuffed past turn 20.</p>\n<p><strong>Speed Tuning —</strong>Winter Tropon wants her buff to be active as soon as possible, so she should move     before any of the enemy units.</p>"
+        "desc": "<p>Winter Tropon is a rather niche unit that, while not universally useful, can be a very powerful tool in specific         scenarios. Due to how stat scaling and the damage formula work, all stats except for HP and speed are essentially         worth a lot more on low level units (the specifics with examples will be explained in another section which will         get added at a later date). This game mechanic pairs incredibly well with her S1, which absorbs 15% of an enemy's         attack and defense into her own attack and defense. This basically makes her immortal as long as her buff is active,         given the high defense values PVE enemies have. The only requirement for this is that you pair her with Fia         to buff her HP, since at level 1 her base HP will be really low.</p>\n<p>Something to take into consideration are the two turns where her buff is not active, since she is a lot more         vulnerable during those turns. This means she performs best against enemies with a 4 turn cooldown cycle like         herself, so she can match her stat absorption with the enemies' skill activations.</p>\n<p>Something that can help with extra bulk during the turns she is vulnerable is P.DEF and M.DEF. These stats are         generally relatively useless on normal units, but work really well for level 1 units. The main source of this         is from STR and MAG runes since those stats are mapped one to one with P.DEF and M.DEF respectively. Another way         to get more P.DEF and M.DEF is simply through P.DEF and M.DEF runes.</p>\n<p><strong>Main Quest —</strong>Winter Tropon loses much of her value in main quest after turn 20 due to enemies gaining Berserk. This prevents her from applying her debuff and thus from stealing enemy stats.</p>\n<p><strong>Speed Tuning —</strong>Winter Tropon wants her buff to be active as soon as possible, so she should move     before any of the enemy units.</p>"
     },
     {
         "id": "XSol",
         "name": "Winter Soltina",
         "role": "Support",
+        "aliases": [],
         "weapons": [
             {
                 "level": "XSolSSR",
@@ -192,6 +200,12 @@ const GENERAL_UNITS = [
         "name": "Fia",
         "role": "Support - DPS",
         "scalable": true,
+        "aliases": [
+            {
+                "id": "FiaLR5",
+                "name": "Fia"
+            }
+        ],
         "weapons": [
             {
                 "level": "FiaUR",
@@ -223,6 +237,7 @@ const GENERAL_UNITS = [
         "id": "Yildiz",
         "name": "Yildiz",
         "role": "Support",
+        "aliases": [],
         "weapons": [
             {
                 "level": "YildizUR",
@@ -250,6 +265,7 @@ const GENERAL_UNITS = [
         "name": "Milla",
         "role": "Support",
         "scalable": true,
+        "aliases": [],
         "weapons": [
             {
                 "level": "MillaUR",
@@ -277,6 +293,7 @@ const GENERAL_UNITS = [
         "name": "Moineau",
         "role": "Support - DPS",
         "scalable": true,
+        "aliases": [],
         "weapons": [
             {
                 "level": "MoineauSSR",
@@ -419,6 +436,7 @@ const GENERAL_UNITS = [
         "id": "Samleth",
         "name": "Summer Amleth",
         "role": "Support",
+        "aliases": [],
         "weapons": [
             {
                 "level": "SamlethSSR",
@@ -526,6 +544,7 @@ const GENERAL_UNITS = [
         "id": "Xamour",
         "name": "Winter Amour",
         "role": "Support",
+        "aliases": [],
         "weapons": [
             {
                 "level": "XamourSSR",
@@ -588,6 +607,7 @@ const GENERAL_UNITS = [
         "id": "Eirene",
         "name": "Eirene",
         "role": "Support",
+        "aliases": [],
         "weapons": [
             {
                 "level": "EireneSSR",
@@ -665,6 +685,7 @@ const GENERAL_UNITS = [
         "id": "Meria",
         "name": "Meria",
         "role": "Support",
+        "aliases": [],
         "weapons": [
             {
                 "level": "MeriaSSR",
@@ -695,6 +716,7 @@ const QUEST_UNITS = [
         "name": "Belle",
         "role": "Tank",
         "scalable": true,
+        "aliases": [],
         "weapons": [],
         "pairs": [
             {
@@ -772,6 +794,12 @@ const QUEST_UNITS = [
         "name": "Summer Moddey",
         "role": "Support - DPS",
         "scalable": true,
+        "aliases": [
+            {
+                "id": "SmoddeyUR",
+                "name": "Summer Moddey"
+            }
+        ],
         "weapons": [
             {
                 "level": "SmoddeyUR",
@@ -858,6 +886,7 @@ const TOWER_UNITS = [
         "name": "Tama",
         "role": "Support - DPS",
         "scalable": true,
+        "aliases": [],
         "weapons": [],
         "pairs": [
             {
@@ -902,6 +931,7 @@ const HONORABLE_MENTIONS = [
         "id": "Eureka",
         "name": "Eureka",
         "role": "Support ",
+        "aliases": [],
         "weapons": [],
         "pairs": [
             {
@@ -918,6 +948,7 @@ const HONORABLE_MENTIONS = [
         "name": "Evelyn",
         "role": "Support",
         "scalable": true,
+        "aliases": [],
         "weapons": [
             {
                 "level": "EvelynSSR",
@@ -949,6 +980,7 @@ const HONORABLE_MENTIONS = [
         "id": "Fenny",
         "name": "Fenny",
         "role": "Support",
+        "aliases": [],
         "weapons": [
             {
                 "level": "FennyUR",
@@ -970,6 +1002,7 @@ const HONORABLE_MENTIONS = [
         "id": "Matilda",
         "name": "Matilda",
         "role": "Support",
+        "aliases": [],
         "weapons": [
             {
                 "level": "MatildaSSR",
@@ -1002,6 +1035,7 @@ const HONORABLE_MENTIONS = [
         "name": "Kobel",
         "role": "Support",
         "scalable": true,
+        "aliases": [],
         "weapons": [
             {
                 "level": "KobelSSR",
@@ -1028,6 +1062,7 @@ const HONORABLE_MENTIONS = [
         "id": "XLuna",
         "name": "Winter Luna",
         "role": "Support",
+        "aliases": [],
         "weapons": [
             {
                 "level": "XLunaSSR",
@@ -1050,6 +1085,7 @@ const HONORABLE_MENTIONS = [
         "name": "Yuni",
         "role": "Support",
         "scalable": true,
+        "aliases": [],
         "weapons": [
             {
                 "level": "YuniUR",
@@ -1071,6 +1107,7 @@ const HONORABLE_MENTIONS = [
         "id": "Rusalka",
         "name": "Rusalka",
         "role": "Support",
+        "aliases": [],
         "weapons": [],
         "pairs": [],
         "teams": [],
@@ -1081,6 +1118,7 @@ const HONORABLE_MENTIONS = [
         "name": "Regina",
         "role": "Support",
         "scalable": true,
+        "aliases": [],
         "weapons": [
             {
                 "level": "ReginaUR",
@@ -1102,6 +1140,7 @@ const HONORABLE_MENTIONS = [
         "id": "Paladea",
         "name": "Paladea",
         "role": "Support",
+        "aliases": [],
         "weapons": [
             {
                 "level": "PaladeaSSR",
@@ -1157,6 +1196,7 @@ const BASE_POOL_UNITS = [
         "id": "Merlyn",
         "name": "Merlyn",
         "role": "Support",
+        "aliases": [],
         "weapons": [],
         "pairs": [],
         "teams": [],
@@ -1166,6 +1206,7 @@ const BASE_POOL_UNITS = [
         "id": "Mertillier",
         "name": "Mertillier",
         "role": "Support",
+        "aliases": [],
         "weapons": [],
         "pairs": [],
         "teams": [],
@@ -1175,6 +1216,12 @@ const BASE_POOL_UNITS = [
         "id": "LunaLR",
         "name": "Lunalynn",
         "role": "Support",
+        "aliases": [
+            {
+                "id": "LunaLR5",
+                "name": "Lunalynn"
+            }
+        ],
         "weapons": [],
         "pairs": [],
         "teams": [],
@@ -1184,6 +1231,7 @@ const BASE_POOL_UNITS = [
         "id": "Dian",
         "name": "Dian",
         "role": "DPS",
+        "aliases": [],
         "weapons": [],
         "pairs": [],
         "teams": [],
@@ -1193,6 +1241,7 @@ const BASE_POOL_UNITS = [
         "id": "Cordie",
         "name": "Cordie",
         "role": "DPS",
+        "aliases": [],
         "weapons": [],
         "pairs": [],
         "teams": [],
@@ -1202,6 +1251,7 @@ const BASE_POOL_UNITS = [
         "id": "Florence",
         "name": "Florence",
         "role": "DPS",
+        "aliases": [],
         "weapons": [],
         "pairs": [],
         "teams": [],
@@ -1211,6 +1261,7 @@ const BASE_POOL_UNITS = [
         "id": "Mimi",
         "name": "Mimi",
         "role": "Support",
+        "aliases": [],
         "weapons": [],
         "pairs": [],
         "teams": [],
@@ -1220,6 +1271,7 @@ const BASE_POOL_UNITS = [
         "id": "Primavera",
         "name": "Primavera",
         "role": "Support",
+        "aliases": [],
         "weapons": [],
         "pairs": [],
         "teams": [],
@@ -1229,6 +1281,7 @@ const BASE_POOL_UNITS = [
         "id": "NinaLR5",
         "name": "Nina",
         "role": "DPS - support",
+        "aliases": [],
         "weapons": [],
         "pairs": [],
         "teams": [],
@@ -1313,11 +1366,19 @@ const SITE_CONTENT = {
                 "definition": "<p>After each turn, increases damage dealt by 10%. [Debuff Immunity] Becomes immune to debuffs (cannot be dispelled).</p>"
             },
             {
+                "term": "Direct Damage",
+                "definition": "<p>Direct damage ignores all enemy defense stats and is not affected by the attackers attacking stats  (unless explicitly mentioned in the skill description) as well as PMDB.</p>"
+            },
+            {
                 "term": "UW",
                 "aliases": [
                     "UWs"
                 ],
                 "definition": "<p>Unique Weapon</p>"
+            },
+            {
+                "term": "PMDB",
+                "definition": "<p>Physical/Magical Defense Break</p>"
             }
         ]
     },
