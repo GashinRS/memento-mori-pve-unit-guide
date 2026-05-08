@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memento Mori - PvE Concepts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+    <script src="data/generated-content.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+<a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
+<div class="page-wrap">
+
+    <header id="site-header"></header>
+
+    <nav class="nav page-nav">
+        <a href="index.html">Limited PvE Guide</a>
+        <a href="base-pool.html">Base Pool Guide</a>
+        <a href="concepts.html" aria-current="page">PvE Concepts</a>
+    </nav>
+
+    <div id="wip-banner"></div>
+
+    <div id="concepts-intro"></div>
+
+    <div id="concepts-toc"></div>
+
+    <div id="mount"></div>
+
+    <footer id="site-footer"></footer>
+
+</div>
+
+<script>
+    function textHtml(text) {
+        return String(text || '').replace(/\n/g, '<br>');
+    }
+
+    function conceptAnchor(article) {
+        return 'concept-' + article.id;
+    }
+
+    function renderHeader() {
+        document.getElementById('site-header').innerHTML =
+            '<p class="header-eyebrow">' + CONCEPTS_CONTENT.header.eyebrow + '</p>' +
+            '<h1>' + textHtml(CONCEPTS_CONTENT.header.title) + '</h1>' +
+            '<p class="header-sub">' + CONCEPTS_CONTENT.header.subtitle + '</p>';
+    }
+
+    function renderIntro() {
+        document.getElementById('concepts-intro').innerHTML =
+            '<section class="base-guide-intro">' +
+            '<div class="overview-header">' +
+            '<h2>' + CONCEPTS_CONTENT.intro.title + '</h2>' +
+            '<div class="overview-line"></div>' +
+            '</div>' +
+            '<div class="base-guide-intro-text">' + CONCEPTS_CONTENT.intro.text + '</div>' +
+            '</section>';
+    }
+
+    function renderWip() {
+        var wip = SITE_CONTENT.wip;
+        document.getElementById('wip-banner').innerHTML =
+            '<div class="wip-banner">' +
+            '<div class="wip-icon">&#9998;</div>' +
+            '<div class="wip-body">' +
+            '<div class="wip-title">' + wip.title + '</div>' +
+            '<div class="wip-text">' + wip.text + '</div>' +
+            '<ul class="wip-list">' + wip.items.map(function(item) {
+                return '<li>' + item + '</li>';
+            }).join('') + '</ul>' +
+            '</div>' +
+            '</div>';
+    }
+
+    function renderToc() {
+        document.getElementById('concepts-toc').innerHTML =
+            '<nav class="concept-toc" aria-label="Concepts">' +
+            '<div class="overview-header">' +
+            '<h2>Contents</h2>' +
+            '<div class="overview-line"></div>' +
+            '</div>' +
+            '<div class="concept-toc-links">' +
+            CONCEPT_ARTICLES.map(function(article) {
+                return '<a href="#' + conceptAnchor(article) + '">' + article.title + '</a>';
+            }).join('') +
+            '</div>' +
+            '</nav>';
+    }
+
+    function renderArticles() {
+        document.getElementById('mount').innerHTML =
+            '<section class="section-block base-pool-section" data-cat="general">' +
+            '<div class="section-header">' +
+            '<h2>PvE Concepts</h2>' +
+            '<span class="section-pill">Strategy Notes</span>' +
+            '<div class="section-line"></div>' +
+            '</div>' +
+            '<div class="concept-list">' +
+            CONCEPT_ARTICLES.map(function(article) {
+                return '<article class="unit-card concept-card" id="' + conceptAnchor(article) + '">' +
+                    '<div class="unit-name">' + article.title + '</div>' +
+                    '<div class="card-divider"></div>' +
+                    '<div class="unit-desc">' + (article.body || '<p>Placeholder text.</p>') + '</div>' +
+                    '</article>';
+            }).join('') +
+            '</div>' +
+            '</section>';
+    }
+
+    function renderFooter() {
+        document.getElementById('site-footer').innerHTML =
+            '<p>' + CONCEPTS_CONTENT.footer.text + ' <span>' + CONCEPTS_CONTENT.footer.brand + '</span>.</p>';
+    }
+
+    function setupBackToTop() {
+        var button = document.querySelector('.back-to-top');
+        function updateButton() {
+            button.classList.toggle('visible', window.scrollY > 500);
+        }
+        window.addEventListener('scroll', updateButton, { passive: true });
+        updateButton();
+    }
+
+    renderHeader();
+    renderWip();
+    renderIntro();
+    renderToc();
+    renderArticles();
+    renderFooter();
+    setupBackToTop();
+</script>
+</body>
+</html>

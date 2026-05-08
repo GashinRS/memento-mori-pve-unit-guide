@@ -4,6 +4,8 @@ const path = require("path");
 const root = path.resolve(__dirname, "..");
 const contentDir = path.join(root, "content");
 const unitsDir = path.join(contentDir, "units");
+const basePoolUnitsDir = path.join(contentDir, "base-pool-units");
+const conceptsDir = path.join(contentDir, "concepts");
 const outputPath = path.join(root, "data", "generated-content.js");
 
 const CATEGORY_KEYS = ["general", "quest", "tower", "mention"];
@@ -21,10 +23,13 @@ const CONTAINER_KEYS = new Set([
     "header",
     "items",
     "pairs",
+    "intro",
     "sections",
     "teams",
     "weapons",
     "wip",
+    "units",
+    "concepts",
     "general",
     "glossary",
     "terms",
@@ -269,6 +274,38 @@ function hydrateUnitReferences(units, names) {
     }));
 }
 
+function readUnitFile(filePath, extraData = {}) {
+    const parsed = parseFrontmatter(fs.readFileSync(filePath, "utf8"), filePath);
+    return {
+        ...parsed.data,
+        ...extraData,
+        body: parsed.body,
+        aliases: parsed.data.aliases || [],
+    };
+}
+
+function sortUnitsByOrder(units, orderedIds, label) {
+    const byId = new Map(units.map((unit) => [unit.id, unit]));
+    const seen = new Set();
+    const sorted = [];
+
+    orderedIds.forEach((id) => {
+        const unit = byId.get(id);
+        if (!unit) {
+            throw new Error(`${label} references missing unit "${id}"`);
+        }
+        sorted.push(unit);
+        seen.add(id);
+    });
+
+    units
+        .filter((unit) => !seen.has(unit.id))
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .forEach((unit) => sorted.push(unit));
+
+    return sorted;
+}
+
 function loadUnits() {
     const orderPath = path.join(contentDir, "unit-order.yaml");
     const unitOrder = fs.existsSync(orderPath) ? parseYaml(fs.readFileSync(orderPath, "utf8")) : {};
@@ -284,13 +321,7 @@ function loadUnits() {
             .sort()
             .forEach((file) => {
                 const filePath = path.join(categoryDir, file);
-                const parsed = parseFrontmatter(fs.readFileSync(filePath, "utf8"), filePath);
-                const unit = {
-                    ...parsed.data,
-                    category,
-                    body: parsed.body,
-                    aliases: parsed.data.aliases || [],
-                };
+                const unit = readUnitFile(filePath, { category });
                 if (unitsById.has(unit.id)) {
                     throw new Error(`Duplicate unit id "${unit.id}" in ${filePath}`);
                 }
@@ -304,24 +335,12 @@ function loadUnits() {
 
     CATEGORY_KEYS.forEach((category) => {
         const orderedIds = Array.isArray(unitOrder[category]) ? unitOrder[category] : [];
-        const categoryUnits = units
-            .filter((unit) => unit.category === category)
-            .sort((a, b) => a.name.localeCompare(b.name));
-        const categoryById = new Map(categoryUnits.map((unit) => [unit.id, unit]));
-        const seen = new Set();
-
-        orderedIds.forEach((id) => {
-            const unit = categoryById.get(id);
-            if (!unit) {
-                throw new Error(`content/unit-order.yaml references missing ${category} unit "${id}"`);
-            }
-            grouped[unit.category].push(unit);
-            seen.add(id);
-        });
-
-        categoryUnits.forEach((unit) => {
-            if (!seen.has(unit.id)) grouped[category].push(unit);
-        });
+        const categoryUnits = units.filter((unit) => unit.category === category);
+        grouped[category] = sortUnitsByOrder(
+            categoryUnits,
+            orderedIds,
+            `content/unit-order.yaml ${category}`
+        );
     });
 
     return {
@@ -333,6 +352,47 @@ function loadUnits() {
             ])
         ),
     };
+}
+
+function loadBasePoolUnits(names) {
+    if (!fs.existsSync(basePoolUnitsDir)) return [];
+    const orderPath = path.join(contentDir, "base-pool-order.yaml");
+    const orderData = fs.existsSync(orderPath) ? parseYaml(fs.readFileSync(orderPath, "utf8")) : {};
+    const orderedIds = Array.isArray(orderData.units) ? orderData.units : [];
+    const units = fs
+        .readdirSync(basePoolUnitsDir)
+        .filter((file) => file.endsWith(".md"))
+        .sort()
+        .map((file) => readUnitFile(path.join(basePoolUnitsDir, file)));
+    units.forEach((unit) => {
+        names[unit.id] = unit.name;
+        unit.aliases.forEach((alias) => {
+            names[alias.id] = alias.name || unit.name;
+        });
+    });
+    return hydrateUnitReferences(
+        sortUnitsByOrder(units, orderedIds, "content/base-pool-order.yaml"),
+        names
+    );
+}
+
+function loadConcepts() {
+    if (!fs.existsSync(conceptsDir)) return [];
+    const orderPath = path.join(contentDir, "concepts-order.yaml");
+    const orderData = fs.existsSync(orderPath) ? parseYaml(fs.readFileSync(orderPath, "utf8")) : {};
+    const orderedIds = Array.isArray(orderData.concepts) ? orderData.concepts : [];
+    const concepts = fs
+        .readdirSync(conceptsDir)
+        .filter((file) => file.endsWith(".md"))
+        .sort()
+        .map((file) => {
+            const parsed = parseFrontmatter(fs.readFileSync(path.join(conceptsDir, file), "utf8"), file);
+            return {
+                ...parsed.data,
+                body: markdownToHtml(parsed.body),
+            };
+        });
+    return sortUnitsByOrder(concepts, orderedIds, "content/concepts-order.yaml");
 }
 
 function siteMarkdownToHtml(value, key = "") {
@@ -349,8 +409,14 @@ function siteMarkdownToHtml(value, key = "") {
 
 function build() {
     const site = parseYaml(fs.readFileSync(path.join(contentDir, "site.yaml"), "utf8"));
+    const basePoolPage = parseYaml(fs.readFileSync(path.join(contentDir, "pages", "base-pool.yaml"), "utf8"));
+    const conceptsPage = parseYaml(fs.readFileSync(path.join(contentDir, "pages", "concepts.yaml"), "utf8"));
     const { names, grouped } = loadUnits();
+    const basePoolUnits = loadBasePoolUnits(names);
+    const concepts = loadConcepts();
     const normalizedSite = siteMarkdownToHtml(site);
+    const normalizedBasePoolPage = siteMarkdownToHtml(basePoolPage);
+    const normalizedConceptsPage = siteMarkdownToHtml(conceptsPage);
 
     const lines = [
         "/* Generated by scripts/build-content.js. Edit content/ instead. */",
@@ -363,7 +429,16 @@ function build() {
         lines.push("");
     });
 
+    lines.push(`const BASE_POOL_UNITS = ${JSON.stringify(basePoolUnits, null, 4)};`);
+    lines.push("");
+    lines.push(`const CONCEPT_ARTICLES = ${JSON.stringify(concepts, null, 4)};`);
+    lines.push("");
+
     lines.push(`const SITE_CONTENT = ${JSON.stringify(normalizedSite, null, 4)};`);
+    lines.push("");
+    lines.push(`const BASE_POOL_CONTENT = ${JSON.stringify(normalizedBasePoolPage, null, 4)};`);
+    lines.push("");
+    lines.push(`const CONCEPTS_CONTENT = ${JSON.stringify(normalizedConceptsPage, null, 4)};`);
     lines.push("");
     lines.push("const UNITS = {");
     lines.push("    general: GENERAL_UNITS,");

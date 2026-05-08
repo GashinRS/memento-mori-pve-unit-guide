@@ -57,6 +57,14 @@ Glossary terms also live in `content/site.yaml`. Terms and aliases are automatic
 
 Names of units that have guide entries are automatically linked when mentioned in another unit's explanation.
 
+## Additional Guide Pages
+
+The base pool guide uses `base-pool.html`, `content/pages/base-pool.yaml`, `content/base-pool-units/`, and `content/base-pool-order.yaml`.
+
+Future long-form guides, such as a level 1 strategy guide, should get their own HTML page plus a matching file under `content/pages/`.
+
+The PvE concepts page uses `concepts.html`, `content/pages/concepts.yaml`, `content/concepts/`, and `content/concepts-order.yaml`.
+
 ## Building Generated Data
 
 After editing content, run:

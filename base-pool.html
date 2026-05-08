@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memento Mori - Base Pool Unit Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+    <script src="data/generated-content.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+<a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
+<div class="page-wrap">
+
+    <header id="site-header"></header>
+
+    <nav class="nav page-nav">
+        <a href="index.html">Limited PvE Guide</a>
+        <a href="base-pool.html" aria-current="page">Base Pool Guide</a>
+        <a href="concepts.html">PvE Concepts</a>
+    </nav>
+
+    <div id="wip-banner"></div>
+
+    <div id="base-pool-intro"></div>
+
+    <div id="base-pool-overview"></div>
+
+    <div id="mount"></div>
+
+    <footer id="site-footer"></footer>
+
+</div>
+
+<script>
+    function textHtml(text) {
+        return String(text || '').replace(/\n/g, '<br>');
+    }
+
+    function imgFB(src, alt, fb) {
+        return '<img src="' + src + '" alt="' + alt + '" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' + fb;
+    }
+
+    function unitAnchor(unit) {
+        return 'unit-' + unit.id;
+    }
+
+    function unitIcon(id, size) {
+        size = size || '4.75rem';
+        return '<div class="unit-icon" style="width:' + size + ';height:' + size + '">' +
+            imgFB('icons/units/' + id + '.png', id,
+                '<div class="placeholder-label" style="display:none">Unit<br>Icon</div>') +
+            '</div>';
+    }
+
+    function renderWeapons(weapons) {
+        if (!weapons || weapons.length === 0) {
+            return '<span class="no-weapon-badge">No weapon needed</span>';
+        }
+        return weapons.map(function(w) {
+            var tierLabel = { optional: 'Optional', recommended: 'Recommended', required: 'Required' }[w.tier] || w.tier;
+            var tipText = tierLabel + (w.description ? ' - click for details' : '');
+            var desc = w.description ? '<div class="weapon-desc">' + w.description + '</div>' : '';
+            var markerDots = { optional: 0, recommended: 1, required: 2 }[w.tier] || 0;
+            var marker = '<div class="weapon-marker ' + w.tier + '" aria-hidden="true">' +
+                Array(markerDots + 1).join('<span></span>') +
+                '</div>';
+            return '<div class="weapon-wrap" onclick="this.classList.toggle(\'active\')">' +
+                '<div class="weapon-icon ' + w.tier + '">' +
+                imgFB('icons/weapons/' + w.level + '.png', w.level, '') +
+                '</div>' +
+                marker +
+                '<div class="weapon-tooltip">' + tipText + '</div>' +
+                desc +
+                '</div>';
+        }).join('');
+    }
+
+    function renderCard(unit) {
+        return '<div class="unit-card base-pool-card" id="' + unitAnchor(unit) + '">' +
+            '<div class="unit-top">' +
+            unitIcon(unit.id) +
+            '<div class="unit-meta">' +
+            '<div class="unit-name">' + unit.name + '</div>' +
+            '<div class="unit-role">' + unit.role +
+            (unit.scalable ? ' <span class="copies-badge">&#8679; scales with copies</span>' : '') +
+            '</div>' +
+            '<div class="weapons-row">' +
+            '<span class="weapons-label">Weapon</span>' +
+            renderWeapons(unit.weapons) +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '<div class="card-divider"></div>' +
+            '<div class="unit-desc">' + unit.desc.trim() + '</div>' +
+            '</div>';
+    }
+
+    function renderHeader() {
+        document.getElementById('site-header').innerHTML =
+            '<p class="header-eyebrow">' + BASE_POOL_CONTENT.header.eyebrow + '</p>' +
+            '<h1>' + textHtml(BASE_POOL_CONTENT.header.title) + '</h1>' +
+            '<p class="header-sub">' + BASE_POOL_CONTENT.header.subtitle + '</p>';
+    }
+
+    function renderIntro() {
+        document.getElementById('base-pool-intro').innerHTML =
+            '<section class="base-guide-intro">' +
+            '<div class="overview-header">' +
+            '<h2>' + BASE_POOL_CONTENT.intro.title + '</h2>' +
+            '<div class="overview-line"></div>' +
+            '</div>' +
+            '<div class="base-guide-intro-text">' + BASE_POOL_CONTENT.intro.text + '</div>' +
+            '</section>';
+    }
+
+    function renderWip() {
+        var wip = SITE_CONTENT.wip;
+        document.getElementById('wip-banner').innerHTML =
+            '<div class="wip-banner">' +
+            '<div class="wip-icon">&#9998;</div>' +
+            '<div class="wip-body">' +
+            '<div class="wip-title">' + wip.title + '</div>' +
+            '<div class="wip-text">' + wip.text + '</div>' +
+            '<ul class="wip-list">' + wip.items.map(function(item) {
+                return '<li>' + item + '</li>';
+            }).join('') + '</ul>' +
+            '</div>' +
+            '</div>';
+    }
+
+    function renderOverview() {
+        document.getElementById('base-pool-overview').innerHTML =
+            '<div class="unit-overview">' +
+            '<div class="overview-header">' +
+            '<h2>Unit Index</h2>' +
+            '<div class="overview-line"></div>' +
+            '</div>' +
+            '<div class="overview-icons base-overview-icons">' +
+            BASE_POOL_UNITS.map(function(unit) {
+                return '<a class="overview-icon tip-icon" href="#' + unitAnchor(unit) + '" aria-label="' + unit.name + '">' +
+                    imgFB('icons/units/' + unit.id + '.png', unit.name,
+                        '<div class="overview-placeholder" style="display:none">?</div>') +
+                    '<span class="tip">' + unit.name + '</span>' +
+                    '</a>';
+            }).join('') +
+            '</div>' +
+            '</div>';
+    }
+
+    function renderFooter() {
+        document.getElementById('site-footer').innerHTML =
+            '<p>' + BASE_POOL_CONTENT.footer.text + ' <span>' + BASE_POOL_CONTENT.footer.brand + '</span>.</p>';
+    }
+
+    function setupBackToTop() {
+        var button = document.querySelector('.back-to-top');
+        function updateButton() {
+            button.classList.toggle('visible', window.scrollY > 500);
+        }
+        window.addEventListener('scroll', updateButton, { passive: true });
+        updateButton();
+    }
+
+    document.getElementById('mount').innerHTML =
+        '<section class="section-block base-pool-section" data-cat="general">' +
+        '<div class="section-header">' +
+        '<h2>Base Pool Units</h2>' +
+        '<span class="section-pill">Permanent Pool</span>' +
+        '<div class="section-line"></div>' +
+        '</div>' +
+        '<div class="unit-grid">' + BASE_POOL_UNITS.map(renderCard).join('') + '</div>' +
+        '</section>';
+
+    renderHeader();
+    renderWip();
+    renderIntro();
+    renderOverview();
+    renderFooter();
+    setupBackToTop();
+</script>
+</body>
+</html>

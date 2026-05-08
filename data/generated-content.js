@@ -11,8 +11,8 @@ const UNIT_NAMES = {
     "FiaLR5": "Fia",
     "Florence": "Florence",
     "Kobel": "Kobel",
-    "LunaLR": "Luna",
-    "LunaLR5": "Luna",
+    "LunaLR": "Lunalynn",
+    "LunaLR5": "Lunalynn",
     "Matilda": "Matilda",
     "Meria": "Meria",
     "Merlyn": "Merlyn",
@@ -1151,6 +1151,76 @@ const HONORABLE_MENTIONS = [
     }
 ];
 
+const BASE_POOL_UNITS = [
+    {
+        "id": "Merlyn",
+        "name": "Merlyn",
+        "role": "Support",
+        "weapons": [],
+        "pairs": [],
+        "teams": [],
+        "desc": "<p>Placeholder text.</p>"
+    },
+    {
+        "id": "Mertillier",
+        "name": "Mertillier",
+        "role": "Support",
+        "weapons": [],
+        "pairs": [],
+        "teams": [],
+        "desc": "<p>Placeholder text.</p>"
+    },
+    {
+        "id": "LunaLR",
+        "name": "Lunalynn",
+        "role": "Support",
+        "weapons": [],
+        "pairs": [],
+        "teams": [],
+        "desc": "<p>Placeholder text.</p>"
+    },
+    {
+        "id": "Dian",
+        "name": "Dian",
+        "role": "DPS",
+        "weapons": [],
+        "pairs": [],
+        "teams": [],
+        "desc": "<p>Placeholder text.</p>"
+    },
+    {
+        "id": "Cordie",
+        "name": "Cordie",
+        "role": "DPS",
+        "weapons": [],
+        "pairs": [],
+        "teams": [],
+        "desc": "<p>Placeholder text.</p>"
+    },
+    {
+        "id": "Florence",
+        "name": "Florence",
+        "role": "DPS",
+        "weapons": [],
+        "pairs": [],
+        "teams": [],
+        "desc": "<p>Placeholder text.</p>"
+    }
+];
+
+const CONCEPT_ARTICLES = [
+    {
+        "id": "level-1-strategy",
+        "title": "Level 1 Strategy",
+        "body": ""
+    },
+    {
+        "id": "unconventional-pve-teams",
+        "title": "Unconventional PvE Teams",
+        "body": ""
+    }
+];
+
 const SITE_CONTENT = {
     "header": {
         "eyebrow": "Bank of Innovation",
@@ -1161,10 +1231,10 @@ const SITE_CONTENT = {
         "title": "Work in Progress",
         "text": "<p>This guide is still being written and expanded. Some units may be missing and entries may be lacking explanations, team suggestions or detailed weapon notes. Please contact @gashin on Discord if you have suggestions, found any errors or if there is anything else you want to discuss regarding this guide. <strong>Planned additions in future revisions:</strong></p>",
         "items": [
-            "Explanation of different DPS units and when each should be used (Cordie, Florence, Fia, Dian, lvl 1 Nina)",
             "The level 1 strategy",
             "Base pool unit guide",
-            "Examples of unconventional PVE teams that work in very specific scenarios"
+            "Examples of unconventional PVE teams that work in very specific scenarios",
+            "Rerun estimations"
         ]
     },
     "assumptions": {
@@ -1256,6 +1326,38 @@ const SITE_CONTENT = {
             "note": "<p>While units are not bad, they are either outshadowed by stronger alternatives or are meant to be paired with Florence who is outshadowed herself by Cordie. They may still be worth considering when preferred units are unavailable due to the long rerun cycles (~6 months) in this game, or if they align with your personal progression goals. That said, the general advice is to pass on them for PVE purposes and conserve resources (both Diamonds and Crystals) unless you have a specific reason to pull, like using them in PVP as well.</p>"
         }
     ],
+    "footer": {
+        "text": "<p>This is a community guide - not affiliated with</p>",
+        "brand": "Bank of Innovation"
+    }
+};
+
+const BASE_POOL_CONTENT = {
+    "header": {
+        "eyebrow": "Bank of Innovation",
+        "title": "Memento Mori\nBase Pool Unit Guide",
+        "subtitle": "Permanent units worth understanding for PvE progression"
+    },
+    "intro": {
+        "title": "About This Guide",
+        "text": "<p>This page is for base pool units: characters that are not limited and can appear from regular sources over time. The goal is to explain what each unit is useful for, what kind of investment they need, and when they are worth fitting into PvE teams.</p>"
+    },
+    "footer": {
+        "text": "<p>This is a community guide - not affiliated with</p>",
+        "brand": "Bank of Innovation"
+    }
+};
+
+const CONCEPTS_CONTENT = {
+    "header": {
+        "eyebrow": "Bank of Innovation",
+        "title": "Memento Mori\nPvE Concepts",
+        "subtitle": "Strategy notes and examples that do not belong to one unit list"
+    },
+    "intro": {
+        "title": "About This Page",
+        "text": "<p>This page is for broader PvE explanations, strategy notes, and team-building examples that are too large for the main unit guide but still useful as references.</p>"
+    },
     "footer": {
         "text": "<p>This is a community guide - not affiliated with</p>",
         "brand": "Bank of Innovation"

@@ -104,6 +104,8 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
 .nav a[data-cat="quest"]:hover   { color: var(--teal);  border-color: var(--teal);  background: rgba(58,122,114,.08); }
 .nav a[data-cat="tower"]:hover   { color: var(--ruby);  border-color: var(--ruby);  background: rgba(139,58,58,.08); }
 .nav a[data-cat="mention"]:hover { color: var(--sage);  border-color: var(--sage);  background: rgba(74,122,74,.08); }
+.page-nav { margin-top: -34px; margin-bottom: 34px; }
+.page-nav a[aria-current="page"] { color: var(--sepia); border-color: var(--sepia); background: rgba(139,94,60,.08); }
 
 /* ── Legend ── */
 .legend { background: var(--bg-card); backdrop-filter: blur(6px); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px 24px; margin-bottom: 52px; display: flex; flex-wrap: wrap; gap: 20px 40px; box-shadow: 0 2px 16px rgba(80,50,20,.07); }
@@ -158,6 +160,45 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
 }
 .overview-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .overview-placeholder { width: 100%; height: 100%; align-items: center; justify-content: center; color: var(--ink-faint); font-family: 'Cinzel',serif; font-size: .75rem; }
+.base-overview-icons { margin-left: 0; }
+
+.base-guide-intro {
+    background: rgba(255,252,245,.68);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 18px 22px;
+    margin-bottom: 36px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 12px rgba(80,50,20,.05);
+}
+.base-guide-intro .overview-header { margin-bottom: 10px; }
+.base-guide-intro-text { font-size: .9rem; color: var(--ink-light); line-height: 1.6; }
+.base-guide-intro-text p + p { margin-top: .65rem; }
+.concept-toc {
+    background: rgba(255,252,245,.58);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 16px 20px;
+    margin-bottom: 36px;
+    backdrop-filter: blur(6px);
+}
+.concept-toc .overview-header { margin-bottom: 10px; }
+.concept-toc-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.concept-toc-links a {
+    font-family: 'Cinzel',serif;
+    font-size: 10px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--ink-mid);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg-card);
+    padding: 5px 12px;
+}
+.concept-toc-links a:hover { color: var(--sepia); border-color: var(--sepia); }
+.concept-list { display: grid; gap: 20px; }
+.concept-card { scroll-margin-top: 18px; }
 
 /* ── Sections ── */
 .section-block { margin-bottom: 64px; }
