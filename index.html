@@ -10,7 +10,8 @@
     <script src="data/generated-content.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
+<a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
 <div class="page-wrap">
 
     <header id="site-header"></header>
@@ -267,6 +268,15 @@
             '<p>' + SITE_CONTENT.footer.text + ' <span>' + SITE_CONTENT.footer.brand + '</span>.</p>';
     }
 
+    function setupBackToTop() {
+        var button = document.querySelector('.back-to-top');
+        function updateButton() {
+            button.classList.toggle('visible', window.scrollY > 500);
+        }
+        window.addEventListener('scroll', updateButton, { passive: true });
+        updateButton();
+    }
+
     document.getElementById('mount').innerHTML = SECTIONS.map(function(sec) {
         var units = UNITS[sec.key] || [];
         var cards = units.map(renderCard).join('');
@@ -290,6 +300,7 @@
     renderAssumptions();
     renderUnitOverview();
     renderFooter();
+    setupBackToTop();
 </script>
 </body>
 </html>

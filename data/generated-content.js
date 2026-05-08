@@ -35,7 +35,9 @@ const UNIT_NAMES = {
     "XTropon": "Winter Tropon",
     "XTropon1": "Winter Tropon",
     "Yildiz": "Yildiz",
-    "Yuni": "Yuni"
+    "Yuni": "Yuni",
+    "Fenny": "Fenny",
+    "Paladea": "Paladea"
 };
 
 const GENERAL_UNITS = [
@@ -1045,6 +1047,53 @@ const HONORABLE_MENTIONS = [
         "weapons": [
             {
                 "level": "ReginaUR",
+                "tier": "required",
+                "description": "todo"
+            }
+        ],
+        "pairs": [
+            {
+                "id": "Fia",
+                "name": "Fia",
+                "badge": "dps"
+            }
+        ],
+        "teams": [],
+        "desc": "<p>Placeholder text</p>"
+    },
+    {
+        "id": "Paladea",
+        "name": "Paladea",
+        "role": "Support",
+        "weapons": [
+            {
+                "level": "PaladeaSSR",
+                "tier": "optional",
+                "description": "todo"
+            },
+            {
+                "level": "PaladeaUR",
+                "tier": "optional",
+                "description": "todo"
+            }
+        ],
+        "pairs": [
+            {
+                "id": "Cordie",
+                "name": "Cordie",
+                "badge": "dps"
+            }
+        ],
+        "teams": [],
+        "desc": "<p>Placeholder text</p>"
+    },
+    {
+        "id": "Fenny",
+        "name": "Fenny",
+        "role": "Support",
+        "weapons": [
+            {
+                "level": "FennyUR",
                 "tier": "required",
                 "description": "todo"
             }
