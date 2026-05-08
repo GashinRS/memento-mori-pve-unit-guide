@@ -23,6 +23,8 @@
     <!-- ── Guide Assumptions ── -->
     <div id="assumptions-block"></div>
 
+    <div id="unit-overview"></div>
+
     <div class="legend">
         <div>
             <div class="legend-group-title">Paired Unit Badges</div>
@@ -36,15 +38,24 @@
             <div class="legend-group-title">Weapon Investment</div>
             <div class="legend-items">
                 <div class="legend-item">
-                    <div class="weapon-icon optional" style="width:36px;height:36px"></div>
+                    <div class="legend-weapon-sample">
+                        <div class="weapon-icon optional" style="width:36px;height:36px"></div>
+                        <div class="weapon-marker optional"></div>
+                    </div>
                     Optional — minor gains
                 </div>
                 <div class="legend-item">
-                    <div class="weapon-icon recommended" style="width:36px;height:36px"></div>
+                    <div class="legend-weapon-sample">
+                        <div class="weapon-icon recommended" style="width:36px;height:36px"></div>
+                        <div class="weapon-marker recommended"><span></span></div>
+                    </div>
                     Recommended — noticeable upgrade
                 </div>
                 <div class="legend-item">
-                    <div class="weapon-icon required" style="width:36px;height:36px"></div>
+                    <div class="legend-weapon-sample">
+                        <div class="weapon-icon required" style="width:36px;height:36px"></div>
+                        <div class="weapon-marker required"><span></span><span></span></div>
+                    </div>
                     Required — unit needs this
                 </div>
             </div>
@@ -75,6 +86,10 @@
             '</div>';
     }
 
+    function unitAnchor(unit) {
+        return 'unit-' + unit.id;
+    }
+
     /* ── Weapons ── */
     function renderWeapons(weapons) {
         if (!weapons || weapons.length === 0) {
@@ -84,11 +99,15 @@
             var tierLabel = { optional: 'Optional', recommended: 'Recommended', required: 'Required' }[w.tier] || w.tier;
             var tipText = tierLabel + (w.description ? ' — click for details' : '');
             var desc = w.description ? '<div class="weapon-desc">' + w.description + '</div>' : '';
+            var markerDots = { optional: 0, recommended: 1, required: 2 }[w.tier] || 0;
+            var marker = '<div class="weapon-marker ' + w.tier + '" aria-hidden="true">' +
+                Array(markerDots + 1).join('<span></span>') +
+                '</div>';
             return '<div class="weapon-wrap" onclick="this.classList.toggle(\'active\')">' +
                 '<div class="weapon-icon ' + w.tier + '">' +
                 imgFB('icons/weapons/' + w.level + '.png', w.level, '') +
                 '</div>' +
-                '<div class="weapon-dot ' + w.tier + '"></div>' +
+                marker +
                 '<div class="weapon-tooltip">' + tipText + '</div>' +
                 desc +
                 '</div>';
@@ -140,7 +159,7 @@
 
     /* ── Card ── */
     function renderCard(unit) {
-        return '<div class="unit-card">' +
+        return '<div class="unit-card" id="' + unitAnchor(unit) + '">' +
             '<div class="unit-top">' +
             unitIcon(unit.id) +
             '<div class="unit-meta">' +
@@ -198,16 +217,45 @@
     function renderAssumptions() {
         var assumptions = SITE_CONTENT.assumptions;
         document.getElementById('assumptions-block').innerHTML =
-            '<div class="assumptions-block">' +
-            '<div class="assumptions-header">' +
+            '<details class="assumptions-block">' +
+            '<summary class="assumptions-header">' +
+            '<span class="assumptions-toggle"></span>' +
             '<h2>' + assumptions.title + '</h2>' +
             '<div class="assumptions-line"></div>' +
-            '</div>' +
+            '</summary>' +
             '<div class="assumptions-grid">' +
             assumptions.cards.map(function(card) {
                 return '<div class="assumption-card">' +
                     '<div class="assumption-title">' + card.icon + ' ' + card.title + '</div>' +
                     '<div class="assumption-text">' + card.text + '</div>' +
+                    '</div>';
+            }).join('') +
+            '</div>' +
+            '</details>';
+    }
+
+    function renderUnitOverview() {
+        document.getElementById('unit-overview').innerHTML =
+            '<div class="unit-overview">' +
+            '<div class="overview-header">' +
+            '<h2>Unit Index</h2>' +
+            '<div class="overview-line"></div>' +
+            '</div>' +
+            '<div class="overview-groups">' +
+            SECTIONS.map(function(sec) {
+                var units = UNITS[sec.key] || [];
+                if (!units.length) return '';
+                return '<div class="overview-group" data-cat="' + sec.key + '">' +
+                    '<div class="overview-label">' + (sec.navLabel || sec.label) + '</div>' +
+                    '<div class="overview-icons">' +
+                    units.map(function(unit) {
+                        return '<a class="overview-icon tip-icon" href="#' + unitAnchor(unit) + '" aria-label="' + unit.name + '">' +
+                            imgFB('icons/units/' + unit.id + '.png', unit.name,
+                                '<div class="overview-placeholder" style="display:none">?</div>') +
+                            '<span class="tip">' + unit.name + '</span>' +
+                            '</a>';
+                    }).join('') +
+                    '</div>' +
                     '</div>';
             }).join('') +
             '</div>' +
@@ -240,6 +288,7 @@
     renderNav();
     renderWip();
     renderAssumptions();
+    renderUnitOverview();
     renderFooter();
 </script>
 </body>
