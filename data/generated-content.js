@@ -519,7 +519,7 @@ const GENERAL_UNITS = [
                 ]
             }
         ],
-        "desc": "<p>Summer Amleth's main support comes from her S1, which decreases enemies' P.DEF by 25% and 50% in main quest and         tower respectively. She has the added benefit of being able to take a certain amount of hits without dying         thanks to her passive The Queen's Resolve.</p>\n<p><strong>Speed Tuning — </strong> Since she is a debuffer, you want her to act before your main DPS.</p>"
+        "desc": "<p>Summer Amleth's main support comes from her S1, which decreases enemies' P.DEF by 25% and 50% in main quest and tower respectively. She has the added benefit of being able to take a certain amount of hits without dying thanks to her passive The Queen's Resolve.</p>\n<p>The shown team with Tama is mainly meant for tower, it does not work as well as the version with Moineau but will  still allow you to do significant amounts of damage when combining the debuffs from Cordie, Tama and Summer Amleth.</p>\n<p><strong>Speed Tuning — </strong> Since she is a debuffer, you want her to act before your main DPS.</p>"
     },
     {
         "id": "Xamour",
@@ -910,7 +910,7 @@ const HONORABLE_MENTIONS = [
             }
         ],
         "teams": [],
-        "desc": "<p>Placeholder text</p>"
+        "desc": "<p>When Eureka is defeated, she grants the highest attack ally a 50% attack buff when this is an Azure ally. She has an additional support effect where she can cleanse herself and the 2 highest attack allies when Eureka is debuffed. While neither of these effects are particularly powerful (given that you are forced to run an Azure DPS, i.e. Florence), she can be a good budget support option in the early game given that she does not require her UW or extra copies.</p>\n<p><strong>Speed Tuning —</strong> No speed tuning is required</p>"
     },
     {
         "id": "Evelyn",
@@ -918,6 +918,11 @@ const HONORABLE_MENTIONS = [
         "role": "Support",
         "scalable": true,
         "weapons": [
+            {
+                "level": "EvelynSSR",
+                "tier": "required",
+                "description": "todo"
+            },
             {
                 "level": "EvelynUR",
                 "tier": "optional",
@@ -929,10 +934,15 @@ const HONORABLE_MENTIONS = [
                 "id": "Florence",
                 "name": "Florence",
                 "badge": "dps"
+            },
+            {
+                "id": "Cordie",
+                "name": "Cordie",
+                "badge": "dps"
             }
         ],
         "teams": [],
-        "desc": "<p>Placeholder text</p>"
+        "desc": "<p>Evenlyn's S1 increases the attack and chance to hit of the highest attack ally with 50%. A useful but relatively barebones effect that is mainly useful early on in the game when you do not have access to many other supports.</p>\n<p><strong>Speed Tuning —</strong> As she is an active buffer, you want her to move before your main DPS.</p>"
     },
     {
         "id": "Matilda",
@@ -955,10 +965,15 @@ const HONORABLE_MENTIONS = [
                 "id": "Florence",
                 "name": "Florence",
                 "badge": "dps"
+            },
+            {
+                "id": "Cordie",
+                "name": "Cordie",
+                "badge": "dps"
             }
         ],
         "teams": [],
-        "desc": "<p>Placeholder text</p>"
+        "desc": "<p>Evenlyn's S1 increases the attack, crit rate and chance to hit the highest attack ally with 50%. A useful but relatively  barebones effect that is mainly useful early on in the game when you do not have access to many other supports. She is  slightly better than Evelyn because she additionally buffs crit rate compared to Evenlyn.</p>\n<p><strong>Speed Tuning —</strong> As she is an active buffer, you want her to move before your main DPS.</p>"
     },
     {
         "id": "Kobel",
@@ -985,7 +1000,7 @@ const HONORABLE_MENTIONS = [
             }
         ],
         "teams": [],
-        "desc": "<p>Placeholder text</p>"
+        "desc": "<p>Kobel increases the HP and HP drain of adjacent allies (no UW) or the entire team (UR UW) by 20% of her own HP. She can additionally inflict Enfeeble on enemies which helps with tanking hits. However, her HP buffing is not as good as Milla's because it uses her own HP as a threshold, which requires you to have her at a high rarity to be really useful. Stacking her with Milla is not a good option in most cases due to a lack of team slots.</p>\n<p><strong>Speed Tuning —</strong> Since you want to inflic Enfeeble before the enemy gets to act, you want Kobel to be faster than all enemies when possible.</p>"
     },
     {
         "id": "XLuna",
@@ -1006,7 +1021,7 @@ const HONORABLE_MENTIONS = [
             }
         ],
         "teams": [],
-        "desc": "<p>Placeholder text</p>"
+        "desc": "<p>Winter Luna provides the highest attack ally with 4 barriers every 8 turns if they are an Emerald or Crimson ally. Her S1 additionally inflicts Enfeeble on 3 to 5 enemies depending on whether you have her UW.</p>"
     },
     {
         "id": "Yuni",
@@ -1037,7 +1052,7 @@ const HONORABLE_MENTIONS = [
         "weapons": [],
         "pairs": [],
         "teams": [],
-        "desc": "<p>Placeholder text</p>"
+        "desc": "<p>Rusalka grants 5 barriers to herself and 1 to every ally when she is defeated. This is useful as a one time increase in  survivability, but she gets outdone by Meria, who can provide barriers every turn without requiring her to be defeated.</p>\n<p><strong>Speed Tuning —</strong> No speed tuning is required</p>"
     },
     {
         "id": "Regina",
@@ -1059,7 +1074,7 @@ const HONORABLE_MENTIONS = [
             }
         ],
         "teams": [],
-        "desc": "<p>Placeholder text</p>"
+        "desc": "<p>Regina increases the HP of the ally with the highest attack by 50%, and can additionally increase the damage taken by all enemies by 10%. It is mainly the HP buff we are interested in, as this provides Fia with a sizable increase in HP. Out of the units in this section, Regina provides the biggest HP buff to Fia. However, her soul makes it harder to slot her in, as you cannot get any soul bonuses with the rest of your team. Because of this Milla will usually be the better option if you simply want to increase Fia's HP.</p>\n<p><strong>Speed Tuning —</strong> No speed tuning is required</p>"
     },
     {
         "id": "Paladea",
@@ -1084,8 +1099,34 @@ const HONORABLE_MENTIONS = [
                 "badge": "dps"
             }
         ],
-        "teams": [],
-        "desc": "<p>Placeholder text</p>"
+        "teams": [
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Florence",
+                        "name": "Florence"
+                    },
+                    {
+                        "id": "Xamour",
+                        "name": "Winter Amour"
+                    },
+                    {
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "Paladea",
+                        "name": "Paladea"
+                    },
+                    {
+                        "id": "LunaLR5",
+                        "name": "Luna"
+                    }
+                ]
+            }
+        ],
+        "desc": "<p>Paladea is mostly useful much later on in the game when you start to encounter enemies with a lot of annoying buffs,  which are mostly Amber units. Her S2 can turn from Bullet Storm into Black Bullet, in which case it can dispel 2 buffs  per hit, and hits for a total of 4 times. This effect will allow you to dispel most buffs that need to be dispelled.  The main issue is that is can be hard to trigger to condition to use Black Bullet, which is to have crit a total of 20 times or more across all units in your team before Paladea uses her S2. The only team where this is realistically possible is the team listed in the team examples where you use a double DPS setup. LR5 Lunalynn here is preferred over lower rarities due to the fact that her LR UW grants extra crit rate.</p>\n<p>If all conditions are met to use Black Bullet, Paladea herself can also do a decent amount of damage if the enemy she is attacking is debuffed by Cordie, even at very low rarity. Because of this it is recommended to run her with another max level weapon if you cannot afford or want her own UW.</p>\n<p><strong>Speed Tuning —</strong> Paladea's S1 debuffs the enemies' crit resistance, so you want her to move before either of your DPSs and Lunalynn</p>"
     },
     {
         "id": "Fenny",
@@ -1106,7 +1147,7 @@ const HONORABLE_MENTIONS = [
             }
         ],
         "teams": [],
-        "desc": "<p>Placeholder text</p>"
+        "desc": "<p>Fenny increases the HP of the 2 allies with the lowest speed by 30%. This is the only useful effect she has and is only useful on Fia. This also requires her to have her UR UW, and she is completely outdone by Milla in her only support role. It is not recommended to pull her nor get her UW if you already have her, but if you already have both she is usable for this specific support role.</p>\n<p><strong>Speed Tuning —</strong> No speed tuning is required</p>"
     }
 ];
 
