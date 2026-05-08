@@ -291,7 +291,7 @@
             assumptions.cards.map(function(card) {
                 return '<div class="assumption-card">' +
                     '<div class="assumption-title">' + card.icon + ' ' + card.title + '</div>' +
-                    '<div class="assumption-text">' + card.text + '</div>' +
+                    '<div class="assumption-text">' + linkGlossaryTerms(card.text) + '</div>' +
                     '</div>';
             }).join('') +
             '</div>' +

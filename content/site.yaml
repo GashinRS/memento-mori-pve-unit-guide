@@ -13,8 +13,6 @@ wip:
     else you want to discuss regarding this guide.
     **Planned additions in future revisions:**
   items:
-    - Explanation of difference between Tower and Main Quest and how this influences what units are good
-    - Explanation of different DPS units and when each should be used (Cordie, Florence, Fia, Dian, lvl 1 Nina)
     - The level 1 strategy
     - Base pool unit guide
     - Examples of unconventional PVE teams that work in very specific scenarios
@@ -42,6 +40,52 @@ assumptions:
         better performance. The expected rarity for every unit in this list will be visible from the icons
         used. When a character performs noticeably better at higher rarities, this will be clearly stated
         in the unit's section.
+    - title: Main Quest vs Tower
+      icon: "&#128506;"
+      text: |
+        Main Quest and Tower value different things, so a unit being strong in one mode does not always mean
+        they are equally strong in the other.
+
+        Main Quest enemies have much higher attack stats, so tanking them can be very hard. This means that most strategies
+        revolve around dealing as much damage as possible, as fast as possible. Prolonged fights are also disadvantageous 
+        because enemies in Main Quest get the Berserk status on turn 20 until the end of battle (turn 40).
+        
+        Furthermore, Main Quest also has NPC characters. These are enemies that are not in the pool of playable units and
+        do not have any skills, and will thus only use auto attacks. These NPCs will also always have a lot higher 
+        attack stats than regular enemies (usually up to 2-4 times as much) but have lower HP values. 
+        It is these incredibly high attack stats that allow certain
+        strategies to work that abuse enemy stats. The overall stats of a stage are roughly correlated with the amount
+        of NPC units present; more NPC units means higher overall stats for a stage. Other units can influence this as well,
+        such as stages with Cordie and Belle generally having lower stats, and stages with base N or R units also having
+        higher stats. Lastly, starting around chapter 26, all main quest enemies will have their LR UWs, even if the 
+        units are not at LR5 rarity.
+
+        In contrast, tower enemies have very high defense stats and much lower attack stats. This makes stacking debuffs
+        and teams focusing on damage over time more viable. Tower floors will also never have NPCs, and enemies do
+        not have their UWs.
+    - title: DPS Options
+      icon: "&#9876;"
+      text: |
+        Different DPS units solve different problems, so the best choice depends heavily on the stage, mode, and support
+        units available.
+
+        Cordie is the most common general-purpose DPS. Her defense debuff is the highest in the game, 
+        making her the default option for many teams.
+
+        Florence is mainly used in double DPS setups or in early game, where she is better than Cordie. Later on in the
+        game, Florence should never be used without Cordie as she will lack a lot of damage with Cordies defense debuff.
+
+        Fia is both a support and a DPS. As a DPS, she relies on HP stacking and direct damage based on damage taken, so
+        she is strongest when the team is built around helping her survive and take meaningful hits. This also means
+        her DPS role is mainly useful in tower where enemy attack stats are lower. In main quest only LR5 Fia with adequate
+        gear will perform well in most cases. 
+
+        Dian is mostly used for direct damage and Invisibility-based strategies. She can be very useful when a team needs
+        a DPS who can keep dealing damage while avoiding being targeted, while having someone else tank hits like Belle
+        or Winter Tropon.
+
+        Level 1 Nina is a special Main Quest strategy. Because low-level units interact unusually well with enemy stat
+        scaling, she can deal meaningful damage with the right support, but she is not a normal plug-and-play DPS.
 glossary:
   title: Glossary
   terms:
@@ -59,7 +103,16 @@ glossary:
         If Multi-Barrier is overlapped with Invulnerable, the barrier layer will not be depleted.
         If Multi-Barrier is overlapped with Shield, Multi-Barrier will be used first.
         If multiple kinds of Multi-Barrier are overlapping with each other, they will be used based on the following order of priority.
+    - term: Invisibility
+      definition: |
+        This buff prevents a character from being a target of attacks and skills of enemies and allies.
+        If all allies who are alive are enhanced with Invisibility, the effect of Invisibility will be nullified.
+    - term: Berserk
+      definition: |
+        After each turn, increases damage dealt by 10%.
+        [Debuff Immunity] Becomes immune to debuffs (cannot be dispelled).
     - term: UW
+      aliases: [UWs]
       definition: Unique Weapon
 sections:
   - key: general
