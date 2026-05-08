@@ -446,6 +446,8 @@ footer span { color: var(--sepia-light); }
 .glossary-entry dd p + p { margin-top: .55rem; }
 .glossary-link { color: var(--teal); text-decoration: none; border-bottom: 1px dotted rgba(58,122,114,.55); }
 .glossary-link:hover { color: var(--sepia); border-bottom-color: var(--sepia); }
+.unit-mention-link { color: var(--sepia); text-decoration: none; border-bottom: 1px dotted rgba(139,94,60,.5); }
+.unit-mention-link:hover { color: var(--teal); border-bottom-color: var(--teal); }
 
 .copies-badge {
     display: inline-flex;

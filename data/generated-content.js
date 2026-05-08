@@ -1165,8 +1165,7 @@ const SITE_CONTENT = {
             "Explanation of different DPS units and when each should be used (Cordie, Florence, Fia, Dian, lvl 1 Nina)",
             "The level 1 strategy",
             "Base pool unit guide",
-            "Examples of unconventional PVE teams that work in very specific scenarios",
-            "List of common abbreviations"
+            "Examples of unconventional PVE teams that work in very specific scenarios"
         ]
     },
     "assumptions": {

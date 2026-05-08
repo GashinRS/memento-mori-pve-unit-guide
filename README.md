@@ -55,6 +55,8 @@ Edit `content/unit-names.yaml` when a team or pair references an icon id that do
 
 Glossary terms also live in `content/site.yaml`. Terms and aliases are automatically linked when they appear in unit explanations.
 
+Names of units that have guide entries are automatically linked when mentioned in another unit's explanation.
+
 ## Building Generated Data
 
 After editing content, run:

@@ -97,6 +97,17 @@
         return 'glossary-' + String(term || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     }
 
+    function escapeRegExp(text) {
+        return String(text).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function linkPlainTextSegments(html, pattern, replacer) {
+        return html.split(/(<[^>]+>)/g).map(function(part) {
+            if (part.charAt(0) === '<') return part;
+            return part.replace(pattern, replacer);
+        }).join('');
+    }
+
     function linkGlossaryTerms(html) {
         var glossary = SITE_CONTENT.glossary;
         if (!glossary || !glossary.terms) return html;
@@ -108,16 +119,39 @@
         });
         terms.sort(function(a, b) { return b.label.length - a.label.length; });
         var pattern = new RegExp('\\b(' + terms.map(function(term) {
-            return term.label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            return escapeRegExp(term.label);
         }).join('|') + ')\\b', 'g');
         var anchorByLabel = {};
         terms.forEach(function(term) { anchorByLabel[term.label] = term.anchor; });
-        return html.split(/(<[^>]+>)/g).map(function(part) {
-            if (part.charAt(0) === '<') return part;
-            return part.replace(pattern, function(match) {
-                return '<a class="glossary-link" href="#' + anchorByLabel[match] + '">' + match + '</a>';
-            });
-        }).join('');
+        return linkPlainTextSegments(html, pattern, function(match) {
+            return '<a class="glossary-link" href="#' + anchorByLabel[match] + '">' + match + '</a>';
+        });
+    }
+
+    function listedUnits() {
+        return SECTIONS.flatMap(function(sec) {
+            return UNITS[sec.key] || [];
+        });
+    }
+
+    function linkUnitMentions(html, currentUnit) {
+        var units = listedUnits().filter(function(unit) {
+            return unit.id !== currentUnit.id && unit.name !== currentUnit.name;
+        });
+        var byName = {};
+        units.forEach(function(unit) {
+            if (!byName[unit.name]) byName[unit.name] = unitAnchor(unit);
+        });
+        var names = Object.keys(byName).sort(function(a, b) { return b.length - a.length; });
+        if (!names.length) return html;
+        var pattern = new RegExp('(^|[^A-Za-z0-9])(' + names.map(escapeRegExp).join('|') + ')(?=$|[^A-Za-z0-9])', 'g');
+        return linkPlainTextSegments(html, pattern, function(match, prefix, name) {
+            return prefix + '<a class="unit-mention-link" href="#' + byName[name] + '">' + name + '</a>';
+        });
+    }
+
+    function linkGuideTerms(html, currentUnit) {
+        return linkGlossaryTerms(linkUnitMentions(html, currentUnit));
     }
 
     /* ── Weapons ── */
@@ -206,7 +240,7 @@
             renderPairs(unit.pairs) +
             renderTeams(unit.teams) +
             '<div class="card-divider"></div>' +
-            '<div class="unit-desc">' + linkGlossaryTerms(unit.desc.trim()) + '</div>' +
+            '<div class="unit-desc">' + linkGuideTerms(unit.desc.trim(), unit) + '</div>' +
             '</div>';
     }
 
