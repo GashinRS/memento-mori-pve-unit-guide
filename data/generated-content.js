@@ -945,6 +945,27 @@ const HONORABLE_MENTIONS = [
         "desc": "<p>Evenlyn's S1 increases the attack and chance to hit of the highest attack ally with 50%. A useful but relatively barebones effect that is mainly useful early on in the game when you do not have access to many other supports.</p>\n<p><strong>Speed Tuning —</strong> As she is an active buffer, you want her to move before your main DPS.</p>"
     },
     {
+        "id": "Fenny",
+        "name": "Fenny",
+        "role": "Support",
+        "weapons": [
+            {
+                "level": "FennyUR",
+                "tier": "required",
+                "description": "todo"
+            }
+        ],
+        "pairs": [
+            {
+                "id": "Fia",
+                "name": "Fia",
+                "badge": "dps"
+            }
+        ],
+        "teams": [],
+        "desc": "<p>Fenny increases the HP of the 2 allies with the lowest speed by 30%. This is the only useful effect she has and is only useful on Fia. This also requires her to have her UR UW, and she is completely outdone by Milla in her only support role. It is not recommended to pull her nor get her UW if you already have her, but if you already have both she is usable for this specific support role.</p>\n<p><strong>Speed Tuning —</strong> No speed tuning is required</p>"
+    },
+    {
         "id": "Matilda",
         "name": "Matilda",
         "role": "Support",
@@ -1021,7 +1042,7 @@ const HONORABLE_MENTIONS = [
             }
         ],
         "teams": [],
-        "desc": "<p>Winter Luna provides the highest attack ally with 4 Multi-Barriers every 8 turns if they are an Emerald or Crimson ally. Her S1 additionally inflicts Enfeeble on 3 to 5 enemies depending on whether you have her UW.</p>"
+        "desc": "<p>Winter Luna provides the highest attack ally with 4 Multi-Barriers every 8 turns if they are an Emerald or Crimson ally. Her S1 additionally inflicts Enfeeble on 3 to 5 enemies depending on whether you have her UW.</p>\n<p><strong>Speed Tuning —</strong> Since you want to inflic Enfeeble before the enemy gets to act, you want Kobel to be faster than all enemies when possible.</p>"
     },
     {
         "id": "Yuni",
@@ -1043,7 +1064,7 @@ const HONORABLE_MENTIONS = [
             }
         ],
         "teams": [],
-        "desc": "<p>Placeholder text</p>"
+        "desc": "<p>Yuni increases the HP of the ally with the highest attack by 50% of her own HP, and can additionally increase the HP of the lowest remaining HP percentage ally by 10% of her own HP from turn 2 to 10. This means that her HP buff heavily depends on the investment you have in her, and can be quite expensive to get to an acceptable level to warrant using her over Milla.</p>\n<p><strong>Speed Tuning —</strong> No speed tuning is required</p>"
     },
     {
         "id": "Rusalka",
@@ -1127,27 +1148,6 @@ const HONORABLE_MENTIONS = [
             }
         ],
         "desc": "<p>Paladea is mostly useful much later on in the game when you start to encounter enemies with a lot of annoying buffs,  which are mostly Amber units. Her S2 can turn from Bullet Storm into Black Bullet, in which case it can dispel 2 buffs  per hit, and hits for a total of 4 times. This effect will allow you to dispel most buffs that need to be dispelled.  The main issue is that is can be hard to trigger to condition to use Black Bullet, which is to have crit a total of 20 times or more across all units in your team before Paladea uses her S2. The only team where this is realistically possible is the team listed in the team examples where you use a double DPS setup. LR5 Lunalynn here is preferred over lower rarities due to the fact that her LR UW grants extra crit rate.</p>\n<p>If all conditions are met to use Black Bullet, Paladea herself can also do a decent amount of damage if the enemy she is attacking is debuffed by Cordie, even at very low rarity. Because of this it is recommended to run her with another max level weapon if you cannot afford or want her own UW.</p>\n<p><strong>Speed Tuning —</strong> Paladea's S1 debuffs the enemies' crit resistance, so you want her to move before either of your DPSs and Lunalynn</p>"
-    },
-    {
-        "id": "Fenny",
-        "name": "Fenny",
-        "role": "Support",
-        "weapons": [
-            {
-                "level": "FennyUR",
-                "tier": "required",
-                "description": "todo"
-            }
-        ],
-        "pairs": [
-            {
-                "id": "Fia",
-                "name": "Fia",
-                "badge": "dps"
-            }
-        ],
-        "teams": [],
-        "desc": "<p>Fenny increases the HP of the 2 allies with the lowest speed by 30%. This is the only useful effect she has and is only useful on Fia. This also requires her to have her UR UW, and she is completely outdone by Milla in her only support role. It is not recommended to pull her nor get her UW if you already have her, but if you already have both she is usable for this specific support role.</p>\n<p><strong>Speed Tuning —</strong> No speed tuning is required</p>"
     }
 ];
 
