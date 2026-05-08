@@ -311,6 +311,11 @@ footer span { color: var(--sepia-light); }
     .unit-top { flex-direction: column; gap: 14px; }
     .page-wrap { padding: 0 14px 60px; }
     .unit-card { padding: 20px 16px 18px; }
+    .unit-name { font-size: 1rem; line-height: 1.2; }
+    .unit-role { font-size: .76rem; }
+    .unit-desc { font-size: .86rem; line-height: 1.58; }
+    .unit-desc p + p { margin-top: .62rem; }
+    .unit-desc p strong:first-child { font-size: .66rem; letter-spacing: .08em; }
     .legend { padding: 16px; }
     .unit-overview { margin-top: -28px; }
     .overview-group { grid-template-columns: 1fr; gap: 5px; }
@@ -412,4 +417,29 @@ footer span { color: var(--sepia-light); }
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-right: 4px;
+}
+
+@media (max-width: 600px) {
+    .team-row {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 2.55rem));
+        gap: 6px;
+        justify-content: start;
+        align-items: start;
+        margin-bottom: 14px;
+    }
+    .team-slot {
+        width: 2.55rem;
+        height: 2.55rem;
+    }
+    .team-label {
+        grid-column: 1 / -1;
+        margin: 0;
+        max-width: 100%;
+        font-size: .5rem;
+        line-height: 1.35;
+        letter-spacing: .1em;
+        overflow-wrap: anywhere;
+        align-self: start;
+    }
 }
