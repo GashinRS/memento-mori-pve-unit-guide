@@ -1,0 +1,78 @@
+header:
+  eyebrow: Bank of Innovation
+  title: |
+    Memento Mori
+    PvE Limited Unit Guide
+  subtitle: Units worth pulling - ranked by impact across PvE content
+wip:
+  title: Work in Progress
+  text: |
+    This guide is still being written and expanded. Some units may be missing and entries may be lacking
+    explanations, team suggestions or detailed weapon notes.
+    Please contact @gashin on Discord if you have suggestions, found any errors or if there is anything
+    else you want to discuss regarding this guide.
+    **Planned additions in future revisions:**
+  items:
+    - Add an icon overview of all units on this list with links to their respective explanation cards
+    - Explanation of difference between Tower and Main Quest and how this influences what units are good
+    - Explanation of different DPS units and when each should be used (Cordie, Florence, Fia, Dian, lvl 1 Nina)
+    - The level 1 strategy
+    - Base pool unit guide
+    - Examples of unconventional PVE teams that work in very specific scenarios
+    - List of common abbreviations
+assumptions:
+  title: Before You Read
+  cards:
+    - title: Gear Requirements
+      icon: "&#9878;"
+      text: |
+        As a general rule of thumb, you always want as much Defense as possible on your support units.
+        This means that SR gear is actually a really cost-effective way to get a lot of defense, because
+        the 4-set bonus gives a 30% Defense buff. Due to this, almost every support unit wants to have
+        4 SR with the boots and gloves (the two gear pieces that give defense) being as high level as
+        possible.
+
+        When it comes to upgrade investment, all your upgrades should go to boots and gloves
+        first once you max out the weapon, other gear pieces can safely be ignored as they do not contribute
+        as much. For example, if your level link is 360, the gear your supports want is level 360 SR boots
+        and gloves, and then 2 level 240 pieces of SR gear between the helmet, dress and necklace. When
+        other gear is expected, this will be clearly stated in that unit's section.
+    - title: Character Rarity Requirements
+      icon: "&#9733;"
+      text: |
+        As a general rule of thumb, support units only require one copy, and having more often does not yield
+        better performance. The expected rarity for every unit in this list will be visible from the icons
+        used. When a character performs noticeably better at higher rarities, this will be clearly stated
+        in the unit's section.
+sections:
+  - key: general
+    id: general
+    label: Generally Useful
+    pill: All Content
+    navIcon: "&#11088;"
+  - key: quest
+    id: quest
+    label: Main Quest Units
+    navLabel: Main Quest
+    pill: Quest Only
+    navIcon: "&#128506;"
+  - key: tower
+    id: tower
+    label: Tower Units
+    navLabel: Tower
+    pill: Tower Only
+    navIcon: "&#128508;"
+  - key: mention
+    id: mention
+    label: Honorable Mentions
+    pill: Situational
+    navIcon: "&#10022;"
+    note: |
+      While units are not bad, they are either outshadowed by stronger alternatives or are meant to be
+      paired with Florence who is outshadowed herself by Cordie. They may still be worth considering when
+      preferred units are unavailable due to the long rerun cycles (~6 months) in this game, or if they align
+      with your personal progression goals. That said, the general advice is to pass on them for PVE purposes and
+      conserve resources (both Diamonds and Crystals) unless you have a specific reason to pull, like using them in PVP as well.
+footer:
+  text: This is a community guide - not affiliated with
+  brand: Bank of Innovation
