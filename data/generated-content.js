@@ -37,7 +37,8 @@ const UNIT_NAMES = {
     "Yildiz": "Yildiz",
     "Yuni": "Yuni",
     "Fenny": "Fenny",
-    "Paladea": "Paladea"
+    "Paladea": "Paladea",
+    "NinaLR5": "Nina"
 };
 
 const GENERAL_UNITS = [
@@ -1205,6 +1206,33 @@ const BASE_POOL_UNITS = [
         "pairs": [],
         "teams": [],
         "desc": "<p>Placeholder text.</p>"
+    },
+    {
+        "id": "Mimi",
+        "name": "Mimi",
+        "role": "Support",
+        "weapons": [],
+        "pairs": [],
+        "teams": [],
+        "desc": "<p>Placeholder text.</p>"
+    },
+    {
+        "id": "Primavera",
+        "name": "Primavera",
+        "role": "Support",
+        "weapons": [],
+        "pairs": [],
+        "teams": [],
+        "desc": "<p>Placeholder text.</p>"
+    },
+    {
+        "id": "NinaLR5",
+        "name": "Nina",
+        "role": "DPS - support",
+        "weapons": [],
+        "pairs": [],
+        "teams": [],
+        "desc": "<p>Placeholder text.</p>"
     }
 ];
 
@@ -1340,7 +1368,7 @@ const BASE_POOL_CONTENT = {
     },
     "intro": {
         "title": "About This Guide",
-        "text": "<p>This page is for base pool units: characters that are not limited and can appear from regular sources over time. The goal is to explain what each unit is useful for, what kind of investment they need, and when they are worth fitting into PvE teams.</p>"
+        "text": "<p>This page is for base pool units. These are, in most cases, the only units from the base pool that are worth using in PVE. The shown rarities do not always reflect the required rarity, this will be explained in the individual sections.</p>"
     },
     "footer": {
         "text": "<p>This is a community guide - not affiliated with</p>",
