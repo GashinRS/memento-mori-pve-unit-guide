@@ -996,7 +996,7 @@ const HONORABLE_MENTIONS = [
             }
         ],
         "teams": [],
-        "desc": "<p>Fenny increases the HP of the 2 allies with the lowest speed by 30%. This is the only useful effect she has and is only useful on Fia. This also requires her to have her UR UW, and she is completely outdone by Milla in her only support role. It is not recommended to pull her nor get her UW if you already have her, but if you already have both she is usable for this specific support role.</p>\n<p><strong>Speed Tuning —</strong> No speed tuning is required</p>"
+        "desc": "<p>Fenny increases the HP of the 2 allies with the lowest speed by 30%. This is the main effect she has and is only useful on Fia. This also requires her to have her UR UW, and she is completely outdone by Milla in her only support role. It is not recommended to pull her nor get her UW if you already have her, but if you already have both she is usable for this specific support role. She does have an additional support effect in her S1 that can inflic Buff Immmunity on all enemies. This can be occasionally useful to prevent enemies from getting annoying buffs.</p>\n<p><strong>Speed Tuning —</strong> Whenever you want to make use of the Buff Immunity debuff, Fenny should be faster than whoever you want this debuff to land on.</p>"
     },
     {
         "id": "Matilda",
@@ -1078,7 +1078,7 @@ const HONORABLE_MENTIONS = [
             }
         ],
         "teams": [],
-        "desc": "<p>Winter Luna provides the highest attack ally with 4 Multi-Barriers every 8 turns if they are an Emerald or Crimson ally. Her S1 additionally inflicts Enfeeble on 3 to 5 enemies depending on whether you have her UW.</p>\n<p><strong>Speed Tuning —</strong> Since you want to inflic Enfeeble before the enemy gets to act, you want Kobel to be faster than all enemies when possible.</p>"
+        "desc": "<p>Winter Luna provides the highest attack ally with 4 Multi-Barriers every 8 turns if they are an Emerald or Crimson ally. Her S1 additionally inflicts Enfeeble on 3 to 5 enemies depending on whether you have her UW.</p>\n<p><strong>Speed Tuning —</strong> Since you want to inflic Enfeeble before the enemy gets to act, you want Winter Luna to be faster than all enemies when possible.</p>"
     },
     {
         "id": "Yuni",
@@ -1355,11 +1355,15 @@ const SITE_CONTENT = {
                 "aliases": [
                     "Multi-Barriers"
                 ],
-                "definition": "<p>This buff provides a multi-layered barrier. When a character takes damage, 1 barrier layer is depleted to nullify that damage. If Multi-Barrier is overlapped with Invulnerable, the barrier layer will not be depleted. If Multi-Barrier is overlapped with Shield, Multi-Barrier will be used first. If multiple kinds of Multi-Barrier are overlapping with each other, they will be used based on the following order of priority.</p>"
+                "definition": "<p>This buff provides a multi-layered barrier. When a character takes damage, 1 barrier layer is depleted to nullify that damage. If Multi-Barrier is overlapped with Invulnerable, the barrier layer will not be depleted. If Multi-Barrier is overlapped with Shield, Multi-Barrier will be used first.</p>"
             },
             {
                 "term": "Invisibility",
                 "definition": "<p>This buff prevents a character from being a target of attacks and skills of enemies and allies. If all allies who are alive are enhanced with Invisibility, the effect of Invisibility will be nullified.</p>"
+            },
+            {
+                "term": "Buff Immunity",
+                "definition": "<p>This debuff prevents buffs from being granted to a character. This does not nullify any buffs a character is already enhanced with. While a character is afflicted with Buff Immunity, if a buff updates the value of a stat, etc., when specific conditions are met, those increases will not be applied. Buff Immunity does not affect buffs that cannot be dispelled.</p>"
             },
             {
                 "term": "Berserk",

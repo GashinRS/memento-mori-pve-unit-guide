@@ -103,11 +103,16 @@ glossary:
         1 barrier layer is depleted to nullify that damage.
         If Multi-Barrier is overlapped with Invulnerable, the barrier layer will not be depleted.
         If Multi-Barrier is overlapped with Shield, Multi-Barrier will be used first.
-        If multiple kinds of Multi-Barrier are overlapping with each other, they will be used based on the following order of priority.
     - term: Invisibility
       definition: |
         This buff prevents a character from being a target of attacks and skills of enemies and allies.
         If all allies who are alive are enhanced with Invisibility, the effect of Invisibility will be nullified.
+    - term: Buff Immunity
+      definition: |
+        This debuff prevents buffs from being granted to a character.
+        This does not nullify any buffs a character is already enhanced with.
+        While a character is afflicted with Buff Immunity, if a buff updates the value of a stat, etc., when specific conditions are met, those increases will not be applied.
+        Buff Immunity does not affect buffs that cannot be dispelled.
     - term: Berserk
       definition: |
         After each turn, increases damage dealt by 10%.
