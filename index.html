@@ -220,8 +220,8 @@
                 '<span class="pair-badge ' + p.badge + '">' + p.badge + '</span>' +
                 '</div>';
         }).join('');
-        return '<div class="row-label">Pairs Well With</div>' +
-            '<div class="pairs-row">' + chips + '</div>';
+        return '<div class="pairs-section"><div class="row-label">Pairs Well With</div>' +
+            '<div class="pairs-row">' + chips + '</div></div>';
     }
 
     /* ── Teams ── */
@@ -251,6 +251,7 @@
     /* ── Card ── */
     function renderCard(unit) {
         return '<div class="unit-card" id="' + unitAnchor(unit) + '">' +
+            '<div class="unit-scan">' +
             '<div class="unit-top">' +
             unitIcon(unit.id) +
             '<div class="unit-meta">' +
@@ -265,9 +266,13 @@
             '</div>' +
             '</div>' +
             renderPairs(unit.pairs, unit) +
-            renderTeams(unit.teams) +
+            '</div>' +
             '<div class="card-divider"></div>' +
+            '<details class="unit-details">' +
+            '<summary><span class="closed-label">View More</span><span class="open-label">View Less</span></summary>' +
+            renderTeams(unit.teams) +
             '<div class="unit-desc">' + linkGuideTerms(unit.desc.trim(), unit) + '</div>' +
+            '</details>' +
             '</div>';
     }
 
