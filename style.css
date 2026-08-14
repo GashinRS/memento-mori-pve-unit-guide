@@ -510,6 +510,9 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
 /* ── Footer ── */
 footer { text-align: center; padding: 32px 0; border-top: 1px solid var(--border); color: var(--ink-faint); font-size: .8rem; font-style: italic; }
 footer span { color: var(--sepia-light); }
+footer .footer-credits { margin-bottom: 6px; color: var(--ink-light); font-style: normal; }
+footer .footer-credits a { color: var(--sepia); text-decoration-color: var(--sepia-dim); text-underline-offset: 2px; }
+footer .footer-credits a:hover { color: var(--teal); }
 
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-parchment); }

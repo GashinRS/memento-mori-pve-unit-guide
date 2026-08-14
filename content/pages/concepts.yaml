@@ -10,5 +10,7 @@ intro:
     This page is for broader PvE explanations, strategy notes, and team-building examples that are too large for
     the main unit guide but still useful as references.
 footer:
-  text: This is a community guide - not affiliated with
+  credits: |
+    Special thanks to <a href="https://tamamo.dev/" target="_blank" rel="noopener noreferrer">Tamamo.dev</a> for the character and gear icons, and <a href="https://github.com/ScobraCK/Artificial-Angel-Bot" target="_blank" rel="noopener noreferrer">AA Bot</a> for the banner history data used to calculate rerun estimates.
+  disclaimer: This is a community guide - not affiliated with
   brand: Bank of Innovation

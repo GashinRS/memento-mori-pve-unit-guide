@@ -213,11 +213,15 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "text",
+        "credits",
+        "disclaimer",
         "brand"
       ],
       "properties": {
-        "text": {
+        "credits": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "disclaimer": {
           "$ref": "#/$defs/nonEmptyString"
         },
         "brand": {

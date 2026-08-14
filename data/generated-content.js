@@ -1764,7 +1764,8 @@ const SITE_CONTENT = {
         "items": [
             "The level 1 strategy",
             "Base pool unit guide",
-            "Examples of unconventional PVE teams that work in very specific scenarios"
+            "Examples of unconventional PVE teams that work in very specific scenarios",
+            "Gear guide"
         ]
     },
     "assumptions": {
@@ -1873,7 +1874,8 @@ const SITE_CONTENT = {
         }
     ],
     "footer": {
-        "text": "<p>This is a community guide - not affiliated with</p>",
+        "credits": "Special thanks to <a href=\"https://tamamo.dev/\" target=\"_blank\" rel=\"noopener noreferrer\">Tamamo.dev</a> for the character and gear icons, and <a href=\"https://github.com/ScobraCK/Artificial-Angel-Bot\" target=\"_blank\" rel=\"noopener noreferrer\">AA Bot</a> for the banner history data used to calculate rerun estimates.",
+        "disclaimer": "This is a community guide - not affiliated with",
         "brand": "Bank of Innovation"
     },
     "lastUpdated": "August 14, 2026"
@@ -1890,7 +1892,8 @@ const BASE_POOL_CONTENT = {
         "text": "<p>This page is for base pool units. These are, in most cases, the only units from the base pool that are worth using in PVE. The shown rarities do not always reflect the required rarity, this will be explained in the individual sections.</p>"
     },
     "footer": {
-        "text": "<p>This is a community guide - not affiliated with</p>",
+        "credits": "Special thanks to <a href=\"https://tamamo.dev/\" target=\"_blank\" rel=\"noopener noreferrer\">Tamamo.dev</a> for the character and gear icons, and <a href=\"https://github.com/ScobraCK/Artificial-Angel-Bot\" target=\"_blank\" rel=\"noopener noreferrer\">AA Bot</a> for the banner history data used to calculate rerun estimates.",
+        "disclaimer": "This is a community guide - not affiliated with",
         "brand": "Bank of Innovation"
     }
 };
@@ -1906,7 +1909,8 @@ const CONCEPTS_CONTENT = {
         "text": "<p>This page is for broader PvE explanations, strategy notes, and team-building examples that are too large for the main unit guide but still useful as references.</p>"
     },
     "footer": {
-        "text": "<p>This is a community guide - not affiliated with</p>",
+        "credits": "Special thanks to <a href=\"https://tamamo.dev/\" target=\"_blank\" rel=\"noopener noreferrer\">Tamamo.dev</a> for the character and gear icons, and <a href=\"https://github.com/ScobraCK/Artificial-Angel-Bot\" target=\"_blank\" rel=\"noopener noreferrer\">AA Bot</a> for the banner history data used to calculate rerun estimates.",
+        "disclaimer": "This is a community guide - not affiliated with",
         "brand": "Bank of Innovation"
     }
 };

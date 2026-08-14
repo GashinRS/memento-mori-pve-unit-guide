@@ -163,7 +163,8 @@
 
     function renderFooter() {
         document.getElementById('site-footer').innerHTML =
-            '<p>' + BASE_POOL_CONTENT.footer.text + ' <span>' + BASE_POOL_CONTENT.footer.brand + '</span>.</p>';
+            '<p class="footer-credits">' + BASE_POOL_CONTENT.footer.credits + '</p>' +
+            '<p>' + BASE_POOL_CONTENT.footer.disclaimer + ' <span>' + BASE_POOL_CONTENT.footer.brand + '</span>.</p>';
     }
 
     function setupBackToTop() {

@@ -114,7 +114,8 @@
 
     function renderFooter() {
         document.getElementById('site-footer').innerHTML =
-            '<p>' + CONCEPTS_CONTENT.footer.text + ' <span>' + CONCEPTS_CONTENT.footer.brand + '</span>.</p>';
+            '<p class="footer-credits">' + CONCEPTS_CONTENT.footer.credits + '</p>' +
+            '<p>' + CONCEPTS_CONTENT.footer.disclaimer + ' <span>' + CONCEPTS_CONTENT.footer.brand + '</span>.</p>';
     }
 
     function setupBackToTop() {

@@ -437,7 +437,8 @@
 
     function renderFooter() {
         document.getElementById('site-footer').innerHTML =
-            '<p>' + SITE_CONTENT.footer.text + ' <span>' + SITE_CONTENT.footer.brand + '</span>.</p>';
+            '<p class="footer-credits">' + SITE_CONTENT.footer.credits + '</p>' +
+            '<p>' + SITE_CONTENT.footer.disclaimer + ' <span>' + SITE_CONTENT.footer.brand + '</span>.</p>';
     }
 
     function setupBackToTop() {
