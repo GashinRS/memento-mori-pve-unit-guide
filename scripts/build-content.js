@@ -10,15 +10,22 @@ const conceptsDir = path.join(contentDir, "concepts");
 const outputPath = path.join(root, "data", "generated-content.js");
 const aaCharacterMapPath = path.join(contentDir, "aa-character-map.yaml");
 
-function latestCommitDate() {
-    const value = execFileSync("git", ["log", "-1", "--format=%cs"], {
+function latestGuideCommitDate() {
+    const value = execFileSync("git", [
+        "log",
+        "-1",
+        "--format=%cs",
+        "--fixed-strings",
+        "--invert-grep",
+        "--grep=[keepalive]",
+    ], {
         cwd: root,
         encoding: "utf8",
     }).trim();
     const match = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
 
     if (!match) {
-        throw new Error(`Could not read the latest Git commit date: "${value}"`);
+        throw new Error(`Could not read the latest non-keepalive Git commit date: "${value}"`);
     }
 
     return new Intl.DateTimeFormat("en-US", {
@@ -608,7 +615,7 @@ async function build() {
     });
     const normalizedSite = {
         ...siteMarkdownToHtml(site),
-        lastUpdated: latestCommitDate(),
+        lastUpdated: latestGuideCommitDate(),
     };
     const normalizedBasePoolPage = siteMarkdownToHtml(basePoolPage);
     const normalizedConceptsPage = siteMarkdownToHtml(conceptsPage);

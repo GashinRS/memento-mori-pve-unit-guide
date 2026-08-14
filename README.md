@@ -83,7 +83,8 @@ maintained in `content/aa-character-map.yaml`; omit `rerunMonths` for the six-mo
 for annual seasonal reruns. The build fails if a guide unit is missing from the mapping or an API name/title no longer
 matches, preventing silent mismatches when the upstream character list changes.
 
-The displayed "Last updated" date comes from the latest Git commit, so scheduled builds do not change it unless the
-guide itself has been committed again.
+The displayed "Last updated" date comes from the latest Git commit that is not marked `[keepalive]`. After 45 days
+without a commit, a scheduled build creates an empty `[keepalive]` commit to prevent GitHub from disabling the schedule,
+without changing the date shown on the guide.
 
 Then open `index.html` in a browser.

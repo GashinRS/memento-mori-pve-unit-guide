@@ -50,3 +50,35 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  keepalive:
+    name: Keep scheduled builds active
+    if: github.event_name == 'schedule'
+    needs: deploy
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Create keepalive commit after 45 idle days
+        shell: bash
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          latest_commit_epoch="$(git log -1 --format=%ct)"
+          current_epoch="$(date +%s)"
+          age_seconds="$((current_epoch - latest_commit_epoch))"
+
+          if (( age_seconds < 45 * 24 * 60 * 60 )); then
+            echo "Latest commit is less than 45 days old; no keepalive commit needed."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "chore: keep scheduled workflow active [keepalive]"
+          git push origin "HEAD:${DEFAULT_BRANCH}"
