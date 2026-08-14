@@ -13,8 +13,8 @@ general:
 quest:
   - Belle
   - SmoddeySR
-tower:
-  - Tama
+  - Shiloh
+#tower:
 mention:
   - Eureka
   - Evelyn
@@ -23,6 +23,8 @@ mention:
   - Kobel
   - XLuna
   - Yuni
+  - Eidene
+  - Tama
   - Rusalka
   - Regina
   - Paladea

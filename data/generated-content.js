@@ -36,6 +36,8 @@ const UNIT_NAMES = {
     "XTropon1": "Winter Tropon",
     "Yildiz": "Yildiz",
     "Yuni": "Yuni",
+    "Shiloh": "Shiloh",
+    "Eidene": "Eidene",
     "Fenny": "Fenny",
     "Paladea": "Paladea",
     "NinaLR5": "Nina"
@@ -877,17 +879,19 @@ const QUEST_UNITS = [
             }
         ],
         "desc": "<p>As mentioned in Moineau's section, Summer Moddey is the main catalyst that allows for the highest damage dealing         team in the entire game, under the right circumstances. For details on how that works, please refer to Moineau's         section.</p>\n<p>What is not covered in that section however is the fact that Summer Moddey herself can also be a great DPS due to         the very same attack buff that Moineau copies from her. While the damage output is not as high as Moineau, she         can act as a viable sub DPS for Moineau when geared properly and also has some viability as a stand alone DPS.         The latter can be seen with example team 2, where you will want at least UR+ rarity for the additional stats.         This team focuses more on damage spread over 4 turns (with Winter Amour reducing cooldown) compared to Moineau's         2 turn burst. In most cases, the team with Moineau will outperform solo Summer Moddey, but there are scenarios         where you will want Luna's silence to survive the first turn. Luna is a unit that cannot be fit onto the team         with Moineau without heavily compromising the damage dealt. Also note how this team includes Artie; she is an         alternative to Eirene by providing a 40% M.DEF debuff as well as a 20% increase in damage taken for the enemies.         Artie also has the added benefit of being a lot bulkier than Eirene, which allows her to take more hits from         silenced enemies.</p>\n<p><strong>Speed Tuning — </strong>When using her with Moineau, you should make sure that she is faster than         Moineau so her attack buff can get copied by Moineau. When using Summer Moddey on her own, the main things to         make sure are that she is not the slowest unit in order to get Winter Amour's crit buff, and that she is          slower than Cordie so she can make use of Cordie's defense debuff.</p>"
-    }
-];
-
-const TOWER_UNITS = [
+    },
     {
-        "id": "Tama",
-        "name": "Tama",
-        "role": "Support - DPS",
-        "scalable": true,
+        "id": "Shiloh",
+        "name": "Shiloh",
+        "role": "Support",
         "aliases": [],
-        "weapons": [],
+        "weapons": [
+            {
+                "level": "ShilohUR",
+                "tier": "optional",
+                "description": "todo"
+            }
+        ],
         "pairs": [
             {
                 "id": "Cordie",
@@ -897,8 +901,16 @@ const TOWER_UNITS = [
         ],
         "teams": [
             {
-                "label": null,
+                "label": "Early-mid game",
                 "slots": [
+                    {
+                        "id": "Mimi",
+                        "name": "Mimi"
+                    },
+                    {
+                        "id": "Primavera",
+                        "name": "Primavera"
+                    },
                     {
                         "id": "Cordie",
                         "name": "Cordie"
@@ -908,23 +920,42 @@ const TOWER_UNITS = [
                         "name": "Merlyn"
                     },
                     {
-                        "id": "Tama",
-                        "name": "Tama"
+                        "id": "Shiloh",
+                        "name": "Shiloh"
+                    }
+                ]
+            },
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Mertillier",
+                        "name": "Mertillier"
                     },
                     {
-                        "id": "Samleth",
-                        "name": "Summer Amleth"
+                        "id": "Sivi",
+                        "name": "Sivi"
                     },
                     {
-                        "id": "Meria",
-                        "name": "Meria"
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "LunaLR",
+                        "name": "Luna"
+                    },
+                    {
+                        "id": "Shiloh",
+                        "name": "Shiloh"
                     }
                 ]
             }
         ],
-        "desc": "<p>Tama's S2 can debuff the highest attack enemy for 50% defense and 50% P.DEF. She is also one of only two units   in the game with prolonged Invisibility (the other being Dian), which greatly contributes to her longevity in battle.   Because her debuff is only on turn 2 and only targets one enemy however, she is not as useful as units like Moineau.   The given example team will almost always work better with Moineau over Tama. The reason she is still here instead   of in the honorable mentions section is because she is one of the lowest investment supports in the game. She does   not require her unique weapon for her most important support effects (unless you are an Amber main), and can also contribute a noticeable amount of damage    herself even at SR rarity due to own debuffs. This damage will also go up if you increase her rarity.</p>\n<p>As for why Tama is specifically in the Tower section: she simply does not have enough bulk to survive in main quest.    Unlike most support units who have their main support effects in their passives or on turn 1, Tama needs to survive    the first turn. This is very hard given that SR units have very low HP and Tama does not have any way to reduce her damage taken.    Another factor for this placement is that battles in main quest tend to focus on high early burst damage to prevent    getting killed by the high attack enemies, whereas Tama mainly shines in longer battles.</p>\n<p><strong>Speed Tuning — </strong>As a debuffer, you want Tama to act before your main DPS.</p>"
+        "desc": "<p>Shiloh can at first sight be considered somewhat of a sidegrade to Merlyn; both units can buff the attack, crit rate and crit damage of 2 allies. Merlyn has the benefit of her crit buff lasting for the entire battle, and Shiloh has the additional benefit of not being tied down to positioning like Merlyn, and also buffing up 2 allies' defense by 150% of Shiloh's own defense. However, Shiloh is unfortunately not as universally useful as Merlyn. One of the main reasons is that Merlyn's permanent crit rate buff is very valuable for a lot of different situations where battles last longer than 4 turns, which tend to be quite common. Shiloh's crit damage buff is also lower in tower at the start of battle, which causes you to lose out on a lot of early damage and subsequently means that she is not very useful in tower.</p>\n<p>What all of this means in practice is that Shiloh will mainly be useful early to mid game when you do not have a lot of other supports yet, so you can use her in combination with Merlyn. Later down the line she starts to lose value due to limited team slots and Merlyn being the better crit rate/damage buffer in most cases, but Shiloh does still have its niches in certain scenarios where she will be better than Merlyn, especially when a stage requires more bulk. The reason Shiloh did not get put in the honorable mentions section is because I believe Shiloh still has untapped potential in undiscovered teams compositions, and she is overall more useful than the units in the honorable mentions section.</p>\n<p><strong>Speed Tuning — </strong>_As a buffer, you want Shiloh to act before your main DPS._</p>"
     }
 ];
+
+const TOWER_UNITS = [];
 
 const HONORABLE_MENTIONS = [
     {
@@ -1102,6 +1133,103 @@ const HONORABLE_MENTIONS = [
         ],
         "teams": [],
         "desc": "<p>Yuni increases the HP of the ally with the highest attack by 50% of her own HP, and can additionally increase the HP of the lowest remaining HP percentage ally by 10% of her own HP from turn 2 to 10. This means that her HP buff heavily depends on the investment you have in her, and can be quite expensive to get to an acceptable level to warrant using her over Milla.</p>\n<p><strong>Speed Tuning —</strong> No speed tuning is required</p>"
+    },
+    {
+        "id": "Eidene",
+        "name": "Eidene",
+        "role": "Support",
+        "scalable": true,
+        "aliases": [],
+        "weapons": [
+            {
+                "level": "EideneUR",
+                "tier": "required",
+                "description": "todo"
+            }
+        ],
+        "pairs": [
+            {
+                "id": "FiaLR5",
+                "name": "Fia",
+                "badge": "dps"
+            },
+            {
+                "id": "Fia",
+                "name": "Fia",
+                "badge": "dps"
+            }
+        ],
+        "teams": [
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Eidene",
+                        "name": "Eidene"
+                    },
+                    {
+                        "id": "FiaLR5",
+                        "name": "Fia"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "Yildiz",
+                        "name": "Yildiz"
+                    },
+                    {
+                        "id": "Milla",
+                        "name": "Milla"
+                    }
+                ]
+            }
+        ],
+        "desc": "<p>Eidene is yet another HP buffer and sidegrade to Milla. Her S1 can increase the entire team's HP by 40%, which is roughly on par with Milla's HP buff to Emerald allies. She can additionally grant the same effect twice upon her second S1 use, making her total HP buff a sizable amount larger than Milla's. Her main issue is that in order to use her HP buffing support, she needs to actually use her S1, whereas Milla's HP buffing support is granted directly at the start of battle. Milla can also work without her UW, whereas Eidene needs her UR UW. This combined with the fact that recasting her S1 can be hard (especially in Main Quest), explains her placement in this section. However, if you can afford the investment to make her survive, which means pulling for dupes and giving her good gear, she will almost always outperform Milla. This is just not something a lot of people will be interested in doing, especially since her only real usage is paired with Fia, which on her own already requires dupes and good gear.</p>\n<p>Eidene is however the best HP buffer in this section in most scenarios, so if you do not have Milla or want a second HP buffer alongside Milla this should be your first pick.</p>\n<p><strong>Speed Tuning — </strong> As an active HP buffer, you want Eidene to act before your the enemy team.</p>"
+    },
+    {
+        "id": "Tama",
+        "name": "Tama",
+        "role": "Support - DPS",
+        "scalable": true,
+        "aliases": [],
+        "weapons": [],
+        "pairs": [
+            {
+                "id": "Cordie",
+                "name": "Cordie",
+                "badge": "dps"
+            }
+        ],
+        "teams": [
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "Tama",
+                        "name": "Tama"
+                    },
+                    {
+                        "id": "Samleth",
+                        "name": "Summer Amleth"
+                    },
+                    {
+                        "id": "Meria",
+                        "name": "Meria"
+                    }
+                ]
+            }
+        ],
+        "desc": "<p>Tama's S2 can debuff the highest attack enemy for 50% defense and 50% P.DEF. She is also one of only two units   in the game with prolonged Invisibility (the other being Dian), which greatly contributes to her longevity in battle.   Because her debuff is only on turn 2 and only targets one enemy however, she is not as useful as units like Moineau.   The given example team will almost always work better with Moineau over Tama. She can still be useful however as does   not require her unique weapon for her most important support effects (unless you are an Amber main), and can also contribute a noticeable amount of damage herself even at SR rarity due to own debuffs. This damage will also go up if you increase her rarity.</p>\n<p>In most circumstances, you will only be using Tama in tower, as she simply does not have enough bulk to survive in main quest. The exception to this is for Amber teams, in which case Tama becomes an invaluable support unit, which you will want to have on almost every team alongside Rustica. This is a high investment team however and only briefly mentioned here for completeness’s sake, and this is not recommended for casual players.</p>\n<p><strong>Speed Tuning — </strong>As a debuffer and buffer, you want Tama to act before your main DPS.</p>"
     },
     {
         "id": "Rusalka",
