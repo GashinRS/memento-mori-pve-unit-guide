@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-    <script src="data/generated-content.js?v=20260814-reruns"></script>
-    <link rel="stylesheet" href="style.css?v=20260814-reruns">
+    <script src="data/generated-content.js?v=20260814-banner-strip"></script>
+    <link rel="stylesheet" href="style.css?v=20260814-banner-strip">
 </head>
 <body id="top">
 <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
@@ -408,12 +408,37 @@
     }
 
     function renderUnitOverview() {
+        var activeUnits = [];
+        var activeUnitIds = {};
+        SECTIONS.forEach(function(sec) {
+            (UNITS[sec.key] || []).forEach(function(unit) {
+                if (unit.rerun && unit.rerun.active && !activeUnitIds[unit.id]) {
+                    activeUnitIds[unit.id] = true;
+                    activeUnits.push(unit);
+                }
+            });
+        });
+        var activeBannerStrip = activeUnits.length ?
+            '<div class="active-banner-strip" aria-label="Units currently on a banner">' +
+            '<div class="active-banner-label"><span aria-hidden="true"></span>On banner now</div>' +
+            '<div class="overview-icons">' +
+            activeUnits.map(function(unit) {
+                return '<a class="overview-icon active-banner-icon tip-icon" href="#' + unitAnchor(unit) + '" aria-label="' + unit.name + ' — on banner now">' +
+                    imgFB('icons/units/' + unit.id + '.png', unit.name,
+                        '<div class="overview-placeholder" style="display:none">?</div>') +
+                    '<span class="tip">' + unit.name + '</span>' +
+                    '</a>';
+            }).join('') +
+            '</div>' +
+            '</div>' : '';
+
         document.getElementById('unit-overview').innerHTML =
             '<div class="unit-overview">' +
             '<div class="overview-header">' +
             '<h2>Unit Index</h2>' +
             '<div class="overview-line"></div>' +
             '</div>' +
+            activeBannerStrip +
             '<div class="overview-groups">' +
             SECTIONS.map(function(sec) {
                 var units = UNITS[sec.key] || [];

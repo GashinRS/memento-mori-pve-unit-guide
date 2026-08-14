@@ -149,6 +149,37 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
 .overview-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
 .overview-header h2 { font-family: 'Cinzel',serif; font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; color: var(--ink-faint); }
 .overview-line { flex: 1; height: 1px; background: var(--border); }
+.active-banner-strip {
+    --overview-cat: var(--teal);
+    display: grid;
+    grid-template-columns: 11rem 1fr;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    padding: 9px 11px;
+    border: 1px solid color-mix(in srgb,var(--teal) 24%,transparent);
+    border-radius: var(--radius);
+    background: color-mix(in srgb,var(--teal) 5%,transparent);
+}
+.active-banner-label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-family: 'Cinzel',serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: color-mix(in srgb,var(--teal) 82%,var(--ink));
+}
+.active-banner-label span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--teal);
+    box-shadow: 0 0 0 3px color-mix(in srgb,var(--teal) 14%,transparent);
+}
+.active-banner-icon { border-color: color-mix(in srgb,var(--teal) 68%,var(--border)); }
 .overview-groups { display: flex; flex-direction: column; gap: 12px; }
 .overview-group { --overview-cat: var(--sepia); display: grid; grid-template-columns: 11rem 1fr; align-items: start; gap: 12px; }
 .overview-group[data-cat="general"] { --overview-cat: var(--sepia); }
@@ -178,7 +209,7 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
     border-radius: 6px;
     border: 1px solid color-mix(in srgb,var(--overview-cat) 36%,var(--border));
     background: var(--bg-card);
-    overflow: hidden;
+    overflow: visible;
     text-decoration: none;
     box-shadow: 0 1px 6px rgba(80,50,20,.06);
     transition: transform .16s, border-color .16s, box-shadow .16s;
@@ -188,7 +219,7 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
     border-color: var(--overview-cat);
     box-shadow: 0 3px 12px rgba(80,50,20,.14);
 }
-.overview-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.overview-icon img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 5px; }
 .overview-placeholder { width: 100%; height: 100%; align-items: center; justify-content: center; color: var(--ink-faint); font-family: 'Cinzel',serif; font-size: .75rem; }
 .base-overview-icons { margin-left: 0; }
 
@@ -539,6 +570,7 @@ footer .footer-credits a:hover { color: var(--teal); }
     .unit-details summary { font-size: .6rem; letter-spacing: .13em; }
     .legend { padding: 16px; }
     .unit-overview { margin-top: -28px; }
+    .active-banner-strip { grid-template-columns: 1fr; gap: 7px; }
     .overview-group { grid-template-columns: 1fr; gap: 5px; }
     .overview-label { margin-top: 0; }
     .overview-icon { width: 2.45rem; height: 2.45rem; }
