@@ -3,6 +3,7 @@ id: Belle
 name: Belle
 role: Tank
 scalable: true
+speed: none
 weapons:
 pairs:
   - id: Dian
@@ -35,5 +36,3 @@ In the first example team, Dian is the main DPS. Since Dian can get the Invisibi
 In the second team, LR5 Fia is the main DPS. Due to the high damage main quest enemies can deal, Fia can
         still struggle to survive even with Yildiz's buff, so Belle is here to act as an unit to take some off the tanking
         load off Fia.
-
-**Speed Tuning — ** No speed tuning is required

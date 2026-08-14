@@ -6,7 +6,8 @@ This is a static guide site. The editable guide content lives in `content/`; the
 
 Each unit has one Markdown file in a category folder under `content/units/`.
 
-- Frontmatter controls metadata such as role, weapons, pairs, and teams.
+- Frontmatter controls metadata such as role, weapons, pairs, teams, and speed tuning.
+- `speed` renders a compact tuning label. Add `speedNote` only for a meaningful exception or interaction.
 - The unit category comes from its folder: `general`, `quest`, `tower`, or `mention`.
 - The Markdown body becomes the unit description.
 - Edit `content/unit-order.yaml` to control where units appear inside each category.
@@ -28,15 +29,18 @@ weapons:
 pairs:
   - id: Cordie
     badge: dps
+speed: before-dps
+speedNote: Main DPS should be the slowest ally for the cooldown reduction.
 teams:
   - label:
     slots: [Mertillier, Sivi, Cordie, Merlyn, LunaLR]
 ---
 
 Write the unit explanation here.
-
-**Speed Tuning —** Add speed notes here.
 ```
+
+Supported speed values are `before-dps`, `before-enemies`, `before-target`, `first`, `prefer-slow`, `none`,
+`usually-none`, `role-dependent`, `team-dependent`, `situational`, and `dps-among-slowest`.
 
 `content/unit-order.yaml`
 

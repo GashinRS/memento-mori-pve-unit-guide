@@ -3,6 +3,8 @@ id: Moineau
 name: Moineau
 role: Support - DPS
 scalable: true
+speed: role-dependent
+speedNote: "Support: before the main DPS. DPS: act last after enemies are fully debuffed."
 weapons:
   - level: MoineauSSR
     tier: required
@@ -60,6 +62,3 @@ Moineau has a ton of effects, which combined, make her into one of the best supp
         Note that this does not work in main quest because both Moineau's and Summer Amleth's P.DEF debuffs are only
         debuffing for 25% instead of 50% in main quest. The Enfeeble debuff is also a very welcome bonus to make survival
         easier.
-
-**Speed Tuning — ** As a debuffer, you want her to act before your main DPS. As a DPS, you want her to
-  act last, making sure the enemy team is fully debuffed before attacking into them.

@@ -2,6 +2,8 @@
 id: Sivi
 name: Sivi
 role: Support
+speed: dps-among-slowest
+speedNote: The main DPS cannot be the fastest or second-fastest ally because Sivi targets the two slowest allies other than herself.
 weapons:
   - level: SiviUR
     tier: recommended
@@ -24,6 +26,3 @@ somewhat alleviated by the fact that she has a passive 100 % DEF and P.DEF buff 
 allies with a passive 25% buff to their DEF and P.DEF. The staple team with Sivi, also simply called "Cordie Sivi" is shown as the first
 example. This is a universally useful team that will especially be able to clear a lot of tower floors without
 the need to change teams. It is definitely not always the best team to use, but very often an effective one.
-
-**Speed Tuning —**Players should take care to correctly speed tune your team when using Sivi, as her S1 buff targets the two
-        allies with the lowest speed other than Sivi. This means that your main DPS cannot be the fastest or second-fastest unit on your team.

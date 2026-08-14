@@ -2,6 +2,7 @@
 id: Samleth
 name: Summer Amleth
 role: Support
+speed: before-dps
 weapons:
   - level: SamlethSSR
     tier: recommended
@@ -29,6 +30,3 @@ thanks to her passive The Queen's Resolve.
 
 The shown team with Tama is mainly meant for tower, it does not work as well as the version with Moineau but will 
 still allow you to do significant amounts of damage when combining the debuffs from Cordie, Tama and Summer Amleth.
-
-
-**Speed Tuning — ** Since she is a debuffer, you want her to act before your main DPS.

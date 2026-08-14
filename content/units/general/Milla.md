@@ -3,6 +3,7 @@ id: Milla
 name: Milla
 role: Support
 scalable: true
+speed: none
 weapons:
   - level: MillaUR
     tier: recommended
@@ -23,5 +24,3 @@ Milla can increases the max HP of all allies by 25% and also increase Emerald al
 
         Milla also scales with rarity due to higher rarities being able to hit higher attack stats for a bigger HP buff
         as well as more survivability which may allow her to reactivate her passive HP regeneration support.
-
-**Speed Tuning — ** No speed tuning is required

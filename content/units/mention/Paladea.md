@@ -3,6 +3,8 @@ id: Paladea
 name: Paladea
 role: Support
 scalable: false
+speed: before-dps
+speedNote: She should also act before Lunalynn.
 weapons:
   - level: PaladeaSSR
     tier: optional
@@ -29,6 +31,3 @@ rarities due to the fact that her LR UW grants extra crit rate.
 If all conditions are met to use Black Bullet, Paladea herself can also do a decent amount of damage if the enemy she is
 attacking is debuffed by Cordie, even at very low rarity. Because of this it is recommended to run her with another
 max level weapon if you cannot afford or want her own UW.
-
-**Speed Tuning —** Paladea's S1 debuffs the enemies' crit resistance, so you want her to move before either of your DPSs
-and Lunalynn

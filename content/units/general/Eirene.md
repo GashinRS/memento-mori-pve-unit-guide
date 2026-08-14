@@ -2,6 +2,8 @@
 id: Eirene
 name: Eirene
 role: Support
+speed: before-dps
+speedNote: Make the main DPS the slowest ally for the cooldown reduction; Meria is a useful alternative.
 weapons:
   - level: EireneSSR
     tier: recommended
@@ -28,8 +30,3 @@ Eirene is one of the few units in the game who can debuff defense (25% in main q
 
 **Main Quest — **Eirene's debuff is undispellable in main quest, which means that you do not
         need any debuff accuracy for the debuff to land. It even works on units with debuff immunity (Cordie).
-
-**Speed Tuning — ** Since Eirene is a debuffer, you want her to act before your main DPS. Another
-        thing to take into account is that when possible, you want your main DPS to be the slowest unit on your team
-        to get the extra cooldown reduction. When this is not possible due to a lack of speed runes, having Meria
-        as the slowest unit is also a good option since she can replenish her Multi-Barriers faster that way.

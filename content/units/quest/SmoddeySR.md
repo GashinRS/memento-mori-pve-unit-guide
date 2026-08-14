@@ -3,6 +3,8 @@ id: SmoddeySR
 name: Summer Moddey
 role: Support - DPS
 scalable: true
+speed: team-dependent
+speedNote: "With Moineau: faster than Moineau. As DPS: slower than Cordie and not the slowest ally."
 aliases:
   - id: SmoddeyUR
     name: Summer Moddey
@@ -39,8 +41,3 @@ What is not covered in that section however is the fact that Summer Moddey herse
         alternative to Eirene by providing a 40% M.DEF debuff as well as a 20% increase in damage taken for the enemies.
         Artie also has the added benefit of being a lot bulkier than Eirene, which allows her to take more hits from
         silenced enemies.
-
-**Speed Tuning — **When using her with Moineau, you should make sure that she is faster than
-        Moineau so her attack buff can get copied by Moineau. When using Summer Moddey on her own, the main things to
-        make sure are that she is not the slowest unit in order to get Winter Amour's crit buff, and that she is
-         slower than Cordie so she can make use of Cordie's defense debuff.

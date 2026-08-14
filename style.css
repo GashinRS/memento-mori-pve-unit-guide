@@ -407,6 +407,29 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
     box-shadow: 0 0 7px color-mix(in srgb,var(--cat) 24%,transparent);
 }
 
+.speed-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    margin: 2px 0 16px;
+}
+.speed-section .row-label { margin: 0 2px 0 0; }
+.speed-badge {
+    border: 1px solid rgba(139,94,60,.3);
+    border-radius: 999px;
+    background: rgba(139,94,60,.08);
+    color: var(--sepia);
+    font-family: 'Cinzel',serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    line-height: 1.4;
+    padding: 3px 9px;
+    text-transform: uppercase;
+}
+.speed-note { color: var(--ink-light); font-size: .82rem; line-height: 1.4; }
+
 /* ── Description ── */
 .unit-details { margin-top: 0; }
 .unit-details summary {

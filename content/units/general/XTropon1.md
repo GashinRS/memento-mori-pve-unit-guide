@@ -2,6 +2,7 @@
 id: XTropon1
 name: Winter Tropon
 role: Tank - Sub DPS
+speed: before-enemies
 aliases:
   - id: XTropon
     name: Winter Tropon
@@ -35,6 +36,3 @@ Winter Tropon is a rather niche unit that, while not universally useful, can be 
 
 **Main Quest —**Winter Tropon loses much of her value in main quest after turn 20 due to enemies gaining Berserk. This prevents
 her from applying her debuff and thus from stealing enemy stats.
-
-**Speed Tuning —**Winter Tropon wants her buff to be active as soon as possible, so she should move
-    before any of the enemy units.

@@ -3,6 +3,7 @@ id: Tama
 name: Tama
 role: Support - DPS
 scalable: true
+speed: before-dps
 weapons:
 pairs:
   - id: Cordie
@@ -19,5 +20,3 @@ Tama's S2 can debuff the highest attack enemy for 50% defense and 50% P.DEF. She
   not require her unique weapon for her most important support effects (unless you are an Amber main), and can also contribute a noticeable amount of damage herself even at SR rarity due to own debuffs. This damage will also go up if you increase her rarity.
 
 In most circumstances, you will only be using Tama in tower, as she simply does not have enough bulk to survive in main quest. The exception to this is for Amber teams, in which case Tama becomes an invaluable support unit, which you will want to have on almost every team alongside Rustica. This is a high investment team however and only briefly mentioned here for completeness’s sake, and this is not recommended for casual players. 
-
-**Speed Tuning — **As a debuffer and buffer, you want Tama to act before your main DPS.

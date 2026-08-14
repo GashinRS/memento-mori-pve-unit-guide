@@ -2,6 +2,8 @@
 id: Meria
 name: Meria
 role: Support
+speed: usually-none
+speedNote: Her innate 20% Speed buff is usually enough; add Speed only when enemies still act first.
 weapons:
   - level: MeriaSSR
     tier: recommended
@@ -25,8 +27,3 @@ Meria is one of the most universally useful support units in the game and can fi
         Her S2 hits 5 times as well, which can immediately replenish broken Multi-Barriers. This makes for a powerful survival tool, and
         hard counters most units that rely on AoE attacks like Soltina since they do not have the necessary hits to break
         the Multi-Barriers.
-
-        **Speed Tuning — **In most cases Meria's speed does not matter that much. Because she already
-        has an innate 20% speed buff, she will be faster than most enemies without any speed runes and will thus
-        already grant her Multi-Barriers before the enemies can act. When this is not the case, giving her
-        a bit of speed runes can help.

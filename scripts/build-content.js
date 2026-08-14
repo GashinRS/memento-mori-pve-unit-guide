@@ -15,6 +15,19 @@ const CATEGORY_VARIABLES = {
     tower: "TOWER_UNITS",
     mention: "HONORABLE_MENTIONS",
 };
+const SPEED_VALUES = new Set([
+    "before-dps",
+    "before-enemies",
+    "before-target",
+    "first",
+    "prefer-slow",
+    "none",
+    "usually-none",
+    "role-dependent",
+    "team-dependent",
+    "situational",
+    "dps-among-slowest",
+]);
 const CONTAINER_KEYS = new Set([
     "aliases",
     "assumptions",
@@ -253,26 +266,36 @@ function unitNameMap(units) {
 }
 
 function hydrateUnitReferences(units, names) {
-    return units.map((unit) => ({
-        id: unit.id,
-        name: unit.name,
-        role: unit.role,
-        scalable: unit.scalable || undefined,
-        aliases: unit.aliases,
-        weapons: Array.isArray(unit.weapons) ? unit.weapons : [],
-        pairs: normalizePairs(unit.pairs).map((pair) => ({
-            ...pair,
-            name: pair.name || names[pair.id] || pair.id,
-        })),
-        teams: normalizeTeams(unit.teams).map((team) => ({
-            ...team,
-            slots: team.slots.map((slot) => ({
-                id: slot.id,
-                name: slot.name || names[slot.id] || slot.id,
+    return units.map((unit) => {
+        if (unit.speed && !SPEED_VALUES.has(unit.speed)) {
+            throw new Error(`Unit "${unit.id}" has unknown speed value "${unit.speed}"`);
+        }
+        if (unit.speedNote && !unit.speed) {
+            throw new Error(`Unit "${unit.id}" has a speedNote without a speed value`);
+        }
+        return {
+            id: unit.id,
+            name: unit.name,
+            role: unit.role,
+            scalable: unit.scalable || undefined,
+            speed: unit.speed || null,
+            speedNote: unit.speedNote || null,
+            aliases: unit.aliases,
+            weapons: Array.isArray(unit.weapons) ? unit.weapons : [],
+            pairs: normalizePairs(unit.pairs).map((pair) => ({
+                ...pair,
+                name: pair.name || names[pair.id] || pair.id,
             })),
-        })),
-        desc: markdownToHtml(unit.body),
-    }));
+            teams: normalizeTeams(unit.teams).map((team) => ({
+                ...team,
+                slots: team.slots.map((slot) => ({
+                    id: slot.id,
+                    name: slot.name || names[slot.id] || slot.id,
+                })),
+            })),
+            desc: markdownToHtml(unit.body),
+        };
+    });
 }
 
 function readUnitFile(filePath, extraData = {}) {

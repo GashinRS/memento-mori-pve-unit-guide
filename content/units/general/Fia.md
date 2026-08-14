@@ -3,6 +3,8 @@ id: Fia
 name: Fia
 role: Support - DPS
 scalable: true
+speed: prefer-slow
+speedNote: Acting first can be useful against effects such as Amour's Blight.
 aliases:
   - id: FiaLR5
     name: Fia
@@ -49,7 +51,3 @@ Fia is without a doubt one of the most important limited units you can pull for 
     main quest, Yildiz is not required and LR should be more than enough to perform adequately in most scenarios. An issue you can run into
     sometimes in tower when pairing her with Yildiz is that she becomes too bulky, which reduces her damage, so this is
     something to take into account.
-
-**Speed Tuning —** In most cases you do not want any speed on her, because taking another hit before
-    being able to attack will increase her damage. There are cases where attacking first can be beneficial however. This
-    can for example be the case when facing Amour, as attacking first will let you avoid the Blight debuff, which prevents healing.

@@ -257,6 +257,28 @@
             '</div>';
     }
 
+    function renderSpeed(speed, note) {
+        if (!speed) return '';
+        var labels = {
+            'before-dps': 'Before main DPS',
+            'before-enemies': 'Before enemies',
+            'before-target': 'Before target',
+            'first': 'Act first',
+            'prefer-slow': 'Prefer slow',
+            'none': 'No tuning',
+            'usually-none': 'Usually no tuning',
+            'role-dependent': 'Role-dependent',
+            'team-dependent': 'Team-dependent',
+            'situational': 'Situational',
+            'dps-among-slowest': 'DPS among slowest'
+        };
+        return '<div class="speed-section">' +
+            '<span class="row-label">Speed</span>' +
+            '<span class="speed-badge">' + (labels[speed] || speed) + '</span>' +
+            (note ? '<span class="speed-note">' + note + '</span>' : '') +
+            '</div>';
+    }
+
     /* ── Card ── */
     function renderCard(unit) {
         return '<div class="unit-card" id="' + unitAnchor(unit) + '">' +
@@ -280,6 +302,7 @@
             '<details class="unit-details">' +
             '<summary><span class="closed-label">View More</span><span class="open-label">View Less</span></summary>' +
             renderTeams(unit.teams) +
+            renderSpeed(unit.speed, unit.speedNote) +
             '<div class="unit-desc">' + linkGuideTerms(unit.desc.trim(), unit) + '</div>' +
             '</details>' +
             '</div>';

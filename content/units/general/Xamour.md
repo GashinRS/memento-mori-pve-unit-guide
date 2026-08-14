@@ -2,6 +2,7 @@
 id: Xamour
 name: Winter Amour
 role: Support
+speed: first
 weapons:
   - level: XamourSSR
     tier: recommended
@@ -28,6 +29,3 @@ Winter Amour is a unit designed for double DPS teams, more specifically for Flor
         Because Winter Amour can also buff the everyone's crit rate except for the slowest unit on the team, she also
         pairs well with Luna because it frees up Luna from taking the position next to Merlyn, which can now be occupied
         by your second DPS.
-
-**Speed Tuning — ** The crit buff is granted with her S1, so she wants to be the first unit to act to
-        give out this buff.
