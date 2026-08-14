@@ -1,3 +1,4 @@
+# $schema: ../schemas/site.schema.json
 header:
   eyebrow: Bank of Innovation
   title: |

@@ -1764,8 +1764,7 @@ const SITE_CONTENT = {
         "items": [
             "The level 1 strategy",
             "Base pool unit guide",
-            "Examples of unconventional PVE teams that work in very specific scenarios",
-            "Rerun estimations"
+            "Examples of unconventional PVE teams that work in very specific scenarios"
         ]
     },
     "assumptions": {

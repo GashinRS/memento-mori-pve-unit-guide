@@ -54,6 +54,7 @@ general:
 ## Editing Page Copy
 
 Edit `content/site.yaml` for the header, WIP banner, assumptions, section labels, section notes, and footer.
+It references `schemas/site.schema.json`, which provides project-specific validation and autocomplete in supporting editors.
 
 Edit `content/unit-names.yaml` when a team or pair references an icon id that does not have its own guide entry.
 
