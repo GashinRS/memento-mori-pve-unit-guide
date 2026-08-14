@@ -40,6 +40,7 @@ const UNIT_NAMES = {
     "Eidene": "Eidene",
     "Fenny": "Fenny",
     "Paladea": "Paladea",
+    "Rustica": "Rustica",
     "NinaLR5": "Nina"
 };
 
@@ -1232,6 +1233,94 @@ const HONORABLE_MENTIONS = [
         "desc": "<p>Tama's S2 can debuff the highest attack enemy for 50% defense and 50% P.DEF. She is also one of only two units   in the game with prolonged Invisibility (the other being Dian), which greatly contributes to her longevity in battle.   Because her debuff is only on turn 2 and only targets one enemy however, she is not as useful as units like Moineau.   The given example team will almost always work better with Moineau over Tama. She can still be useful however as does   not require her unique weapon for her most important support effects (unless you are an Amber main), and can also contribute a noticeable amount of damage herself even at SR rarity due to own debuffs. This damage will also go up if you increase her rarity.</p>\n<p>In most circumstances, you will only be using Tama in tower, as she simply does not have enough bulk to survive in main quest. The exception to this is for Amber teams, in which case Tama becomes an invaluable support unit, which you will want to have on almost every team alongside Rustica. This is a high investment team however and only briefly mentioned here for completeness’s sake, and this is not recommended for casual players.</p>\n<p><strong>Speed Tuning — </strong>As a debuffer and buffer, you want Tama to act before your main DPS.</p>"
     },
     {
+        "id": "Rustica",
+        "name": "Rustica",
+        "role": "DPS",
+        "aliases": [],
+        "weapons": [
+            {
+                "level": "RusticaLR",
+                "tier": "required",
+                "description": "todo"
+            }
+        ],
+        "pairs": [
+            {
+                "id": "TamaLR",
+                "name": "TamaLR",
+                "badge": "support - dps"
+            },
+            {
+                "id": "MoineauLR",
+                "name": "MoineauLR",
+                "badge": "support"
+            },
+            {
+                "id": "Shiloh",
+                "name": "Shiloh",
+                "badge": "support"
+            },
+            {
+                "id": "XTropon",
+                "name": "Winter Tropon",
+                "badge": "tank"
+            }
+        ],
+        "teams": [
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Rustica",
+                        "name": "Rustica"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "Moineau",
+                        "name": "Moineau"
+                    },
+                    {
+                        "id": "Tama",
+                        "name": "Tama"
+                    },
+                    {
+                        "id": "XTropon",
+                        "name": "Winter Tropon"
+                    }
+                ]
+            },
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Rustica",
+                        "name": "Rustica"
+                    },
+                    {
+                        "id": "Shiloh",
+                        "name": "Shiloh"
+                    },
+                    {
+                        "id": "Moineau",
+                        "name": "Moineau"
+                    },
+                    {
+                        "id": "Tama",
+                        "name": "Tama"
+                    },
+                    {
+                        "id": "Dian",
+                        "name": "Dian"
+                    }
+                ]
+            }
+        ],
+        "desc": "<p>Rustica is arguably the best DPS unit in the limited pool aside from Fia for PVE. Aside from her DPS potential, she also has great innate bulk with her 75% DR and her 800% ATK Shield which she can grant to both herself and the highest attack ally. She requires a lot of investment in terms of units however and building her is only recommended if you are planning to go all in on Amber and using Amber in PVP as well. If you do end up on this path, you unlock a lot of new types of teams you can run in both Main Quest and Tower. Most of these revolve around Rustica + Tama, who have incredible synergy thanks to them both targeting the highest attack enemy with their S2, and Tama additionally debuffs the enemy's DEF and P.DEF with her S2. This makes for a very strong combination for damage, and can easily clear a lot of stages that could otherwise be hard to clear for a regular Cordie team. The team examples given here are some of the cheaper teams you can run with Rustica, but there's an abundance of variations to try depending on what other (Amber) units you have. Another strong combination would for example be Rustica + Tama + Cattleya.</p>\n<p><strong>Speed Tuning — </strong> This depends heavily on the team used, but generally you want her on the faster side, faster than Moineau and slower than Tama.</p>"
+    },
+    {
         "id": "Rusalka",
         "name": "Rusalka",
         "role": "Support",
@@ -1510,6 +1599,10 @@ const SITE_CONTENT = {
             {
                 "term": "PMDB",
                 "definition": "<p>Physical/Magical Defense Break</p>"
+            },
+            {
+                "term": "DR",
+                "definition": "<p>Damage Reduction</p>"
             }
         ]
     },

@@ -125,6 +125,8 @@ glossary:
       definition: Unique Weapon
     - term: PMDB
       definition: Physical/Magical Defense Break
+    - term: DR
+      definition: Damage Reduction
 sections:
   - key: general
     id: general

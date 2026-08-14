@@ -350,6 +350,7 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
 .pair-badge { font-size: 9px; font-family: 'Cinzel',serif; letter-spacing: .1em; padding: 2px 8px; border-radius: 999px; text-transform: uppercase; }
 .pair-badge.dps      { background: rgba(139,94,60,.10);  color: var(--sepia); border: 1px solid rgba(139,94,60,.25); }
 .pair-badge.support  { background: rgba(58,122,114,.09); color: var(--teal);  border: 1px solid rgba(58,122,114,.25); }
+.pair-badge.tank     { background: rgba(70,88,120,.09);  color: #4b5f7a;     border: 1px solid rgba(70,88,120,.28); }
 .pair-badge.required { background: rgba(139,58,58,.09);  color: var(--ruby);  border: 1px solid rgba(139,58,58,.25); }
 
 /* pair chip */
