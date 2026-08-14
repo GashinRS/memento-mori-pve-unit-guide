@@ -415,7 +415,14 @@ function build() {
     const { names, grouped } = loadUnits();
     const basePoolUnits = loadBasePoolUnits(names);
     const concepts = loadConcepts();
-    const normalizedSite = siteMarkdownToHtml(site);
+    const normalizedSite = {
+        ...siteMarkdownToHtml(site),
+        lastUpdated: new Intl.DateTimeFormat("en-US", {
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+        }).format(new Date()),
+    };
     const normalizedBasePoolPage = siteMarkdownToHtml(basePoolPage);
     const normalizedConceptsPage = siteMarkdownToHtml(conceptsPage);
 

@@ -1433,8 +1433,7 @@ const CONCEPT_ARTICLES = [
 const SITE_CONTENT = {
     "header": {
         "eyebrow": "Bank of Innovation",
-        "title": "Memento Mori\nPvE Limited Unit Guide",
-        "subtitle": "Units worth pulling - ranked by impact across PvE content"
+        "title": "Memento Mori\nPvE Limited Unit Guide"
     },
     "wip": {
         "title": "Work in Progress",
@@ -1550,7 +1549,8 @@ const SITE_CONTENT = {
     "footer": {
         "text": "<p>This is a community guide - not affiliated with</p>",
         "brand": "Bank of Innovation"
-    }
+    },
+    "lastUpdated": "August 14, 2026"
 };
 
 const BASE_POOL_CONTENT = {

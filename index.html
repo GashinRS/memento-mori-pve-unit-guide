@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-    <script src="data/generated-content.js?v=20260508"></script>
-    <link rel="stylesheet" href="style.css?v=20260508">
+    <script src="data/generated-content.js?v=20260814"></script>
+    <link rel="stylesheet" href="style.css?v=20260814">
 </head>
 <body id="top">
 <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
@@ -228,13 +228,21 @@
     // Each slot is now an object: { id, name }
     function renderTeams(teams) {
         if (!teams || !teams.length) return '';
+        var anchors = samePageUnitAnchors();
         var rows = teams.map(function(team) {
             var slots = team.slots.map(function(slot, i) {
-                return '<div class="tip-icon">' +
-                    '<div class="team-slot">' +
+                var icon = '<div class="team-slot">' +
                     imgFB('icons/units/' + slot.id + '.png', slot.name,
                         '<div class="slot-placeholder" style="display:none"></div>') +
-                    '</div>' +
+                    '</div>';
+                var target = anchors[slot.id] || anchors[slot.name];
+                if (target) {
+                    icon = '<a class="team-slot-link" href="#' + target + '" aria-label="Go to ' + slot.name + '">' +
+                        icon +
+                        '</a>';
+                }
+                return '<div class="tip-icon">' +
+                    icon +
                     '<div class="tip">' + slot.name + '</div>' +
                     '</div>';
             }).join('');
@@ -283,7 +291,7 @@
         document.getElementById('site-header').innerHTML =
             '<p class="header-eyebrow">' + SITE_CONTENT.header.eyebrow + '</p>' +
             '<h1>' + textHtml(SITE_CONTENT.header.title) + '</h1>' +
-            '<p class="header-sub">' + SITE_CONTENT.header.subtitle + '</p>';
+            '<p class="last-updated">Last updated ' + SITE_CONTENT.lastUpdated + '</p>';
     }
 
     function renderNav() {

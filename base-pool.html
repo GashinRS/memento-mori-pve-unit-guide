@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-    <script src="data/generated-content.js?v=20260508"></script>
-    <link rel="stylesheet" href="style.css?v=20260508">
+    <script src="data/generated-content.js?v=20260814"></script>
+    <link rel="stylesheet" href="style.css?v=20260814">
 </head>
 <body id="top">
 <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
@@ -105,7 +105,8 @@
         document.getElementById('site-header').innerHTML =
             '<p class="header-eyebrow">' + BASE_POOL_CONTENT.header.eyebrow + '</p>' +
             '<h1>' + textHtml(BASE_POOL_CONTENT.header.title) + '</h1>' +
-            '<p class="header-sub">' + BASE_POOL_CONTENT.header.subtitle + '</p>';
+            '<p class="header-sub">' + BASE_POOL_CONTENT.header.subtitle + '</p>' +
+            '<p class="last-updated">Last updated ' + SITE_CONTENT.lastUpdated + '</p>';
     }
 
     function renderIntro() {
