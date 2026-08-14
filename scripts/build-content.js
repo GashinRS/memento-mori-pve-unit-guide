@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { execFileSync } = require("child_process");
 
 const root = path.resolve(__dirname, "..");
 const contentDir = path.join(root, "content");
@@ -8,6 +9,25 @@ const basePoolUnitsDir = path.join(contentDir, "base-pool-units");
 const conceptsDir = path.join(contentDir, "concepts");
 const outputPath = path.join(root, "data", "generated-content.js");
 const aaCharacterMapPath = path.join(contentDir, "aa-character-map.yaml");
+
+function latestCommitDate() {
+    const value = execFileSync("git", ["log", "-1", "--format=%cs"], {
+        cwd: root,
+        encoding: "utf8",
+    }).trim();
+    const match = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+
+    if (!match) {
+        throw new Error(`Could not read the latest Git commit date: "${value}"`);
+    }
+
+    return new Intl.DateTimeFormat("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+        timeZone: "UTC",
+    }).format(new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3]))));
+}
 const AA_API_BASE = "https://api.aabot.dev";
 
 const CATEGORY_KEYS = ["general", "quest", "tower", "mention"];
@@ -588,11 +608,7 @@ async function build() {
     });
     const normalizedSite = {
         ...siteMarkdownToHtml(site),
-        lastUpdated: new Intl.DateTimeFormat("en-US", {
-            month: "long",
-            day: "numeric",
-            year: "numeric",
-        }).format(new Date()),
+        lastUpdated: latestCommitDate(),
     };
     const normalizedBasePoolPage = siteMarkdownToHtml(basePoolPage);
     const normalizedConceptsPage = siteMarkdownToHtml(conceptsPage);

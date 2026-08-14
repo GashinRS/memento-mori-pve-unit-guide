@@ -83,4 +83,7 @@ maintained in `content/aa-character-map.yaml`; omit `rerunMonths` for the six-mo
 for annual seasonal reruns. The build fails if a guide unit is missing from the mapping or an API name/title no longer
 matches, preventing silent mismatches when the upstream character list changes.
 
+The displayed "Last updated" date comes from the latest Git commit, so scheduled builds do not change it unless the
+guide itself has been committed again.
+
 Then open `index.html` in a browser.
