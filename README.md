@@ -77,4 +77,9 @@ After editing content, run:
 node scripts/build-content.js
 ```
 
+The build fetches the AA API character list, banner history, and active banners. Character IDs and rerun intervals are
+maintained in `content/aa-character-map.yaml`; omit `rerunMonths` for the six-month default and use `rerunMonths: 12`
+for annual seasonal reruns. The build fails if a guide unit is missing from the mapping or an API name/title no longer
+matches, preventing silent mismatches when the upstream character list changes.
+
 Then open `index.html` in a browser.

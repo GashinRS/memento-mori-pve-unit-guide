@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-    <script src="data/generated-content.js?v=20260814"></script>
-    <link rel="stylesheet" href="style.css?v=20260814">
+    <script src="data/generated-content.js?v=20260814-reruns"></script>
+    <link rel="stylesheet" href="style.css?v=20260814-reruns">
 </head>
 <body id="top">
 <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
@@ -85,8 +85,15 @@
     }
 
     function imgFB(src, alt, fb) {
-        return '<img src="' + src + '" alt="' + alt + '" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' + fb;
+        return '<img src="' + src + '" alt="' + alt + '" data-fallback-image>' + fb;
     }
+
+    document.addEventListener('error', function(event) {
+        var image = event.target;
+        if (!image.matches || !image.matches('img[data-fallback-image]')) return;
+        image.style.display = 'none';
+        if (image.nextElementSibling) image.nextElementSibling.style.display = 'flex';
+    }, true);
 
     function unitIcon(id, size) {
         size = size || '4.75rem';
@@ -198,6 +205,22 @@
         }).join('');
     }
 
+    function renderRerun(rerun) {
+        if (!rerun) return '';
+        if (rerun.active) {
+            return '<div class="rerun-row">' +
+                '<span class="rerun-label">Banner</span>' +
+                '<span class="rerun-active"><span aria-hidden="true">&#9679;</span> On banner now</span>' +
+                '</div>';
+        }
+        var estimate = rerun.estimate || 'Unavailable';
+        var context = rerun.lastRun ? ' title="Based on the latest AA banner: ' + rerun.lastRun + '"' : '';
+        return '<div class="rerun-row"' + context + '>' +
+            '<span class="rerun-label">Estimated rerun</span>' +
+            '<span class="rerun-estimate">' + estimate + '</span>' +
+            '</div>';
+    }
+
     /* ── Pairs ── */
     function renderPairs(pairs, currentUnit) {
         if (!pairs || !pairs.length) return '';
@@ -231,7 +254,7 @@
         if (!teams || !teams.length) return '';
         var anchors = samePageUnitAnchors();
         var rows = teams.map(function(team) {
-            var slots = team.slots.map(function(slot, i) {
+            var slots = team.slots.map(function(slot) {
                 var icon = '<div class="team-slot">' +
                     imgFB('icons/units/' + slot.id + '.png', slot.name,
                         '<div class="slot-placeholder" style="display:none"></div>') +
@@ -290,6 +313,7 @@
             '<div class="unit-role">' + unit.role +
             (unit.scalable ? ' <span class="copies-badge">&#8679; scales with copies</span>' : '') +
             '</div>' +
+            renderRerun(unit.rerun) +
             '<div class="weapons-row">' +
             '<span class="weapons-label">Weapon</span>' +
             renderWeapons(unit.weapons) +

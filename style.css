@@ -256,6 +256,36 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
 .unit-name { font-family: 'Cinzel',serif; font-size: 1.15rem; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
 .unit-role { font-size: .82rem; color: var(--cat); font-style: italic; margin-bottom: 12px; }
 
+.rerun-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    margin: -5px 0 10px;
+    line-height: 1.35;
+}
+.rerun-label {
+    color: var(--ink-faint);
+    font-family: 'Cinzel',serif;
+    font-size: 9px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+.rerun-estimate { color: var(--ink-light); font-size: .76rem; }
+.rerun-active {
+    border: 1px solid rgba(74,122,74,.3);
+    border-radius: 999px;
+    background: rgba(74,122,74,.1);
+    color: var(--sage);
+    font-family: 'Cinzel',serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    padding: 2px 8px;
+    text-transform: uppercase;
+}
+.rerun-active span { font-size: 7px; margin-right: 3px; }
+
 /* ── Weapons ── */
 .weapons-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
 .weapons-label { font-family: 'Cinzel',serif; font-size: 9px; letter-spacing: .15em; text-transform: uppercase; color: var(--ink-faint); margin-right: 4px; }

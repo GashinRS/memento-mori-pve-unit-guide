@@ -1,0 +1,93 @@
+units:
+  - guideId: Belle
+    aaId: 19
+    apiName: Belle
+  - guideId: Eidene
+    aaId: 92
+    apiName: Eidene
+  - guideId: Eirene
+    aaId: 109
+    apiName: Eirene
+  - guideId: Eureka
+    aaId: 106
+    apiName: Eureka
+  - guideId: Evelyn
+    aaId: 101
+    apiName: Evelyn
+  - guideId: Fenny
+    aaId: 68
+    apiName: Fenny
+  - guideId: Fia
+    aaId: 60
+    apiName: Fia
+  - guideId: Kobel
+    aaId: 103
+    apiName: Kobel
+  - guideId: Matilda
+    aaId: 85
+    apiName: Matilda
+  - guideId: Meria
+    aaId: 86
+    apiName: Meria
+  - guideId: Milla
+    aaId: 80
+    apiName: Milla
+  - guideId: Moineau
+    aaId: 100
+    apiName: Moineau
+  - guideId: Paladea
+    aaId: 63
+    apiName: Paladea
+  - guideId: Regina
+    aaId: 137
+    apiName: Regina
+  - guideId: Rusalka
+    aaId: 44
+    apiName: Rusalka
+  - guideId: Rustica
+    aaId: 113
+    apiName: Rustica
+  - guideId: Samleth
+    aaId: 96
+    apiName: Amleth
+    apiTitle: A Midsummer Day’s Dream
+    rerunMonths: 12
+  - guideId: Shiloh
+    aaId: 153
+    apiName: Shiloh
+  - guideId: Sivi
+    aaId: 52
+    apiName: Sivi
+  - guideId: SmoddeySR
+    aaId: 71
+    apiName: Moddey
+    apiTitle: Gravekeeper’s Summer Holiday
+    rerunMonths: 12
+  - guideId: Tama
+    aaId: 81
+    apiName: Tama
+  - guideId: Xamour
+    aaId: 73
+    apiName: Amour
+    apiTitle: Holy Night’s Gift
+    rerunMonths: 12
+  - guideId: XLuna
+    aaId: 108
+    apiName: Lunalynn
+    apiTitle: Holy Night’s Fairy
+  - guideId: XSol
+    aaId: 107
+    apiName: Soltina
+    apiTitle: Heartwarming Memories
+    rerunMonths: 12
+  - guideId: XTropon1
+    aaId: 74
+    apiName: Tropon
+    apiTitle: Holy Night’s Prayer
+    rerunMonths: 12
+  - guideId: Yildiz
+    aaId: 124
+    apiName: Yildiz
+  - guideId: Yuni
+    aaId: 76
+    apiName: Yuni

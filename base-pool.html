@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-    <script src="data/generated-content.js?v=20260814"></script>
-    <link rel="stylesheet" href="style.css?v=20260814">
+    <script src="data/generated-content.js?v=20260814-reruns"></script>
+    <link rel="stylesheet" href="style.css?v=20260814-reruns">
 </head>
 <body id="top">
 <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
@@ -40,8 +40,15 @@
     }
 
     function imgFB(src, alt, fb) {
-        return '<img src="' + src + '" alt="' + alt + '" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' + fb;
+        return '<img src="' + src + '" alt="' + alt + '" data-fallback-image>' + fb;
     }
+
+    document.addEventListener('error', function(event) {
+        var image = event.target;
+        if (!image.matches || !image.matches('img[data-fallback-image]')) return;
+        image.style.display = 'none';
+        if (image.nextElementSibling) image.nextElementSibling.style.display = 'flex';
+    }, true);
 
     function unitAnchor(unit) {
         return 'unit-' + unit.id;

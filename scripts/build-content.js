@@ -7,6 +7,8 @@ const unitsDir = path.join(contentDir, "units");
 const basePoolUnitsDir = path.join(contentDir, "base-pool-units");
 const conceptsDir = path.join(contentDir, "concepts");
 const outputPath = path.join(root, "data", "generated-content.js");
+const aaCharacterMapPath = path.join(contentDir, "aa-character-map.yaml");
+const AA_API_BASE = "https://api.aabot.dev";
 
 const CATEGORY_KEYS = ["general", "quest", "tower", "mention"];
 const CATEGORY_VARIABLES = {
@@ -431,13 +433,159 @@ function siteMarkdownToHtml(value, key = "") {
     return markdownToHtml(value);
 }
 
-function build() {
+async function fetchAA(pathname) {
+    const response = await fetch(`${AA_API_BASE}${pathname}`, {
+        signal: AbortSignal.timeout(20000),
+    });
+    if (!response.ok) {
+        throw new Error(`AA API request failed (${response.status}) for ${pathname}`);
+    }
+    const payload = await response.json();
+    if (!payload || payload.data == null) {
+        throw new Error(`AA API returned no data for ${pathname}`);
+    }
+    return payload.data;
+}
+
+function flattenGachaBanners(data) {
+    const banners = ["fleeting", "ioc", "iosg"].flatMap((key) =>
+        Array.isArray(data[key]) ? data[key] : []
+    );
+    (Array.isArray(data.chosen) ? data.chosen : []).forEach((group) => {
+        if (Array.isArray(group.banners)) banners.push(...group.banners);
+    });
+    // Eminence is a permanent, player-age-based pool rather than a current rerun banner.
+    return banners;
+}
+
+function bannerMonth(value) {
+    const match = String(value || "").match(/^(\d{4})-(\d{2})-/);
+    if (!match) return null;
+    return { year: Number(match[1]), month: Number(match[2]) };
+}
+
+function addMonths(value, amount) {
+    const monthIndex = value.year * 12 + value.month - 1 + amount;
+    return {
+        year: Math.floor(monthIndex / 12),
+        month: (monthIndex % 12) + 1,
+    };
+}
+
+function compareMonths(left, right) {
+    return left.year * 12 + left.month - (right.year * 12 + right.month);
+}
+
+function formatMonthYear(value) {
+    return new Intl.DateTimeFormat("en-US", {
+        month: "long",
+        year: "numeric",
+        timeZone: "UTC",
+    }).format(new Date(Date.UTC(value.year, value.month - 1, 1)));
+}
+
+async function loadAARerunData(units) {
+    if (!fs.existsSync(aaCharacterMapPath)) {
+        throw new Error("Missing content/aa-character-map.yaml");
+    }
+    const mappingData = parseYaml(fs.readFileSync(aaCharacterMapPath, "utf8"));
+    const mappingEntries = Array.isArray(mappingData.units) ? mappingData.units : [];
+    const mapping = Object.fromEntries(mappingEntries.map((entry) => [entry.guideId, entry]));
+    const missingMappings = units.filter((unit) => !mapping[unit.id]).map((unit) => unit.id);
+    if (missingMappings.length) {
+        throw new Error(`Missing AA character mappings for: ${missingMappings.join(", ")}`);
+    }
+
+    const [characters, historyData, activeData] = await Promise.all([
+        fetchAA("/strings/character"),
+        fetchAA("/gacha?is_active=false&include_future=false"),
+        fetchAA("/gacha?is_active=true&include_future=false"),
+    ]);
+
+    units.forEach((unit) => {
+        const entry = mapping[unit.id];
+        const aaId = Number(entry.aaId);
+        const character = characters[String(aaId)];
+        if (!Number.isInteger(aaId) || !character) {
+            throw new Error(`Unit "${unit.id}" maps to unknown AA character ID "${entry.aaId}"`);
+        }
+        if (entry.apiName && character.name !== entry.apiName) {
+            throw new Error(
+                `AA character ${aaId} name changed: expected "${entry.apiName}", received "${character.name}"`
+            );
+        }
+        if (entry.apiTitle && character.title !== entry.apiTitle) {
+            throw new Error(
+                `AA character ${aaId} title changed: expected "${entry.apiTitle}", received "${character.title}"`
+            );
+        }
+    });
+
+    const history = flattenGachaBanners(historyData);
+    const activeIds = new Set(flattenGachaBanners(activeData).map((banner) => Number(banner.char_id)));
+    const now = new Date();
+    const currentMonth = { year: now.getFullYear(), month: now.getMonth() + 1 };
+
+    const reruns = Object.fromEntries(
+        units.map((unit) => {
+            const entry = mapping[unit.id];
+            const aaId = Number(entry.aaId);
+            const active = activeIds.has(aaId);
+            const latest = history
+                .filter((banner) => Number(banner.char_id) === aaId)
+                .sort((left, right) => String(right.start).localeCompare(String(left.start)))[0];
+            const lastRunMonth = latest ? bannerMonth(latest.start) : null;
+
+            if (active) {
+                return [
+                    unit.id,
+                    {
+                        aaId,
+                        active: true,
+                        lastRun: lastRunMonth ? formatMonthYear(lastRunMonth) : null,
+                        estimate: null,
+                    },
+                ];
+            }
+
+            if (!lastRunMonth) {
+                return [unit.id, { aaId, active: false, lastRun: null, estimate: null }];
+            }
+
+            const interval = Number(entry.rerunMonths) || 6;
+            let estimate = addMonths(lastRunMonth, interval);
+            // Once an inactive estimate arrives or passes, keep the estimate forward-looking.
+            if (compareMonths(estimate, currentMonth) <= 0) {
+                estimate = addMonths(currentMonth, 1);
+            }
+            return [
+                unit.id,
+                {
+                    aaId,
+                    active: false,
+                    lastRun: formatMonthYear(lastRunMonth),
+                    estimate: formatMonthYear(estimate),
+                },
+            ];
+        })
+    );
+
+    console.log(`Fetched AA rerun data for ${Object.keys(reruns).length} guide units`);
+    return reruns;
+}
+
+async function build() {
     const site = parseYaml(fs.readFileSync(path.join(contentDir, "site.yaml"), "utf8"));
     const basePoolPage = parseYaml(fs.readFileSync(path.join(contentDir, "pages", "base-pool.yaml"), "utf8"));
     const conceptsPage = parseYaml(fs.readFileSync(path.join(contentDir, "pages", "concepts.yaml"), "utf8"));
     const { names, grouped } = loadUnits();
     const basePoolUnits = loadBasePoolUnits(names);
     const concepts = loadConcepts();
+    const guideUnits = CATEGORY_KEYS.flatMap((category) => grouped[category]);
+    const reruns = await loadAARerunData(guideUnits);
+    guideUnits.forEach((unit) => {
+        unit.rerun = reruns[unit.id] || null;
+    });
     const normalizedSite = {
         ...siteMarkdownToHtml(site),
         lastUpdated: new Intl.DateTimeFormat("en-US", {
@@ -483,4 +631,7 @@ function build() {
     console.log(`Generated ${path.relative(root, outputPath)}`);
 }
 
-build();
+build().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+});
