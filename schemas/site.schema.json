@@ -1,0 +1,229 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://memento-mori-pve-guide.local/schemas/site.schema.json",
+  "title": "Memento Mori PvE Guide Site Content",
+  "description": "Editable site-wide content consumed by scripts/build-content.js.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "header",
+    "wip",
+    "assumptions",
+    "glossary",
+    "sections",
+    "footer"
+  ],
+  "properties": {
+    "header": {
+      "$ref": "#/$defs/header"
+    },
+    "wip": {
+      "$ref": "#/$defs/wip"
+    },
+    "assumptions": {
+      "$ref": "#/$defs/assumptions"
+    },
+    "glossary": {
+      "$ref": "#/$defs/glossary"
+    },
+    "sections": {
+      "type": "array",
+      "description": "Guide sections in display order.",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/section"
+      }
+    },
+    "footer": {
+      "$ref": "#/$defs/footer"
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "header": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "eyebrow",
+        "title"
+      ],
+      "properties": {
+        "eyebrow": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "subtitle": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "wip": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "text",
+        "items"
+      ],
+      "properties": {
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "text": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        }
+      }
+    },
+    "assumptions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "cards"
+      ],
+      "properties": {
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "cards": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/assumptionCard"
+          }
+        }
+      }
+    },
+    "assumptionCard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "icon",
+        "text"
+      ],
+      "properties": {
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "icon": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "text": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "glossary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "terms"
+      ],
+      "properties": {
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "terms": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/glossaryTerm"
+          }
+        }
+      }
+    },
+    "glossaryTerm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "term",
+        "definition"
+      ],
+      "properties": {
+        "term": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          },
+          "uniqueItems": true
+        },
+        "definition": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "key",
+        "id",
+        "label",
+        "pill",
+        "navIcon"
+      ],
+      "properties": {
+        "key": {
+          "type": "string",
+          "enum": [
+            "general",
+            "quest",
+            "tower",
+            "mention"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "label": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "navLabel": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "pill": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "navIcon": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "note": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "footer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "text",
+        "brand"
+      ],
+      "properties": {
+        "text": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "brand": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    }
+  }
+}
