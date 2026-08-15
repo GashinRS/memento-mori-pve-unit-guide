@@ -83,6 +83,10 @@ maintained in `content/aa-character-map.yaml`; omit `rerunMonths` for the six-mo
 for annual seasonal reruns. The build fails if a guide unit is missing from the mapping or an API name/title no longer
 matches, preventing silent mismatches when the upstream character list changes.
 
+Rerun predictions use Invocation of Chance for appearances one through three and Invocation of the Stars' Guidance
+from appearance four onward. When a prediction reaches or passes the current month, the estimate moves to the month in
+which the earliest currently active banner in the appropriate pool ends.
+
 The displayed "Last updated" date comes from the latest Git commit that is not marked `[keepalive]`. After 45 days
 without a commit, a scheduled build creates an empty `[keepalive]` commit to prevent GitHub from disabling the schedule,
 without changing the date shown on the guide.

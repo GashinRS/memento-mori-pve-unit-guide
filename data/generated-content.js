@@ -265,7 +265,7 @@ const GENERAL_UNITS = [
             "aaId": 60,
             "active": false,
             "lastRun": "February 2026",
-            "estimate": "September 2026"
+            "estimate": "August 2026"
         }
     },
     {
@@ -488,7 +488,7 @@ const GENERAL_UNITS = [
             "aaId": 100,
             "active": false,
             "lastRun": "January 2026",
-            "estimate": "September 2026"
+            "estimate": "August 2026"
         }
     },
     {
@@ -1203,7 +1203,7 @@ const HONORABLE_MENTIONS = [
             "aaId": 85,
             "active": false,
             "lastRun": "February 2026",
-            "estimate": "September 2026"
+            "estimate": "August 2026"
         }
     },
     {
@@ -1239,7 +1239,7 @@ const HONORABLE_MENTIONS = [
             "aaId": 103,
             "active": false,
             "lastRun": "February 2026",
-            "estimate": "September 2026"
+            "estimate": "August 2026"
         }
     },
     {
@@ -1269,7 +1269,7 @@ const HONORABLE_MENTIONS = [
             "aaId": 108,
             "active": false,
             "lastRun": "December 2025",
-            "estimate": "September 2026"
+            "estimate": "August 2026"
         }
     },
     {
@@ -1300,7 +1300,7 @@ const HONORABLE_MENTIONS = [
             "aaId": 76,
             "active": false,
             "lastRun": "January 2026",
-            "estimate": "September 2026"
+            "estimate": "August 2026"
         }
     },
     {
@@ -1413,7 +1413,7 @@ const HONORABLE_MENTIONS = [
             "aaId": 81,
             "active": false,
             "lastRun": "February 2026",
-            "estimate": "September 2026"
+            "estimate": "August 2026"
         }
     },
     {
@@ -1527,7 +1527,7 @@ const HONORABLE_MENTIONS = [
             "aaId": 44,
             "active": false,
             "lastRun": "February 2026",
-            "estimate": "September 2026"
+            "estimate": "August 2026"
         }
     },
     {
@@ -1558,7 +1558,7 @@ const HONORABLE_MENTIONS = [
             "aaId": 137,
             "active": false,
             "lastRun": "February 2026",
-            "estimate": "September 2026"
+            "estimate": "August 2026"
         }
     },
     {

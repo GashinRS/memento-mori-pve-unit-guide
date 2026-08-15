@@ -474,21 +474,17 @@ async function fetchAA(pathname) {
     return payload.data;
 }
 
-function flattenGachaBanners(data) {
-    const banners = ["fleeting", "ioc", "iosg"].flatMap((key) =>
-        Array.isArray(data[key]) ? data[key] : []
-    );
-    (Array.isArray(data.chosen) ? data.chosen : []).forEach((group) => {
-        if (Array.isArray(group.banners)) banners.push(...group.banners);
-    });
-    // Eminence is a permanent, player-age-based pool rather than a current rerun banner.
-    return banners;
-}
-
 function bannerMonth(value) {
     const match = String(value || "").match(/^(\d{4})-(\d{2})-/);
     if (!match) return null;
     return { year: Number(match[1]), month: Number(match[2]) };
+}
+
+function earliestBannerEndMonth(banners) {
+    const earliest = banners
+        .filter((banner) => bannerMonth(banner.end))
+        .sort((left, right) => String(left.end).localeCompare(String(right.end)))[0];
+    return earliest ? bannerMonth(earliest.end) : null;
 }
 
 function addMonths(value, amount) {
@@ -548,8 +544,21 @@ async function loadAARerunData(units) {
         }
     });
 
-    const history = flattenGachaBanners(historyData);
-    const activeIds = new Set(flattenGachaBanners(activeData).map((banner) => Number(banner.char_id)));
+    // Only IOC and IOSG represent the rerun slots used by this guide. The first
+    // three appearances are IOC; run 4 onward remains permanently in IOSG.
+    const bannerTypes = ["ioc", "iosg"];
+    const history = bannerTypes.flatMap((key) =>
+        Array.isArray(historyData[key]) ? historyData[key] : []
+    );
+    const activeBanners = Object.fromEntries(
+        bannerTypes.map((key) => [key, Array.isArray(activeData[key]) ? activeData[key] : []])
+    );
+    const activeEndMonths = Object.fromEntries(
+        bannerTypes.map((key) => [key, earliestBannerEndMonth(activeBanners[key])])
+    );
+    const activeIds = new Set(
+        bannerTypes.flatMap((key) => activeBanners[key]).map((banner) => Number(banner.char_id))
+    );
     const now = new Date();
     const currentMonth = { year: now.getFullYear(), month: now.getMonth() + 1 };
 
@@ -581,9 +590,13 @@ async function loadAARerunData(units) {
 
             const interval = Number(entry.rerunMonths) || 6;
             let estimate = addMonths(lastRunMonth, interval);
-            // Once an inactive estimate arrives or passes, keep the estimate forward-looking.
-            if (compareMonths(estimate, currentMonth) <= 0) {
-                estimate = addMonths(currentMonth, 1);
+            const estimateComparison = compareMonths(estimate, currentMonth);
+            if (estimateComparison <= 0) {
+                const nextBannerType = Number(latest.gacha_type) === 3 || Number(latest.run_count) >= 3
+                    ? "iosg"
+                    : "ioc";
+                // The next unit can enter this pool when its earliest active slot ends.
+                estimate = activeEndMonths[nextBannerType] || addMonths(currentMonth, 1);
             }
             return [
                 unit.id,
