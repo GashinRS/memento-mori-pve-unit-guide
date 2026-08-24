@@ -2,6 +2,7 @@
 id: Rusalka
 name: Rusalka
 role: Support
+stage: early
 speed: none
 weapons:
 pairs:

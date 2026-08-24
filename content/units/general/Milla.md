@@ -2,6 +2,7 @@
 id: Milla
 name: Milla
 role: Support
+stage: mid
 scalable: true
 speed: none
 weapons:

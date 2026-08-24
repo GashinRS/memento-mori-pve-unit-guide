@@ -26,6 +26,7 @@ units:
   - guideId: Matilda
     aaId: 85
     apiName: Matilda
+    rerunMonths: 12
   - guideId: Meria
     aaId: 86
     apiName: Meria

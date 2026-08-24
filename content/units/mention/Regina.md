@@ -2,6 +2,7 @@
 id: Regina
 name: Regina
 role: Support
+stage: end
 scalable: true
 speed: none
 weapons:

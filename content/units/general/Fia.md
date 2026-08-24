@@ -2,6 +2,7 @@
 id: Fia
 name: Fia
 role: Support - DPS
+stage: mid
 scalable: true
 speed: prefer-slow
 speedNote: Acting first can be useful against effects such as Amour's Blight.

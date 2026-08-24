@@ -49,6 +49,7 @@ const GENERAL_UNITS = [
         "id": "Sivi",
         "name": "Sivi",
         "role": "Support",
+        "stage": "mid",
         "speed": "dps-among-slowest",
         "speedNote": "The main DPS cannot be the fastest or second-fastest ally because Sivi targets the two slowest allies other than herself.",
         "aliases": [],
@@ -105,6 +106,7 @@ const GENERAL_UNITS = [
         "id": "XTropon1",
         "name": "Winter Tropon",
         "role": "Tank - Sub DPS",
+        "stage": "end",
         "speed": "before-enemies",
         "speedNote": null,
         "aliases": [
@@ -165,6 +167,7 @@ const GENERAL_UNITS = [
         "id": "XSol",
         "name": "Winter Soltina",
         "role": "Support",
+        "stage": "early",
         "speed": "before-dps",
         "speedNote": "Her innate 30% Speed buff means this usually requires little or no Speed investment.",
         "aliases": [],
@@ -227,6 +230,7 @@ const GENERAL_UNITS = [
         "name": "Fia",
         "role": "Support - DPS",
         "scalable": true,
+        "stage": "mid",
         "speed": "prefer-slow",
         "speedNote": "Acting first can be useful against effects such as Amour's Blight.",
         "aliases": [
@@ -272,6 +276,7 @@ const GENERAL_UNITS = [
         "id": "Yildiz",
         "name": "Yildiz",
         "role": "Support",
+        "stage": "mid",
         "speed": "situational",
         "speedNote": "Act before enemies or your DPS when Buff Immunity matters.",
         "aliases": [],
@@ -308,6 +313,7 @@ const GENERAL_UNITS = [
         "name": "Milla",
         "role": "Support",
         "scalable": true,
+        "stage": "mid",
         "speed": "none",
         "speedNote": null,
         "aliases": [],
@@ -344,6 +350,7 @@ const GENERAL_UNITS = [
         "name": "Moineau",
         "role": "Support - DPS",
         "scalable": true,
+        "stage": "early",
         "speed": "role-dependent",
         "speedNote": "Support: before the main DPS. DPS: act last after enemies are fully debuffed.",
         "aliases": [],
@@ -486,15 +493,16 @@ const GENERAL_UNITS = [
         "desc": "<p>Moineau has a ton of effects, which combined, make her into one of the best support units in the game that can even         be used as a very strong DPS in certain scenarios. Her S1 inflicts Enfeeble on enemies, which decreases their         attack by 40%. Her S1 also decreases enemies' P.DEF by 25% in main quest and by 50% in tower. Her S2 inflicts         Delay on enemies which delays the activation of enemy skills by 1 turn. This specific debuff is not as good         as the other parts of her kit, but still a nice to have. Additionally, Moineau also gets a shield equal to 800%         of her attack, and can copy all buffs from the ally with the highest amount of buffs at the start of her         action phase. Due to the vast nature of her effects, her usage in tower and main quest differs a lot.</p>\n<p><strong>Main Quest — </strong> Moineau's primary role in main quest is as a DPS. This is made possible by         using Summer Moddey as the catalyst. Summer Moddey can absorb 30% of an enemy's attack into her own, and Moineau         can then copy this attack buff to do an insane amount of damage. The damage dealt by this is the highest burst         damage in the game that any unit can deal in 1-2 turns. The main downside is that this only really works when         the stage has NPCs, because those always have much higher attack stats than regular units, which you need in         order to increase your own attack stat. Another downside is that the team required for this is very inflexible,         as you want to debuff the enemies' defense to 0. This requires both Cordie and Eirene, making Merlyn the only         flexible slot, who realistically speaking you won't be able to replace due to her crit rate and crit damage         buff being very valuable to maximize Moineau's damage output. While getting more copies of Moineau does not affect         her performance much in tower, in main quest the added rarity will help with accuracy and crit rate, reducing the         RNG required to clear stages.</p>\n<p><strong>Tower — </strong> In tower, she is only used as a debuffer, where her 50% P.DEF debuff can pair with another unit's 50% P.DEF debuff         like Summer Amleth's, causing enemies to have 0 P.DEF due to these debuffs stacking additively. When enemies have         0 P.DEF, PMDB stops becoming a bottleneck because it simply does not do anything if there is no P.DEF to decrease.         As a result, this can also be paired with Eirene, such that Eirene's and Cordie's debuffs combined also put the         enemies at 0 defense in order to do &quot;true&quot; damage where all enemy defensive stats are ignored and essentially         turning every attack into a direct attack. This strategy is very effective and will work on most tower floors.         Note that this does not work in main quest because both Moineau's and Summer Amleth's P.DEF debuffs are only         debuffing for 25% instead of 50% in main quest. The Enfeeble debuff is also a very welcome bonus to make survival         easier.</p>",
         "rerun": {
             "aaId": 100,
-            "active": false,
-            "lastRun": "January 2026",
-            "estimate": "August 2026"
+            "active": true,
+            "lastRun": "August 2026",
+            "estimate": null
         }
     },
     {
         "id": "Samleth",
         "name": "Summer Amleth",
         "role": "Support",
+        "stage": "early",
         "speed": "before-dps",
         "speedNote": null,
         "aliases": [],
@@ -611,6 +619,7 @@ const GENERAL_UNITS = [
         "id": "Xamour",
         "name": "Winter Amour",
         "role": "Support",
+        "stage": "mid",
         "speed": "first",
         "speedNote": null,
         "aliases": [],
@@ -682,6 +691,7 @@ const GENERAL_UNITS = [
         "id": "Eirene",
         "name": "Eirene",
         "role": "Support",
+        "stage": "mid",
         "speed": "before-dps",
         "speedNote": "Make the main DPS the slowest ally for the cooldown reduction; Meria is a useful alternative.",
         "aliases": [],
@@ -768,6 +778,7 @@ const GENERAL_UNITS = [
         "id": "Meria",
         "name": "Meria",
         "role": "Support",
+        "stage": "early",
         "speed": "usually-none",
         "speedNote": "Her innate 20% Speed buff is usually enough; add Speed only when enemies still act first.",
         "aliases": [],
@@ -807,6 +818,7 @@ const QUEST_UNITS = [
         "name": "Belle",
         "role": "Tank",
         "scalable": true,
+        "stage": "mid",
         "speed": "none",
         "speedNote": null,
         "aliases": [],
@@ -893,6 +905,7 @@ const QUEST_UNITS = [
         "name": "Summer Moddey",
         "role": "Support - DPS",
         "scalable": true,
+        "stage": "end",
         "speed": "team-dependent",
         "speedNote": "With Moineau: faster than Moineau. As DPS: slower than Cordie and not the slowest ally.",
         "aliases": [
@@ -989,6 +1002,7 @@ const QUEST_UNITS = [
         "id": "Shiloh",
         "name": "Shiloh",
         "role": "Support",
+        "stage": "early",
         "speed": "before-dps",
         "speedNote": null,
         "aliases": [],
@@ -1061,9 +1075,9 @@ const QUEST_UNITS = [
         "desc": "<p>Shiloh can at first sight be considered somewhat of a sidegrade to Merlyn; both units can buff the attack, crit rate and crit damage of 2 allies. Merlyn has the benefit of her crit buff lasting for the entire battle, and Shiloh has the additional benefit of not being tied down to positioning like Merlyn, and also buffing up 2 allies' defense by 150% of Shiloh's own defense. However, Shiloh is unfortunately not as universally useful as Merlyn. One of the main reasons is that Merlyn's permanent crit rate buff is very valuable for a lot of different situations where battles last longer than 4 turns, which tend to be quite common. Shiloh's crit damage buff is also lower in tower at the start of battle, which causes you to lose out on a lot of early damage and subsequently means that she is not very useful in tower.</p>\n<p>What all of this means in practice is that Shiloh will mainly be useful early to mid game when you do not have a lot of other supports yet, so you can use her in combination with Merlyn. Later down the line she starts to lose value due to limited team slots and Merlyn being the better crit rate/damage buffer in most cases, but Shiloh does still have its niches in certain scenarios where she will be better than Merlyn, especially when a stage requires more bulk. The reason Shiloh did not get put in the honorable mentions section is because I believe Shiloh still has untapped potential in undiscovered teams compositions, and she is overall more useful than the units in the honorable mentions section.</p>",
         "rerun": {
             "aaId": 153,
-            "active": true,
+            "active": false,
             "lastRun": "July 2026",
-            "estimate": null
+            "estimate": "January 2027"
         }
     }
 ];
@@ -1075,6 +1089,7 @@ const HONORABLE_MENTIONS = [
         "id": "Eureka",
         "name": "Eureka",
         "role": "Support ",
+        "stage": "early",
         "speed": "none",
         "speedNote": null,
         "aliases": [],
@@ -1100,6 +1115,7 @@ const HONORABLE_MENTIONS = [
         "name": "Evelyn",
         "role": "Support",
         "scalable": true,
+        "stage": "early",
         "speed": "before-dps",
         "speedNote": null,
         "aliases": [],
@@ -1140,6 +1156,7 @@ const HONORABLE_MENTIONS = [
         "id": "Fenny",
         "name": "Fenny",
         "role": "Support",
+        "stage": "mid",
         "speed": "before-target",
         "speedNote": "Only relevant when using her Buff Immunity debuff.",
         "aliases": [],
@@ -1170,6 +1187,7 @@ const HONORABLE_MENTIONS = [
         "id": "Matilda",
         "name": "Matilda",
         "role": "Support",
+        "stage": "early",
         "speed": "before-dps",
         "speedNote": null,
         "aliases": [],
@@ -1203,7 +1221,7 @@ const HONORABLE_MENTIONS = [
             "aaId": 85,
             "active": false,
             "lastRun": "February 2026",
-            "estimate": "August 2026"
+            "estimate": "February 2027"
         }
     },
     {
@@ -1211,6 +1229,7 @@ const HONORABLE_MENTIONS = [
         "name": "Kobel",
         "role": "Support",
         "scalable": true,
+        "stage": "end",
         "speed": "before-enemies",
         "speedNote": null,
         "aliases": [],
@@ -1246,6 +1265,7 @@ const HONORABLE_MENTIONS = [
         "id": "XLuna",
         "name": "Winter Luna",
         "role": "Support",
+        "stage": "early",
         "speed": "before-enemies",
         "speedNote": null,
         "aliases": [],
@@ -1277,6 +1297,7 @@ const HONORABLE_MENTIONS = [
         "name": "Yuni",
         "role": "Support",
         "scalable": true,
+        "stage": "mid",
         "speed": "none",
         "speedNote": null,
         "aliases": [],
@@ -1308,6 +1329,7 @@ const HONORABLE_MENTIONS = [
         "name": "Eidene",
         "role": "Support",
         "scalable": true,
+        "stage": "end",
         "speed": "before-enemies",
         "speedNote": null,
         "aliases": [],
@@ -1370,6 +1392,7 @@ const HONORABLE_MENTIONS = [
         "name": "Tama",
         "role": "Support - DPS",
         "scalable": true,
+        "stage": "mid",
         "speed": "before-dps",
         "speedNote": null,
         "aliases": [],
@@ -1420,6 +1443,7 @@ const HONORABLE_MENTIONS = [
         "id": "Rustica",
         "name": "Rustica",
         "role": "DPS",
+        "stage": "end",
         "speed": "team-dependent",
         "speedNote": "Usually faster than Moineau and slower than Tama.",
         "aliases": [],
@@ -1447,7 +1471,7 @@ const HONORABLE_MENTIONS = [
                 "badge": "support"
             },
             {
-                "id": "XTropon",
+                "id": "XTropon1",
                 "name": "Winter Tropon",
                 "badge": "tank"
             }
@@ -1473,7 +1497,7 @@ const HONORABLE_MENTIONS = [
                         "name": "Tama"
                     },
                     {
-                        "id": "XTropon",
+                        "id": "XTropon1",
                         "name": "Winter Tropon"
                     }
                 ]
@@ -1516,6 +1540,7 @@ const HONORABLE_MENTIONS = [
         "id": "Rusalka",
         "name": "Rusalka",
         "role": "Support",
+        "stage": "early",
         "speed": "none",
         "speedNote": null,
         "aliases": [],
@@ -1535,6 +1560,7 @@ const HONORABLE_MENTIONS = [
         "name": "Regina",
         "role": "Support",
         "scalable": true,
+        "stage": "end",
         "speed": "none",
         "speedNote": null,
         "aliases": [],
@@ -1565,6 +1591,7 @@ const HONORABLE_MENTIONS = [
         "id": "Paladea",
         "name": "Paladea",
         "role": "Support",
+        "stage": "end",
         "speed": "before-dps",
         "speedNote": "She should also act before Lunalynn.",
         "aliases": [],
@@ -1584,6 +1611,11 @@ const HONORABLE_MENTIONS = [
             {
                 "id": "Cordie",
                 "name": "Cordie",
+                "badge": "dps"
+            },
+            {
+                "id": "Florence",
+                "name": "Florence",
                 "badge": "dps"
             }
         ],
@@ -1629,6 +1661,7 @@ const BASE_POOL_UNITS = [
         "id": "Merlyn",
         "name": "Merlyn",
         "role": "Support",
+        "stage": null,
         "speed": null,
         "speedNote": null,
         "aliases": [],
@@ -1641,6 +1674,7 @@ const BASE_POOL_UNITS = [
         "id": "Mertillier",
         "name": "Mertillier",
         "role": "Support",
+        "stage": null,
         "speed": null,
         "speedNote": null,
         "aliases": [],
@@ -1653,6 +1687,7 @@ const BASE_POOL_UNITS = [
         "id": "LunaLR",
         "name": "Lunalynn",
         "role": "Support",
+        "stage": null,
         "speed": null,
         "speedNote": null,
         "aliases": [
@@ -1670,6 +1705,7 @@ const BASE_POOL_UNITS = [
         "id": "Dian",
         "name": "Dian",
         "role": "DPS",
+        "stage": null,
         "speed": null,
         "speedNote": null,
         "aliases": [],
@@ -1682,6 +1718,7 @@ const BASE_POOL_UNITS = [
         "id": "Cordie",
         "name": "Cordie",
         "role": "DPS",
+        "stage": null,
         "speed": null,
         "speedNote": null,
         "aliases": [],
@@ -1694,6 +1731,7 @@ const BASE_POOL_UNITS = [
         "id": "Florence",
         "name": "Florence",
         "role": "DPS",
+        "stage": null,
         "speed": null,
         "speedNote": null,
         "aliases": [],
@@ -1706,6 +1744,7 @@ const BASE_POOL_UNITS = [
         "id": "Mimi",
         "name": "Mimi",
         "role": "Support",
+        "stage": null,
         "speed": null,
         "speedNote": null,
         "aliases": [],
@@ -1718,6 +1757,7 @@ const BASE_POOL_UNITS = [
         "id": "Primavera",
         "name": "Primavera",
         "role": "Support",
+        "stage": null,
         "speed": null,
         "speedNote": null,
         "aliases": [],
@@ -1730,6 +1770,7 @@ const BASE_POOL_UNITS = [
         "id": "NinaLR5",
         "name": "Nina",
         "role": "DPS - support",
+        "stage": null,
         "speed": null,
         "speedNote": null,
         "aliases": [],
@@ -1741,6 +1782,21 @@ const BASE_POOL_UNITS = [
 ];
 
 const CONCEPT_ARTICLES = [
+    {
+        "id": "gear-requirements",
+        "title": "Gear Requirements",
+        "body": "<p>As a general rule of thumb, you always want as much Defense as possible on your support units. This means that SR gear is actually a really cost-effective way to get a lot of defense, because the 4-set bonus gives a 30% Defense buff. Due to this, almost every support unit wants to have 4 SR with the boots and gloves (the two gear pieces that give defense) being as high level as possible.</p>\n<p>When it comes to upgrade investment, all your upgrades should go to boots and gloves first once you max out the weapon, other gear pieces can safely be ignored as they do not contribute as much. For example, if your level link is 360, the gear your supports want is level 360 SR boots and gloves, and then 2 level 240 pieces of SR gear between the helmet, dress and necklace. When other gear is expected, this will be clearly stated in that unit's section.</p>"
+    },
+    {
+        "id": "main-quest-vs-tower",
+        "title": "Main Quest vs Tower",
+        "body": "<p>Main Quest and Tower value different things, so a unit being strong in one mode does not always mean they are equally strong in the other.</p>\n<p>Main Quest enemies have much higher attack stats, so tanking them can be very hard. This means that most strategies revolve around dealing as much damage as possible, as fast as possible. Prolonged fights are also disadvantageous because enemies in Main Quest get the Berserk status on turn 20 until the end of battle (turn 40).</p>\n<p>Furthermore, Main Quest also has NPC characters. These are enemies that are not in the pool of playable units and do not have any skills, and will thus only use auto attacks. These NPCs will also always have a lot higher attack stats than regular enemies (usually up to 2-4 times as much) but have lower HP values. It is these incredibly high attack stats that allow certain strategies to work that abuse enemy stats. The overall stats of a stage are roughly correlated with the amount of NPC units present; more NPC units means higher overall stats for a stage. Other units can influence this as well, such as stages with Cordie and Belle generally having lower stats, and stages with base N or R units also having higher stats. Lastly, starting around chapter 26, all main quest enemies will have their LR UWs, even if the units are not at LR5 rarity.</p>\n<p>In contrast, tower enemies have very high defense stats and much lower attack stats. This makes stacking debuffs and teams focusing on damage over time more viable. Tower floors will also never have NPCs, and enemies do not have their UWs.</p>"
+    },
+    {
+        "id": "dps-options",
+        "title": "DPS Options",
+        "body": "<p>Different DPS units solve different problems, so the best choice depends heavily on the stage, mode, and support units available.</p>\n<p>Cordie is the most common general-purpose DPS. Her defense debuff is the highest in the game, making her the default option for many teams.</p>\n<p>Florence is mainly used in double DPS setups or in early game, where she is better than Cordie. Later on in the game, Florence should never be used without Cordie as she will lack a lot of damage with Cordies defense debuff.</p>\n<p>Fia is both a support and a DPS. As a DPS, she relies on HP stacking and direct damage based on damage taken, so she is strongest when the team is built around helping her survive and take meaningful hits. This also means her DPS role is mainly useful in tower where enemy attack stats are lower. In main quest only LR5 Fia with adequate gear will perform well in most cases.</p>\n<p>Dian is mostly used for direct damage and Invisibility-based strategies. She can be very useful when a team needs a DPS who can keep dealing damage while avoiding being targeted, while having someone else tank hits like Belle or Winter Tropon.</p>\n<p>Level 1 Nina is a special Main Quest strategy. Because low-level units interact unusually well with enemy stat scaling, she can deal meaningful damage with the right support, but she is not a normal plug-and-play DPS.</p>"
+    },
     {
         "id": "level-1-strategy",
         "title": "Level 1 Strategy",
@@ -1772,24 +1828,14 @@ const SITE_CONTENT = {
         "title": "Before You Read",
         "cards": [
             {
-                "title": "Gear Requirements",
-                "icon": "&#9878;",
-                "text": "<p>As a general rule of thumb, you always want as much Defense as possible on your support units. This means that SR gear is actually a really cost-effective way to get a lot of defense, because the 4-set bonus gives a 30% Defense buff. Due to this, almost every support unit wants to have 4 SR with the boots and gloves (the two gear pieces that give defense) being as high level as possible.</p>\n<p>When it comes to upgrade investment, all your upgrades should go to boots and gloves first once you max out the weapon, other gear pieces can safely be ignored as they do not contribute as much. For example, if your level link is 360, the gear your supports want is level 360 SR boots and gloves, and then 2 level 240 pieces of SR gear between the helmet, dress and necklace. When other gear is expected, this will be clearly stated in that unit's section.</p>"
-            },
-            {
                 "title": "Character Rarity Requirements",
                 "icon": "&#9733;",
                 "text": "<p>As a general rule of thumb, support units only require one copy, and having more often does not yield better performance. The expected rarity for every unit in this list will be visible from the icons used. When a character performs noticeably better at higher rarities, this will be clearly stated in the unit's section.</p>"
             },
             {
-                "title": "Main Quest vs Tower",
-                "icon": "&#128506;",
-                "text": "<p>Main Quest and Tower value different things, so a unit being strong in one mode does not always mean they are equally strong in the other.</p>\n<p>Main Quest enemies have much higher attack stats, so tanking them can be very hard. This means that most strategies revolve around dealing as much damage as possible, as fast as possible. Prolonged fights are also disadvantageous  because enemies in Main Quest get the Berserk status on turn 20 until the end of battle (turn 40).</p>\n<p>Furthermore, Main Quest also has NPC characters. These are enemies that are not in the pool of playable units and do not have any skills, and will thus only use auto attacks. These NPCs will also always have a lot higher  attack stats than regular enemies (usually up to 2-4 times as much) but have lower HP values.  It is these incredibly high attack stats that allow certain strategies to work that abuse enemy stats. The overall stats of a stage are roughly correlated with the amount of NPC units present; more NPC units means higher overall stats for a stage. Other units can influence this as well, such as stages with Cordie and Belle generally having lower stats, and stages with base N or R units also having higher stats. Lastly, starting around chapter 26, all main quest enemies will have their LR UWs, even if the  units are not at LR5 rarity.</p>\n<p>In contrast, tower enemies have very high defense stats and much lower attack stats. This makes stacking debuffs and teams focusing on damage over time more viable. Tower floors will also never have NPCs, and enemies do not have their UWs.</p>"
-            },
-            {
-                "title": "DPS Options",
-                "icon": "&#9876;",
-                "text": "<p>Different DPS units solve different problems, so the best choice depends heavily on the stage, mode, and support units available.</p>\n<p>Cordie is the most common general-purpose DPS. Her defense debuff is the highest in the game,  making her the default option for many teams.</p>\n<p>Florence is mainly used in double DPS setups or in early game, where she is better than Cordie. Later on in the game, Florence should never be used without Cordie as she will lack a lot of damage with Cordies defense debuff.</p>\n<p>Fia is both a support and a DPS. As a DPS, she relies on HP stacking and direct damage based on damage taken, so she is strongest when the team is built around helping her survive and take meaningful hits. This also means her DPS role is mainly useful in tower where enemy attack stats are lower. In main quest only LR5 Fia with adequate gear will perform well in most cases.</p>\n<p>Dian is mostly used for direct damage and Invisibility-based strategies. She can be very useful when a team needs a DPS who can keep dealing damage while avoiding being targeted, while having someone else tank hits like Belle or Winter Tropon.</p>\n<p>Level 1 Nina is a special Main Quest strategy. Because low-level units interact unusually well with enemy stat scaling, she can deal meaningful damage with the right support, but she is not a normal plug-and-play DPS.</p>"
+                "title": "Progression Badges",
+                "icon": "&#8987;",
+                "text": "<p>The Early Game, Mid Game and End Game badges are rough indicators for when a unit starts becoming useful. They do not mean a unit stops being useful later. If a unit has the Early Game badge, it can still be useful in Mid Game or End Game; the badge only marks the point where the unit generally starts to matter.</p>\n<p>The level ranges are rough guidelines, not hard rules. Depending on your account, gear, team options and the stage you are trying to clear, some units can become useful earlier or later than listed.</p>"
             }
         ]
     },
@@ -1878,7 +1924,7 @@ const SITE_CONTENT = {
         "disclaimer": "This is a community guide - not affiliated with",
         "brand": "Bank of Innovation"
     },
-    "lastUpdated": "August 14, 2026"
+    "lastUpdated": "August 15, 2026"
 };
 
 const BASE_POOL_CONTENT = {
@@ -1901,12 +1947,12 @@ const BASE_POOL_CONTENT = {
 const CONCEPTS_CONTENT = {
     "header": {
         "eyebrow": "Bank of Innovation",
-        "title": "Memento Mori\nPvE Concepts",
-        "subtitle": "Strategy notes and examples that do not belong to one unit list"
+        "title": "Memento Mori\nPvE Notes",
+        "subtitle": "Miscellaneous PvE explanations, strategy notes, and team examples"
     },
     "intro": {
         "title": "About This Page",
-        "text": "<p>This page is for broader PvE explanations, strategy notes, and team-building examples that are too large for the main unit guide but still useful as references.</p>"
+        "text": "<p>This page is for miscellaneous PvE explanations, strategy notes, and team-building examples that are too large for the unit guide but still useful as references.</p>"
     },
     "footer": {
         "credits": "Special thanks to <a href=\"https://tamamo.dev/\" target=\"_blank\" rel=\"noopener noreferrer\">Tamamo.dev</a> for the character and gear icons, and <a href=\"https://github.com/ScobraCK/Artificial-Angel-Bot\" target=\"_blank\" rel=\"noopener noreferrer\">AA Bot</a> for the banner history data used to calculate rerun estimates.",

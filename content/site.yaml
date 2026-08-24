@@ -20,20 +20,6 @@ wip:
 assumptions:
   title: Before You Read
   cards:
-    - title: Gear Requirements
-      icon: "&#9878;"
-      text: |
-        As a general rule of thumb, you always want as much Defense as possible on your support units.
-        This means that SR gear is actually a really cost-effective way to get a lot of defense, because
-        the 4-set bonus gives a 30% Defense buff. Due to this, almost every support unit wants to have
-        4 SR with the boots and gloves (the two gear pieces that give defense) being as high level as
-        possible.
-
-        When it comes to upgrade investment, all your upgrades should go to boots and gloves
-        first once you max out the weapon, other gear pieces can safely be ignored as they do not contribute
-        as much. For example, if your level link is 360, the gear your supports want is level 360 SR boots
-        and gloves, and then 2 level 240 pieces of SR gear between the helmet, dress and necklace. When
-        other gear is expected, this will be clearly stated in that unit's section.
     - title: Character Rarity Requirements
       icon: "&#9733;"
       text: |
@@ -41,52 +27,15 @@ assumptions:
         better performance. The expected rarity for every unit in this list will be visible from the icons
         used. When a character performs noticeably better at higher rarities, this will be clearly stated
         in the unit's section.
-    - title: Main Quest vs Tower
-      icon: "&#128506;"
+    - title: Progression Badges
+      icon: "&#8987;"
       text: |
-        Main Quest and Tower value different things, so a unit being strong in one mode does not always mean
-        they are equally strong in the other.
+        The Early Game, Mid Game and End Game badges are rough indicators for when a unit starts becoming useful.
+        They do not mean a unit stops being useful later. If a unit has the Early Game badge, it can still be useful
+        in Mid Game or End Game; the badge only marks the point where the unit generally starts to matter.
 
-        Main Quest enemies have much higher attack stats, so tanking them can be very hard. This means that most strategies
-        revolve around dealing as much damage as possible, as fast as possible. Prolonged fights are also disadvantageous 
-        because enemies in Main Quest get the Berserk status on turn 20 until the end of battle (turn 40).
-        
-        Furthermore, Main Quest also has NPC characters. These are enemies that are not in the pool of playable units and
-        do not have any skills, and will thus only use auto attacks. These NPCs will also always have a lot higher 
-        attack stats than regular enemies (usually up to 2-4 times as much) but have lower HP values. 
-        It is these incredibly high attack stats that allow certain
-        strategies to work that abuse enemy stats. The overall stats of a stage are roughly correlated with the amount
-        of NPC units present; more NPC units means higher overall stats for a stage. Other units can influence this as well,
-        such as stages with Cordie and Belle generally having lower stats, and stages with base N or R units also having
-        higher stats. Lastly, starting around chapter 26, all main quest enemies will have their LR UWs, even if the 
-        units are not at LR5 rarity.
-
-        In contrast, tower enemies have very high defense stats and much lower attack stats. This makes stacking debuffs
-        and teams focusing on damage over time more viable. Tower floors will also never have NPCs, and enemies do
-        not have their UWs.
-    - title: DPS Options
-      icon: "&#9876;"
-      text: |
-        Different DPS units solve different problems, so the best choice depends heavily on the stage, mode, and support
-        units available.
-
-        Cordie is the most common general-purpose DPS. Her defense debuff is the highest in the game, 
-        making her the default option for many teams.
-
-        Florence is mainly used in double DPS setups or in early game, where she is better than Cordie. Later on in the
-        game, Florence should never be used without Cordie as she will lack a lot of damage with Cordies defense debuff.
-
-        Fia is both a support and a DPS. As a DPS, she relies on HP stacking and direct damage based on damage taken, so
-        she is strongest when the team is built around helping her survive and take meaningful hits. This also means
-        her DPS role is mainly useful in tower where enemy attack stats are lower. In main quest only LR5 Fia with adequate
-        gear will perform well in most cases. 
-
-        Dian is mostly used for direct damage and Invisibility-based strategies. She can be very useful when a team needs
-        a DPS who can keep dealing damage while avoiding being targeted, while having someone else tank hits like Belle
-        or Winter Tropon.
-
-        Level 1 Nina is a special Main Quest strategy. Because low-level units interact unusually well with enemy stat
-        scaling, she can deal meaningful damage with the right support, but she is not a normal plug-and-play DPS.
+        The level ranges are rough guidelines, not hard rules. Depending on your account, gear, team options and the
+        stage you are trying to clear, some units can become useful earlier or later than listed.
 glossary:
   title: Glossary
   terms:

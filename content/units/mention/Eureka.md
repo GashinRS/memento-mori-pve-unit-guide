@@ -2,6 +2,7 @@
 id: Eureka
 name: Eureka
 role: "Support "
+stage: early
 speed: none
 weapons:
 pairs:

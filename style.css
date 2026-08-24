@@ -280,12 +280,29 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
 
 .unit-scan { display: grid; grid-template-columns: minmax(20rem, 1fr) minmax(15rem, .9fr); gap: 24px; align-items: start; }
 .unit-top { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 0; }
+.unit-portrait { display: flex; flex-direction: column; align-items: center; gap: 8px; flex-shrink: 0; }
 .unit-icon { border-radius: var(--radius); border: 2px solid var(--border); background: var(--bg-card-alt); overflow: hidden; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
 .unit-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .unit-icon .placeholder-label { font-family: 'Cinzel',serif; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); text-align: center; line-height: 1.3; padding: 4px; }
 .unit-meta { flex: 1; min-width: 0; }
 .unit-name { font-family: 'Cinzel',serif; font-size: 1.15rem; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
 .unit-role { font-size: .82rem; color: var(--cat); font-style: italic; margin-bottom: 12px; }
+.stage-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 0; max-width: 5.4rem; }
+.stage-badge {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Cinzel',serif;
+    font-size: .56rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    padding: 2px 8px;
+    border: 1px solid var(--border);
+    background: rgba(255,252,245,.54);
+}
+.stage-badge.early { color: var(--sage); border-color: rgba(74,122,74,.28); background: rgba(74,122,74,.07); }
+.stage-badge.mid { color: var(--teal); border-color: rgba(58,122,114,.28); background: rgba(58,122,114,.07); }
+.stage-badge.end { color: var(--sepia); border-color: rgba(139,94,60,.28); background: rgba(139,94,60,.07); }
 
 .rerun-row {
     display: flex;

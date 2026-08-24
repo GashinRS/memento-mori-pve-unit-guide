@@ -2,6 +2,7 @@
 id: Kobel
 name: Kobel
 role: Support
+stage: end
 scalable: true
 speed: before-enemies
 weapons:

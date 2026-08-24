@@ -2,6 +2,7 @@
 id: Eidene
 name: Eidene
 role: Support
+stage: end
 scalable: true
 speed: before-enemies
 weapons:

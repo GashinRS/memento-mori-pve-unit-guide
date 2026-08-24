@@ -2,6 +2,7 @@
 id: Moineau
 name: Moineau
 role: Support - DPS
+stage: early
 scalable: true
 speed: role-dependent
 speedNote: "Support: before the main DPS. DPS: act last after enemies are fully debuffed."

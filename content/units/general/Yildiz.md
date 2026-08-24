@@ -2,6 +2,7 @@
 id: Yildiz
 name: Yildiz
 role: Support
+stage: mid
 speed: situational
 speedNote: Act before enemies or your DPS when Buff Immunity matters.
 weapons:

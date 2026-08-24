@@ -2,13 +2,13 @@ header:
   eyebrow: Bank of Innovation
   title: |
     Memento Mori
-    PvE Concepts
-  subtitle: Strategy notes and examples that do not belong to one unit list
+    PvE Notes
+  subtitle: Miscellaneous PvE explanations, strategy notes, and team examples
 intro:
   title: About This Page
   text: |
-    This page is for broader PvE explanations, strategy notes, and team-building examples that are too large for
-    the main unit guide but still useful as references.
+    This page is for miscellaneous PvE explanations, strategy notes, and team-building examples that are too large for
+    the unit guide but still useful as references.
 footer:
   credits: |
     Special thanks to <a href="https://tamamo.dev/" target="_blank" rel="noopener noreferrer">Tamamo.dev</a> for the character and gear icons, and <a href="https://github.com/ScobraCK/Artificial-Angel-Bot" target="_blank" rel="noopener noreferrer">AA Bot</a> for the banner history data used to calculate rerun estimates.

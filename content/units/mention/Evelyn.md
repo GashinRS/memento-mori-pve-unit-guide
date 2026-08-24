@@ -2,6 +2,7 @@
 id: Evelyn
 name: Evelyn
 role: Support
+stage: early
 scalable: true
 speed: before-dps
 weapons:

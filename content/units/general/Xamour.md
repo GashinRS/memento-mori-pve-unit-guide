@@ -2,6 +2,7 @@
 id: Xamour
 name: Winter Amour
 role: Support
+stage: mid
 speed: first
 weapons:
   - level: XamourSSR

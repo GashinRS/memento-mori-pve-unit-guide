@@ -11,17 +11,22 @@ const outputPath = path.join(root, "data", "generated-content.js");
 const aaCharacterMapPath = path.join(contentDir, "aa-character-map.yaml");
 
 function latestGuideCommitDate() {
-    const value = execFileSync("git", [
-        "log",
-        "-1",
-        "--format=%cs",
-        "--fixed-strings",
-        "--invert-grep",
-        "--grep=[keepalive]",
-    ], {
-        cwd: root,
-        encoding: "utf8",
-    }).trim();
+    let value;
+    try {
+        value = execFileSync("git", [
+            "log",
+            "-1",
+            "--format=%cs",
+            "--fixed-strings",
+            "--invert-grep",
+            "--grep=[keepalive]",
+        ], {
+            cwd: root,
+            encoding: "utf8",
+        }).trim();
+    } catch (error) {
+        value = new Date().toISOString().slice(0, 10);
+    }
     const match = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
 
     if (!match) {
@@ -57,6 +62,7 @@ const SPEED_VALUES = new Set([
     "situational",
     "dps-among-slowest",
 ]);
+const STAGE_VALUES = new Set(["early", "mid", "end"]);
 const CONTAINER_KEYS = new Set([
     "aliases",
     "assumptions",
@@ -302,11 +308,15 @@ function hydrateUnitReferences(units, names) {
         if (unit.speedNote && !unit.speed) {
             throw new Error(`Unit "${unit.id}" has a speedNote without a speed value`);
         }
+        if (unit.stage && !STAGE_VALUES.has(unit.stage)) {
+            throw new Error(`Unit "${unit.id}" has unknown stage value "${unit.stage}"`);
+        }
         return {
             id: unit.id,
             name: unit.name,
             role: unit.role,
             scalable: unit.scalable || undefined,
+            stage: unit.stage || null,
             speed: unit.speed || null,
             speedNote: unit.speedNote || null,
             aliases: unit.aliases,

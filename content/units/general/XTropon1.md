@@ -2,6 +2,7 @@
 id: XTropon1
 name: Winter Tropon
 role: Tank - Sub DPS
+stage: end
 speed: before-enemies
 aliases:
   - id: XTropon

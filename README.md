@@ -12,6 +12,7 @@ Each unit has one Markdown file in a category folder under `content/units/`.
 - The Markdown body becomes the unit description.
 - Edit `content/unit-order.yaml` to control where units appear inside each category.
 - Use `aliases` when an icon id should display as the same character name, such as `FiaLR5`.
+- Use `stage: early`, `stage: mid`, or `stage: end` to control the progression badge shown on limited PvE guide cards.
 
 Example:
 
@@ -22,6 +23,7 @@ Example:
 id: Sivi
 name: Sivi
 role: Support
+stage: mid
 weapons:
   - level: SiviUR
     tier: recommended
@@ -68,7 +70,7 @@ The base pool guide uses `base-pool.html`, `content/pages/base-pool.yaml`, `cont
 
 Future long-form guides, such as a level 1 strategy guide, should get their own HTML page plus a matching file under `content/pages/`.
 
-The PvE concepts page uses `concepts.html`, `content/pages/concepts.yaml`, `content/concepts/`, and `content/concepts-order.yaml`.
+The PvE Notes page uses `concepts.html`, `content/pages/concepts.yaml`, `content/concepts/`, and `content/concepts-order.yaml`.
 
 ## Building Generated Data
 

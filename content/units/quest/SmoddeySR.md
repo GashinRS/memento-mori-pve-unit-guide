@@ -2,6 +2,7 @@
 id: SmoddeySR
 name: Summer Moddey
 role: Support - DPS
+stage: end
 scalable: true
 speed: team-dependent
 speedNote: "With Moineau: faster than Moineau. As DPS: slower than Cordie and not the slowest ally."

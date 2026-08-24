@@ -2,6 +2,7 @@
 id: Shiloh
 name: Shiloh
 role: Support
+stage: early
 speed: before-dps
 weapons:
   - level: ShilohUR

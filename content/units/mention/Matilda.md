@@ -2,6 +2,7 @@
 id: Matilda
 name: Matilda
 role: Support
+stage: early
 speed: before-dps
 weapons:
   - level: MatildaSSR

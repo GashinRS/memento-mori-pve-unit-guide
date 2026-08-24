@@ -2,6 +2,7 @@
 id: XLuna
 name: Winter Luna
 role: Support
+stage: early
 speed: before-enemies
 weapons:
   - level: XLunaSSR

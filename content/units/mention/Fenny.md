@@ -2,6 +2,7 @@
 id: Fenny
 name: Fenny
 role: Support
+stage: mid
 scalable: false
 speed: before-target
 speedNote: Only relevant when using her Buff Immunity debuff.

@@ -2,6 +2,7 @@
 id: Samleth
 name: Summer Amleth
 role: Support
+stage: early
 speed: before-dps
 weapons:
   - level: SamlethSSR

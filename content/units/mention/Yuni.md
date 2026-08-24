@@ -2,6 +2,7 @@
 id: Yuni
 name: Yuni
 role: Support
+stage: mid
 scalable: true
 speed: none
 weapons:

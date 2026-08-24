@@ -2,6 +2,7 @@
 id: Meria
 name: Meria
 role: Support
+stage: early
 speed: usually-none
 speedNote: Her innate 20% Speed buff is usually enough; add Speed only when enemies still act first.
 weapons:

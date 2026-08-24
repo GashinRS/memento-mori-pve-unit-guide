@@ -2,6 +2,7 @@
 id: XSol
 name: Winter Soltina
 role: Support
+stage: early
 speed: before-dps
 speedNote: Her innate 30% Speed buff means this usually requires little or no Speed investment.
 weapons:

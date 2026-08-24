@@ -2,6 +2,7 @@
 id: Paladea
 name: Paladea
 role: Support
+stage: end
 scalable: false
 speed: before-dps
 speedNote: She should also act before Lunalynn.
@@ -14,6 +15,8 @@ weapons:
     description: todo
 pairs:
   - id: Cordie
+    badge: dps
+  - id: Florence
     badge: dps
 teams:
   - label:

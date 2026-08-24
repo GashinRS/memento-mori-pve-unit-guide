@@ -2,6 +2,7 @@
 id: Sivi
 name: Sivi
 role: Support
+stage: mid
 speed: dps-among-slowest
 speedNote: The main DPS cannot be the fastest or second-fastest ally because Sivi targets the two slowest allies other than herself.
 weapons:

@@ -2,6 +2,7 @@
 id: Rustica
 name: Rustica
 role: DPS
+stage: end
 speed: team-dependent
 speedNote: Usually faster than Moineau and slower than Tama.
 weapons:
@@ -15,11 +16,11 @@ pairs:
     badge: Support
   - id: Shiloh
     badge: Support
-  - id: XTropon
+  - id: XTropon1
     badge: Tank
 teams:
   - label: 
-    slots: [Rustica, Merlyn, Moineau, Tama, XTropon]
+    slots: [Rustica, Merlyn, Moineau, Tama, XTropon1]
   - label:
     slots: [Rustica, Shiloh, Moineau, Tama, Dian]
 ---

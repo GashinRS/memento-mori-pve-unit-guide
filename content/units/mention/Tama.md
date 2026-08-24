@@ -2,6 +2,7 @@
 id: Tama
 name: Tama
 role: Support - DPS
+stage: mid
 scalable: true
 speed: before-dps
 weapons:

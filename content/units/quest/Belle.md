@@ -2,6 +2,7 @@
 id: Belle
 name: Belle
 role: Tank
+stage: mid
 scalable: true
 speed: none
 weapons:
