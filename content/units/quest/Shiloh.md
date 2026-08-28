@@ -1,6 +1,7 @@
 ---
 id: Shiloh
 name: Shiloh
+wiki: https://mememori.fandom.com/wiki/Shiloh
 role: Support
 stage: early
 speed: before-dps

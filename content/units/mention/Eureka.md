@@ -1,6 +1,7 @@
 ---
 id: Eureka
 name: Eureka
+wiki: https://mememori.fandom.com/wiki/Eureka
 role: "Support "
 stage: early
 speed: none

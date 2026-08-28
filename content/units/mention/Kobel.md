@@ -1,6 +1,7 @@
 ---
 id: Kobel
 name: Kobel
+wiki: https://mememori.fandom.com/wiki/Kobel
 role: Support
 stage: end
 scalable: true

@@ -1,6 +1,7 @@
 ---
 id: Yuni
 name: Yuni
+wiki: https://mememori.fandom.com/wiki/Yuni
 role: Support
 stage: mid
 scalable: true

@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-    <script src="data/generated-content.js?v=20260824-matilda-seasonal"></script>
-    <link rel="stylesheet" href="style.css?v=20260814-banner-strip">
+    <script src="data/generated-content.js?v=20260828-wiki-links"></script>
+    <link rel="stylesheet" href="style.css?v=20260828-wiki-links">
 </head>
 <body id="top">
 <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
@@ -85,12 +85,20 @@
         }).join('');
     }
 
+    function renderUnitName(unit) {
+        var wikiLink = unit.wiki ?
+            '<a class="unit-wiki-link" href="' + unit.wiki + '" target="_blank" rel="noopener noreferrer"' +
+            ' aria-label="View ' + unit.name + '\'s full kit on the MementoMori Wiki"' +
+            ' title="View full kit on Fandom">&#8599;</a>' : '';
+        return '<div class="unit-name-row"><div class="unit-name">' + unit.name + '</div>' + wikiLink + '</div>';
+    }
+
     function renderCard(unit) {
         return '<div class="unit-card base-pool-card" id="' + unitAnchor(unit) + '">' +
             '<div class="unit-top">' +
             unitIcon(unit.id) +
             '<div class="unit-meta">' +
-            '<div class="unit-name">' + unit.name + '</div>' +
+            renderUnitName(unit) +
             '<div class="unit-role">' + unit.role +
             (unit.scalable ? ' <span class="copies-badge">&#8679; scales with copies</span>' : '') +
             '</div>' +

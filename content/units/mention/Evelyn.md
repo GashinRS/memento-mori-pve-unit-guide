@@ -1,6 +1,7 @@
 ---
 id: Evelyn
 name: Evelyn
+wiki: https://mememori.fandom.com/wiki/Evelyn
 role: Support
 stage: early
 scalable: true

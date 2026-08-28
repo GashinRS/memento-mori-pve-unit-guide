@@ -1,6 +1,7 @@
 ---
 id: Paladea
 name: Paladea
+wiki: https://mememori.fandom.com/wiki/Paladea
 role: Support
 stage: end
 scalable: false

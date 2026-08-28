@@ -1,6 +1,7 @@
 ---
 id: Eidene
 name: Eidene
+wiki: https://mememori.fandom.com/wiki/Eidene
 role: Support
 stage: end
 scalable: true

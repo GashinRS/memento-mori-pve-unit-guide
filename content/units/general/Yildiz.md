@@ -1,6 +1,7 @@
 ---
 id: Yildiz
 name: Yildiz
+wiki: https://mememori.fandom.com/wiki/Yildiz
 role: Support
 stage: mid
 speed: situational

@@ -302,6 +302,9 @@ function unitNameMap(units) {
 
 function hydrateUnitReferences(units, names) {
     return units.map((unit) => {
+        if (!unit.wiki || !String(unit.wiki).startsWith("https://mememori.fandom.com/wiki/")) {
+            throw new Error(`Unit "${unit.id}" must have a MementoMori Fandom wiki URL`);
+        }
         if (unit.speed && !SPEED_VALUES.has(unit.speed)) {
             throw new Error(`Unit "${unit.id}" has unknown speed value "${unit.speed}"`);
         }
@@ -314,6 +317,7 @@ function hydrateUnitReferences(units, names) {
         return {
             id: unit.id,
             name: unit.name,
+            wiki: unit.wiki || null,
             role: unit.role,
             scalable: unit.scalable || undefined,
             stage: unit.stage || null,

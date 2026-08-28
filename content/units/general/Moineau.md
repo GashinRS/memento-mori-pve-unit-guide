@@ -1,6 +1,7 @@
 ---
 id: Moineau
 name: Moineau
+wiki: https://mememori.fandom.com/wiki/Moineau
 role: Support - DPS
 stage: early
 scalable: true

@@ -1,6 +1,7 @@
 ---
 id: Sivi
 name: Sivi
+wiki: https://mememori.fandom.com/wiki/Sivi
 role: Support
 stage: mid
 speed: dps-among-slowest

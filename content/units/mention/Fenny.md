@@ -1,6 +1,7 @@
 ---
 id: Fenny
 name: Fenny
+wiki: https://mememori.fandom.com/wiki/Fenny
 role: Support
 stage: mid
 scalable: false

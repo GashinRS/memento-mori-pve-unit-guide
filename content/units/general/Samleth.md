@@ -1,6 +1,7 @@
 ---
 id: Samleth
 name: Summer Amleth
+wiki: https://mememori.fandom.com/wiki/Amleth_%28Summer_ver.%29
 role: Support
 stage: early
 speed: before-dps

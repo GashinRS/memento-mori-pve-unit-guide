@@ -1,6 +1,7 @@
 ---
 id: Fia
 name: Fia
+wiki: https://mememori.fandom.com/wiki/Fia
 role: Support - DPS
 stage: mid
 scalable: true

@@ -1,6 +1,7 @@
 ---
 id: XSol
 name: Winter Soltina
+wiki: https://mememori.fandom.com/wiki/Soltina_%28Winter_ver.%29
 role: Support
 stage: early
 speed: before-dps

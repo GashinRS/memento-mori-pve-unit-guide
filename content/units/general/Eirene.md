@@ -1,6 +1,7 @@
 ---
 id: Eirene
 name: Eirene
+wiki: https://mememori.fandom.com/wiki/Eirene
 role: Support
 stage: mid
 speed: before-dps

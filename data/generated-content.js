@@ -48,6 +48,7 @@ const GENERAL_UNITS = [
     {
         "id": "Sivi",
         "name": "Sivi",
+        "wiki": "https://mememori.fandom.com/wiki/Sivi",
         "role": "Support",
         "stage": "mid",
         "speed": "dps-among-slowest",
@@ -105,6 +106,7 @@ const GENERAL_UNITS = [
     {
         "id": "XTropon1",
         "name": "Winter Tropon",
+        "wiki": "https://mememori.fandom.com/wiki/Tropon_%28Holy_Night_ver.%29",
         "role": "Tank - Sub DPS",
         "stage": "end",
         "speed": "before-enemies",
@@ -166,6 +168,7 @@ const GENERAL_UNITS = [
     {
         "id": "XSol",
         "name": "Winter Soltina",
+        "wiki": "https://mememori.fandom.com/wiki/Soltina_%28Winter_ver.%29",
         "role": "Support",
         "stage": "early",
         "speed": "before-dps",
@@ -228,6 +231,7 @@ const GENERAL_UNITS = [
     {
         "id": "Fia",
         "name": "Fia",
+        "wiki": "https://mememori.fandom.com/wiki/Fia",
         "role": "Support - DPS",
         "scalable": true,
         "stage": "mid",
@@ -275,6 +279,7 @@ const GENERAL_UNITS = [
     {
         "id": "Yildiz",
         "name": "Yildiz",
+        "wiki": "https://mememori.fandom.com/wiki/Yildiz",
         "role": "Support",
         "stage": "mid",
         "speed": "situational",
@@ -311,6 +316,7 @@ const GENERAL_UNITS = [
     {
         "id": "Milla",
         "name": "Milla",
+        "wiki": "https://mememori.fandom.com/wiki/Milla",
         "role": "Support",
         "scalable": true,
         "stage": "mid",
@@ -348,6 +354,7 @@ const GENERAL_UNITS = [
     {
         "id": "Moineau",
         "name": "Moineau",
+        "wiki": "https://mememori.fandom.com/wiki/Moineau",
         "role": "Support - DPS",
         "scalable": true,
         "stage": "early",
@@ -501,6 +508,7 @@ const GENERAL_UNITS = [
     {
         "id": "Samleth",
         "name": "Summer Amleth",
+        "wiki": "https://mememori.fandom.com/wiki/Amleth_%28Summer_ver.%29",
         "role": "Support",
         "stage": "early",
         "speed": "before-dps",
@@ -618,6 +626,7 @@ const GENERAL_UNITS = [
     {
         "id": "Xamour",
         "name": "Winter Amour",
+        "wiki": "https://mememori.fandom.com/wiki/Amour_%28Holy_Night_ver.%29",
         "role": "Support",
         "stage": "mid",
         "speed": "first",
@@ -690,6 +699,7 @@ const GENERAL_UNITS = [
     {
         "id": "Eirene",
         "name": "Eirene",
+        "wiki": "https://mememori.fandom.com/wiki/Eirene",
         "role": "Support",
         "stage": "mid",
         "speed": "before-dps",
@@ -777,6 +787,7 @@ const GENERAL_UNITS = [
     {
         "id": "Meria",
         "name": "Meria",
+        "wiki": "https://mememori.fandom.com/wiki/Meria",
         "role": "Support",
         "stage": "early",
         "speed": "usually-none",
@@ -816,6 +827,7 @@ const QUEST_UNITS = [
     {
         "id": "Belle",
         "name": "Belle",
+        "wiki": "https://mememori.fandom.com/wiki/Belle",
         "role": "Tank",
         "scalable": true,
         "stage": "mid",
@@ -903,6 +915,7 @@ const QUEST_UNITS = [
     {
         "id": "SmoddeySR",
         "name": "Summer Moddey",
+        "wiki": "https://mememori.fandom.com/wiki/Moddey_%28Swimsuit_ver.%29",
         "role": "Support - DPS",
         "scalable": true,
         "stage": "end",
@@ -1001,6 +1014,7 @@ const QUEST_UNITS = [
     {
         "id": "Shiloh",
         "name": "Shiloh",
+        "wiki": "https://mememori.fandom.com/wiki/Shiloh",
         "role": "Support",
         "stage": "early",
         "speed": "before-dps",
@@ -1088,6 +1102,7 @@ const HONORABLE_MENTIONS = [
     {
         "id": "Eureka",
         "name": "Eureka",
+        "wiki": "https://mememori.fandom.com/wiki/Eureka",
         "role": "Support ",
         "stage": "early",
         "speed": "none",
@@ -1113,6 +1128,7 @@ const HONORABLE_MENTIONS = [
     {
         "id": "Evelyn",
         "name": "Evelyn",
+        "wiki": "https://mememori.fandom.com/wiki/Evelyn",
         "role": "Support",
         "scalable": true,
         "stage": "early",
@@ -1155,6 +1171,7 @@ const HONORABLE_MENTIONS = [
     {
         "id": "Fenny",
         "name": "Fenny",
+        "wiki": "https://mememori.fandom.com/wiki/Fenny",
         "role": "Support",
         "stage": "mid",
         "speed": "before-target",
@@ -1186,6 +1203,7 @@ const HONORABLE_MENTIONS = [
     {
         "id": "Matilda",
         "name": "Matilda",
+        "wiki": "https://mememori.fandom.com/wiki/Matilda",
         "role": "Support",
         "stage": "early",
         "speed": "before-dps",
@@ -1222,6 +1240,7 @@ const HONORABLE_MENTIONS = [
     {
         "id": "Kobel",
         "name": "Kobel",
+        "wiki": "https://mememori.fandom.com/wiki/Kobel",
         "role": "Support",
         "scalable": true,
         "stage": "end",
@@ -1259,6 +1278,7 @@ const HONORABLE_MENTIONS = [
     {
         "id": "XLuna",
         "name": "Winter Luna",
+        "wiki": "https://mememori.fandom.com/wiki/Lunalynn_%28Winter_ver.%29",
         "role": "Support",
         "stage": "early",
         "speed": "before-enemies",
@@ -1290,6 +1310,7 @@ const HONORABLE_MENTIONS = [
     {
         "id": "Yuni",
         "name": "Yuni",
+        "wiki": "https://mememori.fandom.com/wiki/Yuni",
         "role": "Support",
         "scalable": true,
         "stage": "mid",
@@ -1322,6 +1343,7 @@ const HONORABLE_MENTIONS = [
     {
         "id": "Eidene",
         "name": "Eidene",
+        "wiki": "https://mememori.fandom.com/wiki/Eidene",
         "role": "Support",
         "scalable": true,
         "stage": "end",
@@ -1385,6 +1407,7 @@ const HONORABLE_MENTIONS = [
     {
         "id": "Tama",
         "name": "Tama",
+        "wiki": "https://mememori.fandom.com/wiki/Tama",
         "role": "Support - DPS",
         "scalable": true,
         "stage": "mid",
@@ -1443,6 +1466,7 @@ const HONORABLE_MENTIONS = [
     {
         "id": "Rustica",
         "name": "Rustica",
+        "wiki": "https://mememori.fandom.com/wiki/Rustica",
         "role": "DPS",
         "stage": "end",
         "speed": "team-dependent",
@@ -1540,6 +1564,7 @@ const HONORABLE_MENTIONS = [
     {
         "id": "Rusalka",
         "name": "Rusalka",
+        "wiki": "https://mememori.fandom.com/wiki/Rusalka",
         "role": "Support",
         "stage": "early",
         "speed": "none",
@@ -1559,6 +1584,7 @@ const HONORABLE_MENTIONS = [
     {
         "id": "Regina",
         "name": "Regina",
+        "wiki": "https://mememori.fandom.com/wiki/Regina",
         "role": "Support",
         "scalable": true,
         "stage": "end",
@@ -1591,6 +1617,7 @@ const HONORABLE_MENTIONS = [
     {
         "id": "Paladea",
         "name": "Paladea",
+        "wiki": "https://mememori.fandom.com/wiki/Paladea",
         "role": "Support",
         "stage": "end",
         "speed": "before-dps",
@@ -1661,6 +1688,7 @@ const BASE_POOL_UNITS = [
     {
         "id": "Merlyn",
         "name": "Merlyn",
+        "wiki": "https://mememori.fandom.com/wiki/Merlyn",
         "role": "Support",
         "stage": null,
         "speed": null,
@@ -1674,6 +1702,7 @@ const BASE_POOL_UNITS = [
     {
         "id": "Mertillier",
         "name": "Mertillier",
+        "wiki": "https://mememori.fandom.com/wiki/Mertillier",
         "role": "Support",
         "stage": null,
         "speed": null,
@@ -1687,6 +1716,7 @@ const BASE_POOL_UNITS = [
     {
         "id": "LunaLR",
         "name": "Lunalynn",
+        "wiki": "https://mememori.fandom.com/wiki/Lunalynn",
         "role": "Support",
         "stage": null,
         "speed": null,
@@ -1705,6 +1735,7 @@ const BASE_POOL_UNITS = [
     {
         "id": "Dian",
         "name": "Dian",
+        "wiki": "https://mememori.fandom.com/wiki/Dian",
         "role": "DPS",
         "stage": null,
         "speed": null,
@@ -1718,6 +1749,7 @@ const BASE_POOL_UNITS = [
     {
         "id": "Cordie",
         "name": "Cordie",
+        "wiki": "https://mememori.fandom.com/wiki/Cordie",
         "role": "DPS",
         "stage": null,
         "speed": null,
@@ -1731,6 +1763,7 @@ const BASE_POOL_UNITS = [
     {
         "id": "Florence",
         "name": "Florence",
+        "wiki": "https://mememori.fandom.com/wiki/Florence",
         "role": "DPS",
         "stage": null,
         "speed": null,
@@ -1744,6 +1777,7 @@ const BASE_POOL_UNITS = [
     {
         "id": "Mimi",
         "name": "Mimi",
+        "wiki": "https://mememori.fandom.com/wiki/Mimi",
         "role": "Support",
         "stage": null,
         "speed": null,
@@ -1757,6 +1791,7 @@ const BASE_POOL_UNITS = [
     {
         "id": "Primavera",
         "name": "Primavera",
+        "wiki": "https://mememori.fandom.com/wiki/Primavera",
         "role": "Support",
         "stage": null,
         "speed": null,
@@ -1770,6 +1805,7 @@ const BASE_POOL_UNITS = [
     {
         "id": "NinaLR5",
         "name": "Nina",
+        "wiki": "https://mememori.fandom.com/wiki/Nina",
         "role": "DPS - support",
         "stage": null,
         "speed": null,
@@ -1932,7 +1968,7 @@ const SITE_CONTENT = {
         "disclaimer": "This is a community guide - not affiliated with",
         "brand": "Bank of Innovation"
     },
-    "lastUpdated": "August 24, 2026"
+    "lastUpdated": "August 28, 2026"
 };
 
 const BASE_POOL_CONTENT = {

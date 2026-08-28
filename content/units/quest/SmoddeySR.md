@@ -1,6 +1,7 @@
 ---
 id: SmoddeySR
 name: Summer Moddey
+wiki: https://mememori.fandom.com/wiki/Moddey_%28Swimsuit_ver.%29
 role: Support - DPS
 stage: end
 scalable: true

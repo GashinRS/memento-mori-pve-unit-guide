@@ -1,6 +1,7 @@
 ---
 id: XLuna
 name: Winter Luna
+wiki: https://mememori.fandom.com/wiki/Lunalynn_%28Winter_ver.%29
 role: Support
 stage: early
 speed: before-enemies

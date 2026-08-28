@@ -1,6 +1,7 @@
 ---
 id: Xamour
 name: Winter Amour
+wiki: https://mememori.fandom.com/wiki/Amour_%28Holy_Night_ver.%29
 role: Support
 stage: mid
 speed: first

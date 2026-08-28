@@ -1,6 +1,7 @@
 ---
 id: Regina
 name: Regina
+wiki: https://mememori.fandom.com/wiki/Regina
 role: Support
 stage: end
 scalable: true

@@ -1,6 +1,7 @@
 ---
 id: Rusalka
 name: Rusalka
+wiki: https://mememori.fandom.com/wiki/Rusalka
 role: Support
 stage: early
 speed: none

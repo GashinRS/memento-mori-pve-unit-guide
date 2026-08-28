@@ -1,6 +1,7 @@
 ---
 id: Milla
 name: Milla
+wiki: https://mememori.fandom.com/wiki/Milla
 role: Support
 stage: mid
 scalable: true

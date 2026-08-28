@@ -1,6 +1,7 @@
 ---
 id: Belle
 name: Belle
+wiki: https://mememori.fandom.com/wiki/Belle
 role: Tank
 stage: mid
 scalable: true

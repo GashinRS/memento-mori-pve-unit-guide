@@ -1,6 +1,7 @@
 ---
 id: Rustica
 name: Rustica
+wiki: https://mememori.fandom.com/wiki/Rustica
 role: DPS
 stage: end
 speed: team-dependent

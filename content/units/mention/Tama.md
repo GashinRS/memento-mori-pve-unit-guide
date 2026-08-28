@@ -1,6 +1,7 @@
 ---
 id: Tama
 name: Tama
+wiki: https://mememori.fandom.com/wiki/Tama
 role: Support - DPS
 stage: mid
 scalable: true

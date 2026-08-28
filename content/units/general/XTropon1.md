@@ -1,6 +1,7 @@
 ---
 id: XTropon1
 name: Winter Tropon
+wiki: https://mememori.fandom.com/wiki/Tropon_%28Holy_Night_ver.%29
 role: Tank - Sub DPS
 stage: end
 speed: before-enemies

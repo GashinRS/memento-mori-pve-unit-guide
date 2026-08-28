@@ -22,6 +22,7 @@ Example:
 ---
 id: Sivi
 name: Sivi
+wiki: https://mememori.fandom.com/wiki/Sivi
 role: Support
 stage: mid
 weapons:

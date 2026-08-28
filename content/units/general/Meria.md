@@ -1,6 +1,7 @@
 ---
 id: Meria
 name: Meria
+wiki: https://mememori.fandom.com/wiki/Meria
 role: Support
 stage: early
 speed: usually-none
