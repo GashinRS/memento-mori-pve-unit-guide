@@ -2636,7 +2636,7 @@ const BASE_POOL_UNITS = [
             },
             {
                 "level": "LunaLR",
-                "tier": "optional",
+                "tier": "recommended",
                 "description": "Increases the S1 critical hit rate bonus from 25% to 40%"
             }
         ],
@@ -2857,7 +2857,7 @@ const BASE_POOL_CONTENT = {
     "header": {
         "eyebrow": "Bank of Innovation",
         "title": "Memento Mori\nBase Pool Unit Guide",
-        "subtitle": "Permanent units worth understanding for PvE progression"
+        "subtitle": ""
     },
     "intro": {
         "title": "About This Guide",
