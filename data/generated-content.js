@@ -57,7 +57,7 @@ const GENERAL_UNITS = [
             {
                 "level": "SiviUR",
                 "tier": "recommended",
-                "description": "todo"
+                "description": "Improves the [Increased Damage Dealing] buff multipliers"
             }
         ],
         "pairs": [
@@ -175,7 +175,7 @@ const GENERAL_UNITS = [
             {
                 "level": "XSolSSR",
                 "tier": "required",
-                "description": "todo"
+                "description": "Increases the attack buff granted to Emerald and Crimson allies from her S1 from 30% to 60%"
             }
         ],
         "pairs": [
@@ -243,12 +243,12 @@ const GENERAL_UNITS = [
             {
                 "level": "FiaUR",
                 "tier": "required",
-                "description": "todo"
+                "description": "Increases the buff to adjacent allies' HP from 20% to 50%"
             },
             {
                 "level": "FiaLR",
                 "tier": "recommended",
-                "description": "todo"
+                "description": "Mostly used for the 4 LR set bonus when your Fia is LR5"
             }
         ],
         "pairs": [
@@ -284,7 +284,7 @@ const GENERAL_UNITS = [
             {
                 "level": "YildizUR",
                 "tier": "required",
-                "description": "todo"
+                "description": "Increases the passive DEF and P.DEF buffs granted from 20% to 80%, and the P.CRIT Cut from 20% to 40%"
             }
         ],
         "pairs": [
@@ -321,7 +321,7 @@ const GENERAL_UNITS = [
             {
                 "level": "MillaUR",
                 "tier": "recommended",
-                "description": "todo"
+                "description": "Increases the team wide HP buff from 15% to 25%. Additionally increases the attack based HP buff to Emerald allies from 100% to 200%."
             }
         ],
         "pairs": [
@@ -358,17 +358,17 @@ const GENERAL_UNITS = [
             {
                 "level": "MoineauSSR",
                 "tier": "required",
-                "description": "todo"
+                "description": "Increases S1 targets from 3 to 5"
             },
             {
                 "level": "Moineau200SSR",
                 "tier": "optional",
-                "description": "todo"
+                "description": "Useful for getting extra DEF Break with the 2x200 SSR set bonus"
             },
             {
                 "level": "MoineauUR",
                 "tier": "optional",
-                "description": "todo"
+                "description": "Useful in order to get a higher attack stat for a higher base shield (1000% of attack)"
             }
         ],
         "pairs": [
@@ -510,12 +510,12 @@ const GENERAL_UNITS = [
             {
                 "level": "SamlethSSR",
                 "tier": "recommended",
-                "description": "todo"
+                "description": "Increases S1 targets from 4 to 5"
             },
             {
                 "level": "SamlethUR",
                 "tier": "recommended",
-                "description": "todo"
+                "description": "[Queen's Resolve] cooldown decreases from 8 to 4 turns"
             }
         ],
         "pairs": [
@@ -627,12 +627,12 @@ const GENERAL_UNITS = [
             {
                 "level": "XamourSSR",
                 "tier": "recommended",
-                "description": "todo"
+                "description": "Increases S1 crit buff targets from 1 to 3"
             },
             {
                 "level": "XamourUR",
                 "tier": "recommended",
-                "description": "todo"
+                "description": "Increases the attack buff granted on defeat from 20% to 40%"
             }
         ],
         "pairs": [
@@ -699,12 +699,12 @@ const GENERAL_UNITS = [
             {
                 "level": "EireneSSR",
                 "tier": "recommended",
-                "description": "todo"
+                "description": "Increases S1 targets from 4 to 5"
             },
             {
                 "level": "EireneUR",
                 "tier": "optional",
-                "description": "todo"
+                "description": "Increases damage cut from [Force Field] from 30% to 45%"
             }
         ],
         "pairs": [
@@ -918,7 +918,7 @@ const QUEST_UNITS = [
             {
                 "level": "SmoddeyUR",
                 "tier": "required",
-                "description": "todo"
+                "description": "Increases the attack absorbed from a poisoned target from 15% to 30%"
             }
         ],
         "pairs": [
@@ -1010,7 +1010,7 @@ const QUEST_UNITS = [
             {
                 "level": "ShilohUR",
                 "tier": "optional",
-                "description": "todo"
+                "description": "Increases the passive attack buff targets from 1 to 2"
             }
         ],
         "pairs": [
@@ -1123,11 +1123,11 @@ const HONORABLE_MENTIONS = [
             {
                 "level": "EvelynSSR",
                 "tier": "required",
-                "description": "todo"
+                "description": "Increases the attack and crit rate buff from her S1 from 25% to 50%"
             },
             {
                 "level": "EvelynUR",
-                "tier": "optional",
+                "tier": "Increases ths size of the shield granted to Azure allies from 30% HP + 200% attack to 80% HP + 600% attack, based on Evelyn's stats.",
                 "description": "todo"
             }
         ],
@@ -1164,7 +1164,7 @@ const HONORABLE_MENTIONS = [
             {
                 "level": "FennyUR",
                 "tier": "required",
-                "description": "todo"
+                "description": "Grants a 30% HP buff to the 2 slowest allies other than Fenny"
             }
         ],
         "pairs": [
@@ -1195,12 +1195,7 @@ const HONORABLE_MENTIONS = [
             {
                 "level": "MatildaSSR",
                 "tier": "required",
-                "description": "todo"
-            },
-            {
-                "level": "MatildaUR",
-                "tier": "optional",
-                "description": "todo"
+                "description": "Increases the attack buff, crit rate buff and hit rate buff granted from S1 from 20% to 50%"
             }
         ],
         "pairs": [
@@ -1237,12 +1232,12 @@ const HONORABLE_MENTIONS = [
             {
                 "level": "KobelSSR",
                 "tier": "recommended",
-                "description": "todo"
+                "description": "Increases the debuff to attack from Enfeeble from 20% to 40%"
             },
             {
                 "level": "KobelUR",
                 "tier": "recommended",
-                "description": "todo"
+                "description": "Increases the targets for her passive HP buff from 2 adjacent allies to all allies"
             }
         ],
         "pairs": [
@@ -1273,7 +1268,7 @@ const HONORABLE_MENTIONS = [
             {
                 "level": "XLunaSSR",
                 "tier": "optional",
-                "description": "todo"
+                "description": "S1 targets increases from 3 to 5"
             }
         ],
         "pairs": [
@@ -1305,7 +1300,7 @@ const HONORABLE_MENTIONS = [
             {
                 "level": "YuniUR",
                 "tier": "recommended",
-                "description": "todo"
+                "description": "Increases the passive HP buff to the highest attack ally from 30% to 50%"
             }
         ],
         "pairs": [
@@ -1337,7 +1332,7 @@ const HONORABLE_MENTIONS = [
             {
                 "level": "EideneUR",
                 "tier": "required",
-                "description": "todo"
+                "description": "Increases the team wide HP buff from her S1 from 10% to 40%"
             }
         ],
         "pairs": [
@@ -1396,7 +1391,13 @@ const HONORABLE_MENTIONS = [
         "speed": "before-dps",
         "speedNote": null,
         "aliases": [],
-        "weapons": [],
+        "weapons": [
+            {
+                "level": "TamaUR",
+                "tier": "optional",
+                "description": "Increases the size of the Shield granted from 30% to 80% of max HP. Additionally increases the Shield's size from 200% to 600% of Tama's attack to Amber allies"
+            }
+        ],
         "pairs": [
             {
                 "id": "Cordie",
@@ -1451,7 +1452,7 @@ const HONORABLE_MENTIONS = [
             {
                 "level": "RusticaLR",
                 "tier": "required",
-                "description": "todo"
+                "description": "Required for higher stats and Shields"
             }
         ],
         "pairs": [
@@ -1568,7 +1569,7 @@ const HONORABLE_MENTIONS = [
             {
                 "level": "ReginaUR",
                 "tier": "required",
-                "description": "todo"
+                "description": "Increases the passive HP buff to the highest attack ally from 25% to 50%"
             }
         ],
         "pairs": [
@@ -1599,12 +1600,12 @@ const HONORABLE_MENTIONS = [
             {
                 "level": "PaladeaSSR",
                 "tier": "optional",
-                "description": "todo"
+                "description": "Increases S1 targets from 4 to 5"
             },
             {
                 "level": "PaladeaUR",
                 "tier": "optional",
-                "description": "todo"
+                "description": "Grants 2 layers of [Multi-Barrier] to all Chaos allies other than Paladea"
             }
         ],
         "pairs": [
@@ -1854,6 +1855,13 @@ const SITE_CONTENT = {
                 "definition": "<p>This buff provides a multi-layered barrier. When a character takes damage, 1 barrier layer is depleted to nullify that damage. If Multi-Barrier is overlapped with Invulnerable, the barrier layer will not be depleted. If Multi-Barrier is overlapped with Shield, Multi-Barrier will be used first.</p>"
             },
             {
+                "term": "Force Field",
+                "aliases": [
+                    "Force Field"
+                ],
+                "definition": "<p>This buff reduces a designated amount of damage from attacks, Resonance, Devotion, and counterattack damage. Damage from Poison and other debuffs that deal continuous damage cannot be reduced. The effects of Increased/Decreased Damage Taken and Increased/Decreased Damage Dealing are calculated before damage is reduced via Force Field. The effects of Shield, Resonance, and Devotion are calculated after damage is reduced via Force Field. When the effect of multiple Force Fields activates, or when the effects of Force Field and cutting activate at the same time, the only effect that will be applied will be the one that results in the least amount of damage being ultimately dealt to the character.</p>"
+            },
+            {
                 "term": "Invisibility",
                 "definition": "<p>This buff prevents a character from being a target of attacks and skills of enemies and allies. If all allies who are alive are enhanced with Invisibility, the effect of Invisibility will be nullified.</p>"
             },
@@ -1924,7 +1932,7 @@ const SITE_CONTENT = {
         "disclaimer": "This is a community guide - not affiliated with",
         "brand": "Bank of Innovation"
     },
-    "lastUpdated": "August 15, 2026"
+    "lastUpdated": "August 24, 2026"
 };
 
 const BASE_POOL_CONTENT = {

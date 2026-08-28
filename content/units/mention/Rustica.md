@@ -8,7 +8,7 @@ speedNote: Usually faster than Moineau and slower than Tama.
 weapons:
   - level: RusticaLR
     tier: required
-    description: todo
+    description: Required for higher stats and Shields
 pairs:
   - id: TamaLR
     badge: Support - dps

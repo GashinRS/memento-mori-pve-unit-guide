@@ -8,10 +8,10 @@ speedNote: Make the main DPS the slowest ally for the cooldown reduction; Meria 
 weapons:
   - level: EireneSSR
     tier: recommended
-    description: todo
+    description: Increases S1 targets from 4 to 5
   - level: EireneUR
     tier: optional
-    description: todo
+    description: Increases damage cut from [Force Field] from 30% to 45%
 pairs:
   - id: Cordie
     badge: dps

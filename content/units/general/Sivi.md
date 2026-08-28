@@ -8,7 +8,7 @@ speedNote: The main DPS cannot be the fastest or second-fastest ally because Siv
 weapons:
   - level: SiviUR
     tier: recommended
-    description: todo
+    description: Improves the [Increased Damage Dealing] buff multipliers
 pairs:
   - id: Cordie
     badge: dps

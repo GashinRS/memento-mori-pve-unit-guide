@@ -8,7 +8,7 @@ speed: before-enemies
 weapons:
   - level: EideneUR
     tier: required
-    description: todo
+    description: Increases the team wide HP buff from her S1 from 10% to 40%
 pairs:
   - id: FiaLR5
     badge: dps

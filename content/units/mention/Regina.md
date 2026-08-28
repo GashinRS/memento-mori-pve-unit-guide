@@ -8,7 +8,7 @@ speed: none
 weapons:
   - level: ReginaUR
     tier: required
-    description: todo
+    description: Increases the passive HP buff to the highest attack ally from 25% to 50%
 pairs:
   - id: Fia
     badge: dps

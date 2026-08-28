@@ -52,6 +52,16 @@ glossary:
         1 barrier layer is depleted to nullify that damage.
         If Multi-Barrier is overlapped with Invulnerable, the barrier layer will not be depleted.
         If Multi-Barrier is overlapped with Shield, Multi-Barrier will be used first.
+    - term: Force Field
+      aliases: [Force Field]
+      definition: |
+        This buff reduces a designated amount of damage from attacks, Resonance, Devotion, and counterattack damage.
+        Damage from Poison and other debuffs that deal continuous damage cannot be reduced.
+        The effects of Increased/Decreased Damage Taken and Increased/Decreased Damage Dealing
+        are calculated before damage is reduced via Force Field.
+        The effects of Shield, Resonance, and Devotion are calculated after damage is reduced via Force Field.
+        When the effect of multiple Force Fields activates, or when the effects of Force Field and cutting activate at the same time,
+        the only effect that will be applied will be the one that results in the least amount of damage being ultimately dealt to the character.
     - term: Invisibility
       definition: |
         This buff prevents a character from being a target of attacks and skills of enemies and allies.

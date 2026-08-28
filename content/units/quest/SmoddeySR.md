@@ -12,7 +12,7 @@ aliases:
 weapons:
   - level: SmoddeyUR
     tier: required
-    description: todo
+    description: Increases the attack absorbed from a poisoned target from 15% to 30%
 pairs:
   - id: Moineau
     badge: dps

@@ -7,7 +7,7 @@ speed: before-dps
 weapons:
   - level: ShilohUR
     tier: optional
-    description: todo
+    description: Increases the passive attack buff targets from 1 to 2
 pairs:
   - id: Cordie
     badge: dps

@@ -7,10 +7,10 @@ speed: before-dps
 weapons:
   - level: SamlethSSR
     tier: recommended
-    description: todo
+    description: Increases S1 targets from 4 to 5
   - level: SamlethUR
     tier: recommended
-    description: todo
+    description: [Queen's Resolve] cooldown decreases from 8 to 4 turns
 pairs:
   - id: Cordie
     badge: dps

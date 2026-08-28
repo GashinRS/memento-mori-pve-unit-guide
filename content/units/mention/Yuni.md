@@ -8,7 +8,7 @@ speed: none
 weapons:
   - level: YuniUR
     tier: recommended
-    description: todo
+    description: Increases the passive HP buff to the highest attack ally from 30% to 50%
 pairs:
   - id: Fia
     badge: dps

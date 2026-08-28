@@ -7,10 +7,10 @@ speed: first
 weapons:
   - level: XamourSSR
     tier: recommended
-    description: todo
+    description: Increases S1 crit buff targets from 1 to 3
   - level: XamourUR
     tier: recommended
-    description: todo
+    description: Increases the attack buff granted on defeat from 20% to 40%
 pairs:
   - id: Cordie
     badge: dps

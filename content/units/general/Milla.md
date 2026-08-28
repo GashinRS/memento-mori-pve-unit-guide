@@ -8,7 +8,7 @@ speed: none
 weapons:
   - level: MillaUR
     tier: recommended
-    description: todo
+    description: Increases the team wide HP buff from 15% to 25%. Additionally increases the attack based HP buff to Emerald allies from 100% to 200%.
 pairs:
   - id: Fia
     badge: dps

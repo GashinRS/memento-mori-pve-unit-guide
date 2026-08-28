@@ -7,7 +7,7 @@ speed: before-enemies
 weapons:
   - level: XLunaSSR
     tier: optional
-    description: todo
+    description: S1 targets increases from 3 to 5
 pairs:
   - id: Cordie
     badge: dps

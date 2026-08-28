@@ -8,7 +8,7 @@ speedNote: Act before enemies or your DPS when Buff Immunity matters.
 weapons:
   - level: YildizUR
     tier: required
-    description: todo
+    description: Increases the passive DEF and P.DEF buffs granted from 20% to 80%, and the P.CRIT Cut from 20% to 40%
 pairs:
   - id: Fia
     badge: dps

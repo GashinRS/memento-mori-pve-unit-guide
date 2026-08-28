@@ -12,10 +12,10 @@ aliases:
 weapons:
   - level: FiaUR
     tier: required
-    description: todo
+    description: Increases the buff to adjacent allies' HP from 20% to 50%
   - level: FiaLR
     tier: recommended
-    description: todo
+    description: Mostly used for the 4 LR set bonus when your Fia is LR5
 pairs:
   - id: Yildiz
     badge: support

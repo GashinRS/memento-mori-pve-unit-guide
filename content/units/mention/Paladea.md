@@ -9,10 +9,10 @@ speedNote: She should also act before Lunalynn.
 weapons:
   - level: PaladeaSSR
     tier: optional
-    description: todo
+    description: Increases S1 targets from 4 to 5
   - level: PaladeaUR
     tier: optional
-    description: todo
+    description: Grants 2 layers of [Multi-Barrier] to all Chaos allies other than Paladea
 pairs:
   - id: Cordie
     badge: dps

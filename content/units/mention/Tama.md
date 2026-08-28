@@ -6,6 +6,9 @@ stage: mid
 scalable: true
 speed: before-dps
 weapons:
+  - level: TamaUR
+    tier: optional
+    description: Increases the size of the Shield granted from 30% to 80% of max HP. Additionally increases the Shield's size from 200% to 600% of Tama's attack to Amber allies
 pairs:
   - id: Cordie
     badge: dps

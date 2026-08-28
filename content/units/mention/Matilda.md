@@ -7,10 +7,7 @@ speed: before-dps
 weapons:
   - level: MatildaSSR
     tier: required
-    description: todo
-  - level: MatildaUR
-    tier: optional
-    description: todo
+    description: Increases the attack buff, crit rate buff and hit rate buff granted from S1 from 20% to 50%
 pairs:
   - id: Florence
     badge: dps

@@ -9,13 +9,13 @@ speedNote: "Support: before the main DPS. DPS: act last after enemies are fully 
 weapons:
   - level: MoineauSSR
     tier: required
-    description: todo
+    description: Increases S1 targets from 3 to 5
   - level: Moineau200SSR
     tier: optional
-    description: todo
+    description: Useful for getting extra DEF Break with the 2x200 SSR set bonus
   - level: MoineauUR
     tier: optional
-    description: todo
+    description: Useful in order to get a higher attack stat for a higher base shield (1000% of attack)
 pairs:
   - id: Cordie
     badge: dps

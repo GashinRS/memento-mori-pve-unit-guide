@@ -8,9 +8,9 @@ speed: before-dps
 weapons:
   - level: EvelynSSR
     tier: required
-    description: todo
+    description: Increases the attack and crit rate buff from her S1 from 25% to 50%
   - level: EvelynUR
-    tier: optional
+    tier: Increases ths size of the shield granted to Azure allies from 30% HP + 200% attack to 80% HP + 600% attack, based on Evelyn's stats.
     description: todo
 pairs:
   - id: Florence

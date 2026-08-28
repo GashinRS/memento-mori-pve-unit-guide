@@ -8,7 +8,7 @@ speedNote: Her innate 30% Speed buff means this usually requires little or no Sp
 weapons:
   - level: XSolSSR
     tier: required
-    description: todo
+    description: Increases the attack buff granted to Emerald and Crimson allies from her S1 from 30% to 60%
 pairs:
   - id: Cordie
     badge: dps

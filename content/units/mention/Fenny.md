@@ -9,7 +9,7 @@ speedNote: Only relevant when using her Buff Immunity debuff.
 weapons:
   - level: FennyUR
     tier: required
-    description: todo
+    description: Grants a 30% HP buff to the 2 slowest allies other than Fenny
 pairs:
   - id: Fia
     badge: dps

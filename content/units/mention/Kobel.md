@@ -8,10 +8,10 @@ speed: before-enemies
 weapons:
   - level: KobelSSR
     tier: recommended
-    description: todo
+    description: Increases the debuff to attack from Enfeeble from 20% to 40%
   - level: KobelUR
     tier: recommended
-    description: todo
+    description: Increases the targets for her passive HP buff from 2 adjacent allies to all allies
 pairs:
   - id: Fia
     badge: dps
