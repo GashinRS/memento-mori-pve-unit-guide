@@ -2275,11 +2275,6 @@ const CONCEPT_ARTICLES = [
         "id": "level-1-strategy",
         "title": "Level 1 Strategy",
         "body": ""
-    },
-    {
-        "id": "unconventional-pve-teams",
-        "title": "Unconventional PvE Teams",
-        "body": ""
     }
 ];
 
@@ -2294,7 +2289,6 @@ const SITE_CONTENT = {
         "items": [
             "The level 1 strategy",
             "Base pool unit guide",
-            "Examples of unconventional PVE teams that work in very specific scenarios",
             "Gear guide"
         ]
     },
