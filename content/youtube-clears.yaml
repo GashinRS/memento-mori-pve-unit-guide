@@ -19,8 +19,5 @@ teams:
     video: https://www.youtube.com/watch?v=s57iDkmDwdk
   - slots: [Florence, Xamour, Cordie, Paladea, LunaLR5]
     video: https://www.youtube.com/watch?v=cYbUFsGmC6E
-
-examples:
-  - unit: Rustica
-    label: Main Quest 46-25 - Rustica with Myrlennia, Merlyn, Tama and Moineau
+  - slots: [Myrlennia, Merlyn, Rustica, Tama, Moineau]
     video: https://www.youtube.com/watch?v=KgWWC5bjK0I

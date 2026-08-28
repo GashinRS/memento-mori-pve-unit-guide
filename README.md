@@ -73,17 +73,13 @@ The shared weapon investment and progression information card is defined once in
 All battle-clear links live in `content/youtube-clears.yaml`, rather than in individual unit files.
 
 - Add a mapping under `teams` for a video that uses an exact five-unit guide lineup. Unit order does not matter.
+- Rarity suffixes (`SR`, `UR`, `LR`, and variants such as `LR5`) are ignored when matching. For example, a displayed `MoineauLR` icon matches `Moineau` in this file.
 - One mapping automatically supplies the link everywhere that lineup appears on either unit guide page.
-- Add an entry under `examples` for a useful clear that does not exactly match a displayed team.
+- Add the lineup to a unit's `teams` frontmatter first when a useful clear does not yet match a displayed team.
 
 ```yaml
 teams:
   - slots: [Mertillier, Sivi, Cordie, Merlyn, LunaLR]
-    video: https://www.youtube.com/watch?v=example
-
-examples:
-  - unit: Sivi
-    label: Main Quest 40-20 - short team description
     video: https://www.youtube.com/watch?v=example
 ```
 

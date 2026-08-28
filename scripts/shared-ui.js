@@ -16,16 +16,6 @@
             'title="' + escapeHtml(description) + '"><span aria-hidden="true">&#9654;</span></a>';
     }
 
-    function exampleClearsHtml(clears) {
-        if (!clears || !clears.length) return '';
-        var links = clears.map(function(clear) {
-            return '<li>' + videoLinkHtml(clear.video, clear.label, 'example-clear-play') +
-                '<a class="example-clear-label" href="' + escapeHtml(clear.video) + '" target="_blank" ' +
-                'rel="noopener noreferrer">' + escapeHtml(clear.label) + '</a></li>';
-        }).join('');
-        return '<div class="example-clears"><div class="row-label">Example Clears</div><ul>' + links + '</ul></div>';
-    }
-
     function guideLegendHtml() {
         return '<div>' +
             '<div class="legend-group-title">Weapon Investment</div>' +
@@ -72,7 +62,6 @@
 
     window.GuideUI = {
         videoLinkHtml: videoLinkHtml,
-        exampleClearsHtml: exampleClearsHtml,
     };
 
     if (document.readyState === 'loading') {

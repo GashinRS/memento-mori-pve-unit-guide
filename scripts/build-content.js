@@ -78,7 +78,6 @@ const CONTAINER_KEYS = new Set([
     "wip",
     "units",
     "concepts",
-    "examples",
     "general",
     "glossary",
     "terms",
@@ -314,9 +313,14 @@ function normalizeYouTubeUrl(value) {
     return url.toString();
 }
 
+function youtubeUnitKey(slot) {
+    const id = String(typeof slot === "string" ? slot : slot.id);
+    return id.replace(/(?:SR|UR|LR\d*)$/i, "").toLowerCase();
+}
+
 function teamKey(slots) {
     return slots
-        .map((slot) => typeof slot === "string" ? slot : slot.id)
+        .map(youtubeUnitKey)
         .sort((left, right) => left.localeCompare(right))
         .join("\u0000");
 }
@@ -335,14 +339,12 @@ function applyYouTubeClears(units, clearData) {
     });
 
     const matchedTeams = new Set();
-    const unitsById = new Map(units.map((unit) => [unit.id, unit]));
     units.forEach((unit) => {
         unit.teams.forEach((team) => {
             const key = teamKey(team.slots);
             team.video = teamVideos.get(key) || null;
             if (team.video) matchedTeams.add(key);
         });
-        unit.exampleClears = [];
     });
 
     teamVideos.forEach((video, key) => {
@@ -351,15 +353,6 @@ function applyYouTubeClears(units, clearData) {
         }
     });
 
-    (clearData.examples || []).forEach((clear) => {
-        const unit = unitsById.get(clear.unit);
-        if (!unit) throw new Error(`Example clear references missing guide unit "${clear.unit}"`);
-        if (!clear.label) throw new Error(`Example clear for "${clear.unit}" requires a label`);
-        unit.exampleClears.push({
-            label: String(clear.label),
-            video: normalizeYouTubeUrl(clear.video),
-        });
-    });
 }
 
 function unitNameMap(units) {
@@ -410,7 +403,6 @@ function hydrateUnitReferences(units, names) {
                     name: slot.name || names[slot.id] || slot.id,
                 })),
             })),
-            exampleClears: [],
             desc: markdownToHtml(unit.body),
         };
     });

@@ -3,7 +3,7 @@ id: Eirene
 name: Eirene
 wiki: https://mememori.fandom.com/wiki/Eirene
 role: Support
-stage: mid
+stage: early
 speed: before-dps
 speedNote: Make the main DPS the slowest ally for the cooldown reduction; Meria is a useful alternative.
 weapons:

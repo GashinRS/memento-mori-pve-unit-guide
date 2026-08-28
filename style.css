@@ -797,12 +797,6 @@ footer .footer-credits a:hover { color: var(--teal); }
     transform: translateY(-1px);
 }
 .video-link span { margin-left: .08rem; }
-.example-clears { margin: 18px 0; }
-.example-clears ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
-.example-clears li { display: flex; align-items: center; gap: 8px; }
-.example-clear-label { color: var(--ink-light); font-size: .86rem; text-decoration-color: var(--border-hover); text-underline-offset: 3px; }
-.example-clear-label:hover { color: var(--sepia); text-decoration-color: currentColor; }
-
 .unit-desc p strong:first-child {
     color: var(--sepia);
     font-family: 'Cinzel', serif;
