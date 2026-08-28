@@ -13,6 +13,8 @@ pairs:
   - id: Cordie
     badge: dps
 teams:
+  - label: Early-mid game
+    slots: [XLuna, MerlynLR, CordieLR, MimiSR, PrimaveraSR]
 ---
 
 

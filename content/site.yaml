@@ -111,11 +111,13 @@ sections:
     pill: Situational
     navIcon: "&#10022;"
     note: |
-      While units are not bad, they are either outshadowed by stronger alternatives or are meant to be
-      paired with Florence who is outshadowed herself by Cordie. They may still be worth considering when
-      preferred units are unavailable due to the long rerun cycles (~6 months) in this game, or if they align
-      with your personal progression goals. That said, the general advice is to pass on them for PVE purposes and
-      conserve resources (both Diamonds and Crystals) unless you have a specific reason to pull, like using them in PVP as well.
+      This section contains units who are either overshadowed by better alternatives, mostly only useful early on or
+      require vast amounts of investment before they become truly useful. Some of these units also mostly only pair well
+      with Florence, who is only good as a solo DPS in the early to mid game, after which Cordie will always be better.
+      These units may still be worth considering when preferred units are unavailable due to the long rerun cycles (~6 months) 
+      in this game, or if they align with your personal progression goals. That said, the general advice is to pass on 
+      them for PVE purposes and conserve resources (both Diamonds and Crystals) unless you have a specific reason to pull, 
+      like using them in PVP as well.
 footer:
   credits: |
     Special thanks to <a href="https://tamamo.dev/" target="_blank" rel="noopener noreferrer">Tamamo.dev</a> for the character and gear icons, and <a href="https://github.com/ScobraCK/Artificial-Angel-Bot" target="_blank" rel="noopener noreferrer">AA Bot</a> for the banner history data used to calculate rerun estimates.

@@ -16,6 +16,10 @@ pairs:
   - id: Cordie
     badge: dps
 teams:
+  - label:
+    slots: [Eidene, FiaLR5, Merlyn, Yildiz, Milla]
+  - label: Common tower team
+    slots: [Cordie, Merlyn, Moineau, Samleth, Yildiz]
 ---
 
 Yildiz can buff the highest attack ally for 80% DEF, 80% P.DEF and 40% P.CRIT CUT if they are an Emerald unit.

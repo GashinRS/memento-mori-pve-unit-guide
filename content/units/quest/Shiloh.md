@@ -14,7 +14,7 @@ pairs:
     badge: dps
 teams:
   - label: Early-mid game
-    slots: [Mimi, Primavera, Cordie, Merlyn, Shiloh]
+    slots: [MimiSR, PrimaveraSR, CordieLR, MerlynLR, Shiloh]
   - label: 
     slots: [Mertillier, Sivi, Cordie, LunaLR, Shiloh]
 ---

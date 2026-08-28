@@ -20,6 +20,10 @@ pairs:
   - id: Cordie
     badge: dps
 teams:
+  - label:
+    slots: [XSol, Merlyn, Cordie, Meria, Eirene]
+  - label:
+    slots: [Florence, Merlyn, Cordie, Meria, Eirene]
 ---
 
 Meria is one of the most universally useful support units in the game and can fit into almost any team, making her

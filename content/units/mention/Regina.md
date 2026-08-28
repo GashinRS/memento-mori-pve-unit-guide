@@ -4,7 +4,6 @@ name: Regina
 wiki: https://mememori.fandom.com/wiki/Regina
 role: Support
 stage: end
-scalable: true
 speed: none
 weapons:
   - level: ReginaUR
@@ -14,6 +13,8 @@ pairs:
   - id: Fia
     badge: dps
 teams:
+  - label:
+    slots: [Regina, Merlyn, FiaLR5, Yildiz, Milla]
 ---
 
 Regina increases the HP of the ally with the highest attack by 50%, and can additionally increase the damage taken

@@ -8,6 +8,8 @@ speed: none
 weapons:
 pairs:
 teams:
+  - label: Early-mid game
+    slots: [Rusalka, MerlynLR, CordieLR, MimiSR, PrimaveraSR]
 ---
 
 Rusalka grants 5 Multi-Barriers to herself and 1 to every ally when she is defeated. This is useful as a one time increase in 

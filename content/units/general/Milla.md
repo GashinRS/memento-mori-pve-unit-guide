@@ -16,6 +16,10 @@ pairs:
   - id: Dian
     badge: dps
 teams:
+  - label: Main quest only
+    slots: [Belle, Fia, Dian, Merlyn, Milla]
+  - label: 
+    slots: [Eidene, FiaLR5, Merlyn, Yildiz, Milla]
 ---
 
 Milla can increases the max HP of all allies by 25% and also increase Emerald allies' by an additional 200%

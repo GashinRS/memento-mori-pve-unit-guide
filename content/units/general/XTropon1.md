@@ -16,7 +16,7 @@ pairs:
     badge: dps
 teams:
   - label: 
-    slots: [Milla, Merlyn, Dian, Fia, XTropon1]
+    slots: [XTropon1, FiaLR5, Merlyn, Yildiz, Milla]
 ---
 
 Winter Tropon is a rather niche unit that, while not universally useful, can be a very powerful tool in specific

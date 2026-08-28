@@ -15,6 +15,8 @@ pairs:
   - id: Fia
     badge: dps
 teams:
+  - label: 
+    slots: [Fenny, Merlyn, FiaLR5, Yildiz, Milla]
 ---
 
 Fenny increases the HP of the 2 allies with the lowest speed by 30%. This is the main effect she has and is only

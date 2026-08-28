@@ -21,7 +21,7 @@ pairs:
     badge: support
 teams:
   - label: 
-    slots: [Cordie, Merlyn, Florence, Xamour, LunaLR]
+    slots: [Florence, Merlyn, Cordie, Xamour, LunaLR]
 ---
 
 Winter Amour is a unit designed for double DPS teams, more specifically for Flordie (Florence + Cordie) teams.

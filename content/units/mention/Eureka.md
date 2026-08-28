@@ -10,6 +10,8 @@ pairs:
   - id: Florence
     badge: dps
 teams:
+  - label: Early-mid game
+    slots: [CordieSR, MerlynLR, FlorenceLR, PrimaveraSR, Eureka]
 ---
 
 When Eureka is defeated, she grants the highest attack ally a 50% attack buff when this is an Azure ally. She has an

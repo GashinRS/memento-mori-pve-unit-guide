@@ -23,6 +23,10 @@ pairs:
   - id: Milla
     badge: support
 teams:
+  - label: Lvl 1 Nina support
+    slots: [Eirene, Meria, Cordie, Fia, Nina1]
+  - label: Fia DPS + Winter Tropon tank
+    slots: [XTropon1, FiaLR5, Merlyn, Yildiz, Milla]
 ---
 
 Fia is without a doubt one of the most important limited units you can pull for PVE. Technically she is usable

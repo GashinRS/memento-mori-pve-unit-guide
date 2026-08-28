@@ -135,24 +135,24 @@ const GENERAL_UNITS = [
                 "label": null,
                 "slots": [
                     {
-                        "id": "Milla",
-                        "name": "Milla"
+                        "id": "XTropon1",
+                        "name": "Winter Tropon"
+                    },
+                    {
+                        "id": "FiaLR5",
+                        "name": "Fia"
                     },
                     {
                         "id": "Merlyn",
                         "name": "Merlyn"
                     },
                     {
-                        "id": "Dian",
-                        "name": "Dian"
+                        "id": "Yildiz",
+                        "name": "Yildiz"
                     },
                     {
-                        "id": "Fia",
-                        "name": "Fia"
-                    },
-                    {
-                        "id": "XTropon1",
-                        "name": "Winter Tropon"
+                        "id": "Milla",
+                        "name": "Milla"
                     }
                 ]
             }
@@ -267,7 +267,58 @@ const GENERAL_UNITS = [
                 "badge": "support"
             }
         ],
-        "teams": [],
+        "teams": [
+            {
+                "label": "Lvl 1 Nina support",
+                "slots": [
+                    {
+                        "id": "Eirene",
+                        "name": "Eirene"
+                    },
+                    {
+                        "id": "Meria",
+                        "name": "Meria"
+                    },
+                    {
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "Fia",
+                        "name": "Fia"
+                    },
+                    {
+                        "id": "Nina1",
+                        "name": "Nina"
+                    }
+                ]
+            },
+            {
+                "label": "Fia DPS + Winter Tropon tank",
+                "slots": [
+                    {
+                        "id": "XTropon1",
+                        "name": "Winter Tropon"
+                    },
+                    {
+                        "id": "FiaLR5",
+                        "name": "Fia"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "Yildiz",
+                        "name": "Yildiz"
+                    },
+                    {
+                        "id": "Milla",
+                        "name": "Milla"
+                    }
+                ]
+            }
+        ],
         "desc": "<p>Fia is without a doubt one of the most important limited units you can pull for PVE. Technically she is usable         at UR+ rarity, but Fia is the only unit on this entire list that gets a firm recommendation to LR. She is unique         in the sense that she can act as both a support unit and DPS.</p>\n<p>Fia's support comes from her passive that increases adjacent allies' HP by 50% of her own, which greatly contributes         to the effectiveness of level 1 strategies and units that rely on their HP to deal damage like Dian. This buff         does not however contribute much to general survivability of other units, as other means such as Multi-Barriers and         buffing defense are more suited for this.</p>\n<p>Fia can also act as a strong DPS option because her S2 deals direct damage based on damage dealt to her. Direct         damage bypasses enemy defenses and also does not require any attack or PMDB from the attacker. Because Fia also         buffs her own HP, this directly affects how much damage she can deal, as being able to take more damage (higher HP)         also means more damage dealt. This means that the only offense stats Fia requires are crit rate, crit damage and         HP.</p>\n<p>Because both her support and DPS roles require as much HP as possible, the gear should also reflect this, as you         want set bonuses that boost HP and stamina. For an LR Fia, the standard gear setup would be 4 UR + 2 SSR. Because         Fia scales with her HP, getting her to LR5 can also be a good option for the added HP and the ability to use         4 LR instead of 4 UR gear for even more HP.</p>\n<p><strong>Main Quest —</strong> Fia's support role is most prevalent in main quest where you will often     use her to buff up level 1 Nina (and sometimes Winter Tropon's) HP. If you want to use her as a DPS, Yildiz is a     must-have for the additional bulk, and LR5 also improves her performance by a big amount.</p>\n<p><strong>Tower —</strong>In tower Fia will mostly be used as a DPS. Because of lower enemy attack stats compared to     main quest, Yildiz is not required and LR should be more than enough to perform adequately in most scenarios. An issue you can run into     sometimes in tower when pairing her with Yildiz is that she becomes too bulky, which reduces her damage, so this is     something to take into account.</p>",
         "rerun": {
             "aaId": 60,
@@ -304,7 +355,58 @@ const GENERAL_UNITS = [
                 "badge": "dps"
             }
         ],
-        "teams": [],
+        "teams": [
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Eidene",
+                        "name": "Eidene"
+                    },
+                    {
+                        "id": "FiaLR5",
+                        "name": "Fia"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "Yildiz",
+                        "name": "Yildiz"
+                    },
+                    {
+                        "id": "Milla",
+                        "name": "Milla"
+                    }
+                ]
+            },
+            {
+                "label": "Common tower team",
+                "slots": [
+                    {
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "Moineau",
+                        "name": "Moineau"
+                    },
+                    {
+                        "id": "Samleth",
+                        "name": "Summer Amleth"
+                    },
+                    {
+                        "id": "Yildiz",
+                        "name": "Yildiz"
+                    }
+                ]
+            }
+        ],
         "desc": "<p>Yildiz can buff the highest attack ally for 80% DEF, 80% P.DEF and 40% P.CRIT CUT if they are an Emerald unit.         This is one of if not the best defensive buff in the game and enables Fia to perform her DPS role in main quest         much more effectively, due main quest enemies otherwise having too much attack for Fia to reliably survive in         most stages. Another great target of this buff is Cordie, but this is more useful in tower because Cordie's         survivability in main quest is still not great even with Yildiz.</p>",
         "rerun": {
             "aaId": 124,
@@ -342,7 +444,58 @@ const GENERAL_UNITS = [
                 "badge": "dps"
             }
         ],
-        "teams": [],
+        "teams": [
+            {
+                "label": "Main quest only",
+                "slots": [
+                    {
+                        "id": "Belle",
+                        "name": "Belle"
+                    },
+                    {
+                        "id": "Fia",
+                        "name": "Fia"
+                    },
+                    {
+                        "id": "Dian",
+                        "name": "Dian"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "Milla",
+                        "name": "Milla"
+                    }
+                ]
+            },
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Eidene",
+                        "name": "Eidene"
+                    },
+                    {
+                        "id": "FiaLR5",
+                        "name": "Fia"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "Yildiz",
+                        "name": "Yildiz"
+                    },
+                    {
+                        "id": "Milla",
+                        "name": "Milla"
+                    }
+                ]
+            }
+        ],
         "desc": "<p>Milla can increases the max HP of all allies by 25% and also increase Emerald allies' by an additional 200%         of her attack. While her role may seem similar to Fia's at first glance, Milla is almost exclusively used to buff         Fia's HP or buff another unit's HP along with Fia and is rarely used on her own without Fia. Due to the general         usefulness of Fia however, any unit that works well with her can be considered a good support unit, which is         exactly what Milla is.</p>\n<p>Milla also scales with rarity due to higher rarities being able to hit higher attack stats for a bigger HP buff         as well as more survivability which may allow her to reactivate her passive HP regeneration support.</p>",
         "rerun": {
             "aaId": 80,
@@ -397,7 +550,7 @@ const GENERAL_UNITS = [
         ],
         "teams": [
             {
-                "label": null,
+                "label": "Common tower team",
                 "slots": [
                     {
                         "id": "Cordie",
@@ -416,8 +569,8 @@ const GENERAL_UNITS = [
                         "name": "Summer Amleth"
                     },
                     {
-                        "id": "Meria",
-                        "name": "Meria"
+                        "id": "Yildiz",
+                        "name": "Yildiz"
                     }
                 ]
             },
@@ -666,16 +819,16 @@ const GENERAL_UNITS = [
                 "label": null,
                 "slots": [
                     {
-                        "id": "Cordie",
-                        "name": "Cordie"
+                        "id": "Florence",
+                        "name": "Florence"
                     },
                     {
                         "id": "Merlyn",
                         "name": "Merlyn"
                     },
                     {
-                        "id": "Florence",
-                        "name": "Florence"
+                        "id": "Cordie",
+                        "name": "Cordie"
                     },
                     {
                         "id": "Xamour",
@@ -812,7 +965,58 @@ const GENERAL_UNITS = [
                 "badge": "dps"
             }
         ],
-        "teams": [],
+        "teams": [
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "XSol",
+                        "name": "Winter Soltina"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "Meria",
+                        "name": "Meria"
+                    },
+                    {
+                        "id": "Eirene",
+                        "name": "Eirene"
+                    }
+                ]
+            },
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Florence",
+                        "name": "Florence"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "Meria",
+                        "name": "Meria"
+                    },
+                    {
+                        "id": "Eirene",
+                        "name": "Eirene"
+                    }
+                ]
+            }
+        ],
         "desc": "<p>Meria is one of the most universally useful support units in the game and can fit into almost any team, making her         a must pull. The reason for this is a passive effect that grants her a Multi-Barrier for every hit she does.         When she already has 4 Multi-Barriers, the extra Multi-Barriers overflow to the ally with the highest attack. Because her S1         hits 5 times, this means that she will immediately grant 4 Multi-Barriers to herself and 1 to the highest attack ally.         Her S2 hits 5 times as well, which can immediately replenish broken Multi-Barriers. This makes for a powerful survival tool, and         hard counters most units that rely on AoE attacks like Soltina since they do not have the necessary hits to break         the Multi-Barriers.</p>",
         "rerun": {
             "aaId": 86,
@@ -1039,20 +1243,20 @@ const QUEST_UNITS = [
                 "label": "Early-mid game",
                 "slots": [
                     {
-                        "id": "Mimi",
-                        "name": "Mimi"
+                        "id": "MimiSR",
+                        "name": "MimiSR"
                     },
                     {
-                        "id": "Primavera",
-                        "name": "Primavera"
+                        "id": "PrimaveraSR",
+                        "name": "PrimaveraSR"
                     },
                     {
-                        "id": "Cordie",
-                        "name": "Cordie"
+                        "id": "CordieLR",
+                        "name": "CordieLR"
                     },
                     {
-                        "id": "Merlyn",
-                        "name": "Merlyn"
+                        "id": "MerlynLR",
+                        "name": "MerlynLR"
                     },
                     {
                         "id": "Shiloh",
@@ -1116,7 +1320,33 @@ const HONORABLE_MENTIONS = [
                 "badge": "dps"
             }
         ],
-        "teams": [],
+        "teams": [
+            {
+                "label": "Early-mid game",
+                "slots": [
+                    {
+                        "id": "CordieSR",
+                        "name": "CordieSR"
+                    },
+                    {
+                        "id": "MerlynLR",
+                        "name": "MerlynLR"
+                    },
+                    {
+                        "id": "FlorenceLR",
+                        "name": "FlorenceLR"
+                    },
+                    {
+                        "id": "PrimaveraSR",
+                        "name": "PrimaveraSR"
+                    },
+                    {
+                        "id": "Eureka",
+                        "name": "Eureka"
+                    }
+                ]
+            }
+        ],
         "desc": "<p>When Eureka is defeated, she grants the highest attack ally a 50% attack buff when this is an Azure ally. She has an additional support effect where she can cleanse herself and the 2 highest attack allies when Eureka is debuffed. While neither of these effects are particularly powerful (given that you are forced to run an Azure DPS, i.e. Florence), she can be a good budget support option in the early game given that she does not require her UW or extra copies.</p>",
         "rerun": {
             "aaId": 106,
@@ -1159,7 +1389,33 @@ const HONORABLE_MENTIONS = [
                 "badge": "dps"
             }
         ],
-        "teams": [],
+        "teams": [
+            {
+                "label": "Early-mid game",
+                "slots": [
+                    {
+                        "id": "CordieSR",
+                        "name": "CordieSR"
+                    },
+                    {
+                        "id": "MerlynLR",
+                        "name": "MerlynLR"
+                    },
+                    {
+                        "id": "FlorenceLR",
+                        "name": "FlorenceLR"
+                    },
+                    {
+                        "id": "PrimaveraSR",
+                        "name": "PrimaveraSR"
+                    },
+                    {
+                        "id": "Evelyn",
+                        "name": "Evelyn"
+                    }
+                ]
+            }
+        ],
         "desc": "<p>Evenlyn's S1 increases the attack and chance to hit of the highest attack ally with 50%. A useful but relatively barebones effect that is mainly useful early on in the game when you do not have access to many other supports.</p>",
         "rerun": {
             "aaId": 101,
@@ -1191,7 +1447,33 @@ const HONORABLE_MENTIONS = [
                 "badge": "dps"
             }
         ],
-        "teams": [],
+        "teams": [
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Fenny",
+                        "name": "Fenny"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "FiaLR5",
+                        "name": "Fia"
+                    },
+                    {
+                        "id": "Yildiz",
+                        "name": "Yildiz"
+                    },
+                    {
+                        "id": "Milla",
+                        "name": "Milla"
+                    }
+                ]
+            }
+        ],
         "desc": "<p>Fenny increases the HP of the 2 allies with the lowest speed by 30%. This is the main effect she has and is only useful on Fia. This also requires her to have her UR UW, and she is completely outdone by Milla in her only support role. It is not recommended to pull her nor get her UW if you already have her, but if you already have both she is usable for this specific support role. She does have an additional support effect in her S1 that can inflic Buff Immmunity on all enemies. This can be occasionally useful to prevent enemies from getting annoying buffs.</p>",
         "rerun": {
             "aaId": 68,
@@ -1228,7 +1510,33 @@ const HONORABLE_MENTIONS = [
                 "badge": "dps"
             }
         ],
-        "teams": [],
+        "teams": [
+            {
+                "label": "Early-mid game",
+                "slots": [
+                    {
+                        "id": "CordieSR",
+                        "name": "CordieSR"
+                    },
+                    {
+                        "id": "MerlynLR",
+                        "name": "MerlynLR"
+                    },
+                    {
+                        "id": "FlorenceLR",
+                        "name": "FlorenceLR"
+                    },
+                    {
+                        "id": "PrimaveraSR",
+                        "name": "PrimaveraSR"
+                    },
+                    {
+                        "id": "Matilda",
+                        "name": "Matilda"
+                    }
+                ]
+            }
+        ],
         "desc": "<p>Evenlyn's S1 increases the attack, crit rate and chance to hit the highest attack ally with 50%. A useful but relatively  barebones effect that is mainly useful early on in the game when you do not have access to many other supports. She is  slightly better than Evelyn because she additionally buffs crit rate compared to Evenlyn.</p>",
         "rerun": {
             "aaId": 85,
@@ -1266,7 +1574,33 @@ const HONORABLE_MENTIONS = [
                 "badge": "dps"
             }
         ],
-        "teams": [],
+        "teams": [
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Kobel",
+                        "name": "Kobel"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "FiaLR5",
+                        "name": "Fia"
+                    },
+                    {
+                        "id": "Yildiz",
+                        "name": "Yildiz"
+                    },
+                    {
+                        "id": "Milla",
+                        "name": "Milla"
+                    }
+                ]
+            }
+        ],
         "desc": "<p>Kobel increases the HP and HP drain of adjacent allies (no UW) or the entire team (UR UW) by 20% of her own HP. She can additionally inflict Enfeeble on enemies which helps with tanking hits. However, her HP buffing is not as good as Milla's because it uses her own HP as a threshold, which requires you to have her at a high rarity to be really useful. Stacking her with Milla is not a good option in most cases due to a lack of team slots.</p>",
         "rerun": {
             "aaId": 103,
@@ -1298,7 +1632,33 @@ const HONORABLE_MENTIONS = [
                 "badge": "dps"
             }
         ],
-        "teams": [],
+        "teams": [
+            {
+                "label": "Early-mid game",
+                "slots": [
+                    {
+                        "id": "XLuna",
+                        "name": "Winter Luna"
+                    },
+                    {
+                        "id": "MerlynLR",
+                        "name": "MerlynLR"
+                    },
+                    {
+                        "id": "CordieLR",
+                        "name": "CordieLR"
+                    },
+                    {
+                        "id": "MimiSR",
+                        "name": "MimiSR"
+                    },
+                    {
+                        "id": "PrimaveraSR",
+                        "name": "PrimaveraSR"
+                    }
+                ]
+            }
+        ],
         "desc": "<p>Winter Luna provides the highest attack ally with 4 Multi-Barriers every 8 turns if they are an Emerald or Crimson ally. Her S1 additionally inflicts Enfeeble on 3 to 5 enemies depending on whether you have her UW.</p>",
         "rerun": {
             "aaId": 108,
@@ -1331,7 +1691,33 @@ const HONORABLE_MENTIONS = [
                 "badge": "dps"
             }
         ],
-        "teams": [],
+        "teams": [
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Yuni",
+                        "name": "Yuni"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "FiaLR5",
+                        "name": "Fia"
+                    },
+                    {
+                        "id": "Yildiz",
+                        "name": "Yildiz"
+                    },
+                    {
+                        "id": "Milla",
+                        "name": "Milla"
+                    }
+                ]
+            }
+        ],
         "desc": "<p>Yuni increases the HP of the ally with the highest attack by 50% of her own HP, and can additionally increase the HP of the lowest remaining HP percentage ally by 10% of her own HP from turn 2 to 10. This means that her HP buff heavily depends on the investment you have in her, and can be quite expensive to get to an acceptable level to warrant using her over Milla.</p>",
         "rerun": {
             "aaId": 76,
@@ -1572,7 +1958,33 @@ const HONORABLE_MENTIONS = [
         "aliases": [],
         "weapons": [],
         "pairs": [],
-        "teams": [],
+        "teams": [
+            {
+                "label": "Early-mid game",
+                "slots": [
+                    {
+                        "id": "Rusalka",
+                        "name": "Rusalka"
+                    },
+                    {
+                        "id": "MerlynLR",
+                        "name": "MerlynLR"
+                    },
+                    {
+                        "id": "CordieLR",
+                        "name": "CordieLR"
+                    },
+                    {
+                        "id": "MimiSR",
+                        "name": "MimiSR"
+                    },
+                    {
+                        "id": "PrimaveraSR",
+                        "name": "PrimaveraSR"
+                    }
+                ]
+            }
+        ],
         "desc": "<p>Rusalka grants 5 Multi-Barriers to herself and 1 to every ally when she is defeated. This is useful as a one time increase in  survivability, but she gets outdone by Meria, who can provide Multi-Barriers every turn without requiring her to be defeated.</p>",
         "rerun": {
             "aaId": 44,
@@ -1586,7 +1998,6 @@ const HONORABLE_MENTIONS = [
         "name": "Regina",
         "wiki": "https://mememori.fandom.com/wiki/Regina",
         "role": "Support",
-        "scalable": true,
         "stage": "end",
         "speed": "none",
         "speedNote": null,
@@ -1605,7 +2016,33 @@ const HONORABLE_MENTIONS = [
                 "badge": "dps"
             }
         ],
-        "teams": [],
+        "teams": [
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Regina",
+                        "name": "Regina"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "FiaLR5",
+                        "name": "Fia"
+                    },
+                    {
+                        "id": "Yildiz",
+                        "name": "Yildiz"
+                    },
+                    {
+                        "id": "Milla",
+                        "name": "Milla"
+                    }
+                ]
+            }
+        ],
         "desc": "<p>Regina increases the HP of the ally with the highest attack by 50%, and can additionally increase the damage taken by all enemies by 10%. It is mainly the HP buff we are interested in, as this provides Fia with a sizable increase in HP. Out of the units in this section, Regina provides the biggest HP buff to Fia. However, her soul makes it harder to slot her in, as you cannot get any soul bonuses with the rest of your team. Because of this Milla will usually be the better option if you simply want to increase Fia's HP.</p>",
         "rerun": {
             "aaId": 137,
@@ -1960,7 +2397,7 @@ const SITE_CONTENT = {
             "label": "Honorable Mentions",
             "pill": "Situational",
             "navIcon": "&#10022;",
-            "note": "<p>While units are not bad, they are either outshadowed by stronger alternatives or are meant to be paired with Florence who is outshadowed herself by Cordie. They may still be worth considering when preferred units are unavailable due to the long rerun cycles (~6 months) in this game, or if they align with your personal progression goals. That said, the general advice is to pass on them for PVE purposes and conserve resources (both Diamonds and Crystals) unless you have a specific reason to pull, like using them in PVP as well.</p>"
+            "note": "<p>This section contains units who are either overshadowed by better alternatives, mostly only useful early on or require vast amounts of investment before they become truly useful. Some of these units also mostly only pair well with Florence, who is only good as a solo DPS in the early to mid game, after which Cordie will always be better. These units may still be worth considering when preferred units are unavailable due to the long rerun cycles (~6 months)  in this game, or if they align with your personal progression goals. That said, the general advice is to pass on  them for PVE purposes and conserve resources (both Diamonds and Crystals) unless you have a specific reason to pull,  like using them in PVP as well.</p>"
         }
     ],
     "footer": {

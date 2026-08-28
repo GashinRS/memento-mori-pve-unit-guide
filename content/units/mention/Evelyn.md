@@ -19,6 +19,8 @@ pairs:
   - id: Cordie
     badge: dps
 teams:
+  - label: Early-mid game
+    slots: [CordieSR, MerlynLR, FlorenceLR, PrimaveraSR, Evelyn]
 ---
 
 Evenlyn's S1 increases the attack and chance to hit of the highest attack ally with 50%. A useful but relatively barebones

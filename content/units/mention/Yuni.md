@@ -14,6 +14,8 @@ pairs:
   - id: Fia
     badge: dps
 teams:
+  - label:
+    slots: [Yuni, Merlyn, FiaLR5, Yildiz, Milla]
 ---
 
 Yuni increases the HP of the ally with the highest attack by 50% of her own HP, and can additionally increase the HP

@@ -25,8 +25,8 @@ pairs:
   - id: SmoddeySR
     badge: support
 teams:
-  - label: 
-    slots: [Cordie, Merlyn, Moineau, Samleth, Meria]
+  - label: Common tower team
+    slots: [Cordie, Merlyn, Moineau, Samleth, Yildiz]
   - label: 
     slots: [Cordie, Merlyn, Moineau, Samleth, Eirene]
   - label: 

@@ -17,6 +17,8 @@ pairs:
   - id: Fia
     badge: dps
 teams:
+  - label:
+    slots: [Kobel, Merlyn, FiaLR5, Yildiz, Milla]
 ---
 
 Kobel increases the HP and HP drain of adjacent allies (no UW) or the entire team (UR UW) by 20% of her own HP. She can
