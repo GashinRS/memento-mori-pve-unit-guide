@@ -13,6 +13,7 @@ Each unit has one Markdown file in a category folder under `content/units/`.
 - Edit `content/unit-order.yaml` to control where units appear inside each category.
 - Use `aliases` when an icon id should display as the same character name, such as `FiaLR5`.
 - Use `stage: early`, `stage: mid`, or `stage: end` to control the progression badge shown on limited PvE guide cards.
+- Standard external Markdown links such as `[video](https://example.com)` are supported in unit explanations.
 
 Example:
 
@@ -65,9 +66,12 @@ Glossary terms also live in `content/site.yaml`. Terms and aliases are automatic
 
 Names of units that have guide entries are automatically linked when mentioned in another unit's explanation.
 
+The shared weapon investment and progression information card is defined once in `scripts/shared-ui.js` and rendered on both unit guide pages.
+
 ## Additional Guide Pages
 
 The base pool guide uses `base-pool.html`, `content/pages/base-pool.yaml`, `content/base-pool-units/`, and `content/base-pool-order.yaml`.
+Base-pool team examples are defined in each unit's `teams` frontmatter and are not inferred from the limited guide.
 
 Future long-form guides, such as a level 1 strategy guide, should get their own HTML page plus a matching file under `content/pages/`.
 

@@ -241,9 +241,24 @@ function escapeHtml(value) {
 }
 
 function applyInlineMarkdown(value) {
-    return escapeHtml(value)
+    const links = [];
+    const source = String(value).replace(
+        /\[([^\]\n]+)\]\((https?:\/\/[^\s)]+)\)/g,
+        (match, label, href) => {
+            const token = `\u0000GUIDE_LINK_${links.length}\u0000`;
+            links.push(
+                `<a class="markdown-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`
+            );
+            return token;
+        }
+    );
+    let html = escapeHtml(source)
         .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
         .replace(/\*(.+?)\*/g, "<em>$1</em>");
+    links.forEach((link, index) => {
+        html = html.split(`\u0000GUIDE_LINK_${index}\u0000`).join(link);
+    });
+    return html;
 }
 
 function markdownToHtml(markdown) {

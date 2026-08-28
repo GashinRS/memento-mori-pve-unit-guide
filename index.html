@@ -7,8 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-    <script src="data/generated-content.js?v=20260828-concepts-cleanup"></script>
-    <link rel="stylesheet" href="style.css?v=20260828-wiki-links">
+    <script src="data/generated-content.js?v=20260828-markdown-links"></script>
+    <script src="scripts/shared-ui.js?v=20260828-compact-legend"></script>
+    <link rel="stylesheet" href="style.css?v=20260828-markdown-links">
 </head>
 <body id="top">
 <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
@@ -34,51 +35,7 @@
 
     <div id="unit-overview"></div>
 
-    <div class="legend">
-        <div>
-            <div class="legend-group-title">Paired Unit Badges</div>
-            <div class="legend-items">
-                <div class="legend-item"><span class="pair-badge dps">DPS</span> Main or sub damage dealer</div>
-                <div class="legend-item"><span class="pair-badge support">Support</span> Enabler or buffer</div>
-                <div class="legend-item"><span class="pair-badge tank">Tank</span> Frontline or damage absorber</div>
-                <div class="legend-item"><span class="pair-badge required">Required</span> Must-have teammate</div>
-            </div>
-        </div>
-        <div>
-            <div class="legend-group-title">Weapon Investment</div>
-            <div class="legend-items">
-                <div class="legend-item">
-                    <div class="legend-weapon-sample">
-                        <div class="weapon-icon optional" style="width:36px;height:36px"></div>
-                        <div class="weapon-marker optional"></div>
-                    </div>
-                    Optional — minor gains
-                </div>
-                <div class="legend-item">
-                    <div class="legend-weapon-sample">
-                        <div class="weapon-icon recommended" style="width:36px;height:36px"></div>
-                        <div class="weapon-marker recommended"><span></span></div>
-                    </div>
-                    Recommended — noticeable upgrade
-                </div>
-                <div class="legend-item">
-                    <div class="legend-weapon-sample">
-                        <div class="weapon-icon required" style="width:36px;height:36px"></div>
-                        <div class="weapon-marker required"><span></span><span></span></div>
-                    </div>
-                    Required — unit needs this
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="legend-group-title">Progression</div>
-            <div class="legend-items">
-                <div class="legend-item"><span class="stage-badge early">Early Game</span> Before level link 240</div>
-                <div class="legend-item"><span class="stage-badge mid">Mid Game</span> Level link 240-400</div>
-                <div class="legend-item"><span class="stage-badge end">End Game</span> Level link 400+</div>
-            </div>
-        </div>
-    </div>
+    <div data-guide-legend></div>
 
     <div id="mount"></div>
 
@@ -194,23 +151,48 @@
         if (!weapons || weapons.length === 0) {
             return '<span class="no-weapon-badge">No weapon needed</span>';
         }
-        return weapons.map(function(w) {
+        var icons = weapons.map(function(w) {
             var tierLabel = { optional: 'Optional', recommended: 'Recommended', required: 'Required' }[w.tier] || w.tier;
             var tipText = tierLabel + (w.description ? ' — click for details' : '');
-            var desc = w.description ? '<div class="weapon-desc">' + w.description + '</div>' : '';
             var markerDots = { optional: 0, recommended: 1, required: 2 }[w.tier] || 0;
             var marker = '<div class="weapon-marker ' + w.tier + '" aria-hidden="true">' +
                 Array(markerDots + 1).join('<span></span>') +
                 '</div>';
-            return '<div class="weapon-wrap" onclick="this.classList.toggle(\'active\')">' +
+            return '<button type="button" class="weapon-wrap" onclick="selectWeapon(this)"' +
+                ' data-description="' + encodeURIComponent(w.description || '') + '" aria-expanded="false"' +
+                ' aria-label="' + w.level + ' ' + tierLabel + (w.description ? ', click for details' : '') + '">' +
                 '<div class="weapon-icon ' + w.tier + '">' +
                 imgFB('icons/weapons/' + w.level + '.png', w.level, '') +
                 '</div>' +
                 marker +
                 '<div class="weapon-tooltip">' + tipText + '</div>' +
-                desc +
-                '</div>';
+                '</button>';
         }).join('');
+        return icons + '<div class="weapon-detail-panel" aria-live="polite">' +
+            '<div class="weapon-detail-content"></div>' +
+            '</div>';
+    }
+
+    function selectWeapon(button) {
+        var row = button.closest('.weapons-row');
+        var panel = row.querySelector('.weapon-detail-panel');
+        var content = panel.querySelector('.weapon-detail-content');
+        var wasActive = button.classList.contains('active');
+        row.querySelectorAll('.weapon-wrap.active').forEach(function(activeButton) {
+            activeButton.classList.remove('active');
+            activeButton.setAttribute('aria-expanded', 'false');
+        });
+
+        if (wasActive || !button.dataset.description) {
+            panel.classList.remove('visible');
+            content.textContent = '';
+            return;
+        }
+
+        button.classList.add('active');
+        button.setAttribute('aria-expanded', 'true');
+        content.textContent = decodeURIComponent(button.dataset.description);
+        panel.classList.add('visible');
     }
 
     function renderRerun(rerun) {

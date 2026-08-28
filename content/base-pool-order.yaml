@@ -1,10 +1,22 @@
+# Soul order: Azure, Crimson, Emerald, Amber, Radiance, Chaos.
+# Radiance currently has no entries; the list starts with Azure.
 units:
+  - Florence
+
+  # Crimson
+  - Dian
+
+  # Emerald
   - Merlyn
   - Mertillier
-  - LunaLR
-  - Dian
   - Cordie
-  - Florence
+  - NinaLR5
+
+  # Amber
   - Mimi
   - Primavera
-  - NinaLR5
+
+  # Radiance
+
+  # Chaos
+  - LunaLR

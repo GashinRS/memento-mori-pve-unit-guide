@@ -7,8 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-    <script src="data/generated-content.js?v=20260828-concepts-cleanup"></script>
-    <link rel="stylesheet" href="style.css?v=20260828-wiki-links">
+    <script src="data/generated-content.js?v=20260828-markdown-links"></script>
+    <script src="scripts/shared-ui.js?v=20260828-compact-legend"></script>
+    <link rel="stylesheet" href="style.css?v=20260828-markdown-links">
 </head>
 <body id="top">
 <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
@@ -27,6 +28,8 @@
     <div id="base-pool-intro"></div>
 
     <div id="base-pool-overview"></div>
+
+    <div data-guide-legend></div>
 
     <div id="mount"></div>
 
@@ -66,23 +69,56 @@
         if (!weapons || weapons.length === 0) {
             return '<span class="no-weapon-badge">No weapon needed</span>';
         }
-        return weapons.map(function(w) {
+        var icons = weapons.map(function(w) {
             var tierLabel = { optional: 'Optional', recommended: 'Recommended', required: 'Required' }[w.tier] || w.tier;
             var tipText = tierLabel + (w.description ? ' - click for details' : '');
-            var desc = w.description ? '<div class="weapon-desc">' + w.description + '</div>' : '';
             var markerDots = { optional: 0, recommended: 1, required: 2 }[w.tier] || 0;
             var marker = '<div class="weapon-marker ' + w.tier + '" aria-hidden="true">' +
                 Array(markerDots + 1).join('<span></span>') +
                 '</div>';
-            return '<div class="weapon-wrap" onclick="this.classList.toggle(\'active\')">' +
+            return '<button type="button" class="weapon-wrap" onclick="selectWeapon(this)"' +
+                ' data-description="' + encodeURIComponent(w.description || '') + '" aria-expanded="false"' +
+                ' aria-label="' + w.level + ' ' + tierLabel + (w.description ? ', click for details' : '') + '">' +
                 '<div class="weapon-icon ' + w.tier + '">' +
                 imgFB('icons/weapons/' + w.level + '.png', w.level, '') +
                 '</div>' +
                 marker +
                 '<div class="weapon-tooltip">' + tipText + '</div>' +
-                desc +
-                '</div>';
+                '</button>';
         }).join('');
+        return icons + '<div class="weapon-detail-panel" aria-live="polite">' +
+            '<div class="weapon-detail-content"></div>' +
+            '</div>';
+    }
+
+    function selectWeapon(button) {
+        var row = button.closest('.weapons-row');
+        var panel = row.querySelector('.weapon-detail-panel');
+        var content = panel.querySelector('.weapon-detail-content');
+        var wasActive = button.classList.contains('active');
+        row.querySelectorAll('.weapon-wrap.active').forEach(function(activeButton) {
+            activeButton.classList.remove('active');
+            activeButton.setAttribute('aria-expanded', 'false');
+        });
+
+        if (wasActive || !button.dataset.description) {
+            panel.classList.remove('visible');
+            content.textContent = '';
+            return;
+        }
+
+        button.classList.add('active');
+        button.setAttribute('aria-expanded', 'true');
+        content.textContent = decodeURIComponent(button.dataset.description);
+        panel.classList.add('visible');
+    }
+
+    function renderStageBadge(stage) {
+        if (!stage) return '';
+        var labels = { early: 'Early Game', mid: 'Mid Game', end: 'End Game' };
+        return '<div class="stage-badges">' +
+            '<span class="stage-badge ' + stage + '">' + (labels[stage] || stage) + '</span>' +
+            '</div>';
     }
 
     function renderUnitName(unit) {
@@ -93,10 +129,56 @@
         return '<div class="unit-name-row"><div class="unit-name">' + unit.name + '</div>' + wikiLink + '</div>';
     }
 
+    function basePoolUnitAnchors() {
+        var anchors = {};
+        BASE_POOL_UNITS.forEach(function(unit) {
+            anchors[unit.id] = unitAnchor(unit);
+            anchors[unit.name] = unitAnchor(unit);
+            (unit.aliases || []).forEach(function(alias) {
+                anchors[alias.id] = unitAnchor(unit);
+                anchors[alias.name] = unitAnchor(unit);
+            });
+        });
+        return anchors;
+    }
+
+    function renderTeams(teams) {
+        if (!teams || !teams.length) return '';
+        var anchors = basePoolUnitAnchors();
+        var rows = teams.map(function(team) {
+            var slots = team.slots.map(function(slot) {
+                var icon = '<div class="team-slot">' +
+                    imgFB('icons/units/' + slot.id + '.png', slot.name,
+                        '<div class="slot-placeholder" style="display:none"></div>') +
+                    '</div>';
+                var target = anchors[slot.id] || anchors[slot.name];
+                if (target) {
+                    icon = '<a class="team-slot-link" href="#' + target + '" aria-label="Go to ' + slot.name + '">' +
+                        icon +
+                        '</a>';
+                }
+                return '<div class="tip-icon">' +
+                    icon +
+                    '<div class="tip">' + slot.name + '</div>' +
+                    '</div>';
+            }).join('');
+            var label = team.label
+                ? '<span class="team-label">' + team.label + '</span>'
+                : '';
+            return '<div class="team-row">' + slots + label + '</div>';
+        }).join('');
+        return '<div class="teams-section">' +
+            '<div class="row-label">Team Examples</div>' + rows +
+            '</div>';
+    }
+
     function renderCard(unit) {
         return '<div class="unit-card base-pool-card" id="' + unitAnchor(unit) + '">' +
             '<div class="unit-top">' +
+            '<div class="unit-portrait">' +
             unitIcon(unit.id) +
+            renderStageBadge(unit.stage) +
+            '</div>' +
             '<div class="unit-meta">' +
             renderUnitName(unit) +
             '<div class="unit-role">' + unit.role +
@@ -111,6 +193,7 @@
             '<div class="card-divider"></div>' +
             '<details class="unit-details">' +
             '<summary><span class="closed-label">View More</span><span class="open-label">View Less</span></summary>' +
+            renderTeams(unit.teams) +
             '<div class="unit-desc">' + unit.desc.trim() + '</div>' +
             '</details>' +
             '</div>';

@@ -11,7 +11,7 @@ aliases:
 weapons:
 pairs:
   - id: Fia
-    badge: required
+    badge: support
   - id: Dian
     badge: dps
 teams:

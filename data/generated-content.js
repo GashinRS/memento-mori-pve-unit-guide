@@ -122,7 +122,7 @@ const GENERAL_UNITS = [
             {
                 "id": "Fia",
                 "name": "Fia",
-                "badge": "required"
+                "badge": "support"
             },
             {
                 "id": "Dian",
@@ -265,6 +265,11 @@ const GENERAL_UNITS = [
                 "id": "Milla",
                 "name": "Milla",
                 "badge": "support"
+            },
+            {
+                "id": "XTropon1",
+                "name": "Winter Tropon",
+                "badge": "tank"
             }
         ],
         "teams": [
@@ -2123,39 +2128,498 @@ const HONORABLE_MENTIONS = [
 
 const BASE_POOL_UNITS = [
     {
+        "id": "Florence",
+        "name": "Florence",
+        "wiki": "https://mememori.fandom.com/wiki/Florence",
+        "role": "DPS",
+        "stage": "early",
+        "speed": null,
+        "speedNote": null,
+        "aliases": [],
+        "weapons": [
+            {
+                "level": "FlorenceSSR",
+                "tier": "required",
+                "description": "S1 decreases all enemies' critical hit resistance by 40% before attacking"
+            },
+            {
+                "level": "FlorenceUR",
+                "tier": "required",
+                "description": "Increases S1 from 4 initial and 8 maximum attacks to 6 initial and 10 maximum attacks"
+            },
+            {
+                "level": "FlorenceLR",
+                "tier": "required",
+                "description": "Increases the damage multiplier of every S1 attack from 480% to 525%"
+            }
+        ],
+        "pairs": [],
+        "teams": [
+            {
+                "label": "Early-mid game",
+                "slots": [
+                    {
+                        "id": "CordieSR",
+                        "name": "CordieSR"
+                    },
+                    {
+                        "id": "MerlynLR",
+                        "name": "MerlynLR"
+                    },
+                    {
+                        "id": "FlorenceLR",
+                        "name": "FlorenceLR"
+                    },
+                    {
+                        "id": "PrimaveraSR",
+                        "name": "PrimaveraSR"
+                    },
+                    {
+                        "id": "MimiSR",
+                        "name": "MimiSR"
+                    }
+                ]
+            },
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "Florence",
+                        "name": "Florence"
+                    },
+                    {
+                        "id": "Eirene",
+                        "name": "Eirene"
+                    },
+                    {
+                        "id": "Meria",
+                        "name": "Meria"
+                    }
+                ]
+            }
+        ],
+        "desc": "<p>Florence shines as a DPS in early game, where her hit count generally makes her better than Cordie. She falls off hard in mid game however, where Cordie takes over as the best DPS due to her defense debuff. Florenec can still be used in mid to end game, but she will always be accompanied by Cordie because she won't be able to deal enough damage on her own without the defense debuff. This means that you should only use Florence when starting out if you already have 2-4 copies of her, and switch to Cordie afterward. She is however still very powerful in double DPS teams in end game, where you should have enough resources to properly gear 2 DPS characters.</p>"
+    },
+    {
+        "id": "Dian",
+        "name": "Dian",
+        "wiki": "https://mememori.fandom.com/wiki/Dian",
+        "role": "DPS - Support",
+        "stage": "early",
+        "speed": null,
+        "speedNote": null,
+        "aliases": [],
+        "weapons": [
+            {
+                "level": "DianUR",
+                "tier": "required",
+                "description": "Increases the targets of S2's direct damage from 2 enemies to 3"
+            },
+            {
+                "level": "DianLR",
+                "tier": "required",
+                "description": "Required for Stamina set bonus when Dian is LR5"
+            }
+        ],
+        "pairs": [],
+        "teams": [
+            {
+                "label": "Early-mid game",
+                "slots": [
+                    {
+                        "id": "DianSR",
+                        "name": "DianSR"
+                    },
+                    {
+                        "id": "MerlynLR",
+                        "name": "MerlynLR"
+                    },
+                    {
+                        "id": "CordieLR",
+                        "name": "CordieLR"
+                    },
+                    {
+                        "id": "MimiSR",
+                        "name": "MimiSR"
+                    },
+                    {
+                        "id": "PrimaveraSR",
+                        "name": "PrimaveraSR"
+                    }
+                ]
+            },
+            {
+                "label": "Main quest only",
+                "slots": [
+                    {
+                        "id": "Belle",
+                        "name": "Belle"
+                    },
+                    {
+                        "id": "Fia",
+                        "name": "Fia"
+                    },
+                    {
+                        "id": "Dian",
+                        "name": "Dian"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "Milla",
+                        "name": "Milla"
+                    }
+                ]
+            }
+        ],
+        "desc": "<p>Dian has two distinct PvE uses. At the start of battle she increases her own evasion and that of the ally with the highest ATK, making her a cheap defensive support for a carry even when Dian is not dealing meaningful damage herself.</p>\n<p>With investment, Dian can instead be used as a direct-damage carry. Her S2 consumes 35% of her maximum HP while she is above 40% HP, then deals direct damage based on the HP consumed. Because the damage scales with maximum HP rather than ordinary ATK multipliers, HP support from Fia is especially valuable.  Enemy DEF does not affect the damage, neither does her own PMDB.</p>\n<p>When Dian falls below 40% HP and at least 1 other ally is alive, she gains Invisibility. This lets her ignore all targets from any attack, buffs and debuffs from enemies and allies alike. This means that as long as that other ally is alive, she can keep doing damage without being killed herself. For this reason, she is often used in Main Quest in combination with Belle, who can become essentially immortal under the right circumstances.</p>"
+    },
+    {
         "id": "Merlyn",
         "name": "Merlyn",
         "wiki": "https://mememori.fandom.com/wiki/Merlyn",
         "role": "Support",
-        "stage": null,
+        "stage": "early",
         "speed": null,
         "speedNote": null,
         "aliases": [],
-        "weapons": [],
+        "weapons": [
+            {
+                "level": "MerlynSSR",
+                "tier": "recommended",
+                "description": "Adds either healing below 50% HP or 20% increased critical hit damage to S1"
+            },
+            {
+                "level": "MerlynUR",
+                "tier": "recommended",
+                "description": "S1 targets the 2 allies with the highest ATK and dispels 2 debuffs from each"
+            },
+            {
+                "level": "MerlynLR",
+                "tier": "recommended",
+                "description": "Increases the critical hit damage granted by S1 from 20% to 40%"
+            }
+        ],
         "pairs": [],
         "teams": [],
-        "desc": "<p>Placeholder text.</p>"
+        "desc": "<p>Merlyn is by far the best support unit from the base pool, and can even be argued to be the best support character in the entire game. She not only greatly increases damage output with her S1, which grants up to 40% attack and crit damage, but also grants a permanent 40% crit rate buff to adjacent allies. Furthermore, she can also grant permanent regeneration when her HP falls below 50%, which is very useful in longer battles, and especially for Fia teams. Finally, her S2 can also dispel buffs from enemies, making her one of the few units in the game with the ability to do so. Every skill in her kit is hyper focused on support, and all of these effects will be useful throughout all stages and all content in the game. This also means that she fits on pretty much any team you can imagine, and you will almost always want her in your team.</p>"
     },
     {
         "id": "Mertillier",
         "name": "Mertillier",
         "wiki": "https://mememori.fandom.com/wiki/Mertillier",
         "role": "Support",
-        "stage": null,
+        "stage": "mid",
+        "speed": null,
+        "speedNote": null,
+        "aliases": [],
+        "weapons": [
+            {
+                "level": "MertillierUR",
+                "tier": "recommended",
+                "description": "Increases the S2 ATK buff from 65% to 85%"
+            },
+            {
+                "level": "MertillierLR",
+                "tier": "recommended",
+                "description": "S2 also increases the target's DEF by 65%"
+            }
+        ],
+        "pairs": [],
+        "teams": [
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Mertillier",
+                        "name": "Mertillier"
+                    },
+                    {
+                        "id": "Sivi",
+                        "name": "Sivi"
+                    },
+                    {
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "LunaLR",
+                        "name": "Lunalynn"
+                    }
+                ]
+            },
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Florence",
+                        "name": "Florence"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "Mertillier",
+                        "name": "Mertillier"
+                    },
+                    {
+                        "id": "LunaLR",
+                        "name": "Lunalynn"
+                    }
+                ]
+            }
+        ],
+        "desc": "<p>Mertillier is a support unit built around her S2, which is quite uncommon. Her S2 decreases the cooldown of the highest attack ally by 2, and also increases their attack by up to 85% while also cleansing all their debuffs. Because her support comes from her S2 however, she requires good defense gear in order to survive to be able to use her S2. This will be difficult to afford early on, so she generally does not become viable until around 300 LL.</p>"
+    },
+    {
+        "id": "Cordie",
+        "name": "Cordie",
+        "wiki": "https://mememori.fandom.com/wiki/Cordie",
+        "role": "DPS",
+        "stage": "early",
+        "speed": null,
+        "speedNote": null,
+        "aliases": [],
+        "weapons": [
+            {
+                "level": "CordieSSR",
+                "tier": "required",
+                "description": "S1 decreases all enemies' DEF by 80% before dealing damage"
+            },
+            {
+                "level": "CordieUR",
+                "tier": "required",
+                "description": "Extends the DEF decrease and Cordie's S1 ATK buff from 1 turn to 2 turns"
+            },
+            {
+                "level": "CordieLR",
+                "tier": "required",
+                "description": "Increases the number of S1 attacks from 4 to 5"
+            }
+        ],
+        "pairs": [],
+        "teams": [
+            {
+                "label": "Early-mid game",
+                "slots": [
+                    {
+                        "id": "MimiSR",
+                        "name": "MimiSR"
+                    },
+                    {
+                        "id": "PrimaveraSR",
+                        "name": "PrimaveraSR"
+                    },
+                    {
+                        "id": "CordieLR",
+                        "name": "CordieLR"
+                    },
+                    {
+                        "id": "MerlynLR",
+                        "name": "MerlynLR"
+                    },
+                    {
+                        "id": "Meria",
+                        "name": "Meria"
+                    }
+                ]
+            },
+            {
+                "label": "Common tower team",
+                "slots": [
+                    {
+                        "id": "Moineau",
+                        "name": "Moineau"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "Samleth",
+                        "name": "Summer Amleth"
+                    },
+                    {
+                        "id": "Yildiz",
+                        "name": "Yildiz"
+                    }
+                ]
+            },
+            {
+                "label": "Lvl 1 Nina support",
+                "slots": [
+                    {
+                        "id": "Eirene",
+                        "name": "Eirene"
+                    },
+                    {
+                        "id": "Meria",
+                        "name": "Meria"
+                    },
+                    {
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "Fia",
+                        "name": "Fia"
+                    },
+                    {
+                        "id": "Nina1",
+                        "name": "Nina"
+                    }
+                ]
+            },
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Mertillier",
+                        "name": "Mertillier"
+                    },
+                    {
+                        "id": "Sivi",
+                        "name": "Sivi"
+                    },
+                    {
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "LunaLR",
+                        "name": "Lunalynn"
+                    }
+                ]
+            },
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Florence",
+                        "name": "Florence"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "Xamour",
+                        "name": "Winter Amour"
+                    },
+                    {
+                        "id": "LunaLR",
+                        "name": "Lunalynn"
+                    }
+                ]
+            }
+        ],
+        "desc": "<p>Cordie is the evergreen DPS in this game; she is useful in every game mode and will almost certainly never be powercrept. Furthermore, you can get her for free in the Cave shop. She is therefore the go-to option for a DPS when starting out. The only reason you should ever not use Cordie when starting out is when you have at least 2-4 Florence copies, but even then it's important to note that Cordie will outperform Florence in the mid to late game.</p>\n<p>One of the main things that make Cordie so good is her S1, which can debuff enemies' defense by 80% upon unlocking her SSR UW. This is the highest defense debuff in the game, and it is very likely we will never get another unit who can debuff for the same or even similar amount, as the second-highest defense debuff is only 50%. The reason this is so powerful is that defense is the biggest contributor to an enemy's bulk, meaning that shredding 80% of it greatly increases not only Cordie's damage, but also the damage for your other allies.</p>\n<p>Additionally, Cordie also has an innate 40% attack and DEF Break buff, further increasing her damage. She is also the only unit in the game with Debuff Immunity, which is an incredibly powerful buff.</p>"
+    },
+    {
+        "id": "NinaLR5",
+        "name": "Nina",
+        "wiki": "https://mememori.fandom.com/wiki/Nina",
+        "role": "DPS - support",
+        "stage": "early",
+        "speed": null,
+        "speedNote": null,
+        "aliases": [],
+        "weapons": [],
+        "pairs": [],
+        "teams": [
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Eirene",
+                        "name": "Eirene"
+                    },
+                    {
+                        "id": "Meria",
+                        "name": "Meria"
+                    },
+                    {
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "Fia",
+                        "name": "Fia"
+                    },
+                    {
+                        "id": "Nina1",
+                        "name": "Nina"
+                    }
+                ]
+            }
+        ],
+        "desc": "<p>Nina has two distinct use cases, one as a buff remover, and one as a DPS as a level 1 unit. Both revolve around her S1, which hits all enemies and can steal 1 buff from each target she hits. This can be useful as a supportive effect when there are units such as Ophelia and Carol on the opposing team, who both have annoying start of turn/battle buffs that you want to remove. It can also be incredibly powerful as an offensive effect in cases where the enemy has any kind of sizable attack buff, such as from Merlyn or Claudia. The reason level 1 for this is preferred is explained in the section going over the level 1 strategy (not yet written).</p>"
+    },
+    {
+        "id": "Mimi",
+        "name": "Mimi",
+        "wiki": "https://mememori.fandom.com/wiki/Mimi",
+        "role": "Support",
+        "stage": "early",
         "speed": null,
         "speedNote": null,
         "aliases": [],
         "weapons": [],
         "pairs": [],
         "teams": [],
-        "desc": "<p>Placeholder text.</p>"
+        "desc": "<p>Mimi is a low-investment support whose value comes entirely from her passive Resonance. At the start of battle, Resonance links the enemies with the highest and lowest DEF. When either linked target takes damage, up to 80% of that damage is also dealt to the other. This can be especially useful versus enemies who can passive defense buffs like Sivi, or versus enemies with invisibility like Dian and Tama, making them easier to kill by attacking the Resonance linked character instead. She is mainly useful in the early to mid-game, after which other supports take over her role. She can still be situationally useful in the end-game when hard to kill units are Resonance linked with easier to kill units.</p>"
+    },
+    {
+        "id": "Primavera",
+        "name": "Primavera",
+        "wiki": "https://mememori.fandom.com/wiki/Primavera",
+        "role": "Support",
+        "stage": "early",
+        "speed": null,
+        "speedNote": null,
+        "aliases": [],
+        "weapons": [],
+        "pairs": [],
+        "teams": [],
+        "desc": "<p>Primavera is an early to mid-game support unit who can increase the entire team's speed and attack by up to 15%. This is especially useful when you do not have a lot of speed runes yet, making it easier to outspeed enemy teams. She falls off in the mid-game when you obtain other supports who can provide better support.</p>"
     },
     {
         "id": "LunaLR",
         "name": "Lunalynn",
         "wiki": "https://mememori.fandom.com/wiki/Lunalynn",
         "role": "Support",
-        "stage": null,
+        "stage": "mid",
         "speed": null,
         "speedNote": null,
         "aliases": [
@@ -2164,94 +2628,72 @@ const BASE_POOL_UNITS = [
                 "name": "Lunalynn"
             }
         ],
-        "weapons": [],
+        "weapons": [
+            {
+                "level": "LunaUR",
+                "tier": "required",
+                "description": "Increases the Silence inflicted by S1 from 1 turn to 3 turns"
+            },
+            {
+                "level": "LunaLR",
+                "tier": "optional",
+                "description": "Increases the S1 critical hit rate bonus from 25% to 40%"
+            }
+        ],
         "pairs": [],
-        "teams": [],
-        "desc": "<p>Placeholder text.</p>"
-    },
-    {
-        "id": "Dian",
-        "name": "Dian",
-        "wiki": "https://mememori.fandom.com/wiki/Dian",
-        "role": "DPS",
-        "stage": null,
-        "speed": null,
-        "speedNote": null,
-        "aliases": [],
-        "weapons": [],
-        "pairs": [],
-        "teams": [],
-        "desc": "<p>Placeholder text.</p>"
-    },
-    {
-        "id": "Cordie",
-        "name": "Cordie",
-        "wiki": "https://mememori.fandom.com/wiki/Cordie",
-        "role": "DPS",
-        "stage": null,
-        "speed": null,
-        "speedNote": null,
-        "aliases": [],
-        "weapons": [],
-        "pairs": [],
-        "teams": [],
-        "desc": "<p>Placeholder text.</p>"
-    },
-    {
-        "id": "Florence",
-        "name": "Florence",
-        "wiki": "https://mememori.fandom.com/wiki/Florence",
-        "role": "DPS",
-        "stage": null,
-        "speed": null,
-        "speedNote": null,
-        "aliases": [],
-        "weapons": [],
-        "pairs": [],
-        "teams": [],
-        "desc": "<p>Placeholder text.</p>"
-    },
-    {
-        "id": "Mimi",
-        "name": "Mimi",
-        "wiki": "https://mememori.fandom.com/wiki/Mimi",
-        "role": "Support",
-        "stage": null,
-        "speed": null,
-        "speedNote": null,
-        "aliases": [],
-        "weapons": [],
-        "pairs": [],
-        "teams": [],
-        "desc": "<p>Placeholder text.</p>"
-    },
-    {
-        "id": "Primavera",
-        "name": "Primavera",
-        "wiki": "https://mememori.fandom.com/wiki/Primavera",
-        "role": "Support",
-        "stage": null,
-        "speed": null,
-        "speedNote": null,
-        "aliases": [],
-        "weapons": [],
-        "pairs": [],
-        "teams": [],
-        "desc": "<p>Placeholder text.</p>"
-    },
-    {
-        "id": "NinaLR5",
-        "name": "Nina",
-        "wiki": "https://mememori.fandom.com/wiki/Nina",
-        "role": "DPS - support",
-        "stage": null,
-        "speed": null,
-        "speedNote": null,
-        "aliases": [],
-        "weapons": [],
-        "pairs": [],
-        "teams": [],
-        "desc": "<p>Placeholder text.</p>"
+        "teams": [
+            {
+                "label": "Early game",
+                "slots": [
+                    {
+                        "id": "MimiSR",
+                        "name": "MimiSR"
+                    },
+                    {
+                        "id": "PrimaveraSR",
+                        "name": "PrimaveraSR"
+                    },
+                    {
+                        "id": "CordieLR",
+                        "name": "CordieLR"
+                    },
+                    {
+                        "id": "MerlynLR",
+                        "name": "MerlynLR"
+                    },
+                    {
+                        "id": "Luna1",
+                        "name": "Luna1"
+                    }
+                ]
+            },
+            {
+                "label": null,
+                "slots": [
+                    {
+                        "id": "Mertillier",
+                        "name": "Mertillier"
+                    },
+                    {
+                        "id": "Sivi",
+                        "name": "Sivi"
+                    },
+                    {
+                        "id": "Cordie",
+                        "name": "Cordie"
+                    },
+                    {
+                        "id": "Merlyn",
+                        "name": "Merlyn"
+                    },
+                    {
+                        "id": "LunaLR",
+                        "name": "Lunalynn"
+                    }
+                ]
+            }
+        ],
+        "desc": "<p>Lunalynn's S1 can silence enemies for up to 3 turns, making them unable to use skills for that duration. This is a really useful effect for extra survivability, and works veyr synergistically with Sivi, who requires allies to be hit for higher buff multipliers.</p>\n<p>When your Lunalynn is not level 240, she won't be able to equip her UR UW and will only be able to silence enemis for a single turn. This is much less useful but can still be good depending on the enemy team. Note that in order to do this, you should use level 1 Lunalynn instead of the maximum level you can have her at. The reason for this is explained <a class=\"markdown-link\" href=\"https://www.youtube.com/watch?v=g7s1keT5vM0\" target=\"_blank\" rel=\"noopener noreferrer\">in this YouTube video</a></p>"
     }
 ];
 
@@ -2285,10 +2727,9 @@ const SITE_CONTENT = {
     },
     "wip": {
         "title": "Work in Progress",
-        "text": "<p>This guide is still being written and expanded. Some units may be missing and entries may be lacking explanations, team suggestions or detailed weapon notes. Please contact @gashin on Discord if you have suggestions, found any errors or if there is anything else you want to discuss regarding this guide. <strong>Planned additions in future revisions:</strong></p>",
+        "text": "<p>This guide is still being written and expanded. Please contact @gashin on Discord if you have suggestions,  found any errors or if there is anything else you want to discuss regarding this guide. <strong>Planned additions in future revisions:</strong></p>",
         "items": [
             "The level 1 strategy",
-            "Base pool unit guide",
             "Gear guide"
         ]
     },
@@ -2304,6 +2745,16 @@ const SITE_CONTENT = {
                 "title": "Progression Badges",
                 "icon": "&#8987;",
                 "text": "<p>The Early Game, Mid Game and End Game badges are rough indicators for when a unit starts becoming useful. They do not mean a unit stops being useful later. If a unit has the Early Game badge, it can still be useful in Mid Game or End Game; the badge only marks the point where the unit generally starts to matter.</p>\n<p>The level ranges are rough guidelines, not hard rules. Depending on your account, gear, team options and the stage you are trying to clear, some units can become useful earlier or later than listed.</p>"
+            },
+            {
+                "title": "External Guides",
+                "icon": "&#9888;",
+                "text": "<p>Not all external resources are equally reliable. In my experience, Game8's Memento Mori guides frequently omit important context or give recommendations that do not hold up in practice, so I recommend taking their advice  with a grain of salt.</p>"
+            },
+            {
+                "title": "Why There Is No Tier List",
+                "icon": "&#8800;",
+                "text": "<p>This guide intentionally does not include a tier list. There are too many variables such as progression, game mode, team building and enemy lineup that can change the value of a unit. It is not possible to accurately capture all this information in a tier list without making it overcomplicated. You should therefore also be careful with any tier lists you do see for this game.</p>"
             }
         ]
     },

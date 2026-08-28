@@ -22,6 +22,8 @@ pairs:
     badge: support
   - id: Milla
     badge: support
+  - id: XTropon1
+    badge: Tank
 teams:
   - label: Lvl 1 Nina support
     slots: [Eirene, Meria, Cordie, Fia, Nina1]

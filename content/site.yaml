@@ -7,14 +7,11 @@ header:
 wip:
   title: Work in Progress
   text: |
-    This guide is still being written and expanded. Some units may be missing and entries may be lacking
-    explanations, team suggestions or detailed weapon notes.
-    Please contact @gashin on Discord if you have suggestions, found any errors or if there is anything
-    else you want to discuss regarding this guide.
+    This guide is still being written and expanded. Please contact @gashin on Discord if you have suggestions, 
+    found any errors or if there is anything else you want to discuss regarding this guide.
     **Planned additions in future revisions:**
   items:
     - The level 1 strategy
-    - Base pool unit guide
     - Gear guide
 assumptions:
   title: Before You Read
@@ -35,6 +32,19 @@ assumptions:
 
         The level ranges are rough guidelines, not hard rules. Depending on your account, gear, team options and the
         stage you are trying to clear, some units can become useful earlier or later than listed.
+    - title: External Guides
+      icon: "&#9888;"
+      text: |
+        Not all external resources are equally reliable. In my experience, Game8's Memento Mori guides frequently omit
+        important context or give recommendations that do not hold up in practice, so I recommend taking their advice 
+        with a grain of salt.
+    - title: Why There Is No Tier List
+      icon: "&#8800;"
+      text: |
+        This guide intentionally does not include a tier list. There are too many variables such as progression, game mode,
+        team building and enemy lineup that can change the value of a unit. It is not possible to accurately capture
+        all this information in a tier list without making it overcomplicated. You should therefore also be careful
+        with any tier lists you do see for this game.
 glossary:
   title: Glossary
   terms:

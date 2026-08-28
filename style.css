@@ -358,8 +358,24 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
 .no-weapon-badge { font-size: .75rem; color: var(--sage); font-style: italic; padding: 2px 10px; background: rgba(74,122,74,.09); border: 1px solid rgba(74,122,74,.25); border-radius: 999px; }
 
 /* Weapon icon wrapper — tooltip lives here */
-.weapon-wrap { position: relative; display: inline-flex; flex-direction: column; align-items: center; gap: 3px; }
+.weapon-wrap {
+    position: relative;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+.weapon-wrap:focus-visible { outline: 2px solid var(--sepia); outline-offset: 3px; border-radius: 4px; }
 .weapon-wrap:hover .weapon-tooltip { opacity: 1; transform: translateY(0); pointer-events: none; }
+.weapon-wrap.active .weapon-tooltip { opacity: 0; }
 
 .weapon-icon {
     width: 2.875rem; height: 2.875rem; border-radius: 4px;
@@ -418,20 +434,38 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
 /*  content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);*/
 /*  border: 4px solid transparent; border-top-color: var(--ink);*/
 /*}*/
-.weapon-desc {
-    display: none;
+.weapon-detail-panel {
+    flex: 0 0 100%;
+    min-width: 0;
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    margin-top: 0;
+    transition: grid-template-rows .2s ease, opacity .15s ease, margin-top .2s ease;
+}
+.weapon-detail-panel.visible {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    margin-top: 5px;
+}
+.weapon-detail-content {
+    min-height: 0;
+    overflow: hidden;
     font-family: 'Crimson Pro', serif;
     font-size: 0.85rem;
     font-style: italic;
     color: var(--ink-light);
-    margin-top: 8px;
-    padding: 8px 12px;
+    padding: 0 12px;
     background: var(--bg-card-alt);
-    border-left: 2px solid var(--cat, var(--sepia));
+    border-left: 0 solid var(--cat, var(--sepia));
     border-radius: 0 4px 4px 0;
     line-height: 1.5;
+    transition: padding .2s ease, border-left-width .2s ease;
 }
-.weapon-wrap.active .weapon-desc { display: block; }
+.weapon-detail-panel.visible .weapon-detail-content {
+    padding: 8px 12px;
+    border-left-width: 2px;
+}
 .weapon-wrap.active .weapon-icon { border-color: var(--sepia); box-shadow: 0 0 8px rgba(139,94,60,.4); }
 
 /* ── Divider ── */
@@ -568,6 +602,9 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
 .unit-desc { font-size: .95rem; color: var(--ink-mid); line-height: 1.7; }
 .unit-desc strong { color: var(--ink); font-weight: 600; }
 .unit-desc em     { color: var(--sepia); font-style: italic; }
+.markdown-link { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(58,122,114,.4); }
+.markdown-link:hover { color: var(--sepia); border-bottom-color: var(--sepia); }
+.markdown-link:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
 .unit-desc p + p {
     margin-top: 0.75rem;
 }
