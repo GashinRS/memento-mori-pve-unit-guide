@@ -1,0 +1,26 @@
+teams:
+  - slots: [Mertillier, Sivi, Cordie, Merlyn, LunaLR]
+    video: https://www.youtube.com/watch?v=jyZu_D4s2fg
+  - slots: [XTropon1, FiaLR5, Merlyn, Yildiz, Milla]
+    video: https://www.youtube.com/watch?v=SHfByL9FqGQ
+  - slots: [Eirene, Meria, Cordie, Fia, Nina1]
+    video: https://www.youtube.com/watch?v=aZfexEpCMtY
+  - slots: [Belle, Fia, Dian, Merlyn, Milla]
+    video: https://www.youtube.com/watch?v=Kr1kr_zTX7s
+  - slots: [Cordie, Merlyn, Moineau, SmoddeySR, Eirene]
+    video: https://www.youtube.com/watch?v=bPO1-vLhq_E
+  - slots: [Florence, Merlyn, Cordie, Xamour, LunaLR]
+    video: https://www.youtube.com/watch?v=OVwNAIHxBug
+  - slots: [Cordie, Merlyn, Florence, Eirene, Meria]
+    video: https://www.youtube.com/watch?v=6OY47Ne-Pdw
+  - slots: [Mertillier, Sivi, Cordie, LunaLR, Shiloh]
+    video: https://www.youtube.com/watch?v=Z0x130H-nBk
+  - slots: [Rustica, Shiloh, Moineau, Tama, Dian]
+    video: https://www.youtube.com/watch?v=s57iDkmDwdk
+  - slots: [Florence, Xamour, Cordie, Paladea, LunaLR5]
+    video: https://www.youtube.com/watch?v=cYbUFsGmC6E
+
+examples:
+  - unit: Rustica
+    label: Main Quest 46-25 - Rustica with Myrlennia, Merlyn, Tama and Moineau
+    video: https://www.youtube.com/watch?v=KgWWC5bjK0I

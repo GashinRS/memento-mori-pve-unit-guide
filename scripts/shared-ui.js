@@ -1,4 +1,31 @@
 (function() {
+    function escapeHtml(value) {
+        return String(value)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
+    function videoLinkHtml(url, label, className) {
+        if (!url) return '';
+        var description = label ? 'Watch ' + label + ' on YouTube' : 'Watch clear on YouTube';
+        return '<a class="video-link ' + (className || '') + '" href="' + escapeHtml(url) + '" ' +
+            'target="_blank" rel="noopener noreferrer" aria-label="' + escapeHtml(description) + '" ' +
+            'title="' + escapeHtml(description) + '"><span aria-hidden="true">&#9654;</span></a>';
+    }
+
+    function exampleClearsHtml(clears) {
+        if (!clears || !clears.length) return '';
+        var links = clears.map(function(clear) {
+            return '<li>' + videoLinkHtml(clear.video, clear.label, 'example-clear-play') +
+                '<a class="example-clear-label" href="' + escapeHtml(clear.video) + '" target="_blank" ' +
+                'rel="noopener noreferrer">' + escapeHtml(clear.label) + '</a></li>';
+        }).join('');
+        return '<div class="example-clears"><div class="row-label">Example Clears</div><ul>' + links + '</ul></div>';
+    }
+
     function guideLegendHtml() {
         return '<div>' +
             '<div class="legend-group-title">Weapon Investment</div>' +
@@ -42,6 +69,11 @@
             element.innerHTML = guideLegendHtml();
         });
     }
+
+    window.GuideUI = {
+        videoLinkHtml: videoLinkHtml,
+        exampleClearsHtml: exampleClearsHtml,
+    };
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', renderGuideLegends);

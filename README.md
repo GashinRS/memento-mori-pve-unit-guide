@@ -68,6 +68,25 @@ Names of units that have guide entries are automatically linked when mentioned i
 
 The shared weapon investment and progression information card is defined once in `scripts/shared-ui.js` and rendered on both unit guide pages.
 
+## Adding YouTube Clears
+
+All battle-clear links live in `content/youtube-clears.yaml`, rather than in individual unit files.
+
+- Add a mapping under `teams` for a video that uses an exact five-unit guide lineup. Unit order does not matter.
+- One mapping automatically supplies the link everywhere that lineup appears on either unit guide page.
+- Add an entry under `examples` for a useful clear that does not exactly match a displayed team.
+
+```yaml
+teams:
+  - slots: [Mertillier, Sivi, Cordie, Merlyn, LunaLR]
+    video: https://www.youtube.com/watch?v=example
+
+examples:
+  - unit: Sivi
+    label: Main Quest 40-20 - short team description
+    video: https://www.youtube.com/watch?v=example
+```
+
 ## Additional Guide Pages
 
 The base pool guide uses `base-pool.html`, `content/pages/base-pool.yaml`, `content/base-pool-units/`, and `content/base-pool-order.yaml`.

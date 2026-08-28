@@ -7,9 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
-    <script src="data/generated-content.js?v=20260828-markdown-links"></script>
-    <script src="scripts/shared-ui.js?v=20260828-compact-legend"></script>
-    <link rel="stylesheet" href="style.css?v=20260828-markdown-links">
+    <script src="data/generated-content.js?v=20260828-video-clears"></script>
+    <script src="scripts/shared-ui.js?v=20260828-video-clears"></script>
+    <link rel="stylesheet" href="style.css?v=20260828-video-clears">
 </head>
 <body id="top">
 <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
@@ -165,7 +165,9 @@
             var label = team.label
                 ? '<span class="team-label">' + team.label + '</span>'
                 : '';
-            return '<div class="team-row">' + slots + label + '</div>';
+            var video = GuideUI.videoLinkHtml(team.video, team.label || 'this team clear', 'team-video-link');
+            var meta = label || video ? '<div class="team-meta">' + label + video + '</div>' : '';
+            return '<div class="team-row">' + slots + meta + '</div>';
         }).join('');
         return '<div class="teams-section">' +
             '<div class="row-label">Team Examples</div>' + rows +
@@ -194,6 +196,7 @@
             '<details class="unit-details">' +
             '<summary><span class="closed-label">View More</span><span class="open-label">View Less</span></summary>' +
             renderTeams(unit.teams) +
+            GuideUI.exampleClearsHtml(unit.exampleClears) +
             '<div class="unit-desc">' + unit.desc.trim() + '</div>' +
             '</details>' +
             '</div>';

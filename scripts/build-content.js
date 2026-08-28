@@ -78,6 +78,7 @@ const CONTAINER_KEYS = new Set([
     "wip",
     "units",
     "concepts",
+    "examples",
     "general",
     "glossary",
     "terms",
@@ -303,6 +304,64 @@ function normalizeTeams(teams) {
     }));
 }
 
+function normalizeYouTubeUrl(value) {
+    if (!value) return null;
+    const url = new URL(String(value));
+    const hostname = url.hostname.toLowerCase().replace(/^www\./, "");
+    if (url.protocol !== "https:" || !["youtube.com", "youtu.be"].includes(hostname)) {
+        throw new Error(`Video URL must be an HTTPS YouTube URL: "${value}"`);
+    }
+    return url.toString();
+}
+
+function teamKey(slots) {
+    return slots
+        .map((slot) => typeof slot === "string" ? slot : slot.id)
+        .sort((left, right) => left.localeCompare(right))
+        .join("\u0000");
+}
+
+function applyYouTubeClears(units, clearData) {
+    const teamVideos = new Map();
+    (clearData.teams || []).forEach((mapping) => {
+        if (!Array.isArray(mapping.slots) || mapping.slots.length !== 5) {
+            throw new Error("YouTube team mappings must contain exactly five unit slots");
+        }
+        const key = teamKey(mapping.slots);
+        if (teamVideos.has(key)) {
+            throw new Error(`Duplicate YouTube mapping for team: ${mapping.slots.join(", ")}`);
+        }
+        teamVideos.set(key, normalizeYouTubeUrl(mapping.video));
+    });
+
+    const matchedTeams = new Set();
+    const unitsById = new Map(units.map((unit) => [unit.id, unit]));
+    units.forEach((unit) => {
+        unit.teams.forEach((team) => {
+            const key = teamKey(team.slots);
+            team.video = teamVideos.get(key) || null;
+            if (team.video) matchedTeams.add(key);
+        });
+        unit.exampleClears = [];
+    });
+
+    teamVideos.forEach((video, key) => {
+        if (!matchedTeams.has(key)) {
+            throw new Error(`YouTube team mapping does not match a guide team: ${key.split("\u0000").join(", ")}`);
+        }
+    });
+
+    (clearData.examples || []).forEach((clear) => {
+        const unit = unitsById.get(clear.unit);
+        if (!unit) throw new Error(`Example clear references missing guide unit "${clear.unit}"`);
+        if (!clear.label) throw new Error(`Example clear for "${clear.unit}" requires a label`);
+        unit.exampleClears.push({
+            label: String(clear.label),
+            video: normalizeYouTubeUrl(clear.video),
+        });
+    });
+}
+
 function unitNameMap(units) {
     const namesPath = path.join(contentDir, "unit-names.yaml");
     const names = fs.existsSync(namesPath) ? parseYaml(fs.readFileSync(namesPath, "utf8")) : {};
@@ -351,6 +410,7 @@ function hydrateUnitReferences(units, names) {
                     name: slot.name || names[slot.id] || slot.id,
                 })),
             })),
+            exampleClears: [],
             desc: markdownToHtml(unit.body),
         };
     });
@@ -647,10 +707,12 @@ async function build() {
     const site = parseYaml(fs.readFileSync(path.join(contentDir, "site.yaml"), "utf8"));
     const basePoolPage = parseYaml(fs.readFileSync(path.join(contentDir, "pages", "base-pool.yaml"), "utf8"));
     const conceptsPage = parseYaml(fs.readFileSync(path.join(contentDir, "pages", "concepts.yaml"), "utf8"));
+    const youtubeClears = parseYaml(fs.readFileSync(path.join(contentDir, "youtube-clears.yaml"), "utf8"));
     const { names, grouped } = loadUnits();
     const basePoolUnits = loadBasePoolUnits(names);
     const concepts = loadConcepts();
     const guideUnits = CATEGORY_KEYS.flatMap((category) => grouped[category]);
+    applyYouTubeClears([...guideUnits, ...basePoolUnits], youtubeClears);
     const reruns = await loadAARerunData(guideUnits);
     guideUnits.forEach((unit) => {
         unit.rerun = reruns[unit.id] || null;

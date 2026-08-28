@@ -520,6 +520,7 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
 .team-row { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
 .team-row:last-child { margin-bottom: 0; }
 .team-sep { color: var(--ink-faint); font-size: 12px; margin: 0 2px; }
+.team-meta { display: flex; align-items: center; gap: 7px; margin-left: 10px; min-width: 0; }
 
 .team-slot {
     width: 2.875rem; height: 2.875rem; border-radius: 4px;
@@ -768,9 +769,39 @@ footer .footer-credits a:hover { color: var(--teal); }
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--ink-faint);
-    margin-left: 10px;
+    margin-left: 0;
     align-self: center;
 }
+
+.video-link {
+    width: 1.55rem;
+    height: 1.55rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    border: 1px solid color-mix(in srgb, var(--ruby) 55%, var(--border));
+    border-radius: 50%;
+    color: var(--ruby);
+    background: color-mix(in srgb, var(--ruby) 6%, var(--bg-card));
+    font-size: .58rem;
+    line-height: 1;
+    text-decoration: none;
+    transition: color .2s, background .2s, border-color .2s, transform .2s;
+}
+.video-link:hover,
+.video-link:focus-visible {
+    color: #fff;
+    background: var(--ruby);
+    border-color: var(--ruby);
+    transform: translateY(-1px);
+}
+.video-link span { margin-left: .08rem; }
+.example-clears { margin: 18px 0; }
+.example-clears ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
+.example-clears li { display: flex; align-items: center; gap: 8px; }
+.example-clear-label { color: var(--ink-light); font-size: .86rem; text-decoration-color: var(--border-hover); text-underline-offset: 3px; }
+.example-clear-label:hover { color: var(--sepia); text-decoration-color: currentColor; }
 
 .unit-desc p strong:first-child {
     color: var(--sepia);
@@ -795,7 +826,6 @@ footer .footer-credits a:hover { color: var(--teal); }
         height: 2.55rem;
     }
     .team-label {
-        grid-column: 1 / -1;
         margin: 0;
         max-width: 100%;
         font-size: .5rem;
@@ -803,5 +833,10 @@ footer .footer-credits a:hover { color: var(--teal); }
         letter-spacing: .1em;
         overflow-wrap: anywhere;
         align-self: start;
+    }
+    .team-meta {
+        grid-column: 1 / -1;
+        margin: 0;
+        min-height: 1.55rem;
     }
 }

@@ -50,11 +50,13 @@
         "eyebrow",
         "title"
       ],
+      "patternProperties": {
+        "^title$": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
       "properties": {
         "eyebrow": {
-          "$ref": "#/$defs/nonEmptyString"
-        },
-        "title": {
           "$ref": "#/$defs/nonEmptyString"
         },
         "subtitle": {
@@ -70,10 +72,12 @@
         "text",
         "items"
       ],
-      "properties": {
-        "title": {
+      "patternProperties": {
+        "^title$": {
           "$ref": "#/$defs/nonEmptyString"
-        },
+        }
+      },
+      "properties": {
         "text": {
           "$ref": "#/$defs/nonEmptyString"
         },
@@ -92,10 +96,12 @@
         "title",
         "cards"
       ],
-      "properties": {
-        "title": {
+      "patternProperties": {
+        "^title$": {
           "$ref": "#/$defs/nonEmptyString"
-        },
+        }
+      },
+      "properties": {
         "cards": {
           "type": "array",
           "minItems": 1,
@@ -113,10 +119,12 @@
         "icon",
         "text"
       ],
-      "properties": {
-        "title": {
+      "patternProperties": {
+        "^title$": {
           "$ref": "#/$defs/nonEmptyString"
-        },
+        }
+      },
+      "properties": {
         "icon": {
           "$ref": "#/$defs/nonEmptyString"
         },
@@ -132,10 +140,12 @@
         "title",
         "terms"
       ],
-      "properties": {
-        "title": {
+      "patternProperties": {
+        "^title$": {
           "$ref": "#/$defs/nonEmptyString"
-        },
+        }
+      },
+      "properties": {
         "terms": {
           "type": "array",
           "minItems": 1,
@@ -175,7 +185,6 @@
         "key",
         "id",
         "label",
-        "pill",
         "navIcon"
       ],
       "properties": {
@@ -196,9 +205,6 @@
           "$ref": "#/$defs/nonEmptyString"
         },
         "navLabel": {
-          "$ref": "#/$defs/nonEmptyString"
-        },
-        "pill": {
           "$ref": "#/$defs/nonEmptyString"
         },
         "navIcon": {
