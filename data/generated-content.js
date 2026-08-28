@@ -2817,7 +2817,6 @@ const SITE_CONTENT = {
             "key": "general",
             "id": "general",
             "label": "Generally Useful",
-            "pill": "All Content",
             "navIcon": "&#11088;"
         },
         {
@@ -2825,7 +2824,6 @@ const SITE_CONTENT = {
             "id": "quest",
             "label": "Main Quest Units",
             "navLabel": "Main Quest",
-            "pill": "Quest Only",
             "navIcon": "&#128506;"
         },
         {
@@ -2833,14 +2831,12 @@ const SITE_CONTENT = {
             "id": "tower",
             "label": "Tower Units",
             "navLabel": "Tower",
-            "pill": "Tower Only",
             "navIcon": "&#128508;"
         },
         {
             "key": "mention",
             "id": "mention",
             "label": "Honorable Mentions",
-            "pill": "Situational",
             "navIcon": "&#10022;",
             "note": "<p>This section contains units who are either overshadowed by better alternatives, mostly only useful early on or require vast amounts of investment before they become truly useful. Some of these units also mostly only pair well with Florence, who is only good as a solo DPS in the early to mid game, after which Cordie will always be better. These units may still be worth considering when preferred units are unavailable due to the long rerun cycles (~6 months)  in this game, or if they align with your personal progression goals. That said, the general advice is to pass on  them for PVE purposes and conserve resources (both Diamonds and Crystals) unless you have a specific reason to pull,  like using them in PVP as well.</p>"
         }

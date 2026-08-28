@@ -269,7 +269,6 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
 .section-block[data-cat="mention"] { --cat: var(--sage);  --cat-dim: var(--sage-dim);  }
 .section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
 .section-header h2 { font-family: 'Cinzel',serif; font-size: 1.1rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 600; color: var(--cat); }
-.section-pill { font-family: 'Cinzel',serif; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--cat); color: var(--cat); background: color-mix(in srgb,var(--cat) 8%,transparent); }
 .section-line { flex: 1; height: 1px; background: var(--cat); opacity: .2; }
 
 /* ── Cards ── */

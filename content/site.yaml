@@ -100,24 +100,20 @@ sections:
   - key: general
     id: general
     label: Generally Useful
-    pill: All Content
     navIcon: "&#11088;"
   - key: quest
     id: quest
     label: Main Quest Units
     navLabel: Main Quest
-    pill: Quest Only
     navIcon: "&#128506;"
   - key: tower
     id: tower
     label: Tower Units
     navLabel: Tower
-    pill: Tower Only
     navIcon: "&#128508;"
   - key: mention
     id: mention
     label: Honorable Mentions
-    pill: Situational
     navIcon: "&#10022;"
     note: |
       This section contains units who are either overshadowed by better alternatives, mostly only useful early on or
