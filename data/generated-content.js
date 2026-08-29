@@ -2407,17 +2407,17 @@ const BASE_POOL_UNITS = [
         "weapons": [
             {
                 "level": "MerlynSSR",
-                "tier": "recommended",
+                "tier": "required",
                 "description": "Adds either healing below 50% HP or 20% increased critical hit damage to S1"
             },
             {
                 "level": "MerlynUR",
-                "tier": "recommended",
+                "tier": "required",
                 "description": "S1 targets the 2 allies with the highest ATK and dispels 2 debuffs from each"
             },
             {
                 "level": "MerlynLR",
-                "tier": "recommended",
+                "tier": "required",
                 "description": "Increases the critical hit damage granted by S1 from 20% to 40%"
             }
         ],
