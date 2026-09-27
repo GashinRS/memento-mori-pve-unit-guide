@@ -8,7 +8,7 @@ Before we get into any specifics it is important to establish that the Defense s
 Gear has several rarities, of which we will cover R, SR, SSR, UR and LR gear. While rarities below R exist, these should all eventually be replaced by R or higher rarity gear as soon as you are able to. 
 
 ### R Gear
-This is the lowest rarity gear you should consider running. Its main purpose is mostly just to have some gear to put on your characters and will eventually be completely replaced by SR or higher gear, but this process will take time. 
+This is the lowest rarity gear you should consider running. Its main purpose is mostly just to have some gear to put on your characters and will eventually be completely replaced by SR or higher rarity gear, but this process will take time. 
 
 ### SR Gear
 This is the most cost-efficient gear you can get and will be something you will never fully replace simply due to how good it can be for the cost. The main reason for SR gear being so good is that the Haniel (lvl 240) set bonus grants 30% Defense, which can bring the raw Defense gained from SR gear on par with SSR gear. This in turns means that SR gear is the ideal gear for your support units in most situations. Even Sandalphon (lvl 180) already provides a 10% Defense set bonus at 2 pieces, so this can already be used if you cannot afford Haniel yet. Eventually you will want 3-4 full sets of SR gear for your supports. Focus on the gloves and boots for Defense and keep the rest at lvl 240. 
