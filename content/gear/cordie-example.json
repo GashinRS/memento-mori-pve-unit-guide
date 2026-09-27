@@ -1,0 +1,159 @@
+{
+  "name": "Cordie",
+  "level": 400,
+  "rarity": "LR+5",
+  "portrait": "images/gear/cordie-lr5-400.png",
+  "title": "Low level LR gear",
+  "role": "Main DPS",
+  "defaultStep": 1,
+  "steps": [
+    {
+      "label": "Current setup",
+      "title": "",
+      "note": "Full LR gear is not worth using if your gloves and boots are too low level, as you will be too frail.",
+      "pieces": [
+        {
+          "slot": "Weapon",
+          "image": "cordie-weapon.png",
+          "level": 400,
+          "upgrade": 400,
+          "rarity": "LR"
+        },
+        {
+          "slot": "Helmet",
+          "image": "cordie-head.png",
+          "level": 240,
+          "upgrade": 240,
+          "rarity": "LR"
+        },
+        {
+          "slot": "Accessory",
+          "image": "lr-240-accessory-60.png",
+          "level": 240,
+          "upgrade": 60,
+          "rarity": "LR"
+        },
+        {
+          "slot": "Body",
+          "image": "cordie-body.png",
+          "level": 240,
+          "upgrade": 240,
+          "rarity": "LR"
+        },
+        {
+          "slot": "Gloves",
+          "image": "cordie-gloves.png",
+          "level": 240,
+          "upgrade": 240,
+          "rarity": "LR"
+        },
+        {
+          "slot": "Boots",
+          "image": "cordie-boots.png",
+          "level": 240,
+          "upgrade": 240,
+          "rarity": "LR"
+        }
+      ]
+    },
+    {
+      "label": "Immediate fix",
+      "title": "",
+      "note": "Replace the LR gear with high level SSR gear. The most important part is to have high level boots and gloves and keep those upgraded. The helmet and dress can be lower level and the LR necklace should be kept for the set bonus.",
+      "pieces": [
+        {
+          "slot": "Weapon",
+          "image": "cordie-weapon.png",
+          "level": 400,
+          "upgrade": 400,
+          "rarity": "LR"
+        },
+        {
+          "slot": "Helmet",
+          "image": "ssr-400-head.png",
+          "level": 400,
+          "upgrade": 400,
+          "rarity": "SSR"
+        },
+        {
+          "slot": "Accessory",
+          "image": "lr-240-accessory-60.png",
+          "level": 240,
+          "upgrade": 60,
+          "rarity": "LR"
+        },
+        {
+          "slot": "Body",
+          "image": "ssr-400-body.png",
+          "level": 400,
+          "upgrade": 400,
+          "rarity": "SSR"
+        },
+        {
+          "slot": "Gloves",
+          "image": "ssr-400-gloves.png",
+          "level": 400,
+          "upgrade": 400,
+          "rarity": "SSR"
+        },
+        {
+          "slot": "Boots",
+          "image": "ssr-400-boots.png",
+          "level": 400,
+          "upgrade": 400,
+          "rarity": "SSR"
+        }
+      ]
+    },
+    {
+      "label": "Next upgrade",
+      "title": "",
+      "note": "The medium to long term goal should be to level your LR boots to a usable degree, which is once their Defense is on par with your SSR boots. Only go back to full LR if you can also do this for your LR gloves",
+      "pieces": [
+        {
+          "slot": "Weapon",
+          "image": "cordie-weapon.png",
+          "level": 400,
+          "upgrade": 400,
+          "rarity": "LR"
+        },
+        {
+          "slot": "Helmet",
+          "image": "ssr-400-head.png",
+          "level": 400,
+          "upgrade": 400,
+          "rarity": "SSR"
+        },
+        {
+          "slot": "Accessory",
+          "image": "ssr-400-accessory-60.png",
+          "level": 400,
+          "upgrade": 60,
+          "rarity": "SSR"
+        },
+        {
+          "slot": "Body",
+          "image": "ssr-400-body.png",
+          "level": 400,
+          "upgrade": 400,
+          "rarity": "SSR"
+        },
+        {
+          "slot": "Gloves",
+          "image": "ssr-400-gloves.png",
+          "level": 400,
+          "upgrade": 400,
+          "rarity": "SSR"
+        },
+        {
+          "slot": "Boots",
+          "image": "lr-400-boots.png",
+          "level": 400,
+          "upgrade": 400,
+          "rarity": "LR"
+        }
+      ]
+    }
+  ],
+  "shareId": "cordie"
+}

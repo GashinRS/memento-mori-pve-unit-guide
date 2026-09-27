@@ -336,9 +336,9 @@ const GENERAL_UNITS = [
         "desc": "<p>Fia is without a doubt one of the most important limited units you can pull for PVE. Technically she is usable         at UR+ rarity, but Fia is the only unit on this entire list that gets a firm recommendation to LR. She is unique         in the sense that she can act as both a support unit and DPS.</p>\n<p>Fia's support comes from her passive that increases adjacent allies' HP by 50% of her own, which greatly contributes         to the effectiveness of level 1 strategies and units that rely on their HP to deal damage like Dian. This buff         does not however contribute much to general survivability of other units, as other means such as Multi-Barriers and         buffing defense are more suited for this.</p>\n<p>Fia can also act as a strong DPS option because her S2 deals direct damage based on damage dealt to her. Direct         damage bypasses enemy defenses and also does not require any attack or PMDB from the attacker. Because Fia also         buffs her own HP, this directly affects how much damage she can deal, as being able to take more damage (higher HP)         also means more damage dealt. This means that the only offense stats Fia requires are crit rate, crit damage and         HP.</p>\n<p>Because both her support and DPS roles require as much HP as possible, the gear should also reflect this, as you         want set bonuses that boost HP and stamina. For an LR Fia, the standard gear setup would be 4 UR + 2 SSR. Because         Fia scales with her HP, getting her to LR5 can also be a good option for the added HP and the ability to use         4 LR instead of 4 UR gear for even more HP.</p>\n<p><strong>Main Quest —</strong> Fia's support role is most prevalent in main quest where you will often     use her to buff up level 1 Nina (and sometimes Winter Tropon's) HP. If you want to use her as a DPS, Yildiz is a     must-have for the additional bulk, and LR5 also improves her performance by a big amount.</p>\n<p><strong>Tower —</strong>In tower Fia will mostly be used as a DPS. Because of lower enemy attack stats compared to     main quest, Yildiz is not required and LR should be more than enough to perform adequately in most scenarios. An issue you can run into     sometimes in tower when pairing her with Yildiz is that she becomes too bulky, which reduces her damage, so this is     something to take into account.</p>",
         "rerun": {
             "aaId": 60,
-            "active": false,
-            "lastRun": "February 2026",
-            "estimate": "August 2026"
+            "active": true,
+            "lastRun": "September 2026",
+            "estimate": null
         }
     },
     {
@@ -427,8 +427,8 @@ const GENERAL_UNITS = [
         "rerun": {
             "aaId": 124,
             "active": false,
-            "lastRun": "March 2026",
-            "estimate": "September 2026"
+            "lastRun": "August 2026",
+            "estimate": "February 2027"
         }
     },
     {
@@ -675,9 +675,9 @@ const GENERAL_UNITS = [
         "desc": "<p>Moineau has a ton of effects, which combined, make her into one of the best support units in the game that can even         be used as a very strong DPS in certain scenarios. Her S1 inflicts Enfeeble on enemies, which decreases their         attack by 40%. Her S1 also decreases enemies' P.DEF by 25% in main quest and by 50% in tower. Her S2 inflicts         Delay on enemies which delays the activation of enemy skills by 1 turn. This specific debuff is not as good         as the other parts of her kit, but still a nice to have. Additionally, Moineau also gets a shield equal to 800%         of her attack, and can copy all buffs from the ally with the highest amount of buffs at the start of her         action phase. Due to the vast nature of her effects, her usage in tower and main quest differs a lot.</p>\n<p><strong>Main Quest — </strong> Moineau's primary role in main quest is as a DPS. This is made possible by         using Summer Moddey as the catalyst. Summer Moddey can absorb 30% of an enemy's attack into her own, and Moineau         can then copy this attack buff to do an insane amount of damage. The damage dealt by this is the highest burst         damage in the game that any unit can deal in 1-2 turns. The main downside is that this only really works when         the stage has NPCs, because those always have much higher attack stats than regular units, which you need in         order to increase your own attack stat. Another downside is that the team required for this is very inflexible,         as you want to debuff the enemies' defense to 0. This requires both Cordie and Eirene, making Merlyn the only         flexible slot, who realistically speaking you won't be able to replace due to her crit rate and crit damage         buff being very valuable to maximize Moineau's damage output. While getting more copies of Moineau does not affect         her performance much in tower, in main quest the added rarity will help with accuracy and crit rate, reducing the         RNG required to clear stages.</p>\n<p><strong>Tower — </strong> In tower, she is only used as a debuffer, where her 50% P.DEF debuff can pair with another unit's 50% P.DEF debuff         like Summer Amleth's, causing enemies to have 0 P.DEF due to these debuffs stacking additively. When enemies have         0 P.DEF, PMDB stops becoming a bottleneck because it simply does not do anything if there is no P.DEF to decrease.         As a result, this can also be paired with Eirene, such that Eirene's and Cordie's debuffs combined also put the         enemies at 0 defense in order to do &quot;true&quot; damage where all enemy defensive stats are ignored and essentially         turning every attack into a direct attack. This strategy is very effective and will work on most tower floors.         Note that this does not work in main quest because both Moineau's and Summer Amleth's P.DEF debuffs are only         debuffing for 25% instead of 50% in main quest. The Enfeeble debuff is also a very welcome bonus to make survival         easier.</p>",
         "rerun": {
             "aaId": 100,
-            "active": true,
+            "active": false,
             "lastRun": "August 2026",
-            "estimate": null
+            "estimate": "February 2027"
         }
     },
     {
@@ -960,9 +960,9 @@ const GENERAL_UNITS = [
         "desc": "<p>Eirene is one of the few units in the game who can debuff defense (25% in main quest, 50% in tower),         which is an incredibly powerful debuff.         It is better than P.DEF debuffs due to defense contributing more to bulk. When you pair her with Cordie,         you can even get enemies down to 0 defense which can allow you to beat stages that would otherwise have way too         much defense to beat with some other teams. She also has an additional effect where the slowest ally on the team         can get a 1 turn cooldown reduction when they use their first auto attack.</p>\n<p><strong>Main Quest — </strong>Eirene's debuff is undispellable in main quest, which means that you do not         need any debuff accuracy for the debuff to land. It even works on units with debuff immunity (Cordie).</p>",
         "rerun": {
             "aaId": 109,
-            "active": true,
+            "active": false,
             "lastRun": "August 2026",
-            "estimate": null
+            "estimate": "February 2027"
         }
     },
     {
@@ -1145,7 +1145,7 @@ const QUEST_UNITS = [
             "aaId": 19,
             "active": false,
             "lastRun": "March 2026",
-            "estimate": "September 2026"
+            "estimate": "October 2026"
         }
     },
     {
@@ -1387,9 +1387,9 @@ const HONORABLE_MENTIONS = [
         "desc": "<p>When Eureka is defeated, she grants the highest attack ally a 50% attack buff when this is an Azure ally. She has an additional support effect where she can cleanse herself and the 2 highest attack allies when Eureka is debuffed. While neither of these effects are particularly powerful (given that you are forced to run an Azure DPS, i.e. Florence), she can be a good budget support option in the early game given that she does not require her UW or extra copies.</p>",
         "rerun": {
             "aaId": 106,
-            "active": true,
+            "active": false,
             "lastRun": "August 2026",
-            "estimate": null
+            "estimate": "February 2027"
         }
     },
     {
@@ -1577,7 +1577,7 @@ const HONORABLE_MENTIONS = [
                 "video": null
             }
         ],
-        "desc": "<p>Evenlyn's S1 increases the attack, crit rate and chance to hit the highest attack ally with 50%. A useful but relatively  barebones effect that is mainly useful early on in the game when you do not have access to many other supports. She is  slightly better than Evelyn because she additionally buffs crit rate compared to Evenlyn.</p>",
+        "desc": "<p>Matilda's S1 increases the attack, crit rate and chance to hit the highest attack ally with 50%. A useful but relatively  barebones effect that is mainly useful early on in the game when you do not have access to many other supports. She is  slightly better than Evelyn because she additionally buffs crit rate compared to Evenlyn.</p>",
         "rerun": {
             "aaId": 85,
             "active": false,
@@ -1645,9 +1645,9 @@ const HONORABLE_MENTIONS = [
         "desc": "<p>Kobel increases the HP and HP drain of adjacent allies (no UW) or the entire team (UR UW) by 20% of her own HP. She can additionally inflict Enfeeble on enemies which helps with tanking hits. However, her HP buffing is not as good as Milla's because it uses her own HP as a threshold, which requires you to have her at a high rarity to be really useful. Stacking her with Milla is not a good option in most cases due to a lack of team slots.</p>",
         "rerun": {
             "aaId": 103,
-            "active": false,
-            "lastRun": "February 2026",
-            "estimate": "August 2026"
+            "active": true,
+            "lastRun": "September 2026",
+            "estimate": null
         }
     },
     {
@@ -1706,7 +1706,7 @@ const HONORABLE_MENTIONS = [
             "aaId": 108,
             "active": false,
             "lastRun": "December 2025",
-            "estimate": "August 2026"
+            "estimate": "September 2026"
         }
     },
     {
@@ -1765,8 +1765,8 @@ const HONORABLE_MENTIONS = [
         "rerun": {
             "aaId": 76,
             "active": false,
-            "lastRun": "January 2026",
-            "estimate": "August 2026"
+            "lastRun": "August 2026",
+            "estimate": "February 2027"
         }
     },
     {
@@ -1891,7 +1891,7 @@ const HONORABLE_MENTIONS = [
             "aaId": 81,
             "active": false,
             "lastRun": "February 2026",
-            "estimate": "August 2026"
+            "estimate": "October 2026"
         }
     },
     {
@@ -2051,9 +2051,9 @@ const HONORABLE_MENTIONS = [
         "desc": "<p>Rustica is arguably the best DPS unit in the limited pool aside from Fia for PVE. Aside from her DPS potential, she also has great innate bulk with her 75% DR and her 800% ATK Shield which she can grant to both herself and the highest attack ally. She requires a lot of investment in terms of units however and building her is only recommended if you are planning to go all in on Amber and using Amber in PVP as well. If you do end up on this path, you unlock a lot of new types of teams you can run in both Main Quest and Tower. Most of these revolve around Rustica + Tama, who have incredible synergy thanks to them both targeting the highest attack enemy with their S2, and Tama additionally debuffs the enemy's DEF and P.DEF with her S2. This makes for a very strong combination for damage, and can easily clear a lot of stages that could otherwise be hard to clear for a regular Cordie team. The team examples given here are some of the cheaper teams you can run with Rustica, but there's an abundance of variations to try depending on what other (Amber) units you have. Another strong combination would for example be Rustica + Tama + Cattleya.</p>",
         "rerun": {
             "aaId": 113,
-            "active": true,
+            "active": false,
             "lastRun": "August 2026",
-            "estimate": null
+            "estimate": "February 2027"
         }
     },
     {
@@ -2098,9 +2098,9 @@ const HONORABLE_MENTIONS = [
         "desc": "<p>Rusalka grants 5 Multi-Barriers to herself and 1 to every ally when she is defeated. This is useful as a one time increase in  survivability, but she gets outdone by Meria, who can provide Multi-Barriers every turn without requiring her to be defeated.</p>",
         "rerun": {
             "aaId": 44,
-            "active": false,
-            "lastRun": "February 2026",
-            "estimate": "August 2026"
+            "active": true,
+            "lastRun": "September 2026",
+            "estimate": null
         }
     },
     {
@@ -2157,9 +2157,9 @@ const HONORABLE_MENTIONS = [
         "desc": "<p>Regina increases the HP of the ally with the highest attack by 50%, and can additionally increase the damage taken by all enemies by 10%. It is mainly the HP buff we are interested in, as this provides Fia with a sizable increase in HP. Out of the units in this section, Regina provides the biggest HP buff to Fia. However, her soul makes it harder to slot her in, as you cannot get any soul bonuses with the rest of your team. Because of this Milla will usually be the better option if you simply want to increase Fia's HP.</p>",
         "rerun": {
             "aaId": 137,
-            "active": false,
-            "lastRun": "February 2026",
-            "estimate": "August 2026"
+            "active": true,
+            "lastRun": "September 2026",
+            "estimate": null
         }
     },
     {
@@ -2820,11 +2820,6 @@ const BASE_POOL_UNITS = [
 
 const CONCEPT_ARTICLES = [
     {
-        "id": "gear-requirements",
-        "title": "Gear Requirements",
-        "body": "<p>As a general rule of thumb, you always want as much Defense as possible on your support units. This means that SR gear is actually a really cost-effective way to get a lot of defense, because the 4-set bonus gives a 30% Defense buff. Due to this, almost every support unit wants to have 4 SR with the boots and gloves (the two gear pieces that give defense) being as high level as possible.</p>\n<p>When it comes to upgrade investment, all your upgrades should go to boots and gloves first once you max out the weapon, other gear pieces can safely be ignored as they do not contribute as much. For example, if your level link is 360, the gear your supports want is level 360 SR boots and gloves, and then 2 level 240 pieces of SR gear between the helmet, dress and necklace. When other gear is expected, this will be clearly stated in that unit's section.</p>"
-    },
-    {
         "id": "main-quest-vs-tower",
         "title": "Main Quest vs Tower",
         "body": "<p>Main Quest and Tower value different things, so a unit being strong in one mode does not always mean they are equally strong in the other.</p>\n<p>Main Quest enemies have much higher attack stats, so tanking them can be very hard. This means that most strategies revolve around dealing as much damage as possible, as fast as possible. Prolonged fights are also disadvantageous because enemies in Main Quest get the Berserk status on turn 20 until the end of battle (turn 40).</p>\n<p>Furthermore, Main Quest also has NPC characters. These are enemies that are not in the pool of playable units and do not have any skills, and will thus only use auto attacks. These NPCs will also always have a lot higher attack stats than regular enemies (usually up to 2-4 times as much) but have lower HP values. It is these incredibly high attack stats that allow certain strategies to work that abuse enemy stats. The overall stats of a stage are roughly correlated with the amount of NPC units present; more NPC units means higher overall stats for a stage. Other units can influence this as well, such as stages with Cordie and Belle generally having lower stats, and stages with base N or R units also having higher stats. Lastly, starting around chapter 26, all main quest enemies will have their LR UWs, even if the units are not at LR5 rarity.</p>\n<p>In contrast, tower enemies have very high defense stats and much lower attack stats. This makes stacking debuffs and teams focusing on damage over time more viable. Tower floors will also never have NPCs, and enemies do not have their UWs.</p>"
@@ -2967,7 +2962,7 @@ const SITE_CONTENT = {
         "disclaimer": "This is a community guide - not affiliated with",
         "brand": "Bank of Innovation"
     },
-    "lastUpdated": "August 28, 2026"
+    "lastUpdated": "September 1, 2026"
 };
 
 const BASE_POOL_CONTENT = {

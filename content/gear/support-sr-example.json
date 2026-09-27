@@ -1,0 +1,225 @@
+{
+  "shareId": "support-sr",
+  "title": "Spread SR investment across supports",
+  "defaultStep": 0,
+  "steps": [
+    {
+      "label": "Before",
+      "title": "",
+      "note": "Merlyn has level 400 SR gear with maxed upgrades, while Mertillier has level 240 SR gear with no upgrades. In this case you are wasting SR scrolls and tomes by leveling Merlyn's necklace, helmet and dress.",
+      "units": [
+        {
+          "name": "Merlyn",
+          "level": 400,
+          "rarity": "LR+5",
+          "portrait": "images/gear/merlyn-lr5-400.png",
+          "role": "Support",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "rarity": "LR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "merlyn-lr-weapon-240-0.png"
+            },
+            {
+              "slot": "Helmet",
+              "rarity": "SR",
+              "level": 400,
+              "upgrade": 400,
+              "image": "sr-400-head-400.png"
+            },
+            {
+              "slot": "Accessory",
+              "rarity": "SR",
+              "level": 400,
+              "upgrade": 400,
+              "image": "sr-400-accessory-400.png"
+            },
+            {
+              "slot": "Body",
+              "rarity": "SR",
+              "level": 400,
+              "upgrade": 400,
+              "image": "sr-400-body-400.png"
+            },
+            {
+              "slot": "Gloves",
+              "rarity": "SR",
+              "level": 400,
+              "upgrade": 400,
+              "image": "sr-400-gloves-400.png"
+            },
+            {
+              "slot": "Boots",
+              "rarity": "SR",
+              "level": 400,
+              "upgrade": 400,
+              "image": "sr-400-boots-400.png"
+            }
+          ]
+        },
+        {
+          "name": "Mertillier",
+          "level": 400,
+          "rarity": "LR+5",
+          "portrait": "images/gear/mertillier-lr5-400.png",
+          "role": "Support",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "rarity": "LR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "mertillier-lr-weapon-240-0.png"
+            },
+            {
+              "slot": "Helmet",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-head-0.png"
+            },
+            {
+              "slot": "Accessory",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-accessory-0.png"
+            },
+            {
+              "slot": "Body",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-body-0.png"
+            },
+            {
+              "slot": "Gloves",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-gloves-0.png"
+            },
+            {
+              "slot": "Boots",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-boots-0.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "After",
+      "title": "",
+      "note": "Prioritize boots and gloves on both supports. Leave their necklaces, helmets, and dresses at level 240 with no upgrades. This goes for all your supports, only invest in leveling the necklace, helmet and dress beyond lvl 240 if you have te spare resources..",
+      "units": [
+        {
+          "name": "Merlyn",
+          "level": 400,
+          "rarity": "LR+5",
+          "portrait": "images/gear/merlyn-lr5-400.png",
+          "role": "Support",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "rarity": "LR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "merlyn-lr-weapon-240-0.png"
+            },
+            {
+              "slot": "Helmet",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-head-0.png"
+            },
+            {
+              "slot": "Accessory",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-accessory-0.png"
+            },
+            {
+              "slot": "Body",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-body-0.png"
+            },
+            {
+              "slot": "Gloves",
+              "rarity": "SR",
+              "level": 400,
+              "upgrade": 400,
+              "image": "sr-400-gloves-400.png"
+            },
+            {
+              "slot": "Boots",
+              "rarity": "SR",
+              "level": 400,
+              "upgrade": 400,
+              "image": "sr-400-boots-400.png"
+            }
+          ]
+        },
+        {
+          "name": "Mertillier",
+          "level": 400,
+          "rarity": "LR+5",
+          "portrait": "images/gear/mertillier-lr5-400.png",
+          "role": "Support",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "rarity": "LR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "mertillier-lr-weapon-240-0.png"
+            },
+            {
+              "slot": "Helmet",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-head-0.png"
+            },
+            {
+              "slot": "Accessory",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-accessory-0.png"
+            },
+            {
+              "slot": "Body",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-body-0.png"
+            },
+            {
+              "slot": "Gloves",
+              "rarity": "SR",
+              "level": 400,
+              "upgrade": 400,
+              "image": "sr-400-gloves-400.png"
+            },
+            {
+              "slot": "Boots",
+              "rarity": "SR",
+              "level": 400,
+              "upgrade": 400,
+              "image": "sr-400-boots-400.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

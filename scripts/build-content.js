@@ -696,6 +696,7 @@ async function loadAARerunData(units) {
 }
 
 async function build() {
+    require('./build-gear')();
     const site = parseYaml(fs.readFileSync(path.join(contentDir, "site.yaml"), "utf8"));
     const basePoolPage = parseYaml(fs.readFileSync(path.join(contentDir, "pages", "base-pool.yaml"), "utf8"));
     const conceptsPage = parseYaml(fs.readFileSync(path.join(contentDir, "pages", "concepts.yaml"), "utf8"));

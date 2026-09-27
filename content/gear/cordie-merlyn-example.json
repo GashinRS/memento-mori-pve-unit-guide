@@ -1,0 +1,225 @@
+{
+  "title": "Share upgrades with your supports",
+  "defaultStep": 0,
+  "steps": [
+    {
+      "label": "Before",
+      "title": "",
+      "note": "Cordie has +400 upgrades on every piece, while Merlyn has none. Some of these upgrades should be moved to Merlyn's gloves and boots to increase her bulk. Also, Cordie does not need upgrade levels on her necklace since she already has Debuff Immunity.",
+      "units": [
+        {
+          "name": "Cordie",
+          "level": 400,
+          "rarity": "LR+5",
+          "portrait": "images/gear/cordie-lr5-400.png",
+          "role": "Main DPS",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "image": "cordie-weapon.png",
+              "level": 400,
+              "upgrade": 400,
+              "rarity": "LR"
+            },
+            {
+              "slot": "Helmet",
+              "image": "ssr-400-head.png",
+              "level": 400,
+              "upgrade": 400,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Accessory",
+              "image": "ssr-400-accessory.png",
+              "level": 400,
+              "upgrade": 400,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Body",
+              "image": "ssr-400-body.png",
+              "level": 400,
+              "upgrade": 400,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Gloves",
+              "image": "ssr-400-gloves.png",
+              "level": 400,
+              "upgrade": 400,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Boots",
+              "image": "lr-400-boots.png",
+              "level": 400,
+              "upgrade": 400,
+              "rarity": "LR"
+            }
+          ]
+        },
+        {
+          "name": "Merlyn",
+          "level": 400,
+          "rarity": "LR+5",
+          "portrait": "images/gear/merlyn-lr5-400.png",
+          "role": "Support",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "rarity": "LR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "merlyn-lr-weapon-240-0.png"
+            },
+            {
+              "slot": "Helmet",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-head-0.png"
+            },
+            {
+              "slot": "Accessory",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-accessory-0.png"
+            },
+            {
+              "slot": "Body",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-body-0.png"
+            },
+            {
+              "slot": "Gloves",
+              "rarity": "SR",
+              "level": 400,
+              "upgrade": 0,
+              "image": "sr-400-gloves-0.png"
+            },
+            {
+              "slot": "Boots",
+              "rarity": "SR",
+              "level": 400,
+              "upgrade": 0,
+              "image": "sr-400-boots-0.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "After",
+      "title": "",
+      "note": "Remove the upgrades from Cordie’s necklace, helmet, and dress, keeping the gear itself at level 400. Upgrade Merlyn’s gloves and boots to +400. Use the remaining upgrade materials on another support’s gloves and boots.",
+      "units": [
+        {
+          "name": "Cordie",
+          "level": 400,
+          "rarity": "LR+5",
+          "portrait": "images/gear/cordie-lr5-400.png",
+          "role": "Main DPS",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "image": "cordie-weapon.png",
+              "level": 400,
+              "upgrade": 400,
+              "rarity": "LR"
+            },
+            {
+              "slot": "Helmet",
+              "image": "ssr-400-head-0.png",
+              "level": 400,
+              "upgrade": 0,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Accessory",
+              "image": "ssr-400-accessory-0.png",
+              "level": 400,
+              "upgrade": 0,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Body",
+              "image": "ssr-400-body-0.png",
+              "level": 400,
+              "upgrade": 0,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Gloves",
+              "image": "ssr-400-gloves.png",
+              "level": 400,
+              "upgrade": 400,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Boots",
+              "image": "lr-400-boots.png",
+              "level": 400,
+              "upgrade": 400,
+              "rarity": "LR"
+            }
+          ]
+        },
+        {
+          "name": "Merlyn",
+          "level": 400,
+          "rarity": "LR+5",
+          "portrait": "images/gear/merlyn-lr5-400.png",
+          "role": "Support",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "rarity": "LR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "merlyn-lr-weapon-240-0.png"
+            },
+            {
+              "slot": "Helmet",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-head-0.png"
+            },
+            {
+              "slot": "Accessory",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-accessory-0.png"
+            },
+            {
+              "slot": "Body",
+              "rarity": "SR",
+              "level": 240,
+              "upgrade": 0,
+              "image": "sr-240-body-0.png"
+            },
+            {
+              "slot": "Gloves",
+              "rarity": "SR",
+              "level": 400,
+              "upgrade": 400,
+              "image": "sr-400-gloves-400.png"
+            },
+            {
+              "slot": "Boots",
+              "rarity": "SR",
+              "level": 400,
+              "upgrade": 400,
+              "image": "sr-400-boots-400.png"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "shareId": "cordie-merlyn"
+}

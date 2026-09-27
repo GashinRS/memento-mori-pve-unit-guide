@@ -114,3 +114,41 @@ without a commit, a scheduled build creates an empty `[keepalive]` commit to pre
 without changing the date shown on the guide.
 
 Then open `index.html` in a browser.
+
+## Editing the Gear Guide
+
+Edit `content/gear/guide.md`, then run `node scripts/build-gear.js` (also included in the full content build). The page is `gear.html`; its contents navigation is generated from the Markdown headings. The supported syntax is headings, paragraphs, bold, italics, and ordered/unordered lists.
+
+Place illustrations in `images/gear/` and insert each on its own line: `![Descriptive caption](images/gear/example.png)`. The caption also serves as alt text; images open at full size in a new tab when clicked. Separate blocks with blank lines.
+
+### Adding equipment example cards
+
+1. Copy `content/gear/cordie-example.json` to `content/gear/your-name-example.json`.
+2. Edit `name`, `level`, `rarity`, `portrait`, `role`, and the overall `title`.
+3. Set `defaultStep` to the initially visible step (0 is first, 1 is second).
+4. Each entry in `steps` is a tab with a `label`, `title`, `note`, and six `pieces`. Keep pieces in this order: Weapon, Helmet, Accessory, Body, Gloves, Boots. Each piece needs `slot`, `rarity`, `level`, `upgrade`, and `image`.
+5. Save generated equipment images in `images/gear/`; use their filenames in `image`. The portrait uses a path from the site root, such as `images/gear/cordie-lr5-400.png`. Generate the level and upgrades into the images; changing JSON numbers only changes accessible descriptions, not image pixels.
+6. Insert this on its own line in `content/gear/guide.md` wherever the card should appear:
+
+```markdown
+<!-- gear-example: your-name -->
+```
+
+7. Run `node scripts/build-gear.js`, then refresh `gear.html`.
+
+One step creates a single setup; multiple steps create a progression. Cards can be repeated or placed anywhere in the guide. Outlines automatically indicate pieces whose data differs from the preceding step. The build checks step selection, slot order, upgrades, and missing image files.
+
+Generate images using [Tama's equipment generator](https://tamamo.dev/GenerateEquipmentIcon) and [character generator](https://tamamo.dev/GenerateCharacterIcon). Keep the image settings and JSON metadata in sync.
+
+### Two-unit examples
+
+Copy `content/gear/cordie-merlyn-example.json` as a starting point. Each step has a `units` array containing one or two character objects; each character has its own `name`, `level`, `rarity`, `portrait`, `role`, and six `pieces`. Keep the same characters in the same order across steps. The shared tabs switch both units together. Desktop shows two units side by side; smaller screens stack them. Changed pieces use a single outline style. Existing single-unit files also remain supported.
+`title` is optional on both the example and each step. Omit it or set it to an empty string to hide that heading; no empty heading space is rendered.
+
+### Renaming examples and preserving shared links
+
+Rename `cordie-example.json` to, for example, `low-level-lr-example.json`, then change its Markdown marker from `<!-- gear-example: cordie -->` to `<!-- gear-example: low-level-lr -->`. Run `node scripts/build-gear.js`. Follow the same procedure for `cordie-merlyn-example.json`. Image filenames do not need changing.
+
+Keep the JSON `shareId` unchanged when renaming a file: shared links use this stable identifier, independently of the filename. Each example needs a unique shareId. Examples appear as subsections in the table of contents. Click an example and copy the address-bar URL to share it. The label uses `tocTitle` if provided, otherwise the card title; `tocTitle` lets a card without a visible title still have a descriptive contents entry. Existing links with a ~step suffix remain supported. Copy links from the published site when sharing with other people.
+
+`support-sr-example.json` is another two-unit template. All changed equipment uses the same outline style.
