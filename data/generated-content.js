@@ -2846,7 +2846,7 @@ const SITE_CONTENT = {
         "text": "<p>This guide is still being written and expanded. Please contact @gashin on Discord if you have suggestions,  found any errors or if there is anything else you want to discuss regarding this guide. <strong>Planned additions in future revisions:</strong></p>",
         "items": [
             "The level 1 strategy",
-            "Gear guide"
+            "DPS guide"
         ]
     },
     "assumptions": {
@@ -2962,7 +2962,7 @@ const SITE_CONTENT = {
         "disclaimer": "This is a community guide - not affiliated with",
         "brand": "Bank of Innovation"
     },
-    "lastUpdated": "September 1, 2026"
+    "lastUpdated": "September 27, 2026"
 };
 
 const BASE_POOL_CONTENT = {
