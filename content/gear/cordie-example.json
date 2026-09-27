@@ -5,7 +5,7 @@
   "portrait": "images/gear/cordie-lr5-400.png",
   "title": "Low level LR gear",
   "role": "Main DPS",
-  "defaultStep": 1,
+  "defaultStep": 0,
   "steps": [
     {
       "label": "Current setup",

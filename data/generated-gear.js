@@ -1,6 +1,6 @@
 /* Generated from content/gear/. */
 const GEAR_CONTENT = {
-    "title": "Gear Guide",
+    "title": "Gear Guide ",
     "headings": [
         {
             "id": "defense",
@@ -67,7 +67,7 @@ const GEAR_CONTENT = {
             "portrait": "images/gear/cordie-lr5-400.png",
             "title": "Low level LR gear",
             "role": "Main DPS",
-            "defaultStep": 1,
+            "defaultStep": 0,
             "steps": [
                 {
                     "label": "Current setup",
