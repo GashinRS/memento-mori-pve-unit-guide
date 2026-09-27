@@ -1,4 +1,11 @@
 document.querySelector('h1').textContent = GEAR_CONTENT.title;
+const wip = SITE_CONTENT.wip;
+document.getElementById('wip-banner').innerHTML =
+    '<div class="wip-banner"><div class="wip-icon">&#9998;</div><div class="wip-body">' +
+    '<div class="wip-title">' + wip.title + '</div>' +
+    '<div class="wip-text">' + wip.text + '</div>' +
+    '<ul class="wip-list">' + wip.items.map(item => '<li>' + item + '</li>').join('') + '</ul>' +
+    '</div></div>';
 document.getElementById('gear-article').innerHTML = GEAR_CONTENT.body;
 const toc = document.getElementById('gear-toc');
 GEAR_CONTENT.headings.forEach(heading => {
