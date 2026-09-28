@@ -26,6 +26,9 @@ The only exception for when you should not get boots as your first UR/LR piece i
 #### Relics
 UR gear can only be obtained from pulling Relics, which in turn can only be obtained from the Invocation of The Seraph's Prophecy. You get 1 free pull every day on this banner, and get a 20% chance to obtain a single relic after 10 pulls, 40% after 25 pulls and 100% after 50 pulls. The catch is that this counter resets every Monday, meaning that you will only have filled the meter to 7/50 by Sunday. This means that **you should always spend 900 gems on Sunday to have a chance to get a relic**. Relics are a never ending upgrade path, you will never max this out on every piece of gear or every character so **do not skip this** unless you are absolutely certain you need the gems for something else. 
 
+## Gear Progression
+This session will walk you through what gear you should be aiming for depending on your level. Coming soon!
+
 ## Examples
 This section will cover some common mistakes and how to fix them. 
 
