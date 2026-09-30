@@ -73,6 +73,7 @@ const CONTAINER_KEYS = new Set([
     "pairs",
     "intro",
     "sections",
+    "subsections",
     "teams",
     "weapons",
     "wip",

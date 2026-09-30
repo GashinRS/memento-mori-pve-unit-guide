@@ -16,6 +16,10 @@ weapons:
 pairs:
   - id: Fia
     badge: dps
+  - id: FiaLR5
+    badge: dps
+  - id: Dian
+    badge: dps
 teams:
   - label:
     slots: [Kobel, Merlyn, FiaLR5, Yildiz, Milla]

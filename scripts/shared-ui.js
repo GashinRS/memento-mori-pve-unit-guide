@@ -18,8 +18,7 @@
 
     function guideLegendHtml() {
         return '<div>' +
-            '<div class="legend-group-title">Weapon Investment</div>' +
-            '<a class="markdown-link" href="gear.html" style="font-size:.8rem">Read the full Gear Guide →</a>' +
+            '<div class="legend-group-title">Unique Weapon Investment</div>' +
             '<div class="legend-items">' +
             '<div class="legend-item">' +
             '<div class="legend-weapon-sample">' +

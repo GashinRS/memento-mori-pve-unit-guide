@@ -26,12 +26,9 @@ assumptions:
     - title: Progression Badges
       icon: "&#8987;"
       text: |
-        The Early Game, Mid Game and End Game badges are rough indicators for when a unit starts becoming useful.
-        They do not mean a unit stops being useful later. If a unit has the Early Game badge, it can still be useful
-        in Mid Game or End Game; the badge only marks the point where the unit generally starts to matter.
-
-        The level ranges are rough guidelines, not hard rules. Depending on your account, gear, team options and the
-        stage you are trying to clear, some units can become useful earlier or later than listed.
+        The Early Game, Mid Game and End Game badges are only rough indicators for when a unit starts becoming useful.
+        They do not mean a unit stops being useful later or can't be useful earlier. The exact criteria for when a unit starts 
+        to become useful depends on your roster, gear and stage you are trying to clear.
     - title: External Guides
       icon: "&#9888;"
       text: |
@@ -115,6 +112,15 @@ sections:
     id: mention
     label: Honorable Mentions
     navIcon: "&#10022;"
+    subsections:
+      - id: niche-hp-buffers
+        label: Niche HP Buffers
+        units: [Fenny, Artoria, Kobel, Yuni, Regina]
+        note: |
+          **These units are only included for their HP-buffing support and intentionally excluded from the unit index to prevent misunderstandings. 
+          They do not contribute much outside of their HP support.** Because of this they are generally
+          only useful combined with Fia or Dian DPS, and are outclassed by Milla and Eidene. Only pull these if you do not have either of those
+          and must absolutely have an HP buffer. However, even in those cases is it recommended to just wait for Milla or Eidene's reruns.
     note: |
       This section contains units who are either overshadowed by better alternatives, mostly only useful early on or
       require vast amounts of investment before they become truly useful. Some of these units also mostly only pair well

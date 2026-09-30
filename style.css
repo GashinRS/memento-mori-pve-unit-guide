@@ -749,6 +749,21 @@ footer .footer-credits a:hover { color: var(--teal); }
     vertical-align: middle;
 }
 
+.unit-subsection {
+    padding-top: 32px;
+    margin-top: 32px;
+    border-top: 1px solid var(--border);
+    scroll-margin-top: 90px;
+}
+
+.unit-subsection h3,
+.remaining-units-heading {
+    font-family: 'Cinzel', serif;
+    color: var(--cat);
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
+
 .section-note {
     font-size: 0.85rem;
     color: var(--ink-light);

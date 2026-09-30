@@ -3,7 +3,7 @@ id: Yuni
 name: Yuni
 wiki: https://mememori.fandom.com/wiki/Yuni
 role: Support
-stage: mid
+stage: end
 scalable: true
 speed: none
 weapons:
@@ -12,6 +12,10 @@ weapons:
     description: Increases the passive HP buff to the highest attack ally from 30% to 50%
 pairs:
   - id: Fia
+    badge: dps
+  - id: FiaLR5
+    badge: dps
+  - id: Dian
     badge: dps
 teams:
   - label:
