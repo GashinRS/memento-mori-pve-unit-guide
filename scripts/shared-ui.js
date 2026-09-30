@@ -60,13 +60,47 @@
         });
     }
 
+    function renderSiteChrome() {
+        var page = window.location.pathname.split('/').pop() || 'index.html';
+        var unitPages = ['index.html', 'base-pool.html'];
+        var items = [
+            { href: 'index.html', label: 'Unit Guides', active: unitPages.indexOf(page) !== -1 },
+            { href: 'team-building.html', label: 'Team Building', active: page === 'team-building.html' },
+            { href: 'gear.html', label: 'Gear Guide', active: page === 'gear.html' },
+            { href: 'concepts.html', label: 'PvE Notes', active: page === 'concepts.html' }
+        ];
+        document.querySelectorAll('.page-nav').forEach(function(nav) {
+            nav.setAttribute('aria-label', 'Guide categories');
+            nav.innerHTML = items.map(function(item) {
+                return '<a href="' + item.href + '"' + (item.active ? ' aria-current="' + (page === item.href ? 'page' : 'true') + '"' : '') + '>' + item.label + '</a>';
+            }).join('');
+            if (page === 'index.html' || page === 'base-pool.html') {
+                var subnav = document.createElement('nav');
+                subnav.className = 'nav guide-subnav';
+                subnav.setAttribute('aria-label', 'Unit guides');
+                subnav.innerHTML = ['index.html', 'base-pool.html'].map(function(href, i) {
+                    return '<a href="' + href + '"' + (page === href ? ' aria-current="page"' : '') + '>' + ['Limited PvE Guide', 'Base Pool Guide'][i] + '</a>';
+                }).join('');
+                nav.insertAdjacentElement('afterend', subnav);
+            }
+        });
+        var footer = document.getElementById('site-footer');
+        if (footer) footer.innerHTML = '<p class="footer-credits">' + SITE_CONTENT.footer.credits + '</p>' +
+            '<p>' + SITE_CONTENT.footer.disclaimer + ' <span>' + SITE_CONTENT.footer.brand + '</span>.</p>';
+    }
+
+    function initialize() {
+        renderGuideLegends();
+        renderSiteChrome();
+    }
+
     window.GuideUI = {
         videoLinkHtml: videoLinkHtml,
     };
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', renderGuideLegends);
+        document.addEventListener('DOMContentLoaded', initialize);
     } else {
-        renderGuideLegends();
+        initialize();
     }
 }());

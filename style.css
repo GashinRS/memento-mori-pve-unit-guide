@@ -115,7 +115,18 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
 .nav a[data-cat="tower"]:hover   { color: var(--ruby);  border-color: var(--ruby);  background: rgba(139,58,58,.08); }
 .nav a[data-cat="mention"]:hover { color: var(--sage);  border-color: var(--sage);  background: rgba(74,122,74,.08); }
 .page-nav { margin-top: -34px; margin-bottom: 34px; }
-.page-nav a[aria-current="page"] { color: var(--sepia); border-color: var(--sepia); background: rgba(139,94,60,.08); }
+.page-nav a[aria-current] { color: var(--sepia); border-color: var(--sepia); background: rgba(139,94,60,.08); }
+.guide-subnav { margin-top: -18px; margin-bottom: 34px; }
+.guide-subnav a { font-size: 10px; letter-spacing: .12em; }
+.guide-subnav a[aria-current] { color: var(--sepia); border-color: var(--sepia); }
+.guide-hub { margin-bottom: 56px; }
+.guide-hub-intro { max-width: 680px; margin: 0 auto 32px; text-align: center; color: var(--ink-mid); }
+.guide-hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.guide-hub-card { display: block; padding: 28px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-card); color: var(--ink-mid); text-decoration: none; }
+a.guide-hub-card:hover { border-color: var(--sepia); }
+.guide-hub-card h2 { font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--sepia); margin-bottom: 12px; }
+.guide-hub-card p { line-height: 1.7; }
+.guide-hub-status { display: block; margin-top: 18px; font-size: .85rem; color: var(--ink-faint); font-style: italic; }
 
 /* ── Legend ── */
 .legend { background: var(--bg-card); backdrop-filter: blur(6px); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px 24px; margin-bottom: 52px; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px 40px; box-shadow: 0 2px 16px rgba(80,50,20,.07); }
@@ -187,6 +198,7 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
 .overview-group[data-cat="tower"]   { --overview-cat: var(--ruby); }
 .overview-group[data-cat="mention"] { --overview-cat: var(--sage); }
 .overview-label {
+    text-decoration: none;
     justify-self: start;
     font-family: 'Cinzel',serif;
     font-size: 11px;
@@ -201,6 +213,12 @@ h1 { font-family: 'Cinzel',serif; font-size: clamp(2rem,5vw,3.4rem); font-weight
     margin-top: 4px;
     text-shadow: 0 1px 0 rgba(255,255,255,.8);
     backdrop-filter: blur(3px);
+}
+.overview-label:hover,
+.overview-label:focus-visible {
+    border-color: var(--overview-cat);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 .overview-icons { display: flex; flex-wrap: wrap; gap: 7px; }
 .overview-icon {

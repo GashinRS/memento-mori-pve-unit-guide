@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
     <script src="data/generated-content.js?v=20260828-video-clears"></script>
-    <script src="scripts/shared-ui.js?v=20260828-video-clears"></script>
+    <script src="scripts/shared-ui.js?v=20260930-navigation"></script>
     <link rel="stylesheet" href="style.css?v=20260828-video-clears">
 </head>
 <body id="top">
@@ -30,8 +30,6 @@
 <div class="page-wrap">
 
     <header id="site-header"></header>
-
-    <nav class="nav" id="site-nav"></nav>
 
     <nav class="nav page-nav">
         <a href="index.html" aria-current="page">Limited PvE Guide</a>
@@ -368,19 +366,8 @@
     }
 
     function renderHeader() {
-        document.getElementById('site-header').innerHTML =
-            '<p class="header-eyebrow">' + SITE_CONTENT.header.eyebrow + '</p>' +
-            '<h1>' + textHtml(SITE_CONTENT.header.title) + '</h1>' +
+        document.getElementById('site-header').innerHTML =            '<h1>' + textHtml(SITE_CONTENT.header.title) + '</h1>' +
             '<p class="last-updated">Last updated ' + SITE_CONTENT.lastUpdated + '</p>';
-    }
-
-    function renderNav() {
-        document.getElementById('site-nav').innerHTML = SECTIONS.map(function(sec) {
-            var label = sec.navLabel || sec.label;
-            return '<a href="#' + sec.id + '" data-cat="' + sec.key + '">' +
-                sec.navIcon + ' ' + label +
-                '</a>';
-        }).join('');
     }
 
     function renderWip() {
@@ -476,7 +463,7 @@
                 var units = UNITS[sec.key] || [];
                 if (!units.length) return '';
                 return '<div class="overview-group" data-cat="' + sec.key + '">' +
-                    '<div class="overview-label">' + (sec.navLabel || sec.label) + '</div>' +
+                    '<a class="overview-label" href="#' + sec.id + '">' + (sec.navLabel || sec.label) + '</a>' +
                     '<div class="overview-icons">' +
                     units.filter(function(unit) { return !isSubsectionUnit(sec, unit); }).map(function(unit) {
                         return '<a class="overview-icon tip-icon" href="#' + unitAnchor(unit) + '" aria-label="' + unit.name + '">' +
@@ -535,7 +522,6 @@
     }).join('');
 
     renderHeader();
-    renderNav();
     renderWip();
     renderAssumptions();
     renderGlossary();

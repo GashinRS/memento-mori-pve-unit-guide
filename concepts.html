@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
     <script src="data/generated-content.js?v=20260828-video-clears"></script>
+    <script src="scripts/shared-ui.js?v=20260930-navigation" defer></script>
     <link rel="stylesheet" href="style.css?v=20260828-video-clears">
 </head>
 <body id="top">
@@ -45,9 +46,7 @@
     }
 
     function renderHeader() {
-        document.getElementById('site-header').innerHTML =
-            '<p class="header-eyebrow">' + CONCEPTS_CONTENT.header.eyebrow + '</p>' +
-            '<h1>' + textHtml(CONCEPTS_CONTENT.header.title) + '</h1>' +
+        document.getElementById('site-header').innerHTML =            '<h1>' + textHtml(CONCEPTS_CONTENT.header.title) + '</h1>' +
             '<p class="header-sub">' + CONCEPTS_CONTENT.header.subtitle + '</p>' +
             '<p class="last-updated">Last updated ' + SITE_CONTENT.lastUpdated + '</p>';
     }
@@ -114,8 +113,8 @@
 
     function renderFooter() {
         document.getElementById('site-footer').innerHTML =
-            '<p class="footer-credits">' + CONCEPTS_CONTENT.footer.credits + '</p>' +
-            '<p>' + CONCEPTS_CONTENT.footer.disclaimer + ' <span>' + CONCEPTS_CONTENT.footer.brand + '</span>.</p>';
+            '<p class="footer-credits">' + SITE_CONTENT.footer.credits + '</p>' +
+            '<p>' + SITE_CONTENT.footer.disclaimer + ' <span>' + SITE_CONTENT.footer.brand + '</span>.</p>';
     }
 
     function setupBackToTop() {
