@@ -1954,6 +1954,11 @@ const HONORABLE_MENTIONS = [
                 "id": "Cordie",
                 "name": "Cordie",
                 "badge": "dps"
+            },
+            {
+                "id": "Rustica",
+                "name": "Rustica",
+                "badge": "dps"
             }
         ],
         "teams": [

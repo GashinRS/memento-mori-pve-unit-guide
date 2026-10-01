@@ -13,6 +13,8 @@ weapons:
 pairs:
   - id: Cordie
     badge: dps
+  - id: Rustica
+    badge: dps
 teams:
   - label: 
     slots: [Cordie, Merlyn, Tama, Samleth, Meria]
