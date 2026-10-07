@@ -3115,7 +3115,7 @@ const SITE_CONTENT = {
         "disclaimer": "This is a community guide - not affiliated with",
         "brand": "Bank of Innovation"
     },
-    "lastUpdated": "October 1, 2026"
+    "lastUpdated": "October 7, 2026"
 };
 
 const BASE_POOL_CONTENT = {
