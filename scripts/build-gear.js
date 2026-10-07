@@ -3,13 +3,24 @@ const path = require('path');
 const root = path.resolve(__dirname, '..');
 const escape = value => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 function inline(value) {
-    return escape(value).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\*(.+?)\*/g, '<em>$1</em>');
+    return escape(value)
+        .replace(/\[([^\x5d\n]+)\]\((#[^\s)]+|(?:\.\.\/)*[a-z0-9-]+\.html(?:#[^\s)]+)?|https?:\/\/[^\s)]+)\)/gi,
+            (_, label, target) => {
+                // Markdown links are relative to content/gear; HTML renders at the site root.
+                const href = target.startsWith('../')
+                    ? path.posix.normalize('content/gear/' + target)
+                    : target;
+                return `<a class="markdown-link" href="${href}">${label}</a>`;
+            })
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em>$1</em>');
 }
 function buildGear() {
     const source = fs.readFileSync(path.join(root, 'content/gear/guide.md'), 'utf8');
     const headings = [];
     const used = new Set();
     let title = 'Gear Guide';
+    let currentHeadingLevel = 2;
     let paragraph = [];
     let list = null;
     const html = [];
@@ -23,7 +34,7 @@ function buildGear() {
     }
     for (const line of source.replace(/\r\n/g, '\n').split('\n')) {
         const heading = line.match(/^(#{1,6})\s+(.+)$/);
-        const image = line.trim().match(/^!\[([^\]]*)\]\(([^\s)]+)\)$/);
+        const image = line.trim().match(/^!\[([^\x5d]*)\]\(([^\s)]+)\)$/);
         const item = line.match(/^\s*(?:([-*])|\d+\.)\s+(.+)$/);
         const marker = line.trim().match(/^<!-- gear-example: ([a-z0-9-]+) -->$/);
         if (marker) {
@@ -36,7 +47,8 @@ function buildGear() {
             const slots = ['Weapon', 'Helmet', 'Accessory', 'Body', 'Gloves', 'Boots'];
             if (!example.steps?.length || !Number.isInteger(example.defaultStep) || !example.steps[example.defaultStep]) throw new Error(`${id}: invalid steps/defaultStep`);
             for (const step of example.steps) {
-                if (!step.label || !step.note) throw new Error(`${id}: each step needs label and note`);
+                if (!step.label) throw new Error(`${id}: each step needs a label`);
+                if (step.note != null && typeof step.note !== 'string') throw new Error(`${id}: note must be a string when provided`);
                 const units = step.units || [{ ...example, pieces: step.pieces }];
                 if (units.length < 1 || units.length > 2) throw new Error(`${id}: use one or two units`);
                 const firstUnits = example.steps[0].units || [example];
@@ -51,7 +63,7 @@ function buildGear() {
                 });
             }
             examples[id] = example;
-            headings.push({ id: 'example-' + example.shareId, title: example.tocTitle || example.title || 'Equipment example', level: 3 });
+            headings.push({ id: 'example-' + example.shareId, title: example.tocTitle || example.title || 'Equipment example', level: currentHeadingLevel + 1 });
             html.push(`<div data-gear-example="${id}"></div>`);
         } else if (heading) {
             flush();
@@ -61,6 +73,7 @@ function buildGear() {
             while (used.has(id)) id = base + '-' + suffix++;
             used.add(id);
             const level = heading[1].length;
+            currentHeadingLevel = level;
             headings.push({ id, title: heading[2], level });
             html.push(`<h${level} id="${id}">${inline(heading[2])}<a class="gear-anchor" href="#${id}" aria-label="Link to ${escape(heading[2])}">#</a></h${level}>`);
         } else if (image) {
@@ -75,7 +88,7 @@ function buildGear() {
         else { if (list) flush(); paragraph.push(line.trim()); }
     }
     flush();
-    fs.writeFileSync(path.join(root, 'data/generated-gear.js'), '/* Generated from content/gear/. */\nconst GEAR_CONTENT = ' + JSON.stringify({ title, headings, body: html.join('\n'), examples }, null, 4) + ';\n');
+    fs.writeFileSync(path.join(root, 'data/generated-gear.js'), '/* Generated from content/gear/. HTML URLs are relative to gear.html, not this data file. */\n// noinspection HtmlUnknownTarget\nconst GEAR_CONTENT = ' + JSON.stringify({ title, headings, body: html.join('\n'), examples }, null, 4) + ';\n');
     console.log('Generated data/generated-gear.js');
 }
 if (require.main === module) buildGear();

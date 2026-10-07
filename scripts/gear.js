@@ -38,6 +38,10 @@ document.querySelectorAll('[data-gear-example]').forEach((mount, instance) => {
         panel.setAttribute('aria-labelledby', tabs[index].id);
         const units = step.units || [{ ...example, pieces: step.pieces }];
         const previousUnits = previous && (previous.units || [{ ...example, pieces: previous.pieces }]);
+        const takeaway =
+            (typeof step.title === 'string' && step.title.trim() ? '<strong>' + safe(step.title.trim()) + '</strong>' : '') +
+            (typeof step.note === 'string' && step.note.trim() ? '<p>' + safe(step.note.trim()) + '</p>' : '') +
+            (previous ? '<small class="equipment-change-key">Outlined pieces change from the previous step.</small>' : '');
         panel.innerHTML = '<div class="equipment-units' + (units.length === 2 ? ' equipment-duo' : '') + '">' + units.map((unit, unitIndex) => {
             const oldUnit = previousUnits && previousUnits[unitIndex];
             return '<div class="equipment-board" role="group" aria-label="' + safe(unit.name) + ' equipment"><div class="equipment-character">' +
@@ -47,9 +51,8 @@ document.querySelectorAll('[data-gear-example]').forEach((mount, instance) => {
                     const changed = oldUnit && JSON.stringify(piece) !== JSON.stringify(oldUnit.pieces[i]);
                     return '<div class="equipment-piece equipment-piece-' + i + (changed ? ' equipment-changed' : '') + '"><img src="images/gear/' + safe(piece.image) + '" alt="' + safe(piece.rarity + ' ' + piece.slot) + ', level ' + piece.level + ', upgrade +' + piece.upgrade + (changed ? ', changed from previous step' : '') + '"></div>';
                 }).join('') + '</div>';
-        }).join('') + '</div><div class="equipment-takeaway">' +
-            (typeof step.title === 'string' && step.title.trim() ? '<strong>' + safe(step.title.trim()) + '</strong>' : '') + '<p>' + safe(step.note) + '</p>' +
-            (previous ? '<small class="equipment-change-key">Outlined pieces change from the previous step.</small>' : '') + '</div>';
+        }).join('') + '</div>' +
+            (takeaway ? '<div class="equipment-takeaway">' + takeaway + '</div>' : '');
         if (focus) tabs[index].focus();
     }
     tabs.forEach((tab, index) => {

@@ -8,6 +8,9 @@
 #gear-toc a:hover { color: var(--sepia); text-decoration: underline; }
 #gear-toc .gear-toc-level-3 { padding-left: 14px; }
 #gear-toc .gear-toc-level-4 { padding-left: 28px; }
+#gear-toc .gear-toc-level-5 { padding-left: 42px; }
+#gear-toc .gear-toc-level-6 { padding-left: 56px; }
+#gear-toc .gear-toc-level-7 { padding-left: 70px; }
 .gear-article { min-width: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 36px 40px; color: var(--ink-mid); line-height: 1.8; }
 .gear-article p { margin: 0 0 20px; }
 .gear-article h2, .gear-article h3, .gear-article h4 { color: var(--ink); line-height: 1.4; scroll-margin-top: 24px; }

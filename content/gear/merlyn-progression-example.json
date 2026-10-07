@@ -1,0 +1,294 @@
+{
+  "name": "Merlyn",
+  "title": "",
+  "tocTitle": "Merlyn: 180–220 LL progression",
+  "shareId": "merlyn-progression",
+  "defaultStep": 0,
+  "steps": [
+    {
+      "label": "180 LL*",
+      "note": "",
+      "units": [
+        {
+          "name": "Merlyn",
+          "level": 180,
+          "rarity": "SR",
+          "portrait": "images/gear/merlyn-sr-180.png",
+          "role": "Support",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "rarity": "SSR",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-weapon-ssr-180-0.png"
+            },
+            {
+              "slot": "Helmet",
+              "rarity": "R",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-helmet-r-180-0.png"
+            },
+            {
+              "slot": "Accessory",
+              "rarity": "R",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-accessory-r-180-0.png"
+            },
+            {
+              "slot": "Body",
+              "rarity": "R",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-body-r-180-0.png"
+            },
+            {
+              "slot": "Gloves",
+              "rarity": "R",
+              "level": 180,
+              "upgrade": 180,
+              "image": "progression-merlyn-gloves-r-180-180.png"
+            },
+            {
+              "slot": "Boots",
+              "rarity": "R",
+              "level": 180,
+              "upgrade": 180,
+              "image": "progression-merlyn-boots-r-180-180.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "180 LL",
+      "note": "",
+      "units": [
+        {
+          "name": "Merlyn",
+          "level": 180,
+          "rarity": "SR",
+          "portrait": "images/gear/merlyn-sr-180.png",
+          "role": "Support",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "rarity": "SSR",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-weapon-ssr-180-0.png"
+            },
+            {
+              "slot": "Helmet",
+              "rarity": "R",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-helmet-r-180-0.png"
+            },
+            {
+              "slot": "Accessory",
+              "rarity": "R",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-accessory-r-180-0.png"
+            },
+            {
+              "slot": "Body",
+              "rarity": "R",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-body-r-180-0.png"
+            },
+            {
+              "slot": "Gloves",
+              "rarity": "SR",
+              "level": 180,
+              "upgrade": 180,
+              "image": "progression-merlyn-gloves-sr-180-180.png"
+            },
+            {
+              "slot": "Boots",
+              "rarity": "SR",
+              "level": 180,
+              "upgrade": 180,
+              "image": "progression-merlyn-boots-sr-180-180.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "200 LL*",
+      "note": "",
+      "units": [
+        {
+          "name": "Merlyn",
+          "level": 200,
+          "rarity": "SR",
+          "portrait": "images/gear/merlyn-sr-200.png",
+          "role": "Support",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "rarity": "SSR",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-weapon-ssr-180-0.png"
+            },
+            {
+              "slot": "Helmet",
+              "rarity": "R",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-helmet-r-180-0.png"
+            },
+            {
+              "slot": "Accessory",
+              "rarity": "R",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-accessory-r-180-0.png"
+            },
+            {
+              "slot": "Body",
+              "rarity": "R",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-body-r-180-0.png"
+            },
+            {
+              "slot": "Gloves",
+              "rarity": "SR",
+              "level": 200,
+              "upgrade": 200,
+              "image": "progression-merlyn-gloves-sr-200-200.png"
+            },
+            {
+              "slot": "Boots",
+              "rarity": "SR",
+              "level": 200,
+              "upgrade": 200,
+              "image": "progression-merlyn-boots-sr-200-200.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "200 LL",
+      "note": "2x180 SR provides a 10% defense bonus. You can get a 180 SR necklace too instead of a helmet or dress.",
+      "units": [
+        {
+          "name": "Merlyn",
+          "level": 200,
+          "rarity": "SR",
+          "portrait": "images/gear/merlyn-sr-200.png",
+          "role": "Support",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "rarity": "SSR",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-weapon-ssr-180-0.png"
+            },
+            {
+              "slot": "Helmet",
+              "rarity": "SR",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-helmet-sr-180-0.png"
+            },
+            {
+              "slot": "Accessory",
+              "rarity": "R",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-accessory-r-180-0.png"
+            },
+            {
+              "slot": "Body",
+              "rarity": "SR",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-body-sr-180-0.png"
+            },
+            {
+              "slot": "Gloves",
+              "rarity": "SR",
+              "level": 200,
+              "upgrade": 200,
+              "image": "progression-merlyn-gloves-sr-200-200.png"
+            },
+            {
+              "slot": "Boots",
+              "rarity": "SR",
+              "level": 200,
+              "upgrade": 200,
+              "image": "progression-merlyn-boots-sr-200-200.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "220 LL",
+      "note": "",
+      "units": [
+        {
+          "name": "Merlyn",
+          "level": 220,
+          "rarity": "SR",
+          "portrait": "images/gear/merlyn-sr-220.png",
+          "role": "Support",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "rarity": "SSR",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-weapon-ssr-180-0.png"
+            },
+            {
+              "slot": "Helmet",
+              "rarity": "SR",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-helmet-sr-180-0.png"
+            },
+            {
+              "slot": "Accessory",
+              "rarity": "R",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-accessory-r-180-0.png"
+            },
+            {
+              "slot": "Body",
+              "rarity": "SR",
+              "level": 180,
+              "upgrade": 0,
+              "image": "progression-merlyn-body-sr-180-0.png"
+            },
+            {
+              "slot": "Gloves",
+              "rarity": "SR",
+              "level": 220,
+              "upgrade": 220,
+              "image": "progression-merlyn-gloves-sr-220-220.png"
+            },
+            {
+              "slot": "Boots",
+              "rarity": "SR",
+              "level": 220,
+              "upgrade": 220,
+              "image": "progression-merlyn-boots-sr-220-220.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

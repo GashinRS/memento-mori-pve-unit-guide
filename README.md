@@ -126,7 +126,7 @@ Place illustrations in `images/gear/` and insert each on its own line: `![Descri
 1. Copy `content/gear/cordie-example.json` to `content/gear/your-name-example.json`.
 2. Edit `name`, `level`, `rarity`, `portrait`, `role`, and the overall `title`.
 3. Set `defaultStep` to the initially visible step (0 is first, 1 is second).
-4. Each entry in `steps` is a tab with a `label`, `title`, `note`, and six `pieces`. Keep pieces in this order: Weapon, Helmet, Accessory, Body, Gloves, Boots. Each piece needs `slot`, `rarity`, `level`, `upgrade`, and `image`.
+4. Each entry in `steps` is a tab with a `label`, optional `title` and `note`, and six `pieces`. Omit `note` or set it to `""` to hide the note without leaving an empty paragraph. The changed-piece legend still appears on later tabs. Keep pieces in this order: Weapon, Helmet, Accessory, Body, Gloves, Boots. Each piece needs `slot`, `rarity`, `level`, `upgrade`, and `image`.
 5. Save generated equipment images in `images/gear/`; use their filenames in `image`. The portrait uses a path from the site root, such as `images/gear/cordie-lr5-400.png`. Generate the level and upgrades into the images; changing JSON numbers only changes accessible descriptions, not image pixels.
 6. Insert this on its own line in `content/gear/guide.md` wherever the card should appear:
 

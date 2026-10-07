@@ -1,0 +1,294 @@
+{
+  "name": "Cordie",
+  "title": "",
+  "tocTitle": "Cordie: 180–220 LL progression",
+  "shareId": "cordie-progression",
+  "defaultStep": 0,
+  "steps": [
+    {
+      "label": "180 LL",
+      "note": "",
+      "units": [
+        {
+          "name": "Cordie",
+          "level": 180,
+          "rarity": "LR",
+          "portrait": "images/gear/cordie-lr-180.png",
+          "role": "Main DPS",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "image": "progression-cordie-weapon-180-180.png",
+              "level": 180,
+              "upgrade": 180,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Helmet",
+              "image": "progression-cordie-helmet-180-60.png",
+              "level": 180,
+              "upgrade": 60,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Accessory",
+              "image": "progression-cordie-accessory-180-60.png",
+              "level": 180,
+              "upgrade": 60,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Body",
+              "image": "progression-cordie-body-180-60.png",
+              "level": 180,
+              "upgrade": 60,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Gloves",
+              "image": "progression-cordie-gloves-180-180.png",
+              "level": 180,
+              "upgrade": 180,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Boots",
+              "image": "progression-cordie-boots-180-180.png",
+              "level": 180,
+              "upgrade": 180,
+              "rarity": "SR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "200 LL*",
+      "note": "Upgrade the UW, SSR gloves, and SR boots to level 200 and max their upgrades first. The 2x200 SSR set bonus is especially good because it gives DEF Break.",
+      "units": [
+        {
+          "name": "Cordie",
+          "level": 200,
+          "rarity": "LR",
+          "portrait": "images/gear/cordie-lr-200.png",
+          "role": "Main DPS",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "image": "progression-cordie-weapon-200-200.png",
+              "level": 200,
+              "upgrade": 200,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Helmet",
+              "image": "progression-cordie-helmet-180-60.png",
+              "level": 180,
+              "upgrade": 60,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Accessory",
+              "image": "progression-cordie-accessory-180-60.png",
+              "level": 180,
+              "upgrade": 60,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Body",
+              "image": "progression-cordie-body-180-60.png",
+              "level": 180,
+              "upgrade": 60,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Gloves",
+              "image": "progression-cordie-gloves-200-200.png",
+              "level": 200,
+              "upgrade": 200,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Boots",
+              "image": "progression-cordie-boots-200-200.png",
+              "level": 200,
+              "upgrade": 200,
+              "rarity": "SR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "200 LL",
+      "note": "Raise the remaining SSR gear to level 200.",
+      "units": [
+        {
+          "name": "Cordie",
+          "level": 200,
+          "rarity": "LR",
+          "portrait": "images/gear/cordie-lr-200.png",
+          "role": "Main DPS",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "image": "progression-cordie-weapon-200-200.png",
+              "level": 200,
+              "upgrade": 200,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Helmet",
+              "image": "progression-cordie-helmet-200-60.png",
+              "level": 200,
+              "upgrade": 60,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Accessory",
+              "image": "progression-cordie-accessory-200-60.png",
+              "level": 200,
+              "upgrade": 60,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Body",
+              "image": "progression-cordie-body-200-60.png",
+              "level": 200,
+              "upgrade": 60,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Gloves",
+              "image": "progression-cordie-gloves-200-200.png",
+              "level": 200,
+              "upgrade": 200,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Boots",
+              "image": "progression-cordie-boots-200-200.png",
+              "level": 200,
+              "upgrade": 200,
+              "rarity": "SR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "220 LL*",
+      "note": "Upgrade the UW, SSR gloves, and SR boots to level 220 and max their upgrades.",
+      "units": [
+        {
+          "name": "Cordie",
+          "level": 220,
+          "rarity": "LR",
+          "portrait": "images/gear/cordie-lr-220.png",
+          "role": "Main DPS",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "image": "progression-cordie-weapon-220-220.png",
+              "level": 220,
+              "upgrade": 220,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Helmet",
+              "image": "progression-cordie-helmet-200-60.png",
+              "level": 200,
+              "upgrade": 60,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Accessory",
+              "image": "progression-cordie-accessory-200-60.png",
+              "level": 200,
+              "upgrade": 60,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Body",
+              "image": "progression-cordie-body-200-60.png",
+              "level": 200,
+              "upgrade": 60,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Gloves",
+              "image": "progression-cordie-gloves-220-220.png",
+              "level": 220,
+              "upgrade": 220,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Boots",
+              "image": "progression-cordie-boots-220-220.png",
+              "level": 220,
+              "upgrade": 220,
+              "rarity": "SR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "220 LL",
+      "note": "Raise the remaining SSR gear to level 220, keeping the helmet, necklace, and body at +60 upgrades to save resources for your supports.",
+      "units": [
+        {
+          "name": "Cordie",
+          "level": 220,
+          "rarity": "LR",
+          "portrait": "images/gear/cordie-lr-220.png",
+          "role": "Main DPS",
+          "pieces": [
+            {
+              "slot": "Weapon",
+              "image": "progression-cordie-weapon-220-220.png",
+              "level": 220,
+              "upgrade": 220,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Helmet",
+              "image": "progression-cordie-helmet-220-60.png",
+              "level": 220,
+              "upgrade": 60,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Accessory",
+              "image": "progression-cordie-accessory-220-60.png",
+              "level": 220,
+              "upgrade": 60,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Body",
+              "image": "progression-cordie-body-220-60.png",
+              "level": 220,
+              "upgrade": 60,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Gloves",
+              "image": "progression-cordie-gloves-220-220.png",
+              "level": 220,
+              "upgrade": 220,
+              "rarity": "SSR"
+            },
+            {
+              "slot": "Boots",
+              "image": "progression-cordie-boots-220-220.png",
+              "level": 220,
+              "upgrade": 220,
+              "rarity": "SR"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
